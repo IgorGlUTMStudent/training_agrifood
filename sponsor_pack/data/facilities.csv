@@ -1,0 +1,11 @@
+facility_id,facility_name,region,district,facility_type,capacity_tonnes,commissioned_year,has_controlled_atmosphere
+FAC-001,NordFrigo Hub,North,Bălți,Commercial Cold Store,4500,2018,True
+FAC-002,Edineț AgroStore,North,Edineț,Packinghouse,3200,2015,False
+FAC-003,Briceni FruitLog,North,Briceni,Cooperative Hub,2800,2020,True
+FAC-004,Codru AgroTerm,Centre,Strășeni,Commercial Cold Store,5000,2016,True
+FAC-005,Chișinău Central Cold,Centre,Chișinău,Distribution Center,6000,2012,True
+FAC-006,Orhei FructStore,Centre,Orhei,Packinghouse,3500,2019,False
+FAC-007,Ialoveni AgroDepot,Centre,Ialoveni,Cooperative Hub,2500,2021,False
+FAC-008,Cahul FrigoPort,South,Cahul,Commercial Cold Store,4000,2017,True
+FAC-009,Comrat FruitLogistics,South,Comrat,Packinghouse,3000,2018,False
+FAC-010,Taraclia SouthCold,South,Taraclia,Commercial Cold Store,2600,2022,False

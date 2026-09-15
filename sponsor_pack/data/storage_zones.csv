@@ -1,0 +1,26 @@
+zone_id,facility_id,zone_name,zone_type,nominal_capacity_tonnes,target_temperature_c,target_relative_humidity_pct,cooling_system_type,insulation_quality,defrost_cycle_frequency_per_day
+ZONE-001,FAC-001,Chamber 1 (CA),Controlled Atmosphere (CA),120,0.5,94.0,Propane Chiller,Premium,1
+ZONE-002,FAC-001,Chamber 2 (Std),Standard Cold Room,100,1.0,91.0,Ammonia Secondary,Standard,2
+ZONE-003,FAC-001,Chamber 3 (Std),Rapid Pre-Cooling,80,2.0,90.0,R134a DX,High,2
+ZONE-004,FAC-002,Chamber 1 (Std),Standard Cold Room,100,1.0,91.0,Propane Chiller,Premium,1
+ZONE-005,FAC-002,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,Ammonia Secondary,Standard,2
+ZONE-006,FAC-003,Chamber 1 (CA),Controlled Atmosphere (CA),120,0.5,94.0,Ammonia Secondary,High,2
+ZONE-007,FAC-003,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,R134a DX,Premium,2
+ZONE-008,FAC-004,Chamber 1 (CA),Controlled Atmosphere (CA),120,0.5,94.0,R134a DX,Standard,2
+ZONE-009,FAC-004,Chamber 2 (Std),Standard Cold Room,100,1.0,91.0,Propane Chiller,High,1
+ZONE-010,FAC-004,Chamber 3 (Std),Rapid Pre-Cooling,80,2.0,90.0,Ammonia Secondary,Premium,2
+ZONE-011,FAC-005,Chamber 1 (CA),Controlled Atmosphere (CA),120,0.5,94.0,R134a DX,Standard,2
+ZONE-012,FAC-005,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,Propane Chiller,High,1
+ZONE-013,FAC-005,Chamber 3 (Std),Rapid Pre-Cooling,80,2.0,90.0,Ammonia Secondary,Premium,2
+ZONE-014,FAC-006,Chamber 1 (Std),Standard Cold Room,100,1.0,91.0,R134a DX,Standard,2
+ZONE-015,FAC-006,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,Propane Chiller,High,1
+ZONE-016,FAC-006,Chamber 3 (Std),Rapid Pre-Cooling,80,2.0,90.0,Ammonia Secondary,Premium,2
+ZONE-017,FAC-007,Chamber 1 (Std),Standard Cold Room,100,1.0,91.0,R134a DX,Standard,2
+ZONE-018,FAC-007,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,Propane Chiller,High,1
+ZONE-019,FAC-008,Chamber 1 (CA),Controlled Atmosphere (CA),120,0.5,94.0,Propane Chiller,Premium,1
+ZONE-020,FAC-008,Chamber 2 (Std),Standard Cold Room,100,1.0,91.0,Ammonia Secondary,Standard,2
+ZONE-021,FAC-008,Chamber 3 (Std),Rapid Pre-Cooling,80,2.0,90.0,R134a DX,High,2
+ZONE-022,FAC-009,Chamber 1 (Std),Standard Cold Room,100,1.0,91.0,Propane Chiller,Premium,1
+ZONE-023,FAC-009,Chamber 2 (Std),Vegetable & Fresh Produce Room,90,11.0,90.0,Ammonia Secondary,Standard,2
+ZONE-024,FAC-010,Chamber 1 (Std),Standard Cold Room,100,1.0,91.0,Ammonia Secondary,High,2
+ZONE-025,FAC-010,Chamber 2 (Std),Standard Cold Room,100,1.0,91.0,R134a DX,Premium,2

@@ -1,0 +1,1801 @@
+batch_id,crop_type,variety,origin_region,harvest_datetime,harvest_weight_kg,initial_quality_score,harvest_temperature_c,harvest_conditions,field_precooled
+BAT-000001,plums,Stanley,South,2024-08-06 12:15:00,9026.1,89.4,20.7,Optimal Dry,True
+BAT-000002,pears,Conference,South,2024-09-03 14:45:00,4709.7,84.7,32.2,Hot / Sun-Exposed,False
+BAT-000003,pears,Williams,South,2024-08-19 11:15:00,9029.9,90.2,30.6,Hot / Sun-Exposed,False
+BAT-000004,plums,President,South,2024-08-23 06:00:00,6603.8,91.8,20.7,Optimal Dry,False
+BAT-000005,apples,Gala,North,2024-10-20 06:00:00,14385.9,89.5,-0.4,Humid,False
+BAT-000006,apples,Gala,North,2024-09-25 11:15:00,13806.4,88.3,21.2,Optimal Dry,True
+BAT-000007,apples,Granny Smith,North,2024-09-06 07:30:00,5381.6,86.2,18.7,Optimal Dry,True
+BAT-000008,table_grapes,Codreanca,Centre,2024-10-03 14:45:00,6253.5,94.7,21.2,Optimal Dry,False
+BAT-000009,tomatoes,Cherry,North,2024-07-01 07:45:00,2800.9,89.3,25.8,Optimal Dry,False
+BAT-000010,plums,President,Centre,2024-09-02 13:00:00,9217.9,96.3,29.7,Hot / Sun-Exposed,False
+BAT-000011,plums,President,North,2024-09-09 09:45:00,9435.5,86.7,20.9,Optimal Dry,True
+BAT-000012,pears,Abate Fetel,South,2024-08-25 08:30:00,10836.1,85.3,21.5,Optimal Dry,False
+BAT-000013,apples,Gala,North,2024-09-19 11:00:00,9945.3,97.5,17.9,Optimal Dry,False
+BAT-000014,pears,Abate Fetel,South,2024-08-18 12:00:00,7264.6,92.2,31.2,Hot / Sun-Exposed,False
+BAT-000015,plums,President,Centre,2024-08-14 07:15:00,5570.6,87.8,18.2,Optimal Dry,False
+BAT-000016,plums,Kabardinka,Centre,2024-10-09 12:00:00,7452.3,91.0,19.2,Optimal Dry,True
+BAT-000017,pears,Abate Fetel,Centre,2024-08-27 11:15:00,5442.4,88.4,25.7,Post-Rain,True
+BAT-000018,apples,Granny Smith,North,2024-09-22 10:15:00,13666.1,95.4,17.2,Optimal Dry,False
+BAT-000019,table_grapes,Victoria,South,2024-10-06 06:00:00,6570.2,90.5,18.4,Post-Rain,False
+BAT-000020,apples,Gala,North,2024-09-17 14:15:00,10242.0,95.9,23.2,Optimal Dry,False
+BAT-000021,apples,Granny Smith,North,2024-09-03 10:15:00,12798.5,94.6,25.1,Optimal Dry,True
+BAT-000022,plums,Kabardinka,South,2024-10-05 11:00:00,4727.7,89.0,19.9,Humid,False
+BAT-000023,table_grapes,Victoria,South,2024-10-23 07:00:00,7918.7,97.5,4.0,Humid,True
+BAT-000024,strawberries,Clery,North,2024-05-20 12:45:00,2606.2,99.0,23.1,Optimal Dry,False
+BAT-000025,apples,Golden Delicious,North,2024-10-20 14:30:00,14325.6,86.6,9.6,Optimal Dry,True
+BAT-000026,tomatoes,Bobcat,Centre,2024-09-08 14:45:00,6345.3,92.2,25.2,Optimal Dry,False
+BAT-000027,tomatoes,Primadonna,Centre,2024-10-08 09:30:00,6860.8,86.5,14.7,Optimal Dry,False
+BAT-000028,strawberries,Clery,Centre,2024-06-02 14:15:00,2300.9,99.0,29.5,Hot / Sun-Exposed,False
+BAT-000029,apples,Idared,North,2024-09-04 08:30:00,14711.6,88.5,19.4,Optimal Dry,False
+BAT-000030,apples,Fuji,North,2024-10-18 12:45:00,10658.1,83.5,10.3,Optimal Dry,True
+BAT-000031,table_grapes,Victoria,Centre,2024-10-01 14:30:00,7479.1,89.9,15.0,Optimal Dry,False
+BAT-000032,table_grapes,Codreanca,Centre,2024-10-03 08:15:00,6580.2,90.2,10.7,Humid,True
+BAT-000033,apples,Granny Smith,North,2024-10-25 06:30:00,4943.8,85.2,2.4,Humid,True
+BAT-000034,plums,Anna Späth,South,2024-08-11 08:15:00,4390.0,90.7,22.0,Optimal Dry,False
+BAT-000035,apples,Idared,North,2024-09-06 11:30:00,6770.9,84.8,26.4,Optimal Dry,False
+BAT-000036,plums,Kabardinka,Centre,2024-09-27 07:45:00,9744.3,92.6,17.2,Humid,False
+BAT-000037,apricots,Kioto,Centre,2024-07-20 08:45:00,5767.8,91.6,24.9,Optimal Dry,False
+BAT-000038,apples,Idared,North,2024-10-02 08:30:00,14318.2,85.5,8.5,Humid,False
+BAT-000039,table_grapes,Victoria,Centre,2024-09-30 08:30:00,3444.1,95.5,12.2,Optimal Dry,True
+BAT-000040,strawberries,Clery,North,2024-06-10 09:30:00,1542.3,88.5,24.7,Optimal Dry,True
+BAT-000041,apricots,Spring Blush,North,2024-07-02 09:00:00,5922.7,86.7,26.3,Optimal Dry,True
+BAT-000042,plums,Stanley,Centre,2024-08-22 07:15:00,3299.5,94.0,22.2,Optimal Dry,False
+BAT-000043,plums,President,Centre,2024-08-10 13:45:00,5633.9,96.9,28.1,Hot / Sun-Exposed,True
+BAT-000044,plums,Kabardinka,South,2024-08-01 14:00:00,4543.5,90.7,31.9,Hot / Sun-Exposed,True
+BAT-000045,plums,Anna Späth,North,2024-10-10 10:45:00,8147.7,86.3,15.8,Humid,False
+BAT-000046,plums,Kabardinka,Centre,2024-08-26 11:00:00,9620.2,93.1,31.4,Hot / Sun-Exposed,False
+BAT-000047,plums,Stanley,South,2024-08-16 12:45:00,6780.8,99.0,30.8,Hot / Sun-Exposed,False
+BAT-000048,apples,Gala,North,2024-09-01 07:00:00,10650.3,88.0,20.8,Optimal Dry,False
+BAT-000049,apricots,Nadejda,North,2024-06-25 09:45:00,3498.5,92.1,21.9,Optimal Dry,False
+BAT-000050,apples,Idared,North,2024-08-27 13:45:00,6894.3,88.7,33.4,Hot / Sun-Exposed,False
+BAT-000051,apples,Golden Delicious,North,2024-10-17 14:00:00,11687.2,86.5,10.5,Optimal Dry,False
+BAT-000052,apples,Idared,North,2024-09-26 13:45:00,9447.6,90.8,23.8,Optimal Dry,False
+BAT-000053,plums,President,South,2024-09-14 13:15:00,9460.0,96.1,23.4,Post-Rain,True
+BAT-000054,tomatoes,Bobcat,Centre,2024-09-16 09:30:00,6792.9,87.6,17.8,Post-Rain,True
+BAT-000055,table_grapes,Muscat de Hamburg,South,2024-10-07 06:45:00,5029.7,95.0,12.8,Humid,False
+BAT-000056,tomatoes,Cherry,Centre,2024-09-28 09:45:00,6806.8,94.0,20.1,Optimal Dry,True
+BAT-000057,apples,Granny Smith,North,2024-09-18 09:15:00,8775.0,84.4,16.9,Optimal Dry,True
+BAT-000058,table_grapes,Victoria,Centre,2024-09-05 09:15:00,4113.9,87.6,17.6,Post-Rain,True
+BAT-000059,apples,Granny Smith,North,2024-08-21 13:00:00,13434.3,97.0,33.7,Hot / Sun-Exposed,False
+BAT-000060,apples,Idared,North,2024-08-26 12:00:00,9204.3,94.0,33.1,Hot / Sun-Exposed,True
+BAT-000061,apples,Idared,North,2024-09-09 13:30:00,7729.4,82.6,26.5,Optimal Dry,False
+BAT-000062,table_grapes,Victoria,South,2024-10-24 09:00:00,7322.3,95.1,8.2,Humid,True
+BAT-000063,apples,Idared,North,2024-09-24 13:00:00,8005.7,93.5,25.1,Optimal Dry,False
+BAT-000064,pears,Ksenia,North,2024-09-02 07:15:00,11196.9,90.9,21.8,Optimal Dry,False
+BAT-000065,apples,Golden Delicious,North,2024-08-23 12:30:00,8675.4,94.8,24.5,Optimal Dry,False
+BAT-000066,apples,Gala,North,2024-08-27 06:45:00,8243.7,87.1,21.7,Optimal Dry,False
+BAT-000067,apples,Golden Delicious,North,2024-10-03 12:15:00,9744.1,86.8,18.6,Optimal Dry,True
+BAT-000068,apples,Granny Smith,North,2024-10-17 13:00:00,7953.1,95.9,9.6,Optimal Dry,True
+BAT-000069,apples,Idared,Centre,2024-08-25 14:15:00,14762.2,94.9,32.4,Hot / Sun-Exposed,False
+BAT-000070,apples,Granny Smith,North,2024-09-05 06:00:00,14125.7,95.7,17.8,Optimal Dry,True
+BAT-000071,apples,Idared,North,2024-09-24 13:30:00,7524.2,97.7,25.6,Optimal Dry,True
+BAT-000072,plums,Kabardinka,South,2024-09-23 13:00:00,8473.5,90.0,24.0,Optimal Dry,False
+BAT-000073,plums,Stanley,Centre,2024-08-05 07:45:00,5686.0,92.5,19.4,Optimal Dry,False
+BAT-000074,strawberries,Alba,Centre,2024-05-22 07:30:00,1632.9,85.0,16.5,Optimal Dry,False
+BAT-000075,plums,President,North,2024-09-26 10:15:00,5712.0,97.0,19.3,Optimal Dry,True
+BAT-000076,plums,President,Centre,2024-08-06 07:00:00,3194.8,88.1,18.8,Optimal Dry,True
+BAT-000077,strawberries,Clery,Centre,2024-05-26 10:45:00,2107.7,95.3,23.3,Optimal Dry,True
+BAT-000078,plums,President,Centre,2024-09-30 06:15:00,5028.5,89.5,12.1,Optimal Dry,False
+BAT-000079,apples,Gala,North,2024-08-28 12:30:00,6170.2,93.0,28.9,Hot / Sun-Exposed,False
+BAT-000080,apples,Granny Smith,North,2024-09-17 10:45:00,13936.2,88.2,21.1,Optimal Dry,False
+BAT-000081,apples,Golden Delicious,Centre,2024-10-10 13:00:00,6744.2,93.6,18.6,Optimal Dry,True
+BAT-000082,apples,Golden Delicious,North,2024-09-29 13:00:00,7394.9,94.5,19.0,Optimal Dry,False
+BAT-000083,plums,President,Centre,2024-08-16 07:45:00,3585.6,89.9,21.8,Optimal Dry,False
+BAT-000084,tomatoes,Bobcat,North,2024-07-07 14:45:00,2688.1,91.3,30.7,Hot / Sun-Exposed,False
+BAT-000085,plums,Kabardinka,North,2024-10-04 13:00:00,8954.6,90.6,21.6,Optimal Dry,True
+BAT-000086,tomatoes,Primadonna,Centre,2024-07-15 10:45:00,2808.3,90.4,34.3,Hot / Sun-Exposed,True
+BAT-000087,apricots,Kioto,Centre,2024-07-01 12:30:00,2652.4,89.7,31.4,Hot / Sun-Exposed,False
+BAT-000088,plums,Anna Späth,South,2024-09-05 14:00:00,4925.8,94.8,24.1,Optimal Dry,False
+BAT-000089,apples,Fuji,North,2024-10-02 10:30:00,5198.9,87.9,11.5,Optimal Dry,True
+BAT-000090,pears,Williams,Centre,2024-09-11 09:15:00,3193.5,89.9,19.2,Humid,False
+BAT-000091,plums,Anna Späth,Centre,2024-10-09 10:30:00,7304.7,89.4,15.9,Optimal Dry,False
+BAT-000092,strawberries,Marmolada,Centre,2024-06-19 08:45:00,1855.3,88.1,24.7,Optimal Dry,True
+BAT-000093,tomatoes,Primadonna,South,2024-09-21 11:15:00,5967.8,94.5,19.0,Optimal Dry,True
+BAT-000094,apples,Idared,Centre,2024-09-26 06:45:00,10397.7,91.5,15.7,Humid,True
+BAT-000095,apples,Granny Smith,North,2024-10-16 06:45:00,12480.6,92.8,5.9,Humid,True
+BAT-000096,apples,Golden Delicious,North,2024-09-07 07:45:00,11931.2,90.5,17.8,Optimal Dry,False
+BAT-000097,strawberries,Asia,Centre,2024-06-14 14:30:00,2768.4,81.2,22.2,Optimal Dry,True
+BAT-000098,apricots,Kioto,Centre,2024-07-28 13:00:00,2203.5,95.1,29.9,Hot / Sun-Exposed,True
+BAT-000099,plums,Anna Späth,South,2024-08-25 07:00:00,7184.4,89.3,19.7,Optimal Dry,False
+BAT-000100,apples,Fuji,North,2024-09-28 08:15:00,7646.7,81.1,17.3,Optimal Dry,False
+BAT-000101,apples,Granny Smith,Centre,2024-09-18 11:30:00,11611.5,88.4,21.7,Optimal Dry,False
+BAT-000102,apples,Golden Delicious,North,2024-08-22 06:45:00,11943.0,90.5,20.1,Optimal Dry,True
+BAT-000103,apples,Fuji,North,2024-09-12 10:15:00,11783.6,91.0,20.7,Optimal Dry,False
+BAT-000104,table_grapes,Muscat de Hamburg,South,2024-09-15 08:30:00,3046.2,86.5,14.6,Optimal Dry,True
+BAT-000105,plums,President,Centre,2024-09-28 06:15:00,3850.4,91.9,16.6,Humid,True
+BAT-000106,plums,Stanley,South,2024-09-08 06:45:00,2964.1,83.3,13.4,Optimal Dry,False
+BAT-000107,tomatoes,Cherry,North,2024-08-19 12:00:00,6151.8,90.3,33.2,Hot / Sun-Exposed,False
+BAT-000108,table_grapes,Muscat de Hamburg,South,2024-09-15 13:00:00,4365.2,91.6,17.8,Post-Rain,True
+BAT-000109,plums,Kabardinka,North,2024-08-18 09:45:00,8676.6,93.0,27.6,Optimal Dry,False
+BAT-000110,plums,Kabardinka,Centre,2024-08-11 10:15:00,5555.7,85.1,26.2,Optimal Dry,True
+BAT-000111,pears,Abate Fetel,North,2024-08-16 10:15:00,5365.2,90.6,26.4,Optimal Dry,True
+BAT-000112,apples,Golden Delicious,North,2024-10-12 14:15:00,10542.6,92.4,13.4,Optimal Dry,False
+BAT-000113,pears,Abate Fetel,Centre,2024-09-02 11:00:00,6182.5,88.9,27.0,Optimal Dry,True
+BAT-000114,apples,Idared,North,2024-08-20 14:15:00,4804.7,97.6,34.2,Hot / Sun-Exposed,True
+BAT-000115,pears,Ksenia,North,2024-08-16 14:45:00,11088.0,90.8,33.2,Hot / Sun-Exposed,False
+BAT-000116,table_grapes,Codreanca,Centre,2024-09-18 10:45:00,3455.3,85.8,21.1,Optimal Dry,True
+BAT-000117,apples,Granny Smith,Centre,2024-10-23 06:45:00,12600.5,86.7,4.5,Humid,True
+BAT-000118,strawberries,Asia,Centre,2024-05-25 10:45:00,2442.3,90.9,23.1,Optimal Dry,False
+BAT-000119,apricots,Nadejda,North,2024-07-11 08:30:00,3490.9,88.5,26.1,Optimal Dry,False
+BAT-000120,apples,Golden Delicious,Centre,2024-10-07 12:30:00,6616.8,99.0,14.3,Optimal Dry,False
+BAT-000121,table_grapes,Muscat de Hamburg,South,2024-09-19 08:15:00,7262.2,97.9,14.1,Optimal Dry,False
+BAT-000122,table_grapes,Codreanca,Centre,2024-10-15 13:45:00,4366.0,99.0,14.0,Optimal Dry,False
+BAT-000123,table_grapes,Moldova,South,2024-10-14 14:45:00,3016.5,86.2,17.3,Optimal Dry,False
+BAT-000124,strawberries,Clery,Centre,2024-06-06 08:45:00,1515.9,89.0,22.4,Optimal Dry,True
+BAT-000125,table_grapes,Moldova,South,2024-10-18 13:45:00,3262.7,86.3,11.6,Optimal Dry,False
+BAT-000126,plums,Anna Späth,Centre,2024-08-21 14:15:00,4228.0,87.5,34.3,Hot / Sun-Exposed,False
+BAT-000127,apples,Idared,North,2024-09-12 13:45:00,6093.2,93.5,20.1,Post-Rain,True
+BAT-000128,apples,Golden Delicious,North,2024-08-27 14:45:00,8183.5,99.0,33.7,Hot / Sun-Exposed,False
+BAT-000129,plums,Anna Späth,North,2024-08-05 10:15:00,5260.5,96.1,22.8,Optimal Dry,True
+BAT-000130,table_grapes,Victoria,Centre,2024-09-09 14:15:00,4836.2,89.6,25.5,Optimal Dry,True
+BAT-000131,raspberries,Novokitaevskaya,North,2024-07-20 11:00:00,1567.5,88.5,27.3,Optimal Dry,False
+BAT-000132,table_grapes,Moldova,Centre,2024-09-28 13:00:00,3655.8,97.5,24.2,Optimal Dry,False
+BAT-000133,plums,President,North,2024-09-15 07:45:00,9301.2,91.0,15.7,Humid,True
+BAT-000134,tomatoes,Rio Grande,South,2024-07-09 10:00:00,3013.6,89.9,28.6,Hot / Sun-Exposed,True
+BAT-000135,apples,Golden Delicious,North,2024-09-21 12:30:00,11541.6,90.6,21.2,Optimal Dry,False
+BAT-000136,plums,President,South,2024-09-04 13:45:00,7997.1,92.3,23.9,Optimal Dry,True
+BAT-000137,table_grapes,Victoria,Centre,2024-10-02 11:45:00,3330.3,95.9,16.3,Optimal Dry,False
+BAT-000138,raspberries,Novokitaevskaya,North,2024-07-30 07:15:00,2271.0,93.9,17.6,Optimal Dry,False
+BAT-000139,apples,Fuji,North,2024-09-12 11:30:00,5747.1,84.0,23.1,Optimal Dry,True
+BAT-000140,plums,Kabardinka,South,2024-08-09 06:45:00,8062.2,87.8,20.1,Optimal Dry,True
+BAT-000141,apples,Fuji,North,2024-10-08 09:30:00,10154.9,89.3,13.3,Optimal Dry,True
+BAT-000142,plums,Kabardinka,North,2024-10-09 13:00:00,5199.9,94.3,19.5,Optimal Dry,False
+BAT-000143,plums,Stanley,Centre,2024-10-09 12:30:00,7255.0,88.7,19.2,Optimal Dry,False
+BAT-000144,apricots,Kioto,Centre,2024-07-26 14:45:00,4385.6,84.9,20.7,Optimal Dry,True
+BAT-000145,tomatoes,Primadonna,Centre,2024-09-25 14:00:00,5735.4,94.3,23.7,Optimal Dry,True
+BAT-000146,plums,Anna Späth,North,2024-09-06 11:45:00,6213.0,88.8,26.4,Optimal Dry,False
+BAT-000147,apples,Golden Delicious,North,2024-09-08 14:00:00,5011.9,93.5,25.5,Optimal Dry,False
+BAT-000148,apples,Jonagold,North,2024-09-09 10:30:00,9710.1,89.2,20.9,Optimal Dry,False
+BAT-000149,apples,Gala,North,2024-09-14 07:00:00,4718.2,91.5,18.8,Post-Rain,True
+BAT-000150,tomatoes,Cherry,North,2024-07-10 12:45:00,3415.2,87.3,33.0,Hot / Sun-Exposed,True
+BAT-000151,plums,Stanley,Centre,2024-10-08 14:00:00,6719.8,92.9,19.7,Optimal Dry,False
+BAT-000152,apples,Fuji,North,2024-09-24 06:30:00,4051.0,89.4,12.1,Humid,False
+BAT-000153,pears,Ksenia,South,2024-09-25 14:15:00,8701.1,86.5,23.8,Optimal Dry,True
+BAT-000154,apples,Fuji,North,2024-10-11 13:45:00,6630.9,90.5,24.1,Optimal Dry,False
+BAT-000155,pears,Ksenia,South,2024-09-28 10:15:00,3884.3,85.5,20.8,Optimal Dry,False
+BAT-000156,apples,Golden Delicious,North,2024-10-20 12:00:00,12101.7,85.4,8.2,Optimal Dry,False
+BAT-000157,tomatoes,Bobcat,Centre,2024-07-03 12:15:00,6969.9,99.0,27.3,Optimal Dry,True
+BAT-000158,apples,Granny Smith,North,2024-10-01 11:15:00,11683.9,78.8,10.3,Humid,False
+BAT-000159,table_grapes,Muscat de Hamburg,South,2024-09-09 11:15:00,6251.6,83.8,22.2,Optimal Dry,True
+BAT-000160,plums,President,South,2024-08-25 09:15:00,7321.0,96.6,23.9,Optimal Dry,False
+BAT-000161,apples,Idared,North,2024-09-16 11:30:00,14687.1,95.5,19.3,Optimal Dry,False
+BAT-000162,plums,Anna Späth,Centre,2024-08-07 12:00:00,4506.0,95.9,25.4,Optimal Dry,True
+BAT-000163,plums,Kabardinka,Centre,2024-09-30 06:45:00,4709.7,89.9,11.7,Optimal Dry,False
+BAT-000164,table_grapes,Codreanca,South,2024-09-20 11:15:00,5865.4,82.4,17.2,Optimal Dry,True
+BAT-000165,plums,Kabardinka,North,2024-10-07 09:30:00,9754.3,89.9,12.5,Optimal Dry,True
+BAT-000166,table_grapes,Muscat de Hamburg,Centre,2024-10-03 09:45:00,7558.1,92.8,15.4,Optimal Dry,False
+BAT-000167,apples,Jonagold,North,2024-08-25 11:15:00,9483.7,85.6,27.9,Optimal Dry,True
+BAT-000168,table_grapes,Victoria,South,2024-10-20 13:30:00,7426.6,92.5,10.0,Optimal Dry,False
+BAT-000169,table_grapes,Victoria,South,2024-09-10 14:15:00,5532.4,99.0,25.1,Optimal Dry,False
+BAT-000170,apples,Granny Smith,North,2024-10-10 13:45:00,8965.6,82.5,19.4,Optimal Dry,False
+BAT-000171,apples,Granny Smith,North,2024-10-19 14:15:00,14893.1,91.7,10.6,Optimal Dry,False
+BAT-000172,table_grapes,Victoria,Centre,2024-09-24 08:00:00,5925.4,98.0,14.3,Optimal Dry,False
+BAT-000173,apples,Granny Smith,Centre,2024-10-24 08:30:00,6628.5,93.8,6.0,Humid,True
+BAT-000174,apples,Idared,Centre,2024-10-20 08:15:00,5202.9,92.1,1.8,Humid,False
+BAT-000175,pears,Williams,South,2024-08-16 11:30:00,6297.8,90.1,29.7,Hot / Sun-Exposed,True
+BAT-000176,strawberries,Marmolada,Centre,2024-05-31 14:15:00,1092.8,85.7,26.4,Optimal Dry,True
+BAT-000177,plums,Kabardinka,Centre,2024-08-25 08:45:00,5784.2,91.8,24.1,Optimal Dry,False
+BAT-000178,pears,Conference,Centre,2024-09-04 08:15:00,10410.3,88.0,19.3,Optimal Dry,True
+BAT-000179,apples,Idared,Centre,2024-09-27 09:30:00,9123.6,99.0,20.7,Optimal Dry,True
+BAT-000180,tomatoes,Cherry,Centre,2024-07-02 11:00:00,5429.7,86.2,31.0,Hot / Sun-Exposed,True
+BAT-000181,plums,President,South,2024-08-10 09:15:00,5009.1,84.4,23.5,Optimal Dry,True
+BAT-000182,plums,Kabardinka,Centre,2024-10-06 06:45:00,9543.5,92.8,17.8,Humid,False
+BAT-000183,apples,Idared,North,2024-09-18 11:00:00,13296.4,89.0,20.2,Optimal Dry,False
+BAT-000184,plums,Kabardinka,Centre,2024-09-01 12:45:00,4838.5,86.5,30.1,Hot / Sun-Exposed,True
+BAT-000185,strawberries,Clery,Centre,2024-06-24 08:00:00,1482.7,85.1,22.2,Optimal Dry,True
+BAT-000186,plums,Anna Späth,North,2024-08-12 10:30:00,7174.7,97.3,23.0,Optimal Dry,False
+BAT-000187,strawberries,Clery,North,2024-06-21 07:15:00,1632.0,88.1,16.0,Optimal Dry,False
+BAT-000188,apples,Fuji,North,2024-09-11 11:00:00,13228.4,99.0,24.1,Optimal Dry,True
+BAT-000189,plums,Anna Späth,Centre,2024-09-29 11:45:00,8789.6,85.2,19.6,Optimal Dry,False
+BAT-000190,table_grapes,Codreanca,South,2024-10-25 07:30:00,6413.8,94.6,3.7,Humid,False
+BAT-000191,apples,Granny Smith,North,2024-08-28 07:45:00,5999.7,90.6,22.9,Optimal Dry,True
+BAT-000192,apples,Granny Smith,North,2024-10-18 07:45:00,12997.2,84.6,1.1,Humid,False
+BAT-000193,apples,Jonagold,North,2024-09-19 11:15:00,5090.9,90.9,17.9,Optimal Dry,False
+BAT-000194,apples,Jonagold,North,2024-09-09 07:15:00,8132.9,95.5,12.5,Optimal Dry,True
+BAT-000195,tomatoes,Primadonna,South,2024-09-07 14:45:00,2009.1,87.8,25.5,Optimal Dry,True
+BAT-000196,apples,Jonagold,North,2024-08-25 07:15:00,12030.2,90.1,18.3,Optimal Dry,False
+BAT-000197,plums,Kabardinka,North,2024-09-19 07:15:00,9780.1,97.9,13.2,Optimal Dry,False
+BAT-000198,pears,Conference,North,2024-09-04 08:45:00,9080.6,85.8,20.7,Optimal Dry,True
+BAT-000199,apples,Granny Smith,North,2024-10-01 07:45:00,6658.1,86.9,9.2,Post-Rain,False
+BAT-000200,table_grapes,Codreanca,South,2024-09-22 14:15:00,5498.8,99.0,23.5,Optimal Dry,True
+BAT-000201,apples,Granny Smith,North,2024-08-30 07:00:00,14121.3,83.4,21.5,Optimal Dry,False
+BAT-000202,tomatoes,Bobcat,Centre,2024-09-17 08:15:00,6977.4,92.0,18.4,Optimal Dry,False
+BAT-000203,table_grapes,Victoria,Centre,2024-09-03 13:45:00,7670.6,92.8,29.6,Hot / Sun-Exposed,True
+BAT-000204,plums,Anna Späth,South,2024-08-29 10:30:00,3238.3,89.4,22.7,Optimal Dry,False
+BAT-000205,apples,Idared,North,2024-09-18 06:00:00,11882.0,93.0,15.6,Optimal Dry,False
+BAT-000206,apples,Fuji,North,2024-08-20 14:15:00,9074.4,87.0,34.2,Hot / Sun-Exposed,True
+BAT-000207,apples,Granny Smith,North,2024-09-04 14:45:00,13306.3,90.0,22.6,Optimal Dry,True
+BAT-000208,tomatoes,Cherry,North,2024-08-28 13:15:00,6041.9,96.2,29.6,Hot / Sun-Exposed,False
+BAT-000209,plums,Stanley,North,2024-09-20 11:30:00,7928.8,92.2,19.4,Optimal Dry,False
+BAT-000210,apples,Granny Smith,North,2024-09-12 12:00:00,13198.1,95.9,23.1,Optimal Dry,False
+BAT-000211,apples,Granny Smith,North,2024-10-14 13:45:00,12164.8,94.6,15.4,Optimal Dry,True
+BAT-000212,table_grapes,Muscat de Hamburg,South,2024-10-18 13:15:00,7134.5,83.1,11.1,Optimal Dry,True
+BAT-000213,apples,Gala,North,2024-10-21 12:30:00,14039.7,96.5,11.2,Optimal Dry,False
+BAT-000214,plums,Kabardinka,North,2024-10-05 09:15:00,5315.7,82.9,16.7,Humid,False
+BAT-000215,apples,Granny Smith,Centre,2024-10-15 06:30:00,9510.6,92.0,5.5,Humid,True
+BAT-000216,table_grapes,Codreanca,Centre,2024-10-05 06:30:00,7437.6,94.0,16.5,Humid,False
+BAT-000217,tomatoes,Primadonna,Centre,2024-09-14 12:45:00,3328.9,86.5,25.2,Optimal Dry,False
+BAT-000218,apples,Fuji,North,2024-10-11 12:45:00,14401.7,82.0,23.1,Optimal Dry,False
+BAT-000219,table_grapes,Muscat de Hamburg,Centre,2024-10-22 14:15:00,7365.8,85.5,17.0,Optimal Dry,True
+BAT-000220,apples,Jonagold,North,2024-08-26 06:30:00,13175.7,91.2,22.2,Optimal Dry,False
+BAT-000221,pears,Ksenia,North,2024-08-21 09:00:00,10887.3,89.0,25.3,Optimal Dry,False
+BAT-000222,table_grapes,Victoria,South,2024-09-03 07:15:00,6545.3,95.7,20.5,Optimal Dry,False
+BAT-000223,table_grapes,Moldova,Centre,2024-10-01 07:45:00,3017.8,91.9,10.6,Humid,False
+BAT-000224,table_grapes,Moldova,South,2024-09-17 14:00:00,5653.5,90.9,21.4,Optimal Dry,True
+BAT-000225,table_grapes,Muscat de Hamburg,Centre,2024-10-11 14:15:00,5258.2,87.7,24.5,Optimal Dry,False
+BAT-000226,tomatoes,Rio Grande,North,2024-08-08 09:15:00,5614.2,91.1,22.7,Optimal Dry,True
+BAT-000227,tomatoes,Primadonna,North,2024-08-21 08:00:00,4279.8,85.6,22.0,Optimal Dry,True
+BAT-000228,plums,Anna Späth,Centre,2024-09-24 14:30:00,6892.5,85.6,25.5,Optimal Dry,True
+BAT-000229,plums,President,Centre,2024-09-16 10:00:00,9860.0,90.7,17.8,Post-Rain,False
+BAT-000230,apples,Fuji,Centre,2024-08-30 08:30:00,4638.0,95.0,23.0,Optimal Dry,False
+BAT-000231,plums,Anna Späth,Centre,2024-09-15 14:00:00,5393.1,89.3,18.1,Post-Rain,False
+BAT-000232,table_grapes,Codreanca,South,2024-10-01 14:45:00,3122.5,91.3,14.0,Optimal Dry,True
+BAT-000233,apples,Idared,North,2024-08-28 06:15:00,14284.6,93.2,20.7,Optimal Dry,False
+BAT-000234,apricots,Nadejda,North,2024-06-24 09:15:00,4518.2,90.3,22.6,Optimal Dry,False
+BAT-000235,pears,Conference,South,2024-09-08 10:45:00,3943.9,94.3,21.9,Optimal Dry,False
+BAT-000236,apples,Jonagold,North,2024-08-29 14:30:00,4244.2,99.0,29.5,Hot / Sun-Exposed,False
+BAT-000237,raspberries,Novokitaevskaya,North,2024-06-20 07:30:00,1566.9,87.0,24.7,Optimal Dry,False
+BAT-000238,apples,Idared,North,2024-09-28 07:15:00,11926.5,88.0,16.7,Optimal Dry,False
+BAT-000239,plums,Kabardinka,South,2024-09-10 12:30:00,5968.1,86.5,23.2,Optimal Dry,False
+BAT-000240,apples,Gala,North,2024-08-25 10:30:00,12934.3,93.4,25.6,Optimal Dry,True
+BAT-000241,plums,Anna Späth,Centre,2024-09-10 13:00:00,9403.6,92.7,25.3,Optimal Dry,True
+BAT-000242,apples,Jonagold,North,2024-09-15 14:15:00,4087.2,88.5,17.2,Optimal Dry,False
+BAT-000243,apples,Fuji,North,2024-08-26 11:15:00,10558.5,88.9,31.3,Hot / Sun-Exposed,True
+BAT-000244,table_grapes,Moldova,South,2024-10-04 13:00:00,5328.7,98.4,23.0,Optimal Dry,True
+BAT-000245,apples,Idared,North,2024-09-11 08:15:00,11639.0,81.2,19.5,Optimal Dry,False
+BAT-000246,tomatoes,Primadonna,Centre,2024-07-07 07:15:00,2187.7,91.1,19.4,Optimal Dry,False
+BAT-000247,apples,Idared,North,2024-09-19 10:00:00,14462.8,88.7,16.3,Optimal Dry,False
+BAT-000248,table_grapes,Codreanca,South,2024-09-11 07:30:00,6613.1,95.3,18.8,Humid,True
+BAT-000249,table_grapes,Muscat de Hamburg,Centre,2024-10-20 10:30:00,5975.5,95.0,5.9,Optimal Dry,False
+BAT-000250,apples,Gala,North,2024-08-28 09:45:00,9896.8,85.1,25.7,Optimal Dry,True
+BAT-000251,plums,Stanley,North,2024-10-05 11:00:00,4044.3,87.4,18.4,Humid,False
+BAT-000252,apples,Fuji,Centre,2024-09-29 07:45:00,6591.2,87.8,16.7,Humid,True
+BAT-000253,apples,Golden Delicious,North,2024-08-31 13:45:00,7015.8,97.3,31.9,Hot / Sun-Exposed,False
+BAT-000254,pears,Ksenia,North,2024-10-13 09:00:00,3424.5,99.0,7.2,Humid,False
+BAT-000255,plums,Kabardinka,South,2024-08-12 14:30:00,9451.5,90.5,29.8,Hot / Sun-Exposed,True
+BAT-000256,apples,Fuji,North,2024-09-12 11:30:00,6877.4,95.1,23.1,Optimal Dry,True
+BAT-000257,table_grapes,Codreanca,South,2024-09-25 07:45:00,6658.6,92.1,14.8,Humid,False
+BAT-000258,apples,Golden Delicious,North,2024-10-09 14:30:00,14898.7,87.4,20.4,Optimal Dry,False
+BAT-000259,table_grapes,Victoria,South,2024-10-06 08:45:00,7411.8,95.9,18.5,Humid,True
+BAT-000260,table_grapes,Moldova,South,2024-09-05 10:15:00,3935.3,86.6,22.0,Optimal Dry,True
+BAT-000261,apples,Gala,North,2024-09-21 06:00:00,12625.6,94.7,11.5,Optimal Dry,True
+BAT-000262,tomatoes,Bobcat,South,2024-10-01 07:15:00,3835.5,88.8,8.6,Humid,True
+BAT-000263,plums,President,Centre,2024-08-06 08:45:00,7070.3,96.6,20.7,Optimal Dry,False
+BAT-000264,plums,Anna Späth,Centre,2024-08-03 06:45:00,2859.1,93.7,22.3,Optimal Dry,False
+BAT-000265,apples,Idared,Centre,2024-10-09 11:00:00,9213.8,90.9,17.4,Optimal Dry,False
+BAT-000266,table_grapes,Moldova,Centre,2024-09-20 09:15:00,3297.9,94.6,13.8,Optimal Dry,True
+BAT-000267,pears,Conference,Centre,2024-09-06 14:30:00,5739.1,91.4,26.5,Optimal Dry,False
+BAT-000268,apples,Idared,North,2024-09-17 14:15:00,10453.7,92.9,23.2,Optimal Dry,True
+BAT-000269,apples,Fuji,North,2024-10-04 11:30:00,8300.2,88.3,20.7,Optimal Dry,True
+BAT-000270,tomatoes,Cherry,South,2024-10-04 07:15:00,3566.1,90.1,14.9,Humid,True
+BAT-000271,strawberries,Marmolada,Centre,2024-06-24 11:30:00,1976.1,89.6,22.7,Optimal Dry,False
+BAT-000272,apricots,Krasnoshchoky,North,2024-07-15 13:00:00,5824.2,90.5,36.5,Hot / Sun-Exposed,False
+BAT-000273,apples,Jonagold,North,2024-08-25 13:45:00,7878.9,85.5,32.4,Hot / Sun-Exposed,False
+BAT-000274,apples,Gala,North,2024-08-20 09:45:00,11793.8,93.4,29.2,Hot / Sun-Exposed,False
+BAT-000275,table_grapes,Moldova,South,2024-09-04 06:00:00,3095.2,89.8,18.5,Optimal Dry,True
+BAT-000276,apples,Granny Smith,North,2024-08-28 11:00:00,9246.7,92.3,27.4,Optimal Dry,True
+BAT-000277,tomatoes,Rio Grande,Centre,2024-07-06 10:00:00,2548.0,96.7,24.5,Optimal Dry,False
+BAT-000278,tomatoes,Rio Grande,South,2024-08-21 07:45:00,3785.5,87.0,22.5,Optimal Dry,False
+BAT-000279,apples,Gala,North,2024-09-24 10:30:00,13516.6,91.1,20.5,Optimal Dry,False
+BAT-000280,tomatoes,Cherry,North,2024-07-31 14:15:00,2073.6,95.3,26.5,Optimal Dry,False
+BAT-000281,apples,Fuji,Centre,2024-09-20 11:00:00,12717.6,90.4,17.9,Optimal Dry,False
+BAT-000282,apples,Golden Delicious,North,2024-09-06 10:15:00,8425.5,90.8,23.2,Optimal Dry,False
+BAT-000283,apples,Jonagold,North,2024-09-22 06:15:00,14604.2,92.0,11.3,Humid,False
+BAT-000284,table_grapes,Victoria,Centre,2024-09-12 13:30:00,3336.8,93.3,25.1,Optimal Dry,True
+BAT-000285,apples,Golden Delicious,North,2024-10-24 10:45:00,4097.7,89.1,9.9,Optimal Dry,True
+BAT-000286,tomatoes,Rio Grande,South,2024-09-13 06:15:00,3931.9,90.2,17.1,Humid,True
+BAT-000287,tomatoes,Cherry,Centre,2024-10-09 08:45:00,6516.8,88.3,13.8,Humid,False
+BAT-000288,table_grapes,Moldova,North,2024-09-05 09:00:00,6753.2,99.0,22.5,Optimal Dry,False
+BAT-000289,pears,Ksenia,South,2024-10-09 06:00:00,7193.8,89.3,12.9,Humid,True
+BAT-000290,table_grapes,Muscat de Hamburg,Centre,2024-09-29 13:00:00,3218.3,92.8,20.2,Optimal Dry,False
+BAT-000291,plums,Anna Späth,Centre,2024-09-12 10:30:00,7002.0,86.1,20.8,Optimal Dry,True
+BAT-000292,apples,Golden Delicious,North,2024-09-17 09:00:00,4109.8,91.7,18.2,Optimal Dry,True
+BAT-000293,pears,Williams,South,2024-09-22 12:45:00,11588.4,87.3,22.8,Optimal Dry,False
+BAT-000294,table_grapes,Victoria,South,2024-09-29 10:30:00,6229.5,88.8,18.7,Humid,True
+BAT-000295,apples,Gala,North,2024-10-01 11:15:00,9484.1,88.8,10.3,Humid,False
+BAT-000296,apples,Fuji,North,2024-09-11 07:00:00,12389.7,95.3,17.7,Humid,False
+BAT-000297,apples,Fuji,North,2024-09-20 06:00:00,12668.4,91.1,9.7,Optimal Dry,True
+BAT-000298,tomatoes,Primadonna,South,2024-08-04 08:30:00,5824.4,90.9,21.1,Optimal Dry,True
+BAT-000299,tomatoes,Cherry,South,2024-09-29 09:00:00,5111.9,92.4,17.7,Humid,False
+BAT-000300,table_grapes,Codreanca,South,2024-09-07 14:30:00,7957.9,89.9,25.3,Optimal Dry,True
+BAT-000301,apples,Fuji,North,2024-09-04 06:00:00,5076.3,94.9,19.9,Optimal Dry,True
+BAT-000302,raspberries,Novokitaevskaya,North,2024-08-11 10:00:00,2458.7,91.6,25.3,Optimal Dry,True
+BAT-000303,tomatoes,Primadonna,North,2024-07-03 14:15:00,4438.7,94.2,22.8,Optimal Dry,True
+BAT-000304,apples,Gala,North,2024-09-13 08:15:00,4459.2,82.5,17.1,Humid,True
+BAT-000305,table_grapes,Moldova,South,2024-09-23 08:30:00,3313.6,90.6,14.3,Optimal Dry,False
+BAT-000306,plums,Anna Späth,South,2024-08-29 13:30:00,7330.3,93.0,27.3,Optimal Dry,False
+BAT-000307,apples,Idared,North,2024-09-15 14:45:00,6566.1,89.9,16.4,Post-Rain,True
+BAT-000308,apples,Fuji,North,2024-10-24 13:15:00,8822.2,93.8,12.5,Optimal Dry,True
+BAT-000309,apples,Idared,Centre,2024-09-04 09:00:00,4531.0,91.3,20.7,Optimal Dry,False
+BAT-000310,table_grapes,Codreanca,South,2024-10-17 10:00:00,6118.2,81.8,7.3,Optimal Dry,True
+BAT-000311,apples,Fuji,North,2024-09-09 11:30:00,5890.1,89.6,25.2,Optimal Dry,True
+BAT-000312,apples,Jonagold,North,2024-10-05 10:00:00,14910.0,86.1,17.7,Humid,True
+BAT-000313,tomatoes,Rio Grande,South,2024-07-21 08:30:00,5188.7,95.0,24.2,Optimal Dry,False
+BAT-000314,plums,President,South,2024-08-13 07:00:00,2504.2,85.4,20.8,Optimal Dry,True
+BAT-000315,apples,Fuji,Centre,2024-09-29 10:45:00,9065.3,92.3,18.8,Optimal Dry,False
+BAT-000316,apples,Idared,South,2024-09-12 14:00:00,6102.2,91.6,24.1,Optimal Dry,True
+BAT-000317,plums,Stanley,Centre,2024-08-16 14:15:00,8366.9,92.1,32.0,Hot / Sun-Exposed,False
+BAT-000318,tomatoes,Primadonna,North,2024-09-09 06:30:00,2602.3,93.0,12.0,Optimal Dry,True
+BAT-000319,apples,Idared,North,2024-09-19 06:15:00,5511.0,83.5,13.3,Post-Rain,False
+BAT-000320,table_grapes,Codreanca,Centre,2024-10-05 09:45:00,6457.8,92.6,18.0,Humid,True
+BAT-000321,plums,President,Centre,2024-10-06 12:30:00,3205.8,92.2,19.2,Optimal Dry,True
+BAT-000322,plums,Stanley,South,2024-09-09 07:00:00,6302.1,88.7,12.4,Optimal Dry,False
+BAT-000323,apples,Fuji,Centre,2024-08-30 07:30:00,6430.7,90.1,23.0,Optimal Dry,True
+BAT-000324,plums,Stanley,Centre,2024-09-07 11:45:00,6874.1,96.7,24.1,Optimal Dry,False
+BAT-000325,apples,Idared,North,2024-08-22 14:30:00,9783.3,92.0,28.8,Hot / Sun-Exposed,True
+BAT-000326,apples,Gala,Centre,2024-09-24 13:45:00,11343.3,90.3,25.5,Optimal Dry,False
+BAT-000327,tomatoes,Bobcat,Centre,2024-09-11 08:15:00,5070.0,91.3,17.5,Humid,False
+BAT-000328,tomatoes,Cherry,Centre,2024-07-11 06:15:00,2729.2,99.0,23.0,Optimal Dry,True
+BAT-000329,table_grapes,Victoria,South,2024-10-22 07:30:00,5697.9,89.2,2.1,Humid,True
+BAT-000330,plums,Anna Späth,North,2024-10-09 06:15:00,6897.9,92.3,10.9,Humid,False
+BAT-000331,tomatoes,Primadonna,South,2024-09-02 09:00:00,4204.2,91.3,22.8,Optimal Dry,True
+BAT-000332,plums,Stanley,Centre,2024-08-13 08:30:00,5880.2,89.2,21.1,Optimal Dry,True
+BAT-000333,tomatoes,Cherry,Centre,2024-07-08 10:00:00,2665.6,93.7,27.6,Optimal Dry,False
+BAT-000334,apples,Idared,North,2024-10-08 08:15:00,5264.1,87.4,8.5,Humid,False
+BAT-000335,apples,Gala,North,2024-08-26 12:00:00,8538.3,94.6,33.1,Hot / Sun-Exposed,False
+BAT-000336,plums,Anna Späth,Centre,2024-10-03 09:00:00,6522.2,92.9,13.0,Optimal Dry,False
+BAT-000337,plums,Stanley,Centre,2024-08-20 14:45:00,8754.5,92.3,33.9,Hot / Sun-Exposed,True
+BAT-000338,apples,Golden Delicious,North,2024-10-03 10:00:00,5561.7,94.5,15.1,Optimal Dry,True
+BAT-000339,plums,Stanley,South,2024-09-04 11:30:00,2579.2,95.8,25.3,Optimal Dry,True
+BAT-000340,plums,Kabardinka,South,2024-09-23 12:15:00,5635.3,90.3,22.5,Optimal Dry,True
+BAT-000341,plums,Kabardinka,Centre,2024-08-06 11:15:00,6691.6,84.3,19.8,Optimal Dry,False
+BAT-000342,apples,Fuji,North,2024-10-06 11:45:00,14759.9,94.1,17.7,Optimal Dry,False
+BAT-000343,plums,Kabardinka,Centre,2024-08-09 10:45:00,3278.8,88.3,29.3,Hot / Sun-Exposed,True
+BAT-000344,table_grapes,Muscat de Hamburg,South,2024-09-08 14:15:00,4068.1,92.1,25.0,Optimal Dry,False
+BAT-000345,apples,Idared,North,2024-09-09 11:30:00,12576.0,89.0,25.2,Optimal Dry,False
+BAT-000346,pears,Ksenia,Centre,2024-10-15 11:00:00,5222.1,97.6,12.2,Optimal Dry,False
+BAT-000347,plums,President,Centre,2024-09-22 08:45:00,8137.9,96.5,15.7,Optimal Dry,True
+BAT-000348,tomatoes,Primadonna,Centre,2024-08-08 11:00:00,5152.9,90.2,27.0,Optimal Dry,False
+BAT-000349,pears,Conference,Centre,2024-08-27 06:15:00,3195.8,90.0,24.7,Optimal Dry,True
+BAT-000350,plums,Kabardinka,North,2024-08-08 10:30:00,3297.9,98.6,24.8,Optimal Dry,False
+BAT-000351,table_grapes,Moldova,South,2024-10-12 09:30:00,3123.5,84.1,14.4,Optimal Dry,False
+BAT-000352,strawberries,Asia,North,2024-05-29 14:00:00,1321.7,98.4,18.1,Post-Rain,True
+BAT-000353,apples,Jonagold,North,2024-09-20 14:00:00,10276.7,89.8,21.6,Optimal Dry,False
+BAT-000354,apples,Jonagold,North,2024-09-28 11:00:00,13100.6,85.5,22.0,Optimal Dry,False
+BAT-000355,table_grapes,Muscat de Hamburg,Centre,2024-09-21 13:30:00,5115.8,88.5,23.1,Optimal Dry,False
+BAT-000356,table_grapes,Muscat de Hamburg,South,2024-10-01 12:45:00,5911.1,84.0,10.8,Optimal Dry,True
+BAT-000357,pears,Williams,Centre,2024-09-17 12:00:00,6835.0,94.3,22.5,Optimal Dry,False
+BAT-000358,tomatoes,Primadonna,Centre,2024-09-16 07:00:00,5124.7,90.0,16.9,Optimal Dry,False
+BAT-000359,table_grapes,Codreanca,Centre,2024-09-03 08:45:00,4248.6,87.2,23.1,Optimal Dry,True
+BAT-000360,tomatoes,Cherry,North,2024-08-21 11:45:00,4169.7,94.5,32.4,Hot / Sun-Exposed,False
+BAT-000361,plums,Kabardinka,South,2024-09-21 13:30:00,5508.8,87.4,23.5,Optimal Dry,False
+BAT-000362,apples,Jonagold,North,2024-10-22 14:00:00,11294.8,82.5,17.1,Optimal Dry,True
+BAT-000363,table_grapes,Muscat de Hamburg,South,2024-09-24 07:00:00,3042.2,90.1,13.1,Humid,False
+BAT-000364,plums,President,South,2024-08-03 14:00:00,5740.4,92.9,33.6,Hot / Sun-Exposed,False
+BAT-000365,table_grapes,Codreanca,South,2024-09-19 13:15:00,5000.7,95.1,18.2,Optimal Dry,False
+BAT-000366,apples,Golden Delicious,South,2024-10-14 14:45:00,14664.7,86.3,17.3,Optimal Dry,True
+BAT-000367,tomatoes,Primadonna,North,2024-09-10 07:45:00,6216.0,84.1,17.4,Optimal Dry,True
+BAT-000368,strawberries,Clery,Centre,2024-05-20 08:00:00,2366.8,89.4,13.6,Optimal Dry,False
+BAT-000369,table_grapes,Muscat de Hamburg,South,2024-10-18 10:45:00,4713.2,95.2,8.8,Optimal Dry,False
+BAT-000370,apples,Golden Delicious,North,2024-08-23 06:00:00,12245.8,99.0,16.9,Optimal Dry,True
+BAT-000371,table_grapes,Codreanca,South,2024-10-04 14:30:00,6384.7,89.9,23.3,Optimal Dry,False
+BAT-000372,raspberries,Novokitaevskaya,North,2024-08-14 08:45:00,1311.7,87.3,20.5,Optimal Dry,False
+BAT-000373,raspberries,Novokitaevskaya,Centre,2024-06-30 06:30:00,1206.4,94.4,19.2,Optimal Dry,True
+BAT-000374,tomatoes,Rio Grande,North,2024-07-30 07:15:00,2759.8,99.0,17.6,Optimal Dry,False
+BAT-000375,plums,Anna Späth,North,2024-09-20 06:00:00,8010.4,92.9,9.7,Optimal Dry,False
+BAT-000376,tomatoes,Primadonna,South,2024-08-16 07:00:00,5200.8,90.8,20.7,Optimal Dry,True
+BAT-000377,table_grapes,Codreanca,South,2024-09-06 12:15:00,5328.7,91.3,20.1,Post-Rain,True
+BAT-000378,apples,Idared,North,2024-09-08 06:15:00,14481.2,86.8,12.6,Optimal Dry,True
+BAT-000379,apples,Golden Delicious,North,2024-10-23 13:00:00,10567.9,87.5,15.6,Optimal Dry,False
+BAT-000380,apples,Gala,North,2024-10-16 11:30:00,7968.7,95.7,10.0,Optimal Dry,True
+BAT-000381,plums,Kabardinka,South,2024-09-03 12:00:00,6828.7,90.5,29.8,Hot / Sun-Exposed,False
+BAT-000382,table_grapes,Moldova,Centre,2024-10-08 14:45:00,6361.6,91.3,20.0,Optimal Dry,False
+BAT-000383,pears,Williams,South,2024-10-05 06:30:00,9142.3,90.3,15.4,Humid,False
+BAT-000384,apples,Jonagold,North,2024-09-27 09:45:00,12322.2,87.9,21.5,Optimal Dry,False
+BAT-000385,table_grapes,Codreanca,Centre,2024-10-09 09:30:00,3082.4,99.0,15.9,Optimal Dry,False
+BAT-000386,apples,Golden Delicious,North,2024-10-21 07:30:00,10401.5,88.8,0.1,Humid,False
+BAT-000387,apples,Golden Delicious,North,2024-09-22 08:00:00,11006.6,93.8,12.3,Optimal Dry,False
+BAT-000388,tomatoes,Cherry,Centre,2024-07-01 08:00:00,2494.6,93.3,23.6,Optimal Dry,False
+BAT-000389,apples,Idared,North,2024-08-28 12:00:00,13913.1,97.3,28.9,Hot / Sun-Exposed,False
+BAT-000390,table_grapes,Codreanca,South,2024-09-05 08:30:00,3442.5,91.4,18.8,Optimal Dry,False
+BAT-000391,table_grapes,Moldova,South,2024-09-09 11:45:00,5902.2,86.4,23.7,Optimal Dry,True
+BAT-000392,table_grapes,Moldova,Centre,2024-09-17 09:15:00,6317.1,88.6,18.7,Optimal Dry,False
+BAT-000393,apples,Fuji,North,2024-10-04 07:30:00,12072.1,86.7,14.4,Humid,False
+BAT-000394,apples,Golden Delicious,North,2024-10-02 12:30:00,6926.7,88.5,14.9,Optimal Dry,False
+BAT-000395,plums,Kabardinka,Centre,2024-09-19 08:45:00,5240.3,95.0,15.2,Optimal Dry,True
+BAT-000396,apples,Granny Smith,North,2024-09-24 09:30:00,5716.0,92.6,20.5,Optimal Dry,False
+BAT-000397,plums,Stanley,South,2024-10-03 10:45:00,2969.5,87.2,17.3,Optimal Dry,True
+BAT-000398,tomatoes,Bobcat,South,2024-09-17 14:00:00,4473.0,95.6,21.4,Optimal Dry,True
+BAT-000399,tomatoes,Rio Grande,South,2024-10-10 11:15:00,3145.7,94.8,17.9,Optimal Dry,False
+BAT-000400,table_grapes,Codreanca,South,2024-10-02 09:15:00,4049.0,88.5,10.6,Optimal Dry,False
+BAT-000401,apples,Idared,North,2024-10-22 12:30:00,13152.1,90.4,14.3,Optimal Dry,False
+BAT-000402,apples,Fuji,North,2024-09-26 11:45:00,13303.7,91.7,21.9,Optimal Dry,False
+BAT-000403,tomatoes,Cherry,North,2024-07-09 14:00:00,3543.2,91.3,32.5,Hot / Sun-Exposed,False
+BAT-000404,plums,Kabardinka,South,2024-09-01 07:45:00,4686.1,89.5,21.7,Optimal Dry,False
+BAT-000405,apples,Jonagold,North,2024-10-04 10:45:00,9259.4,94.6,19.5,Optimal Dry,True
+BAT-000406,table_grapes,Victoria,South,2024-09-29 06:15:00,6535.3,89.6,15.1,Humid,True
+BAT-000407,apples,Idared,North,2024-09-11 08:30:00,11669.0,84.3,19.5,Optimal Dry,True
+BAT-000408,apples,Idared,North,2024-08-22 07:30:00,14245.0,86.9,21.3,Optimal Dry,False
+BAT-000409,plums,Anna Späth,Centre,2024-09-04 08:00:00,6725.2,96.6,19.3,Optimal Dry,True
+BAT-000410,plums,Kabardinka,Centre,2024-09-30 13:00:00,9320.2,82.5,17.5,Optimal Dry,False
+BAT-000411,plums,President,North,2024-09-01 14:15:00,6396.0,90.9,32.7,Hot / Sun-Exposed,False
+BAT-000412,apples,Golden Delicious,Centre,2024-09-05 14:00:00,12009.1,91.5,22.8,Optimal Dry,True
+BAT-000413,apples,Golden Delicious,North,2024-10-03 09:45:00,5466.2,87.7,15.1,Optimal Dry,False
+BAT-000414,strawberries,Alba,Centre,2024-05-22 07:45:00,1101.9,98.4,16.5,Optimal Dry,True
+BAT-000415,plums,Stanley,Centre,2024-08-10 12:15:00,4837.7,85.5,25.6,Optimal Dry,True
+BAT-000416,apples,Idared,Centre,2024-09-18 10:00:00,7141.9,99.0,19.5,Optimal Dry,False
+BAT-000417,plums,President,Centre,2024-08-27 10:30:00,3758.1,95.0,25.7,Optimal Dry,True
+BAT-000418,tomatoes,Primadonna,South,2024-07-17 08:45:00,6897.8,91.0,30.8,Hot / Sun-Exposed,False
+BAT-000419,tomatoes,Cherry,North,2024-07-19 06:15:00,5838.1,95.8,21.0,Humid,False
+BAT-000420,tomatoes,Cherry,North,2024-08-09 09:00:00,3045.0,82.3,25.2,Optimal Dry,False
+BAT-000421,apples,Gala,North,2024-10-02 14:45:00,10380.5,89.1,17.8,Optimal Dry,True
+BAT-000422,apples,Golden Delicious,North,2024-09-04 07:30:00,6846.1,94.9,19.4,Optimal Dry,True
+BAT-000423,table_grapes,Moldova,South,2024-10-18 14:30:00,3439.5,87.6,11.6,Optimal Dry,True
+BAT-000424,apples,Jonagold,North,2024-09-17 14:30:00,10477.0,95.0,23.2,Optimal Dry,True
+BAT-000425,pears,Ksenia,Centre,2024-09-13 08:15:00,8414.8,97.3,17.4,Humid,False
+BAT-000426,pears,Abate Fetel,North,2024-09-26 09:45:00,7928.3,95.2,19.3,Optimal Dry,False
+BAT-000427,pears,Abate Fetel,Centre,2024-10-03 07:45:00,10895.7,97.5,10.7,Humid,False
+BAT-000428,apples,Golden Delicious,North,2024-09-11 14:00:00,13613.0,90.5,25.7,Optimal Dry,True
+BAT-000429,tomatoes,Primadonna,Centre,2024-09-15 10:30:00,6196.5,87.1,16.5,Optimal Dry,True
+BAT-000430,apples,Jonagold,North,2024-09-16 10:15:00,8390.7,98.0,18.2,Optimal Dry,True
+BAT-000431,apples,Gala,North,2024-09-25 09:45:00,4293.6,88.5,19.0,Optimal Dry,True
+BAT-000432,apples,Fuji,North,2024-09-18 06:45:00,7372.0,90.7,14.9,Optimal Dry,False
+BAT-000433,apples,Golden Delicious,Centre,2024-08-20 08:30:00,13317.4,99.0,22.3,Optimal Dry,False
+BAT-000434,table_grapes,Moldova,Centre,2024-09-19 08:45:00,5930.9,92.2,15.2,Optimal Dry,False
+BAT-000435,apricots,Nadejda,Centre,2024-07-25 09:45:00,4626.6,93.7,22.1,Optimal Dry,False
+BAT-000436,apples,Fuji,North,2024-10-15 08:45:00,8570.9,93.9,7.7,Optimal Dry,False
+BAT-000437,table_grapes,Moldova,Centre,2024-10-06 10:30:00,3810.8,92.8,17.4,Humid,True
+BAT-000438,apples,Gala,North,2024-08-21 14:30:00,8371.8,93.7,34.4,Hot / Sun-Exposed,False
+BAT-000439,apples,Idared,North,2024-09-29 14:30:00,8968.8,87.9,18.5,Optimal Dry,True
+BAT-000440,table_grapes,Codreanca,South,2024-10-12 13:30:00,3715.7,88.6,15.5,Optimal Dry,True
+BAT-000441,apples,Golden Delicious,North,2024-09-27 06:00:00,8920.5,91.2,16.4,Humid,True
+BAT-000442,pears,Conference,South,2024-10-02 08:00:00,9732.9,91.3,9.3,Optimal Dry,False
+BAT-000443,table_grapes,Moldova,South,2024-09-25 06:00:00,2518.6,95.3,13.9,Humid,True
+BAT-000444,tomatoes,Bobcat,South,2024-08-29 14:00:00,2655.1,94.3,27.3,Optimal Dry,False
+BAT-000445,table_grapes,Codreanca,Centre,2024-10-07 08:00:00,5946.4,80.4,12.3,Humid,True
+BAT-000446,plums,President,Centre,2024-09-03 13:15:00,5665.9,89.2,28.9,Hot / Sun-Exposed,False
+BAT-000447,plums,Kabardinka,Centre,2024-08-02 09:45:00,9734.8,85.1,22.9,Optimal Dry,False
+BAT-000448,apples,Granny Smith,North,2024-08-30 09:00:00,4822.0,90.4,24.9,Optimal Dry,False
+BAT-000449,apples,Fuji,North,2024-09-06 14:45:00,5294.6,99.0,27.3,Optimal Dry,False
+BAT-000450,strawberries,Clery,North,2024-05-22 10:00:00,1828.6,92.3,21.6,Optimal Dry,False
+BAT-000451,apples,Fuji,North,2024-10-25 14:45:00,12839.4,93.5,13.3,Optimal Dry,False
+BAT-000452,apricots,Kioto,North,2024-07-01 07:45:00,4975.8,83.1,25.8,Optimal Dry,False
+BAT-000453,plums,Anna Späth,Centre,2024-08-05 08:30:00,8178.3,88.3,19.4,Optimal Dry,True
+BAT-000454,apples,Idared,Centre,2024-09-26 12:15:00,11124.9,88.4,22.2,Optimal Dry,True
+BAT-000455,apples,Granny Smith,North,2024-09-17 09:15:00,14304.0,96.4,18.2,Optimal Dry,False
+BAT-000456,apples,Gala,Centre,2024-09-17 07:30:00,6501.7,85.8,18.4,Optimal Dry,False
+BAT-000457,apples,Fuji,North,2024-10-12 08:15:00,14986.3,95.5,12.0,Humid,True
+BAT-000458,apples,Jonagold,North,2024-09-23 10:30:00,5080.2,92.2,18.7,Optimal Dry,True
+BAT-000459,plums,Kabardinka,Centre,2024-08-22 11:45:00,9821.5,83.4,29.0,Hot / Sun-Exposed,False
+BAT-000460,raspberries,Polana,North,2024-06-27 09:00:00,533.4,85.3,24.4,Optimal Dry,False
+BAT-000461,plums,President,Centre,2024-08-10 09:45:00,9188.9,94.0,24.1,Optimal Dry,True
+BAT-000462,apples,Jonagold,North,2024-08-30 13:30:00,14176.6,86.4,32.0,Hot / Sun-Exposed,False
+BAT-000463,tomatoes,Primadonna,Centre,2024-08-24 11:30:00,2360.8,86.0,26.3,Optimal Dry,True
+BAT-000464,apples,Golden Delicious,North,2024-09-16 12:00:00,8863.7,86.2,19.3,Optimal Dry,False
+BAT-000465,table_grapes,Muscat de Hamburg,Centre,2024-09-08 09:30:00,5283.0,86.2,19.7,Optimal Dry,False
+BAT-000466,apples,Granny Smith,North,2024-08-21 14:45:00,14704.4,95.8,34.7,Hot / Sun-Exposed,True
+BAT-000467,apples,Idared,North,2024-09-28 10:45:00,6604.3,95.8,22.0,Optimal Dry,False
+BAT-000468,plums,Anna Späth,North,2024-08-24 06:30:00,5303.4,99.0,15.0,Optimal Dry,False
+BAT-000469,apples,Fuji,North,2024-10-04 10:45:00,14123.6,87.2,19.5,Optimal Dry,False
+BAT-000470,plums,Anna Späth,Centre,2024-09-08 06:30:00,2981.1,96.9,13.1,Optimal Dry,False
+BAT-000471,table_grapes,Moldova,Centre,2024-10-18 12:45:00,4178.0,97.9,10.3,Optimal Dry,False
+BAT-000472,table_grapes,Codreanca,Centre,2024-09-09 09:00:00,2683.5,99.0,18.1,Optimal Dry,False
+BAT-000473,table_grapes,Victoria,South,2024-09-02 11:30:00,7402.6,91.4,28.2,Hot / Sun-Exposed,False
+BAT-000474,plums,Stanley,Centre,2024-09-29 13:00:00,9974.1,93.2,20.2,Optimal Dry,True
+BAT-000475,plums,Stanley,Centre,2024-10-07 08:30:00,5184.3,92.3,12.3,Humid,True
+BAT-000476,table_grapes,Victoria,Centre,2024-09-24 12:00:00,7373.5,91.9,24.1,Optimal Dry,True
+BAT-000477,table_grapes,Muscat de Hamburg,South,2024-09-27 07:00:00,6055.4,92.3,16.7,Humid,True
+BAT-000478,tomatoes,Primadonna,Centre,2024-07-30 13:00:00,5133.7,86.9,24.0,Optimal Dry,False
+BAT-000479,apples,Gala,North,2024-09-26 09:00:00,13617.6,90.6,17.8,Humid,False
+BAT-000480,tomatoes,Primadonna,North,2024-07-21 06:15:00,5119.9,90.5,21.1,Optimal Dry,True
+BAT-000481,pears,Williams,Centre,2024-09-11 09:30:00,11491.8,93.6,21.1,Optimal Dry,True
+BAT-000482,apples,Granny Smith,North,2024-10-21 14:45:00,9434.6,91.9,14.0,Optimal Dry,False
+BAT-000483,apples,Idared,North,2024-10-03 12:30:00,4027.0,87.7,18.6,Optimal Dry,True
+BAT-000484,plums,Anna Späth,South,2024-09-25 07:30:00,2584.2,86.0,14.8,Humid,True
+BAT-000485,plums,Anna Späth,South,2024-08-08 12:30:00,7537.9,88.8,28.0,Optimal Dry,False
+BAT-000486,apples,Golden Delicious,North,2024-09-27 11:45:00,11262.2,93.7,25.4,Optimal Dry,False
+BAT-000487,plums,Kabardinka,North,2024-09-16 13:45:00,7765.6,86.9,21.6,Optimal Dry,False
+BAT-000488,apples,Gala,North,2024-09-10 11:15:00,10213.9,98.9,23.9,Optimal Dry,False
+BAT-000489,apples,Granny Smith,North,2024-09-29 13:30:00,10528.2,93.0,18.5,Optimal Dry,False
+BAT-000490,plums,Kabardinka,South,2024-10-10 12:45:00,8912.2,94.9,20.7,Optimal Dry,True
+BAT-000491,tomatoes,Cherry,Centre,2024-08-01 06:45:00,5968.9,90.2,18.1,Optimal Dry,True
+BAT-000492,table_grapes,Codreanca,South,2024-10-02 12:30:00,2559.9,88.0,15.5,Optimal Dry,False
+BAT-000493,plums,Kabardinka,North,2024-08-17 13:00:00,3577.1,87.1,31.4,Hot / Sun-Exposed,False
+BAT-000494,pears,Ksenia,North,2024-09-15 10:45:00,9700.0,90.6,16.9,Optimal Dry,False
+BAT-000495,table_grapes,Codreanca,South,2024-10-23 06:00:00,4118.9,83.9,5.6,Humid,False
+BAT-000496,pears,Williams,North,2024-10-08 06:00:00,7956.7,89.0,8.2,Humid,True
+BAT-000497,apples,Golden Delicious,North,2024-09-08 06:00:00,7871.4,90.2,12.6,Optimal Dry,False
+BAT-000498,pears,Williams,North,2024-08-29 14:30:00,8645.1,92.4,29.5,Hot / Sun-Exposed,True
+BAT-000499,table_grapes,Victoria,Centre,2024-09-23 12:15:00,3546.6,88.0,23.4,Optimal Dry,True
+BAT-000500,table_grapes,Muscat de Hamburg,South,2024-10-04 13:30:00,3945.6,88.8,23.3,Optimal Dry,True
+BAT-000501,apples,Idared,North,2024-09-30 11:30:00,9833.5,96.0,14.8,Optimal Dry,False
+BAT-000502,plums,Stanley,North,2024-09-10 12:00:00,6353.0,86.3,25.2,Optimal Dry,True
+BAT-000503,tomatoes,Bobcat,North,2024-08-21 12:30:00,6221.3,92.6,32.4,Hot / Sun-Exposed,True
+BAT-000504,plums,Stanley,North,2024-10-06 13:00:00,7410.8,92.2,19.0,Optimal Dry,False
+BAT-000505,apples,Gala,North,2024-09-23 13:15:00,7736.1,83.4,24.1,Optimal Dry,False
+BAT-000506,plums,Anna Späth,Centre,2024-08-26 09:00:00,4137.3,90.3,27.7,Optimal Dry,True
+BAT-000507,plums,Stanley,South,2024-08-22 08:15:00,9958.9,92.0,23.0,Optimal Dry,True
+BAT-000508,apples,Gala,North,2024-08-24 11:30:00,13439.8,94.2,26.9,Optimal Dry,False
+BAT-000509,apples,Idared,South,2024-09-27 07:45:00,10994.1,93.4,17.2,Humid,True
+BAT-000510,apples,Golden Delicious,North,2024-09-16 08:45:00,7450.0,92.5,17.4,Optimal Dry,True
+BAT-000511,tomatoes,Primadonna,South,2024-09-15 12:15:00,2116.1,92.2,18.5,Optimal Dry,True
+BAT-000512,apples,Gala,North,2024-09-21 10:30:00,10299.5,87.0,17.4,Optimal Dry,True
+BAT-000513,apples,Gala,North,2024-09-16 12:00:00,4495.6,92.7,19.3,Optimal Dry,True
+BAT-000514,plums,President,Centre,2024-09-29 11:00:00,4330.8,91.0,18.8,Optimal Dry,True
+BAT-000515,table_grapes,Muscat de Hamburg,Centre,2024-09-03 12:00:00,3662.0,97.1,27.7,Optimal Dry,False
+BAT-000516,plums,Stanley,South,2024-09-09 10:30:00,7556.3,92.3,20.1,Optimal Dry,True
+BAT-000517,apples,Gala,North,2024-09-09 08:15:00,10410.0,95.7,15.1,Optimal Dry,False
+BAT-000518,apples,Idared,North,2024-10-19 09:30:00,10644.7,86.8,6.1,Optimal Dry,True
+BAT-000519,table_grapes,Moldova,South,2024-09-20 08:45:00,3391.1,86.1,13.4,Optimal Dry,True
+BAT-000520,table_grapes,Victoria,South,2024-09-16 14:45:00,5545.9,94.7,22.0,Optimal Dry,True
+BAT-000521,table_grapes,Codreanca,South,2024-09-14 11:45:00,3337.7,91.1,23.3,Optimal Dry,False
+BAT-000522,table_grapes,Muscat de Hamburg,Centre,2024-10-15 13:45:00,5048.1,82.6,14.0,Optimal Dry,False
+BAT-000523,apples,Granny Smith,Centre,2024-08-27 13:00:00,14286.7,99.0,28.9,Hot / Sun-Exposed,False
+BAT-000524,table_grapes,Codreanca,South,2024-09-23 14:15:00,5939.4,84.9,24.9,Optimal Dry,True
+BAT-000525,table_grapes,Codreanca,South,2024-09-27 09:45:00,3427.3,95.3,20.6,Optimal Dry,False
+BAT-000526,strawberries,Marmolada,North,2024-06-17 11:30:00,1082.0,89.3,26.0,Optimal Dry,False
+BAT-000527,apples,Golden Delicious,North,2024-08-23 12:00:00,14441.6,91.7,24.5,Optimal Dry,True
+BAT-000528,apples,Granny Smith,North,2024-09-21 06:30:00,9692.2,88.4,11.5,Optimal Dry,True
+BAT-000529,strawberries,Clery,North,2024-06-08 07:15:00,1389.6,85.3,18.7,Humid,True
+BAT-000530,table_grapes,Victoria,Centre,2024-09-21 08:30:00,3795.7,88.8,13.5,Optimal Dry,True
+BAT-000531,apples,Granny Smith,North,2024-08-28 10:15:00,14702.5,82.6,25.7,Optimal Dry,True
+BAT-000532,tomatoes,Bobcat,South,2024-09-04 08:30:00,5066.4,92.0,20.1,Optimal Dry,True
+BAT-000533,table_grapes,Victoria,Centre,2024-09-15 10:00:00,5566.1,93.5,16.5,Optimal Dry,True
+BAT-000534,table_grapes,Moldova,South,2024-09-26 12:15:00,6030.3,94.1,23.1,Optimal Dry,True
+BAT-000535,apples,Granny Smith,North,2024-10-25 09:45:00,11939.0,94.0,6.5,Optimal Dry,True
+BAT-000536,apples,Granny Smith,North,2024-09-13 08:30:00,10916.2,92.7,17.1,Humid,False
+BAT-000537,apricots,Krasnoshchoky,North,2024-07-10 11:45:00,4958.3,87.2,31.9,Hot / Sun-Exposed,False
+BAT-000538,apples,Fuji,North,2024-09-17 11:45:00,10398.2,90.5,22.3,Optimal Dry,False
+BAT-000539,apples,Fuji,North,2024-09-19 10:00:00,11212.3,87.0,16.3,Optimal Dry,False
+BAT-000540,apples,Fuji,North,2024-09-14 06:30:00,10051.9,92.4,18.8,Post-Rain,False
+BAT-000541,apples,Gala,North,2024-10-10 11:15:00,6715.1,96.8,15.8,Humid,False
+BAT-000542,apples,Golden Delicious,North,2024-08-20 14:30:00,9635.0,84.6,34.2,Hot / Sun-Exposed,False
+BAT-000543,plums,President,North,2024-09-30 09:30:00,4128.6,91.8,12.3,Optimal Dry,True
+BAT-000544,apples,Granny Smith,North,2024-10-08 07:00:00,10854.9,91.1,7.8,Humid,True
+BAT-000545,apples,Gala,North,2024-10-18 08:45:00,7030.2,87.4,3.3,Humid,True
+BAT-000546,apples,Gala,Centre,2024-10-15 09:30:00,8603.4,97.4,11.6,Optimal Dry,True
+BAT-000547,table_grapes,Moldova,South,2024-09-25 12:15:00,6941.4,98.3,22.9,Optimal Dry,False
+BAT-000548,apples,Golden Delicious,North,2024-10-21 11:45:00,12310.2,94.0,11.2,Optimal Dry,False
+BAT-000549,plums,Kabardinka,Centre,2024-08-15 07:30:00,4048.9,91.2,21.3,Optimal Dry,True
+BAT-000550,pears,Ksenia,North,2024-08-26 12:45:00,10049.0,96.6,34.0,Hot / Sun-Exposed,True
+BAT-000551,apples,Jonagold,North,2024-10-10 10:15:00,9125.3,90.4,14.5,Humid,True
+BAT-000552,apples,Fuji,North,2024-10-02 07:30:00,14685.7,88.6,8.5,Humid,True
+BAT-000553,apples,Jonagold,North,2024-10-17 12:30:00,12289.7,91.9,8.4,Optimal Dry,False
+BAT-000554,plums,Kabardinka,Centre,2024-08-14 08:00:00,9323.4,85.7,18.9,Optimal Dry,False
+BAT-000555,apples,Golden Delicious,North,2024-10-03 13:00:00,12161.4,88.4,19.9,Optimal Dry,True
+BAT-000556,plums,President,South,2024-08-22 12:15:00,7049.6,83.2,29.7,Hot / Sun-Exposed,True
+BAT-000557,tomatoes,Primadonna,Centre,2024-07-05 06:45:00,5987.8,85.0,17.5,Optimal Dry,True
+BAT-000558,table_grapes,Victoria,Centre,2024-09-24 08:30:00,5539.0,92.5,14.3,Optimal Dry,False
+BAT-000559,table_grapes,Moldova,South,2024-10-16 08:15:00,3510.5,96.0,7.5,Humid,False
+BAT-000560,tomatoes,Cherry,North,2024-07-19 07:15:00,3936.3,84.9,22.0,Optimal Dry,True
+BAT-000561,apples,Gala,North,2024-10-15 12:45:00,6178.5,88.8,13.7,Optimal Dry,True
+BAT-000562,tomatoes,Rio Grande,South,2024-07-20 06:45:00,4842.6,91.3,22.3,Optimal Dry,False
+BAT-000563,strawberries,Clery,North,2024-06-13 08:15:00,865.1,91.3,16.3,Optimal Dry,True
+BAT-000564,strawberries,Marmolada,North,2024-05-21 13:00:00,872.7,91.2,24.7,Optimal Dry,False
+BAT-000565,raspberries,Heritage,North,2024-06-29 14:00:00,1964.2,89.5,31.2,Hot / Sun-Exposed,False
+BAT-000566,apples,Granny Smith,Centre,2024-09-27 07:15:00,9443.3,92.2,16.6,Humid,False
+BAT-000567,plums,President,Centre,2024-08-05 09:30:00,5283.2,90.6,23.5,Optimal Dry,True
+BAT-000568,apricots,Krasnoshchoky,North,2024-07-27 14:00:00,5412.7,88.0,26.7,Optimal Dry,True
+BAT-000569,strawberries,Alba,Centre,2024-05-23 14:00:00,991.1,92.7,25.9,Optimal Dry,False
+BAT-000570,apples,Granny Smith,North,2024-09-07 08:45:00,5333.3,82.2,20.2,Optimal Dry,True
+BAT-000571,apples,Golden Delicious,North,2024-10-11 06:00:00,4669.4,89.1,12.9,Humid,False
+BAT-000572,apples,Granny Smith,Centre,2024-08-25 08:00:00,14487.8,96.4,22.0,Optimal Dry,True
+BAT-000573,apples,Granny Smith,North,2024-10-15 14:15:00,14937.4,93.1,14.3,Optimal Dry,False
+BAT-000574,plums,Anna Späth,Centre,2024-10-04 06:00:00,7561.7,90.3,14.5,Humid,True
+BAT-000575,apples,Granny Smith,Centre,2024-09-06 07:15:00,11589.1,88.7,17.1,Optimal Dry,False
+BAT-000576,apples,Gala,North,2024-08-23 08:15:00,4363.1,90.9,18.4,Optimal Dry,False
+BAT-000577,pears,Ksenia,North,2024-09-21 08:15:00,3504.6,95.9,12.7,Optimal Dry,False
+BAT-000578,apples,Jonagold,North,2024-10-20 14:45:00,9086.8,89.9,10.0,Optimal Dry,False
+BAT-000579,table_grapes,Moldova,South,2024-09-09 07:30:00,4474.5,97.3,14.5,Optimal Dry,False
+BAT-000580,pears,Abate Fetel,Centre,2024-10-13 10:00:00,3612.5,90.9,10.4,Optimal Dry,False
+BAT-000581,tomatoes,Cherry,Centre,2024-08-25 12:15:00,3128.5,89.1,30.1,Hot / Sun-Exposed,True
+BAT-000582,apples,Idared,North,2024-08-20 07:30:00,8984.1,91.4,23.7,Optimal Dry,False
+BAT-000583,apples,Granny Smith,Centre,2024-09-25 10:30:00,5735.3,92.0,19.4,Optimal Dry,False
+BAT-000584,plums,Kabardinka,Centre,2024-10-08 07:00:00,3311.0,99.0,8.7,Humid,False
+BAT-000585,table_grapes,Muscat de Hamburg,South,2024-09-03 13:15:00,7027.2,91.2,31.0,Hot / Sun-Exposed,True
+BAT-000586,strawberries,Marmolada,Centre,2024-06-01 14:30:00,1669.8,91.9,29.6,Hot / Sun-Exposed,False
+BAT-000587,apples,Idared,North,2024-10-05 08:00:00,4875.6,89.0,16.1,Humid,True
+BAT-000588,strawberries,Asia,Centre,2024-06-23 13:30:00,2739.9,90.0,31.1,Hot / Sun-Exposed,False
+BAT-000589,apples,Golden Delicious,Centre,2024-10-16 10:00:00,10876.6,94.2,8.8,Humid,True
+BAT-000590,table_grapes,Moldova,South,2024-10-08 09:15:00,5811.1,84.8,11.5,Humid,True
+BAT-000591,apples,Idared,North,2024-09-12 14:45:00,10146.2,90.2,20.7,Optimal Dry,True
+BAT-000592,table_grapes,Muscat de Hamburg,South,2024-10-22 09:15:00,5514.4,87.7,4.1,Humid,False
+BAT-000593,apples,Granny Smith,North,2024-09-18 09:15:00,13654.9,93.2,16.9,Optimal Dry,False
+BAT-000594,table_grapes,Victoria,Centre,2024-10-03 06:45:00,7127.9,87.6,10.0,Humid,True
+BAT-000595,apples,Gala,North,2024-09-08 12:00:00,9011.0,87.7,24.4,Optimal Dry,True
+BAT-000596,table_grapes,Victoria,Centre,2024-09-07 10:00:00,6803.5,92.9,20.9,Optimal Dry,False
+BAT-000597,apples,Idared,North,2024-09-12 06:15:00,14548.7,88.2,18.3,Humid,False
+BAT-000598,pears,Williams,Centre,2024-09-21 12:15:00,7559.7,91.2,21.6,Optimal Dry,False
+BAT-000599,table_grapes,Moldova,South,2024-09-24 13:45:00,5634.7,96.2,25.7,Optimal Dry,False
+BAT-000600,plums,President,South,2024-08-22 11:00:00,3991.2,90.5,27.9,Optimal Dry,True
+BAT-000601,strawberries,Marmolada,Centre,2024-06-20 13:45:00,2979.2,97.7,28.3,Hot / Sun-Exposed,False
+BAT-000602,table_grapes,Victoria,South,2024-10-24 10:00:00,2572.9,89.6,9.7,Optimal Dry,False
+BAT-000603,apples,Fuji,Centre,2024-09-16 07:00:00,11229.8,87.5,16.9,Optimal Dry,True
+BAT-000604,apples,Idared,Centre,2024-10-15 09:30:00,13782.7,89.3,11.6,Optimal Dry,False
+BAT-000605,apples,Jonagold,North,2024-10-21 13:00:00,6669.7,94.9,12.6,Optimal Dry,False
+BAT-000606,apples,Gala,North,2024-09-16 09:30:00,12525.2,94.2,18.2,Optimal Dry,False
+BAT-000607,pears,Abate Fetel,North,2024-09-25 12:30:00,9146.2,87.8,22.7,Optimal Dry,False
+BAT-000608,raspberries,Heritage,Centre,2024-08-04 13:00:00,1587.5,85.3,21.7,Optimal Dry,True
+BAT-000609,apricots,Kioto,North,2024-06-25 09:15:00,2622.1,95.5,20.6,Optimal Dry,False
+BAT-000610,apples,Granny Smith,North,2024-08-29 14:00:00,10637.9,97.6,29.5,Hot / Sun-Exposed,False
+BAT-000611,apricots,Krasnoshchoky,Centre,2024-07-01 13:45:00,2754.6,85.1,32.6,Hot / Sun-Exposed,False
+BAT-000612,apples,Granny Smith,Centre,2024-10-01 07:30:00,13725.0,93.9,10.6,Humid,False
+BAT-000613,apples,Gala,South,2024-08-27 11:30:00,13162.6,87.3,26.3,Optimal Dry,True
+BAT-000614,strawberries,Clery,Centre,2024-06-12 13:00:00,2860.6,89.9,24.8,Optimal Dry,False
+BAT-000615,apples,Granny Smith,South,2024-10-04 14:00:00,14383.7,86.8,23.3,Optimal Dry,False
+BAT-000616,plums,Anna Späth,Centre,2024-09-21 08:45:00,4054.0,88.0,16.0,Optimal Dry,True
+BAT-000617,pears,Ksenia,North,2024-09-03 09:45:00,7733.8,85.6,25.1,Optimal Dry,True
+BAT-000618,tomatoes,Bobcat,Centre,2024-10-03 06:15:00,5154.0,92.5,10.3,Humid,True
+BAT-000619,apples,Gala,North,2024-10-15 07:45:00,9036.7,89.3,5.3,Humid,False
+BAT-000620,apples,Gala,North,2024-09-28 07:00:00,5511.4,91.2,16.7,Optimal Dry,True
+BAT-000621,pears,Conference,North,2024-10-10 14:00:00,9124.2,89.8,19.4,Optimal Dry,False
+BAT-000622,plums,Kabardinka,North,2024-09-02 12:45:00,3973.7,89.1,31.0,Hot / Sun-Exposed,True
+BAT-000623,apples,Idared,North,2024-09-28 11:45:00,8767.5,91.5,23.5,Optimal Dry,True
+BAT-000624,apples,Jonagold,North,2024-08-25 09:15:00,12076.4,91.9,23.1,Optimal Dry,False
+BAT-000625,plums,Anna Späth,Centre,2024-09-05 14:30:00,4974.7,93.4,22.8,Optimal Dry,False
+BAT-000626,plums,Kabardinka,South,2024-08-01 11:45:00,3843.1,93.8,30.2,Hot / Sun-Exposed,True
+BAT-000627,table_grapes,Muscat de Hamburg,Centre,2024-10-22 07:30:00,7500.0,93.8,5.0,Optimal Dry,False
+BAT-000628,plums,Anna Späth,South,2024-10-09 09:45:00,5244.5,83.5,16.9,Optimal Dry,False
+BAT-000629,apples,Idared,North,2024-10-09 10:30:00,12282.7,90.3,15.2,Optimal Dry,False
+BAT-000630,table_grapes,Muscat de Hamburg,Centre,2024-09-02 10:00:00,3512.9,93.7,25.3,Optimal Dry,True
+BAT-000631,apples,Gala,North,2024-09-07 08:15:00,12795.4,89.0,17.8,Optimal Dry,True
+BAT-000632,apples,Granny Smith,North,2024-09-20 09:15:00,13881.7,85.2,13.0,Optimal Dry,False
+BAT-000633,table_grapes,Victoria,South,2024-09-28 10:45:00,6210.4,92.8,22.3,Optimal Dry,False
+BAT-000634,apples,Granny Smith,North,2024-10-01 12:15:00,8083.1,87.3,10.7,Humid,True
+BAT-000635,apples,Granny Smith,Centre,2024-08-27 09:45:00,7300.4,90.5,25.7,Optimal Dry,False
+BAT-000636,tomatoes,Rio Grande,South,2024-09-04 12:45:00,3622.4,92.1,26.1,Optimal Dry,False
+BAT-000637,apples,Granny Smith,Centre,2024-09-04 07:15:00,8353.3,88.8,18.4,Optimal Dry,True
+BAT-000638,raspberries,Polana,North,2024-08-10 08:15:00,1579.6,85.1,20.7,Humid,True
+BAT-000639,plums,Anna Späth,Centre,2024-08-15 11:15:00,7845.4,86.1,27.2,Optimal Dry,True
+BAT-000640,table_grapes,Victoria,South,2024-09-05 09:30:00,2626.5,92.9,22.0,Optimal Dry,False
+BAT-000641,raspberries,Novokitaevskaya,North,2024-07-14 10:45:00,841.2,91.5,34.1,Hot / Sun-Exposed,True
+BAT-000642,apples,Golden Delicious,North,2024-10-17 09:00:00,5771.9,88.6,6.4,Optimal Dry,False
+BAT-000643,strawberries,Marmolada,Centre,2024-06-22 09:00:00,2144.4,91.5,23.6,Optimal Dry,True
+BAT-000644,apples,Jonagold,Centre,2024-08-30 07:00:00,14907.4,90.0,22.5,Optimal Dry,False
+BAT-000645,tomatoes,Bobcat,Centre,2024-07-07 08:00:00,5764.2,92.2,21.6,Optimal Dry,True
+BAT-000646,apples,Gala,North,2024-09-27 06:00:00,6303.6,91.5,16.4,Humid,True
+BAT-000647,raspberries,Heritage,Centre,2024-07-19 07:30:00,1594.6,87.6,24.0,Optimal Dry,False
+BAT-000648,apricots,Nadejda,North,2024-07-13 07:15:00,4088.8,94.1,25.4,Optimal Dry,False
+BAT-000649,apples,Idared,North,2024-09-13 13:00:00,4515.6,93.3,25.6,Optimal Dry,False
+BAT-000650,plums,Kabardinka,Centre,2024-08-13 13:15:00,9472.3,89.6,27.4,Optimal Dry,False
+BAT-000651,raspberries,Glen Ample,Centre,2024-07-13 13:15:00,1314.5,86.2,35.7,Hot / Sun-Exposed,True
+BAT-000652,plums,President,Centre,2024-08-01 14:30:00,9323.4,92.3,29.5,Hot / Sun-Exposed,False
+BAT-000653,apples,Golden Delicious,Centre,2024-09-12 07:30:00,10335.3,82.8,17.9,Humid,True
+BAT-000654,apples,Granny Smith,North,2024-08-20 08:45:00,8256.3,84.3,26.5,Optimal Dry,False
+BAT-000655,apples,Granny Smith,North,2024-10-05 06:00:00,11086.9,80.6,14.7,Humid,False
+BAT-000656,apples,Fuji,North,2024-08-27 13:00:00,13532.2,96.4,32.6,Hot / Sun-Exposed,True
+BAT-000657,apricots,Spring Blush,South,2024-07-19 14:15:00,4276.1,84.3,32.0,Hot / Sun-Exposed,False
+BAT-000658,raspberries,Novokitaevskaya,North,2024-07-16 11:30:00,2437.8,86.4,36.4,Hot / Sun-Exposed,False
+BAT-000659,tomatoes,Rio Grande,South,2024-07-10 07:00:00,4019.5,96.1,24.0,Optimal Dry,False
+BAT-000660,table_grapes,Victoria,South,2024-10-01 11:45:00,3886.7,94.4,10.0,Humid,False
+BAT-000661,tomatoes,Cherry,South,2024-08-19 14:30:00,5879.5,89.9,33.0,Hot / Sun-Exposed,False
+BAT-000662,apples,Idared,North,2024-09-17 13:00:00,5808.3,92.2,23.0,Optimal Dry,False
+BAT-000663,table_grapes,Codreanca,Centre,2024-09-25 07:30:00,4912.0,92.7,14.6,Humid,False
+BAT-000664,table_grapes,Muscat de Hamburg,South,2024-09-21 09:00:00,4294.2,90.7,14.5,Optimal Dry,True
+BAT-000665,plums,President,South,2024-09-19 08:30:00,3638.9,91.8,14.1,Optimal Dry,False
+BAT-000666,tomatoes,Rio Grande,South,2024-07-01 07:45:00,4416.2,99.0,23.3,Optimal Dry,False
+BAT-000667,plums,Kabardinka,Centre,2024-08-24 12:30:00,9324.9,89.3,26.3,Optimal Dry,False
+BAT-000668,raspberries,Novokitaevskaya,North,2024-07-06 09:15:00,1819.3,79.9,22.6,Optimal Dry,False
+BAT-000669,table_grapes,Codreanca,Centre,2024-10-13 06:45:00,2929.0,82.6,7.1,Optimal Dry,True
+BAT-000670,table_grapes,Moldova,South,2024-09-18 10:45:00,6806.7,95.8,20.1,Optimal Dry,True
+BAT-000671,plums,Stanley,South,2024-09-18 07:00:00,9954.8,96.7,13.1,Humid,True
+BAT-000672,pears,Ksenia,Centre,2024-10-06 09:15:00,7382.4,83.2,17.3,Humid,False
+BAT-000673,table_grapes,Moldova,South,2024-09-26 07:30:00,2636.0,89.6,17.4,Humid,True
+BAT-000674,plums,President,Centre,2024-08-04 09:15:00,3299.4,96.8,21.0,Optimal Dry,True
+BAT-000675,plums,Anna Späth,Centre,2024-10-03 07:45:00,5497.0,96.4,10.7,Humid,False
+BAT-000676,plums,Stanley,North,2024-09-17 10:30:00,3420.1,83.9,19.6,Optimal Dry,False
+BAT-000677,apples,Granny Smith,Centre,2024-10-23 09:00:00,5250.5,96.7,7.3,Optimal Dry,False
+BAT-000678,table_grapes,Moldova,South,2024-09-01 08:30:00,5890.8,90.9,21.7,Optimal Dry,False
+BAT-000679,plums,Stanley,Centre,2024-08-09 14:15:00,7920.7,85.6,31.9,Hot / Sun-Exposed,False
+BAT-000680,table_grapes,Victoria,South,2024-09-18 10:30:00,4352.9,87.9,17.9,Optimal Dry,False
+BAT-000681,table_grapes,Victoria,South,2024-09-12 08:30:00,4598.2,92.5,18.3,Humid,False
+BAT-000682,apples,Idared,North,2024-09-30 08:00:00,11015.0,94.1,11.2,Optimal Dry,False
+BAT-000683,table_grapes,Victoria,South,2024-09-20 06:30:00,6238.8,97.4,11.0,Optimal Dry,False
+BAT-000684,tomatoes,Rio Grande,South,2024-08-02 08:15:00,5729.6,94.1,23.3,Optimal Dry,True
+BAT-000685,plums,President,North,2024-08-04 13:00:00,7930.8,92.3,23.2,Optimal Dry,False
+BAT-000686,apples,Golden Delicious,North,2024-10-21 13:45:00,8652.7,90.7,13.5,Optimal Dry,True
+BAT-000687,tomatoes,Cherry,Centre,2024-08-11 11:15:00,3404.0,95.6,27.4,Optimal Dry,False
+BAT-000688,apples,Jonagold,North,2024-10-06 13:15:00,11113.1,89.7,19.0,Optimal Dry,False
+BAT-000689,table_grapes,Codreanca,South,2024-09-05 09:15:00,3802.0,93.1,20.1,Optimal Dry,True
+BAT-000690,plums,President,South,2024-09-05 10:30:00,7219.6,90.0,22.0,Optimal Dry,False
+BAT-000691,pears,Conference,Centre,2024-09-11 13:15:00,10961.8,87.9,25.9,Optimal Dry,False
+BAT-000692,apples,Idared,North,2024-10-08 08:00:00,12069.9,89.9,8.5,Humid,True
+BAT-000693,apples,Idared,North,2024-08-31 07:00:00,10639.9,90.9,19.7,Optimal Dry,True
+BAT-000694,plums,Kabardinka,Centre,2024-09-07 10:00:00,9912.7,82.9,20.9,Optimal Dry,True
+BAT-000695,table_grapes,Codreanca,South,2024-09-15 09:30:00,7619.9,85.5,15.7,Optimal Dry,True
+BAT-000696,apples,Golden Delicious,North,2024-09-27 09:45:00,8808.6,90.5,21.5,Optimal Dry,False
+BAT-000697,plums,Kabardinka,Centre,2024-10-02 09:30:00,7117.1,92.0,12.9,Optimal Dry,True
+BAT-000698,apples,Fuji,North,2024-09-30 14:30:00,4940.1,90.9,16.7,Optimal Dry,False
+BAT-000699,plums,Kabardinka,North,2024-09-05 14:00:00,8079.9,92.6,23.3,Optimal Dry,False
+BAT-000700,apples,Idared,Centre,2024-08-22 06:30:00,4290.2,85.5,22.8,Optimal Dry,True
+BAT-000701,apples,Gala,North,2024-09-08 11:30:00,11666.8,93.0,24.4,Optimal Dry,True
+BAT-000702,apples,Jonagold,North,2024-08-25 07:30:00,8576.6,84.3,20.6,Optimal Dry,True
+BAT-000703,strawberries,Asia,North,2024-05-20 07:30:00,1040.8,92.6,14.8,Optimal Dry,True
+BAT-000704,apples,Jonagold,North,2024-08-26 09:30:00,5092.0,97.5,29.3,Hot / Sun-Exposed,False
+BAT-000705,table_grapes,Victoria,South,2024-10-25 14:30:00,5835.8,94.5,14.0,Optimal Dry,False
+BAT-000706,apples,Granny Smith,North,2024-10-01 12:45:00,6549.1,85.1,11.5,Optimal Dry,False
+BAT-000707,tomatoes,Cherry,Centre,2024-07-29 11:15:00,5749.7,95.5,22.0,Optimal Dry,True
+BAT-000708,pears,Ksenia,Centre,2024-10-15 09:15:00,6597.5,90.7,9.0,Optimal Dry,False
+BAT-000709,table_grapes,Moldova,South,2024-09-26 08:45:00,7536.1,89.9,19.2,Humid,False
+BAT-000710,tomatoes,Rio Grande,Centre,2024-09-23 10:15:00,3232.5,84.7,19.7,Optimal Dry,False
+BAT-000711,pears,Williams,North,2024-09-03 06:45:00,5362.9,89.4,19.6,Optimal Dry,False
+BAT-000712,apples,Golden Delicious,North,2024-10-06 11:15:00,6377.7,87.7,17.1,Optimal Dry,False
+BAT-000713,tomatoes,Primadonna,Centre,2024-08-10 07:00:00,5444.9,90.3,20.2,Humid,True
+BAT-000714,pears,Ksenia,Centre,2024-09-19 08:45:00,11979.3,86.5,15.2,Optimal Dry,False
+BAT-000715,table_grapes,Codreanca,Centre,2024-09-17 09:30:00,4975.6,92.8,19.5,Optimal Dry,True
+BAT-000716,plums,President,South,2024-09-13 06:45:00,5784.7,86.6,16.9,Humid,False
+BAT-000717,plums,Anna Späth,Centre,2024-10-07 12:00:00,9603.1,87.4,14.3,Optimal Dry,True
+BAT-000718,plums,Stanley,South,2024-09-24 07:15:00,6808.4,99.0,13.1,Humid,False
+BAT-000719,table_grapes,Victoria,Centre,2024-10-14 08:15:00,6771.3,90.7,10.0,Optimal Dry,False
+BAT-000720,plums,Stanley,North,2024-09-23 12:15:00,8840.2,91.3,22.9,Optimal Dry,True
+BAT-000721,plums,Anna Späth,Centre,2024-09-03 13:30:00,3790.7,88.1,29.6,Hot / Sun-Exposed,True
+BAT-000722,apples,Idared,North,2024-09-22 13:45:00,6222.7,92.6,22.9,Optimal Dry,True
+BAT-000723,plums,Kabardinka,Centre,2024-09-22 10:45:00,3156.3,95.2,20.2,Optimal Dry,True
+BAT-000724,plums,Anna Späth,Centre,2024-09-18 11:15:00,8321.9,88.0,21.1,Optimal Dry,False
+BAT-000725,table_grapes,Muscat de Hamburg,South,2024-09-07 12:30:00,2951.4,96.9,24.0,Optimal Dry,True
+BAT-000726,plums,Kabardinka,Centre,2024-09-23 08:00:00,2561.8,99.0,14.0,Optimal Dry,True
+BAT-000727,apples,Jonagold,Centre,2024-08-27 10:45:00,9543.0,95.8,25.7,Post-Rain,True
+BAT-000728,apricots,Krasnoshchoky,Centre,2024-07-17 09:15:00,5498.6,88.8,30.4,Hot / Sun-Exposed,False
+BAT-000729,table_grapes,Victoria,Centre,2024-10-22 09:00:00,3287.0,93.7,6.1,Optimal Dry,False
+BAT-000730,apples,Golden Delicious,Centre,2024-08-27 10:00:00,13134.6,86.6,25.7,Optimal Dry,True
+BAT-000731,strawberries,Asia,South,2024-05-29 13:00:00,2343.4,84.5,19.9,Optimal Dry,False
+BAT-000732,pears,Conference,Centre,2024-08-30 08:15:00,5982.7,90.9,23.0,Optimal Dry,False
+BAT-000733,table_grapes,Codreanca,South,2024-10-14 12:15:00,3255.7,84.9,15.6,Optimal Dry,False
+BAT-000734,apples,Granny Smith,North,2024-09-26 10:15:00,7408.2,95.4,19.3,Optimal Dry,True
+BAT-000735,apples,Golden Delicious,North,2024-09-18 11:00:00,4958.2,92.0,20.2,Optimal Dry,False
+BAT-000736,tomatoes,Rio Grande,Centre,2024-07-04 11:00:00,6032.2,90.3,23.6,Optimal Dry,False
+BAT-000737,apples,Jonagold,Centre,2024-08-28 07:30:00,12528.1,89.9,22.7,Optimal Dry,False
+BAT-000738,plums,Stanley,South,2024-09-27 10:15:00,4207.4,90.7,20.6,Optimal Dry,False
+BAT-000739,table_grapes,Codreanca,South,2024-09-11 06:30:00,4150.0,82.0,17.3,Humid,False
+BAT-000740,raspberries,Novokitaevskaya,North,2024-07-26 11:45:00,1224.2,88.5,22.9,Optimal Dry,False
+BAT-000741,strawberries,Asia,Centre,2024-05-30 07:15:00,2254.4,87.1,13.5,Humid,True
+BAT-000742,apples,Idared,North,2024-08-27 09:45:00,6869.7,90.1,28.2,Hot / Sun-Exposed,False
+BAT-000743,apricots,Nadejda,South,2024-07-30 09:30:00,3160.2,90.6,22.9,Optimal Dry,True
+BAT-000744,plums,Kabardinka,Centre,2024-08-30 09:45:00,9206.2,83.7,25.2,Optimal Dry,False
+BAT-000745,apples,Granny Smith,North,2024-08-26 13:45:00,12140.1,97.1,35.0,Hot / Sun-Exposed,False
+BAT-000746,table_grapes,Codreanca,South,2024-09-07 12:45:00,5939.6,87.2,24.8,Optimal Dry,False
+BAT-000747,plums,Kabardinka,South,2024-08-03 13:30:00,3744.8,94.6,33.6,Hot / Sun-Exposed,False
+BAT-000748,apples,Gala,North,2024-08-23 11:45:00,11925.2,93.6,24.5,Optimal Dry,True
+BAT-000749,pears,Williams,South,2024-10-02 08:45:00,9278.7,86.3,10.6,Optimal Dry,True
+BAT-000750,apricots,Nadejda,Centre,2024-07-27 09:30:00,5885.4,92.7,23.1,Optimal Dry,True
+BAT-000751,apples,Idared,North,2024-10-14 11:30:00,5293.3,90.8,14.1,Optimal Dry,False
+BAT-000752,tomatoes,Rio Grande,South,2024-07-27 12:15:00,6150.9,94.4,26.7,Optimal Dry,False
+BAT-000753,apples,Fuji,North,2024-09-23 08:15:00,8935.9,90.4,12.8,Humid,False
+BAT-000754,table_grapes,Muscat de Hamburg,South,2024-10-21 06:45:00,7296.8,90.7,1.2,Humid,True
+BAT-000755,apples,Granny Smith,North,2024-09-27 14:15:00,9733.4,88.0,27.3,Optimal Dry,False
+BAT-000756,plums,Stanley,Centre,2024-09-24 08:00:00,4877.5,91.0,14.3,Optimal Dry,True
+BAT-000757,table_grapes,Codreanca,South,2024-10-18 06:45:00,7307.1,89.0,2.4,Humid,False
+BAT-000758,plums,President,North,2024-10-03 10:30:00,3090.3,98.0,15.1,Optimal Dry,False
+BAT-000759,apples,Idared,Centre,2024-08-27 13:45:00,8637.1,91.4,30.3,Hot / Sun-Exposed,False
+BAT-000760,tomatoes,Primadonna,Centre,2024-09-10 08:45:00,6777.1,88.2,19.0,Optimal Dry,False
+BAT-000761,apples,Gala,North,2024-09-21 14:00:00,12061.7,83.2,22.9,Optimal Dry,True
+BAT-000762,table_grapes,Muscat de Hamburg,South,2024-09-20 11:00:00,4318.1,85.1,17.2,Optimal Dry,False
+BAT-000763,apples,Jonagold,North,2024-10-10 13:30:00,12532.3,89.7,19.4,Optimal Dry,True
+BAT-000764,apples,Golden Delicious,North,2024-10-05 11:15:00,10350.2,88.6,18.4,Humid,False
+BAT-000765,apples,Gala,Centre,2024-09-23 09:15:00,7583.7,91.2,17.0,Optimal Dry,True
+BAT-000766,plums,Kabardinka,South,2024-08-07 08:30:00,8861.2,86.1,18.7,Optimal Dry,True
+BAT-000767,tomatoes,Cherry,Centre,2024-10-10 09:15:00,5450.4,85.9,14.9,Humid,False
+BAT-000768,plums,Kabardinka,Centre,2024-10-02 06:15:00,8604.8,91.9,9.2,Humid,False
+BAT-000769,apples,Idared,North,2024-08-21 14:30:00,14553.9,94.8,34.4,Hot / Sun-Exposed,True
+BAT-000770,apples,Golden Delicious,South,2024-10-07 12:30:00,12763.5,98.2,15.5,Optimal Dry,False
+BAT-000771,apples,Jonagold,North,2024-08-20 07:30:00,6001.2,91.7,23.7,Optimal Dry,True
+BAT-000772,apples,Fuji,Centre,2024-10-10 09:45:00,12285.7,96.8,15.2,Humid,False
+BAT-000773,apples,Fuji,North,2024-09-22 09:45:00,9148.7,86.1,17.2,Optimal Dry,True
+BAT-000774,tomatoes,Bobcat,Centre,2024-07-08 13:00:00,3743.3,83.1,31.4,Hot / Sun-Exposed,True
+BAT-000775,apples,Granny Smith,North,2024-09-23 07:15:00,11255.6,90.1,11.2,Humid,False
+BAT-000776,apples,Golden Delicious,North,2024-09-28 07:15:00,7370.5,84.9,16.7,Optimal Dry,False
+BAT-000777,apples,Golden Delicious,North,2024-08-30 07:15:00,7381.7,87.4,21.5,Optimal Dry,False
+BAT-000778,plums,Stanley,Centre,2024-08-11 12:45:00,7056.9,90.5,29.0,Hot / Sun-Exposed,True
+BAT-000779,plums,President,Centre,2024-10-10 10:00:00,3693.9,89.3,15.2,Humid,True
+BAT-000780,tomatoes,Bobcat,Centre,2024-10-06 13:15:00,3024.2,82.6,19.4,Post-Rain,False
+BAT-000781,apples,Gala,Centre,2024-08-25 12:30:00,14460.5,99.0,30.1,Hot / Sun-Exposed,False
+BAT-000782,table_grapes,Moldova,South,2024-09-13 12:30:00,5982.0,89.6,25.5,Optimal Dry,False
+BAT-000783,apples,Jonagold,North,2024-10-13 07:30:00,4607.2,90.9,5.4,Humid,True
+BAT-000784,apples,Golden Delicious,North,2024-09-06 12:15:00,14253.9,95.6,26.4,Optimal Dry,True
+BAT-000785,table_grapes,Codreanca,South,2024-10-24 11:15:00,4003.2,96.5,11.1,Optimal Dry,True
+BAT-000786,plums,Stanley,Centre,2024-09-15 10:45:00,8491.1,97.0,16.3,Post-Rain,False
+BAT-000787,plums,Stanley,Centre,2024-09-22 13:45:00,8325.3,83.3,23.4,Optimal Dry,True
+BAT-000788,apples,Golden Delicious,North,2024-09-19 06:15:00,10439.6,96.4,13.3,Post-Rain,False
+BAT-000789,apples,Granny Smith,North,2024-09-18 11:30:00,12529.8,95.3,21.7,Optimal Dry,True
+BAT-000790,apples,Idared,North,2024-09-22 12:30:00,9318.4,88.4,21.5,Optimal Dry,True
+BAT-000791,strawberries,Marmolada,Centre,2024-05-26 09:15:00,929.3,96.4,19.5,Optimal Dry,False
+BAT-000792,pears,Williams,Centre,2024-10-09 10:45:00,10323.3,83.6,17.4,Optimal Dry,False
+BAT-000793,strawberries,Marmolada,Centre,2024-05-31 09:45:00,1145.7,88.0,21.6,Optimal Dry,False
+BAT-000794,plums,Stanley,Centre,2024-09-30 10:15:00,2738.0,94.2,14.1,Optimal Dry,True
+BAT-000795,apples,Idared,Centre,2024-08-24 12:30:00,6175.6,89.7,26.3,Optimal Dry,True
+BAT-000796,apples,Jonagold,North,2024-10-06 10:00:00,5444.4,82.6,16.3,Humid,True
+BAT-000797,tomatoes,Rio Grande,Centre,2024-07-21 08:00:00,2212.2,83.7,24.0,Optimal Dry,True
+BAT-000798,apples,Fuji,North,2024-10-14 10:15:00,13425.3,81.7,11.2,Optimal Dry,False
+BAT-000799,table_grapes,Codreanca,South,2024-09-06 06:45:00,4106.3,87.4,17.8,Post-Rain,True
+BAT-000800,tomatoes,Cherry,Centre,2024-08-01 09:15:00,4263.9,93.4,23.9,Optimal Dry,True
+BAT-000801,plums,Anna Späth,North,2024-08-23 08:30:00,2915.2,89.8,18.4,Optimal Dry,False
+BAT-000802,apples,Granny Smith,North,2024-09-13 12:00:00,12614.6,93.7,24.8,Optimal Dry,False
+BAT-000803,raspberries,Glen Ample,North,2024-06-15 06:15:00,609.0,96.2,15.9,Optimal Dry,True
+BAT-000804,plums,Anna Späth,Centre,2024-09-22 08:00:00,2629.3,96.6,13.3,Optimal Dry,True
+BAT-000805,apples,Gala,North,2024-08-26 08:15:00,7255.3,96.7,23.9,Optimal Dry,True
+BAT-000806,apples,Idared,North,2024-09-17 07:30:00,7280.5,96.9,17.3,Optimal Dry,True
+BAT-000807,tomatoes,Cherry,Centre,2024-09-22 13:45:00,6355.1,99.0,23.4,Optimal Dry,False
+BAT-000808,table_grapes,Codreanca,Centre,2024-10-07 10:30:00,6634.7,92.9,13.3,Optimal Dry,False
+BAT-000809,pears,Abate Fetel,South,2024-08-25 09:00:00,3660.3,86.2,23.9,Optimal Dry,True
+BAT-000810,table_grapes,Moldova,South,2024-10-13 08:45:00,3979.7,91.1,9.4,Optimal Dry,False
+BAT-000811,tomatoes,Cherry,Centre,2024-09-01 09:15:00,5336.2,79.5,23.8,Optimal Dry,False
+BAT-000812,apples,Golden Delicious,Centre,2024-09-23 07:30:00,9170.9,86.4,14.0,Optimal Dry,True
+BAT-000813,apples,Jonagold,North,2024-09-13 06:00:00,4708.9,90.3,15.7,Humid,True
+BAT-000814,apples,Golden Delicious,North,2024-08-28 10:15:00,7876.6,90.7,25.7,Optimal Dry,False
+BAT-000815,pears,Conference,South,2024-08-25 10:45:00,11108.3,90.3,28.5,Hot / Sun-Exposed,False
+BAT-000816,plums,Kabardinka,Centre,2024-09-03 12:45:00,9760.9,87.4,28.9,Hot / Sun-Exposed,False
+BAT-000817,tomatoes,Bobcat,Centre,2024-08-30 14:15:00,5522.0,88.3,30.3,Hot / Sun-Exposed,False
+BAT-000818,table_grapes,Codreanca,South,2024-10-18 14:45:00,5678.2,96.9,12.2,Optimal Dry,True
+BAT-000819,plums,Stanley,Centre,2024-10-06 10:15:00,4701.9,94.2,17.4,Humid,True
+BAT-000820,apples,Fuji,North,2024-09-12 11:30:00,13733.9,86.3,23.1,Optimal Dry,True
+BAT-000821,apples,Idared,North,2024-10-12 08:00:00,7812.1,85.4,12.0,Humid,True
+BAT-000822,raspberries,Heritage,North,2024-08-14 14:30:00,751.0,87.4,27.6,Optimal Dry,False
+BAT-000823,table_grapes,Codreanca,Centre,2024-09-09 08:00:00,3893.3,92.6,14.9,Optimal Dry,False
+BAT-000824,plums,President,North,2024-09-15 12:15:00,2807.3,88.6,16.3,Humid,True
+BAT-000825,table_grapes,Victoria,South,2024-10-12 07:30:00,7673.4,99.0,13.7,Optimal Dry,True
+BAT-000826,apples,Idared,North,2024-10-20 08:45:00,10515.6,90.9,2.0,Humid,True
+BAT-000827,apples,Granny Smith,North,2024-10-06 14:00:00,12648.3,91.3,20.0,Optimal Dry,False
+BAT-000828,table_grapes,Moldova,Centre,2024-10-23 13:00:00,4526.7,84.9,15.6,Optimal Dry,True
+BAT-000829,raspberries,Novokitaevskaya,North,2024-08-03 09:45:00,580.4,96.3,26.4,Optimal Dry,False
+BAT-000830,apples,Idared,North,2024-10-11 14:45:00,8442.7,85.8,24.3,Optimal Dry,False
+BAT-000831,raspberries,Polana,North,2024-07-05 09:45:00,783.0,85.4,22.5,Optimal Dry,False
+BAT-000832,apricots,Spring Blush,Centre,2024-07-24 08:15:00,5848.2,91.4,22.5,Optimal Dry,False
+BAT-000833,raspberries,Novokitaevskaya,North,2024-06-22 06:15:00,1450.3,95.2,17.1,Optimal Dry,False
+BAT-000834,plums,Kabardinka,Centre,2024-08-06 09:00:00,4116.9,85.8,20.7,Optimal Dry,False
+BAT-000835,apples,Fuji,North,2024-10-03 10:45:00,8696.3,99.0,17.2,Optimal Dry,True
+BAT-000836,plums,Anna Späth,North,2024-08-18 12:00:00,4702.3,89.9,31.4,Hot / Sun-Exposed,False
+BAT-000837,pears,Ksenia,North,2024-08-25 13:30:00,6804.7,96.0,32.4,Hot / Sun-Exposed,False
+BAT-000838,pears,Abate Fetel,South,2024-09-08 07:15:00,4296.1,93.9,13.4,Optimal Dry,False
+BAT-000839,table_grapes,Muscat de Hamburg,Centre,2024-10-15 06:00:00,6977.2,88.2,5.5,Humid,True
+BAT-000840,apples,Granny Smith,North,2024-09-16 12:15:00,11543.5,94.1,19.3,Optimal Dry,True
+BAT-000841,apples,Fuji,Centre,2024-09-18 11:00:00,9588.6,94.2,21.1,Optimal Dry,False
+BAT-000842,raspberries,Polana,North,2024-07-28 08:00:00,1163.3,93.3,21.6,Optimal Dry,False
+BAT-000843,plums,Stanley,North,2024-09-06 08:00:00,3055.5,86.6,18.7,Optimal Dry,False
+BAT-000844,apples,Idared,North,2024-09-30 08:15:00,9907.4,90.4,11.2,Optimal Dry,False
+BAT-000845,apples,Idared,North,2024-10-03 09:15:00,6667.6,97.1,12.8,Optimal Dry,False
+BAT-000846,strawberries,Asia,North,2024-05-28 08:15:00,2784.8,96.2,16.8,Optimal Dry,True
+BAT-000847,raspberries,Glen Ample,Centre,2024-07-27 08:00:00,1482.9,89.1,19.6,Humid,False
+BAT-000848,table_grapes,Codreanca,Centre,2024-09-18 07:00:00,6888.1,84.5,14.5,Optimal Dry,False
+BAT-000849,table_grapes,Muscat de Hamburg,South,2024-10-17 07:00:00,6584.8,99.0,6.3,Optimal Dry,False
+BAT-000850,apples,Fuji,North,2024-09-23 06:45:00,13886.3,87.7,11.2,Humid,False
+BAT-000851,table_grapes,Victoria,Centre,2024-09-06 08:45:00,3948.9,93.2,20.1,Optimal Dry,False
+BAT-000852,tomatoes,Rio Grande,Centre,2024-08-09 08:00:00,2099.7,91.1,22.4,Optimal Dry,True
+BAT-000853,apricots,Spring Blush,Centre,2024-07-07 06:45:00,4257.3,98.2,19.4,Optimal Dry,True
+BAT-000854,table_grapes,Codreanca,South,2024-09-22 10:30:00,5337.7,97.4,17.8,Optimal Dry,False
+BAT-000855,table_grapes,Codreanca,South,2024-09-03 10:30:00,6470.6,90.2,26.0,Optimal Dry,True
+BAT-000856,plums,Kabardinka,North,2024-08-06 13:15:00,9749.9,89.1,21.5,Optimal Dry,False
+BAT-000857,plums,Stanley,Centre,2024-09-11 07:45:00,8410.8,94.6,17.5,Humid,False
+BAT-000858,table_grapes,Victoria,South,2024-10-03 10:15:00,5803.5,86.8,15.5,Optimal Dry,False
+BAT-000859,apples,Golden Delicious,North,2024-09-11 09:00:00,7532.5,97.2,20.5,Optimal Dry,False
+BAT-000860,plums,Stanley,Centre,2024-08-18 13:15:00,5639.2,85.3,32.5,Hot / Sun-Exposed,False
+BAT-000861,table_grapes,Victoria,South,2024-09-03 08:45:00,6668.6,92.7,23.8,Optimal Dry,True
+BAT-000862,apples,Gala,North,2024-09-20 09:00:00,12623.2,89.3,13.0,Optimal Dry,True
+BAT-000863,apples,Fuji,Centre,2024-09-01 12:00:00,13143.8,97.5,29.1,Hot / Sun-Exposed,False
+BAT-000864,plums,Anna Späth,Centre,2024-08-31 10:30:00,3577.3,99.0,25.8,Optimal Dry,True
+BAT-000865,table_grapes,Victoria,South,2024-10-21 12:00:00,7283.1,81.7,11.0,Optimal Dry,True
+BAT-000866,apples,Idared,North,2024-09-25 13:45:00,8178.2,91.4,24.3,Optimal Dry,True
+BAT-000867,apples,Idared,North,2024-08-22 13:45:00,11227.5,85.5,28.8,Hot / Sun-Exposed,True
+BAT-000868,apples,Golden Delicious,North,2024-09-20 14:45:00,11963.3,89.5,21.8,Optimal Dry,True
+BAT-000869,plums,Stanley,Centre,2024-08-12 14:30:00,6025.0,93.8,27.9,Optimal Dry,False
+BAT-000870,apples,Gala,North,2024-10-08 13:15:00,5093.9,85.6,18.2,Optimal Dry,True
+BAT-000871,table_grapes,Victoria,South,2024-10-17 12:45:00,6817.2,85.5,9.8,Optimal Dry,False
+BAT-000872,plums,Stanley,Centre,2024-08-01 11:45:00,5585.8,88.8,28.3,Hot / Sun-Exposed,False
+BAT-000873,table_grapes,Codreanca,South,2024-09-23 09:30:00,7471.9,93.2,18.6,Optimal Dry,False
+BAT-000874,tomatoes,Bobcat,North,2024-08-06 06:00:00,5080.6,91.1,17.4,Optimal Dry,False
+BAT-000875,raspberries,Polana,North,2024-08-19 06:00:00,1893.1,92.1,20.2,Optimal Dry,False
+BAT-000876,plums,Stanley,Centre,2024-08-03 11:15:00,5800.0,93.9,27.6,Optimal Dry,False
+BAT-000877,apples,Idared,North,2024-09-21 09:00:00,5259.9,90.5,15.0,Optimal Dry,True
+BAT-000878,apples,Granny Smith,North,2024-10-25 08:45:00,6791.3,93.3,4.3,Humid,True
+BAT-000879,tomatoes,Rio Grande,South,2024-10-08 07:30:00,4054.4,95.9,9.4,Humid,False
+BAT-000880,apples,Fuji,North,2024-08-26 12:00:00,7801.0,86.9,33.1,Hot / Sun-Exposed,False
+BAT-000881,plums,Kabardinka,Centre,2024-09-07 09:45:00,3216.7,84.1,20.9,Optimal Dry,True
+BAT-000882,plums,Kabardinka,Centre,2024-09-10 14:45:00,6573.4,93.0,25.7,Optimal Dry,True
+BAT-000883,pears,Conference,South,2024-10-05 11:00:00,5006.0,99.0,19.9,Humid,False
+BAT-000884,plums,Anna Späth,Centre,2024-09-09 10:15:00,4740.1,94.2,20.6,Optimal Dry,True
+BAT-000885,table_grapes,Codreanca,Centre,2024-10-01 11:45:00,2639.5,94.4,13.7,Optimal Dry,False
+BAT-000886,apricots,Nadejda,Centre,2024-06-30 08:15:00,5174.8,89.5,24.0,Optimal Dry,False
+BAT-000887,tomatoes,Cherry,South,2024-09-16 11:30:00,2569.1,93.2,19.7,Optimal Dry,False
+BAT-000888,apples,Jonagold,North,2024-09-08 12:00:00,9034.4,90.2,24.4,Optimal Dry,True
+BAT-000889,plums,Kabardinka,North,2024-09-01 08:30:00,7093.1,92.0,21.9,Optimal Dry,False
+BAT-000890,apples,Golden Delicious,Centre,2024-09-20 09:30:00,13877.3,89.8,15.8,Optimal Dry,False
+BAT-000891,plums,President,North,2024-08-03 11:00:00,3808.9,89.8,26.6,Optimal Dry,True
+BAT-000892,apples,Gala,North,2024-08-29 13:15:00,4332.1,90.7,28.4,Hot / Sun-Exposed,True
+BAT-000893,apples,Granny Smith,North,2024-10-01 12:30:00,13820.9,91.7,10.7,Humid,False
+BAT-000894,plums,Stanley,Centre,2024-09-16 08:30:00,7999.3,91.0,17.2,Optimal Dry,True
+BAT-000895,apples,Idared,North,2024-10-13 09:00:00,13644.0,93.1,7.2,Humid,False
+BAT-000896,plums,Stanley,North,2024-08-31 10:30:00,9327.7,96.9,25.9,Optimal Dry,True
+BAT-000897,plums,Stanley,North,2024-08-07 11:45:00,4523.6,97.9,24.9,Optimal Dry,True
+BAT-000898,apples,Granny Smith,North,2024-09-01 06:00:00,12160.2,92.3,21.4,Optimal Dry,False
+BAT-000899,tomatoes,Cherry,South,2024-07-26 14:15:00,3435.6,95.0,26.3,Optimal Dry,False
+BAT-000900,table_grapes,Muscat de Hamburg,South,2024-10-16 12:30:00,4735.5,83.2,11.6,Optimal Dry,False
+BAT-000901,apples,Fuji,North,2025-10-14 11:00:00,9250.7,89.5,9.4,Optimal Dry,False
+BAT-000902,apricots,Spring Blush,Centre,2025-07-27 09:15:00,5178.4,89.2,26.6,Optimal Dry,True
+BAT-000903,apples,Idared,North,2025-09-19 07:45:00,4674.2,86.0,11.5,Optimal Dry,False
+BAT-000904,table_grapes,Victoria,Centre,2025-09-13 14:00:00,7158.3,88.4,25.8,Optimal Dry,False
+BAT-000905,table_grapes,Moldova,South,2025-09-10 10:45:00,4207.2,86.4,24.3,Optimal Dry,False
+BAT-000906,tomatoes,Primadonna,South,2025-07-23 13:30:00,4646.6,88.8,31.9,Hot / Sun-Exposed,False
+BAT-000907,raspberries,Polana,North,2025-06-17 07:15:00,1086.7,94.7,17.5,Optimal Dry,True
+BAT-000908,apples,Idared,North,2025-10-02 13:45:00,11702.3,97.2,9.2,Optimal Dry,True
+BAT-000909,apples,Jonagold,North,2025-10-13 14:45:00,7770.4,85.5,12.0,Optimal Dry,False
+BAT-000910,table_grapes,Moldova,Centre,2025-10-21 12:45:00,5266.5,92.0,11.3,Optimal Dry,False
+BAT-000911,table_grapes,Codreanca,Centre,2025-09-21 06:00:00,4656.8,88.6,12.7,Humid,False
+BAT-000912,apples,Golden Delicious,Centre,2025-10-12 10:00:00,8898.4,93.2,11.8,Humid,False
+BAT-000913,apricots,Nadejda,Centre,2025-06-23 08:30:00,2654.7,92.2,18.0,Optimal Dry,True
+BAT-000914,plums,Kabardinka,North,2025-09-18 12:15:00,9553.2,99.0,17.4,Optimal Dry,True
+BAT-000915,raspberries,Heritage,North,2025-08-23 09:45:00,1173.8,89.9,18.0,Optimal Dry,False
+BAT-000916,tomatoes,Rio Grande,Centre,2025-08-20 10:00:00,4645.9,93.8,21.2,Optimal Dry,False
+BAT-000917,plums,Kabardinka,Centre,2025-09-07 07:00:00,3194.8,93.4,15.6,Optimal Dry,False
+BAT-000918,apples,Granny Smith,North,2025-10-09 07:15:00,13296.9,89.8,10.6,Humid,False
+BAT-000919,apples,Jonagold,Centre,2025-10-23 11:15:00,13646.5,99.0,13.9,Optimal Dry,False
+BAT-000920,raspberries,Novokitaevskaya,North,2025-06-28 09:15:00,1525.5,85.6,20.9,Optimal Dry,False
+BAT-000921,apples,Gala,North,2025-10-13 08:30:00,12876.6,90.6,10.2,Humid,False
+BAT-000922,table_grapes,Victoria,South,2025-10-22 08:15:00,4820.6,93.4,8.9,Humid,True
+BAT-000923,apples,Golden Delicious,North,2025-10-21 08:00:00,7983.4,89.3,0.9,Humid,True
+BAT-000924,apples,Fuji,North,2025-09-20 06:15:00,5675.7,95.7,15.3,Humid,True
+BAT-000925,apples,Granny Smith,North,2025-10-01 08:45:00,5886.8,84.1,5.5,Humid,True
+BAT-000926,apples,Granny Smith,North,2025-10-01 06:45:00,8758.3,88.7,5.4,Humid,True
+BAT-000927,pears,Abate Fetel,Centre,2025-08-24 10:00:00,10920.1,93.2,19.9,Optimal Dry,False
+BAT-000928,table_grapes,Muscat de Hamburg,South,2025-10-15 06:30:00,5507.6,91.3,5.9,Humid,True
+BAT-000929,table_grapes,Moldova,Centre,2025-09-17 14:00:00,3087.7,94.1,15.7,Post-Rain,False
+BAT-000930,plums,Anna Späth,North,2025-10-05 14:30:00,5347.0,89.3,15.1,Optimal Dry,True
+BAT-000931,apples,Gala,North,2025-09-23 14:15:00,12607.8,86.0,23.7,Optimal Dry,False
+BAT-000932,apples,Golden Delicious,North,2025-10-17 08:15:00,13916.8,89.6,5.3,Humid,True
+BAT-000933,apples,Gala,North,2025-09-27 12:45:00,7343.6,89.4,14.8,Optimal Dry,False
+BAT-000934,table_grapes,Victoria,Centre,2025-10-08 12:15:00,3394.0,93.3,12.7,Humid,False
+BAT-000935,table_grapes,Victoria,South,2025-09-29 14:15:00,7192.4,93.4,17.3,Optimal Dry,False
+BAT-000936,tomatoes,Primadonna,South,2025-07-27 13:45:00,2938.2,89.9,36.0,Hot / Sun-Exposed,False
+BAT-000937,apples,Gala,Centre,2025-10-11 13:45:00,13345.8,96.1,10.3,Optimal Dry,False
+BAT-000938,tomatoes,Cherry,Centre,2025-08-04 08:30:00,3897.0,96.4,21.9,Optimal Dry,True
+BAT-000939,apricots,Kioto,North,2025-07-04 09:45:00,2079.4,94.6,27.0,Optimal Dry,False
+BAT-000940,apples,Golden Delicious,North,2025-09-28 10:30:00,7875.2,96.7,10.8,Optimal Dry,False
+BAT-000941,pears,Williams,South,2025-09-10 08:15:00,7460.0,89.7,18.8,Optimal Dry,True
+BAT-000942,plums,Stanley,South,2025-08-04 09:15:00,4623.7,88.8,24.0,Optimal Dry,True
+BAT-000943,apples,Golden Delicious,Centre,2025-09-10 13:15:00,5987.0,95.8,24.4,Optimal Dry,True
+BAT-000944,table_grapes,Moldova,South,2025-10-14 14:45:00,5689.2,98.9,14.8,Optimal Dry,False
+BAT-000945,tomatoes,Primadonna,North,2025-07-10 07:30:00,2081.9,94.0,18.0,Humid,True
+BAT-000946,table_grapes,Muscat de Hamburg,South,2025-10-24 07:00:00,5364.5,86.7,14.7,Humid,False
+BAT-000947,table_grapes,Victoria,Centre,2025-10-13 12:15:00,6743.4,90.9,10.9,Optimal Dry,True
+BAT-000948,table_grapes,Victoria,Centre,2025-09-09 09:00:00,3302.8,90.4,19.7,Optimal Dry,False
+BAT-000949,plums,Anna Späth,Centre,2025-09-04 06:15:00,7254.3,87.1,16.2,Optimal Dry,False
+BAT-000950,table_grapes,Codreanca,Centre,2025-10-20 14:30:00,5058.7,91.4,8.8,Optimal Dry,False
+BAT-000951,plums,Kabardinka,North,2025-08-12 11:45:00,6957.0,95.6,22.2,Optimal Dry,True
+BAT-000952,apples,Jonagold,North,2025-09-25 06:00:00,8076.1,96.7,11.0,Optimal Dry,False
+BAT-000953,apples,Jonagold,North,2025-09-25 07:15:00,12126.2,90.4,10.6,Optimal Dry,False
+BAT-000954,apricots,Kioto,North,2025-07-09 10:15:00,4740.0,89.0,25.8,Optimal Dry,False
+BAT-000955,plums,President,Centre,2025-10-05 14:45:00,3302.9,87.2,15.8,Optimal Dry,True
+BAT-000956,apples,Gala,North,2025-09-07 10:30:00,5548.8,88.6,20.3,Optimal Dry,False
+BAT-000957,apples,Idared,North,2025-08-29 07:30:00,5128.8,93.8,16.9,Optimal Dry,True
+BAT-000958,apples,Golden Delicious,North,2025-08-24 06:30:00,10533.5,88.8,12.3,Humid,True
+BAT-000959,table_grapes,Moldova,South,2025-10-21 09:00:00,6119.0,89.1,3.1,Optimal Dry,True
+BAT-000960,plums,Anna Späth,Centre,2025-08-30 13:30:00,3350.8,89.6,31.3,Hot / Sun-Exposed,False
+BAT-000961,table_grapes,Muscat de Hamburg,Centre,2025-09-27 06:00:00,7431.7,93.4,5.0,Optimal Dry,False
+BAT-000962,apples,Idared,North,2025-09-03 12:45:00,9289.9,90.3,27.2,Optimal Dry,False
+BAT-000963,apples,Gala,North,2025-09-17 06:00:00,4592.9,90.9,13.5,Post-Rain,False
+BAT-000964,apples,Golden Delicious,North,2025-08-21 14:30:00,4713.5,88.8,28.6,Hot / Sun-Exposed,False
+BAT-000965,table_grapes,Muscat de Hamburg,South,2025-09-15 08:15:00,4688.9,90.2,13.2,Humid,False
+BAT-000966,apricots,Kioto,North,2025-07-10 11:15:00,4989.8,95.5,21.9,Optimal Dry,False
+BAT-000967,apples,Golden Delicious,North,2025-10-22 14:30:00,5671.5,85.5,14.1,Optimal Dry,False
+BAT-000968,apples,Idared,North,2025-09-29 10:00:00,9993.9,82.5,11.9,Optimal Dry,True
+BAT-000969,table_grapes,Muscat de Hamburg,Centre,2025-10-06 07:45:00,3649.6,99.0,10.0,Post-Rain,False
+BAT-000970,strawberries,Alba,Centre,2025-06-25 09:15:00,1489.1,91.9,22.7,Optimal Dry,False
+BAT-000971,table_grapes,Moldova,South,2025-10-22 11:00:00,7949.4,93.9,15.1,Optimal Dry,True
+BAT-000972,apples,Jonagold,North,2025-09-14 09:45:00,11180.4,89.4,17.8,Optimal Dry,False
+BAT-000973,table_grapes,Codreanca,South,2025-10-14 14:30:00,6111.4,96.6,14.6,Optimal Dry,True
+BAT-000974,apples,Gala,North,2025-09-08 06:30:00,10802.6,89.4,14.1,Optimal Dry,True
+BAT-000975,tomatoes,Bobcat,South,2025-08-09 08:00:00,3991.5,94.8,19.5,Optimal Dry,True
+BAT-000976,apples,Jonagold,North,2025-09-16 13:30:00,14136.7,91.0,21.7,Optimal Dry,False
+BAT-000977,tomatoes,Cherry,South,2025-09-04 10:15:00,4793.8,88.6,24.9,Optimal Dry,True
+BAT-000978,plums,Anna Späth,North,2025-08-24 13:45:00,6281.2,88.4,15.2,Optimal Dry,True
+BAT-000979,table_grapes,Codreanca,South,2025-09-15 08:00:00,6048.1,93.2,13.2,Humid,True
+BAT-000980,tomatoes,Bobcat,North,2025-07-12 12:00:00,3851.8,96.5,23.7,Optimal Dry,False
+BAT-000981,apples,Granny Smith,North,2025-10-09 14:30:00,14285.8,93.8,12.3,Humid,True
+BAT-000982,pears,Conference,North,2025-08-30 09:00:00,9914.5,87.5,20.8,Optimal Dry,False
+BAT-000983,apples,Granny Smith,North,2025-09-09 09:15:00,6090.9,90.1,18.8,Optimal Dry,False
+BAT-000984,tomatoes,Cherry,Centre,2025-09-27 10:45:00,4496.9,92.6,13.0,Optimal Dry,False
+BAT-000985,apples,Idared,North,2025-09-11 11:30:00,11330.0,87.5,22.7,Optimal Dry,True
+BAT-000986,apples,Granny Smith,North,2025-10-17 14:30:00,7704.6,91.1,12.9,Optimal Dry,True
+BAT-000987,apples,Golden Delicious,Centre,2025-08-25 10:00:00,7775.2,87.2,17.3,Optimal Dry,False
+BAT-000988,apples,Granny Smith,North,2025-09-03 12:30:00,7873.8,91.0,26.1,Optimal Dry,False
+BAT-000989,strawberries,Asia,Centre,2025-06-16 07:00:00,2764.8,89.3,15.3,Optimal Dry,True
+BAT-000990,plums,President,North,2025-09-26 07:45:00,7529.2,93.6,5.4,Optimal Dry,True
+BAT-000991,apples,Fuji,North,2025-09-04 12:30:00,7072.0,84.0,25.5,Optimal Dry,False
+BAT-000992,apples,Fuji,Centre,2025-10-05 06:15:00,7934.9,89.7,9.5,Humid,True
+BAT-000993,strawberries,Marmolada,Centre,2025-05-26 06:45:00,1656.7,93.2,12.6,Humid,False
+BAT-000994,apples,Gala,North,2025-10-12 08:00:00,6985.2,95.8,11.3,Humid,False
+BAT-000995,apples,Fuji,North,2025-10-25 12:00:00,9451.9,90.0,12.4,Optimal Dry,False
+BAT-000996,strawberries,Marmolada,North,2025-05-31 06:15:00,1349.9,92.8,11.2,Optimal Dry,False
+BAT-000997,apples,Granny Smith,North,2025-09-24 14:00:00,10231.3,89.8,20.7,Optimal Dry,True
+BAT-000998,pears,Williams,South,2025-10-07 11:15:00,5903.3,92.3,12.3,Humid,False
+BAT-000999,plums,President,Centre,2025-10-04 12:00:00,3089.8,96.2,11.4,Post-Rain,True
+BAT-001000,table_grapes,Codreanca,South,2025-09-02 13:15:00,7770.1,91.4,30.1,Hot / Sun-Exposed,True
+BAT-001001,plums,Anna Späth,North,2025-09-29 07:30:00,5988.3,87.1,9.2,Optimal Dry,False
+BAT-001002,table_grapes,Moldova,South,2025-10-13 09:45:00,4248.6,95.7,10.7,Humid,True
+BAT-001003,apricots,Spring Blush,North,2025-07-04 08:30:00,4172.7,86.9,22.2,Optimal Dry,True
+BAT-001004,tomatoes,Primadonna,South,2025-07-15 14:15:00,4020.0,92.9,29.9,Hot / Sun-Exposed,False
+BAT-001005,table_grapes,Codreanca,South,2025-10-13 11:30:00,2671.8,99.0,11.9,Humid,False
+BAT-001006,apples,Golden Delicious,North,2025-09-28 06:15:00,7602.7,95.0,4.9,Optimal Dry,True
+BAT-001007,table_grapes,Muscat de Hamburg,South,2025-10-21 06:30:00,7445.8,92.6,0.5,Humid,False
+BAT-001008,apples,Fuji,North,2025-10-24 11:45:00,13122.1,90.2,17.4,Optimal Dry,True
+BAT-001009,table_grapes,Victoria,South,2025-10-02 14:30:00,5139.3,95.2,11.2,Optimal Dry,True
+BAT-001010,table_grapes,Victoria,South,2025-10-01 12:15:00,5268.9,94.0,12.0,Optimal Dry,False
+BAT-001011,table_grapes,Victoria,South,2025-10-04 13:15:00,7377.6,88.3,14.0,Humid,False
+BAT-001012,apples,Golden Delicious,North,2025-09-23 14:00:00,8134.6,95.2,23.7,Optimal Dry,True
+BAT-001013,plums,Anna Späth,North,2025-10-10 14:15:00,6317.9,93.8,15.8,Optimal Dry,False
+BAT-001014,table_grapes,Muscat de Hamburg,South,2025-10-08 08:45:00,2832.6,92.5,12.4,Humid,False
+BAT-001015,apples,Idared,North,2025-10-09 07:30:00,4486.1,91.7,10.5,Humid,False
+BAT-001016,apples,Granny Smith,North,2025-10-25 11:30:00,5656.3,93.7,12.4,Optimal Dry,True
+BAT-001017,apples,Fuji,North,2025-09-29 09:00:00,13887.3,87.9,10.1,Optimal Dry,True
+BAT-001018,plums,Anna Späth,Centre,2025-08-08 10:45:00,7377.9,85.1,23.2,Optimal Dry,True
+BAT-001019,apples,Idared,North,2025-09-02 12:30:00,8540.8,88.6,26.7,Optimal Dry,False
+BAT-001020,table_grapes,Codreanca,South,2025-09-04 10:15:00,7310.7,93.3,24.9,Optimal Dry,True
+BAT-001021,plums,President,Centre,2025-10-04 10:15:00,4587.6,96.1,9.7,Humid,False
+BAT-001022,plums,President,North,2025-08-24 10:30:00,8141.4,93.2,16.0,Optimal Dry,True
+BAT-001023,apples,Idared,North,2025-08-26 08:15:00,8380.2,90.5,12.4,Optimal Dry,False
+BAT-001024,plums,Stanley,Centre,2025-09-08 11:30:00,9225.0,96.6,24.6,Optimal Dry,True
+BAT-001025,tomatoes,Primadonna,Centre,2025-07-23 13:15:00,4393.9,85.6,29.2,Hot / Sun-Exposed,False
+BAT-001026,apples,Gala,Centre,2025-10-03 11:15:00,11343.4,92.3,10.2,Optimal Dry,True
+BAT-001027,apples,Idared,North,2025-10-19 06:45:00,12983.7,93.5,5.9,Optimal Dry,True
+BAT-001028,pears,Ksenia,Centre,2025-08-30 13:00:00,8610.6,89.3,30.3,Hot / Sun-Exposed,False
+BAT-001029,plums,Kabardinka,South,2025-09-15 12:45:00,9498.8,79.7,22.2,Optimal Dry,False
+BAT-001030,table_grapes,Codreanca,South,2025-09-19 09:45:00,5499.6,90.9,16.7,Optimal Dry,True
+BAT-001031,table_grapes,Victoria,South,2025-09-06 13:45:00,2943.2,94.9,27.7,Optimal Dry,True
+BAT-001032,apples,Gala,North,2025-10-18 08:45:00,8727.7,97.3,8.5,Humid,False
+BAT-001033,raspberries,Glen Ample,Centre,2025-07-01 13:45:00,1549.1,89.2,23.0,Optimal Dry,False
+BAT-001034,apples,Golden Delicious,North,2025-09-28 08:00:00,7685.1,86.4,5.8,Optimal Dry,False
+BAT-001035,apples,Granny Smith,North,2025-10-22 11:15:00,7072.2,91.8,9.9,Optimal Dry,False
+BAT-001036,plums,Kabardinka,North,2025-08-04 06:15:00,6014.4,91.4,16.6,Optimal Dry,False
+BAT-001037,pears,Ksenia,South,2025-09-14 12:30:00,11875.7,96.4,21.7,Optimal Dry,False
+BAT-001038,pears,Ksenia,North,2025-08-30 11:00:00,9860.8,92.1,26.0,Optimal Dry,True
+BAT-001039,table_grapes,Codreanca,South,2025-09-29 07:30:00,5322.8,91.8,7.5,Humid,False
+BAT-001040,table_grapes,Moldova,South,2025-09-14 11:15:00,3709.3,99.0,20.9,Optimal Dry,True
+BAT-001041,plums,Kabardinka,Centre,2025-09-25 13:30:00,9304.7,87.0,14.0,Optimal Dry,True
+BAT-001042,plums,President,Centre,2025-09-27 06:30:00,7708.5,88.7,5.0,Optimal Dry,False
+BAT-001043,table_grapes,Codreanca,South,2025-10-23 09:15:00,5979.6,89.6,12.8,Humid,True
+BAT-001044,apples,Gala,North,2025-10-18 10:45:00,12903.1,82.0,8.7,Humid,True
+BAT-001045,table_grapes,Codreanca,Centre,2025-10-21 11:30:00,4156.2,89.9,9.8,Optimal Dry,True
+BAT-001046,apples,Idared,North,2025-08-26 08:30:00,14590.3,91.7,12.4,Optimal Dry,False
+BAT-001047,table_grapes,Moldova,South,2025-09-28 12:30:00,3180.2,93.1,15.9,Optimal Dry,False
+BAT-001048,table_grapes,Victoria,South,2025-10-10 10:45:00,4069.8,91.8,14.1,Optimal Dry,False
+BAT-001049,table_grapes,Codreanca,South,2025-09-01 14:15:00,7954.5,98.0,28.1,Hot / Sun-Exposed,False
+BAT-001050,apples,Jonagold,Centre,2025-08-23 13:30:00,10373.2,89.7,24.1,Optimal Dry,True
+BAT-001051,plums,Stanley,Centre,2025-08-08 10:30:00,2645.5,87.8,21.4,Optimal Dry,False
+BAT-001052,apples,Jonagold,North,2025-09-25 10:00:00,4056.3,89.3,11.5,Optimal Dry,True
+BAT-001053,apples,Gala,North,2025-09-01 06:45:00,7671.7,89.7,18.8,Humid,False
+BAT-001054,apples,Gala,North,2025-10-20 07:45:00,9029.3,93.2,3.0,Optimal Dry,True
+BAT-001055,apples,Gala,North,2025-09-29 09:30:00,14700.8,92.3,11.9,Optimal Dry,False
+BAT-001056,plums,President,Centre,2025-08-11 06:30:00,5692.2,92.1,20.9,Optimal Dry,True
+BAT-001057,strawberries,Clery,Centre,2025-06-21 13:45:00,2150.2,91.3,20.4,Optimal Dry,True
+BAT-001058,plums,Stanley,Centre,2025-10-05 06:45:00,5649.1,91.5,9.0,Humid,True
+BAT-001059,apricots,Nadejda,Centre,2025-06-29 09:15:00,2983.5,91.0,19.2,Optimal Dry,True
+BAT-001060,pears,Abate Fetel,North,2025-10-04 12:00:00,7601.7,91.9,9.9,Humid,False
+BAT-001061,apples,Fuji,North,2025-09-12 11:45:00,6537.0,98.4,16.7,Optimal Dry,False
+BAT-001062,pears,Ksenia,South,2025-10-06 12:30:00,10969.9,85.6,14.3,Optimal Dry,False
+BAT-001063,apples,Gala,North,2025-09-26 08:00:00,8115.0,93.5,5.4,Optimal Dry,False
+BAT-001064,plums,President,Centre,2025-08-26 09:15:00,9121.4,95.5,17.2,Optimal Dry,True
+BAT-001065,plums,President,North,2025-09-19 07:00:00,2727.8,94.0,9.6,Humid,True
+BAT-001066,apples,Idared,North,2025-10-15 08:15:00,5425.5,98.7,2.4,Humid,False
+BAT-001067,apples,Jonagold,Centre,2025-09-19 06:30:00,8002.4,96.0,11.0,Optimal Dry,False
+BAT-001068,apples,Gala,North,2025-09-24 13:45:00,5947.7,89.7,20.7,Optimal Dry,True
+BAT-001069,table_grapes,Moldova,South,2025-09-23 13:30:00,7265.0,97.0,23.7,Optimal Dry,False
+BAT-001070,plums,President,South,2025-10-03 06:15:00,4307.9,92.8,6.8,Optimal Dry,True
+BAT-001071,apples,Idared,North,2025-10-22 11:45:00,12094.1,97.1,10.7,Optimal Dry,True
+BAT-001072,apricots,Spring Blush,North,2025-06-23 13:15:00,5798.5,84.6,22.3,Optimal Dry,False
+BAT-001073,apples,Idared,North,2025-09-10 09:45:00,12511.7,95.9,21.6,Optimal Dry,True
+BAT-001074,tomatoes,Cherry,North,2025-08-19 13:45:00,3812.3,93.8,22.3,Optimal Dry,False
+BAT-001075,apples,Granny Smith,North,2025-09-07 07:15:00,7732.8,87.1,14.8,Optimal Dry,False
+BAT-001076,plums,Kabardinka,North,2025-10-09 14:15:00,3740.9,84.7,12.3,Humid,True
+BAT-001077,apples,Idared,South,2025-10-04 11:30:00,7806.7,92.4,13.5,Humid,False
+BAT-001078,plums,President,Centre,2025-08-25 07:15:00,9385.7,92.5,10.8,Optimal Dry,False
+BAT-001079,apples,Gala,North,2025-10-10 12:30:00,12939.7,83.9,13.3,Optimal Dry,False
+BAT-001080,plums,Kabardinka,North,2025-09-29 14:15:00,4434.2,84.8,17.0,Optimal Dry,True
+BAT-001081,plums,Kabardinka,Centre,2025-10-09 06:45:00,7596.9,95.4,11.2,Humid,True
+BAT-001082,apples,Jonagold,North,2025-10-13 12:30:00,4300.7,96.2,11.1,Optimal Dry,True
+BAT-001083,plums,Anna Späth,Centre,2025-09-23 12:00:00,9097.2,88.0,22.9,Optimal Dry,True
+BAT-001084,plums,President,South,2025-08-26 10:45:00,3177.7,88.9,21.8,Optimal Dry,False
+BAT-001085,pears,Abate Fetel,Centre,2025-08-27 13:45:00,8196.9,90.8,27.6,Optimal Dry,True
+BAT-001086,tomatoes,Rio Grande,Centre,2025-08-05 07:45:00,3642.9,89.9,22.2,Optimal Dry,True
+BAT-001087,apples,Granny Smith,North,2025-09-27 10:15:00,10973.3,89.8,10.4,Optimal Dry,False
+BAT-001088,strawberries,Marmolada,Centre,2025-05-21 13:00:00,2404.6,93.4,19.9,Optimal Dry,True
+BAT-001089,pears,Williams,North,2025-10-11 06:30:00,5313.3,91.8,8.2,Humid,False
+BAT-001090,apples,Fuji,North,2025-08-26 14:15:00,4668.0,98.4,21.7,Optimal Dry,False
+BAT-001091,pears,Williams,Centre,2025-09-12 14:30:00,11813.7,94.4,20.9,Optimal Dry,False
+BAT-001092,plums,Kabardinka,Centre,2025-09-10 11:00:00,8538.2,87.8,22.5,Optimal Dry,False
+BAT-001093,table_grapes,Codreanca,Centre,2025-09-19 12:45:00,7591.4,91.4,20.9,Optimal Dry,False
+BAT-001094,table_grapes,Codreanca,South,2025-10-15 14:00:00,6441.0,91.4,12.7,Optimal Dry,False
+BAT-001095,apples,Jonagold,North,2025-08-26 10:15:00,5253.8,95.5,17.2,Optimal Dry,False
+BAT-001096,strawberries,Alba,Centre,2025-06-10 10:30:00,1977.1,94.8,19.3,Optimal Dry,True
+BAT-001097,pears,Ksenia,South,2025-10-11 07:45:00,7100.8,95.2,9.5,Optimal Dry,False
+BAT-001098,tomatoes,Bobcat,North,2025-10-02 14:45:00,4044.4,88.7,8.4,Optimal Dry,True
+BAT-001099,tomatoes,Primadonna,Centre,2025-07-06 09:15:00,3070.4,90.8,24.4,Optimal Dry,False
+BAT-001100,apples,Granny Smith,North,2025-09-14 13:00:00,5883.0,88.5,21.0,Optimal Dry,False
+BAT-001101,apples,Granny Smith,North,2025-09-01 14:15:00,14841.7,89.4,27.2,Optimal Dry,False
+BAT-001102,pears,Ksenia,South,2025-08-27 11:45:00,6074.7,94.8,25.7,Optimal Dry,True
+BAT-001103,apples,Fuji,North,2025-09-28 07:15:00,4496.8,91.8,4.8,Optimal Dry,True
+BAT-001104,strawberries,Clery,Centre,2025-06-07 07:45:00,1736.8,91.8,21.5,Optimal Dry,False
+BAT-001105,table_grapes,Muscat de Hamburg,Centre,2025-09-02 13:30:00,5147.9,88.4,30.6,Hot / Sun-Exposed,False
+BAT-001106,table_grapes,Victoria,South,2025-09-04 12:15:00,7669.4,90.7,27.9,Optimal Dry,True
+BAT-001107,tomatoes,Cherry,Centre,2025-08-09 10:30:00,4589.5,93.2,25.6,Optimal Dry,True
+BAT-001108,apples,Golden Delicious,Centre,2025-08-21 07:15:00,6163.1,92.1,17.6,Optimal Dry,True
+BAT-001109,apples,Idared,North,2025-09-04 14:30:00,11870.8,95.4,27.7,Optimal Dry,False
+BAT-001110,tomatoes,Rio Grande,Centre,2025-08-16 11:15:00,2491.1,95.0,24.9,Optimal Dry,False
+BAT-001111,tomatoes,Rio Grande,South,2025-08-28 10:30:00,2413.8,96.6,23.1,Optimal Dry,False
+BAT-001112,apples,Gala,Centre,2025-10-12 13:15:00,8746.6,83.2,14.7,Optimal Dry,False
+BAT-001113,table_grapes,Muscat de Hamburg,South,2025-10-03 07:00:00,3773.7,92.6,6.6,Optimal Dry,False
+BAT-001114,plums,President,North,2025-08-21 11:00:00,7501.8,91.8,25.2,Optimal Dry,True
+BAT-001115,apples,Gala,North,2025-10-23 08:15:00,10800.3,89.8,11.4,Humid,True
+BAT-001116,apricots,Spring Blush,Centre,2025-07-03 07:15:00,2159.9,93.6,17.9,Optimal Dry,True
+BAT-001117,tomatoes,Primadonna,South,2025-09-15 13:30:00,5849.3,96.6,22.9,Optimal Dry,False
+BAT-001118,table_grapes,Moldova,South,2025-10-21 13:15:00,2879.7,90.2,13.5,Optimal Dry,False
+BAT-001119,apples,Fuji,North,2025-10-07 11:00:00,8850.5,82.7,10.5,Humid,False
+BAT-001120,apples,Gala,North,2025-09-15 13:00:00,4089.6,93.8,18.0,Post-Rain,False
+BAT-001121,tomatoes,Primadonna,Centre,2025-09-26 08:30:00,5925.4,84.4,6.7,Optimal Dry,False
+BAT-001122,apricots,Spring Blush,Centre,2025-07-26 11:45:00,2158.0,90.2,32.0,Hot / Sun-Exposed,True
+BAT-001123,apples,Gala,North,2025-09-18 11:30:00,7199.8,86.1,17.4,Optimal Dry,False
+BAT-001124,apples,Jonagold,North,2025-08-25 08:15:00,11460.4,97.4,11.2,Optimal Dry,False
+BAT-001125,apples,Granny Smith,North,2025-10-08 06:00:00,4614.0,87.9,10.7,Humid,False
+BAT-001126,apples,Gala,North,2025-09-26 08:15:00,5764.0,87.3,5.4,Optimal Dry,False
+BAT-001127,tomatoes,Rio Grande,Centre,2025-08-11 11:00:00,2649.4,91.3,24.7,Optimal Dry,True
+BAT-001128,tomatoes,Bobcat,South,2025-07-06 11:15:00,2274.6,87.5,28.8,Hot / Sun-Exposed,True
+BAT-001129,apples,Golden Delicious,North,2025-10-18 07:45:00,14638.6,86.1,7.2,Humid,False
+BAT-001130,table_grapes,Muscat de Hamburg,South,2025-09-18 08:15:00,4072.3,88.2,13.2,Optimal Dry,True
+BAT-001131,plums,President,Centre,2025-08-24 09:30:00,3851.3,96.9,19.9,Optimal Dry,False
+BAT-001132,tomatoes,Bobcat,North,2025-09-03 12:00:00,5978.2,88.9,26.1,Optimal Dry,True
+BAT-001133,apples,Granny Smith,North,2025-09-02 09:30:00,13286.5,90.0,23.3,Optimal Dry,False
+BAT-001134,raspberries,Heritage,North,2025-07-02 11:00:00,812.7,89.8,22.9,Optimal Dry,True
+BAT-001135,pears,Abate Fetel,South,2025-10-02 10:00:00,11256.9,88.8,8.2,Optimal Dry,True
+BAT-001136,tomatoes,Cherry,North,2025-09-09 09:30:00,4562.5,87.7,21.3,Optimal Dry,True
+BAT-001137,plums,Kabardinka,Centre,2025-10-10 07:15:00,7950.8,86.3,10.6,Optimal Dry,True
+BAT-001138,apples,Gala,North,2025-08-31 12:00:00,4367.1,90.6,29.1,Hot / Sun-Exposed,False
+BAT-001139,pears,Abate Fetel,Centre,2025-09-26 10:30:00,6911.5,91.1,10.9,Optimal Dry,True
+BAT-001140,apples,Golden Delicious,North,2025-10-15 06:00:00,8740.2,96.3,3.2,Humid,True
+BAT-001141,table_grapes,Victoria,Centre,2025-10-03 09:30:00,4711.9,97.8,8.6,Optimal Dry,True
+BAT-001142,table_grapes,Muscat de Hamburg,South,2025-09-10 07:00:00,5857.6,95.4,16.7,Optimal Dry,False
+BAT-001143,plums,Kabardinka,South,2025-09-07 10:15:00,8100.2,97.9,21.7,Optimal Dry,False
+BAT-001144,raspberries,Novokitaevskaya,North,2025-07-09 13:45:00,2029.6,88.1,30.0,Hot / Sun-Exposed,True
+BAT-001145,apples,Gala,North,2025-10-03 11:15:00,6551.8,86.5,8.5,Optimal Dry,False
+BAT-001146,table_grapes,Muscat de Hamburg,Centre,2025-10-08 10:30:00,7769.5,97.1,12.5,Humid,False
+BAT-001147,table_grapes,Moldova,South,2025-09-13 08:45:00,3658.7,93.5,18.5,Optimal Dry,False
+BAT-001148,table_grapes,Muscat de Hamburg,Centre,2025-09-30 11:30:00,7687.0,83.2,12.6,Optimal Dry,False
+BAT-001149,apples,Granny Smith,North,2025-09-27 14:45:00,11282.5,91.4,15.6,Optimal Dry,False
+BAT-001150,apples,Gala,Centre,2025-09-20 07:30:00,7637.7,84.2,16.0,Humid,True
+BAT-001151,plums,Kabardinka,Centre,2025-08-15 07:30:00,2505.5,92.9,20.6,Optimal Dry,True
+BAT-001152,pears,Williams,South,2025-09-09 08:00:00,7974.4,95.0,16.5,Optimal Dry,True
+BAT-001153,plums,President,South,2025-08-22 10:45:00,8955.4,91.4,28.9,Hot / Sun-Exposed,False
+BAT-001154,tomatoes,Primadonna,South,2025-07-31 10:15:00,5491.8,88.2,22.6,Optimal Dry,False
+BAT-001155,strawberries,Clery,Centre,2025-05-30 10:15:00,1705.0,96.6,17.0,Optimal Dry,True
+BAT-001156,apples,Jonagold,North,2025-10-10 14:00:00,8648.3,96.3,15.8,Optimal Dry,False
+BAT-001157,plums,President,Centre,2025-10-03 06:45:00,9875.1,95.3,6.6,Optimal Dry,True
+BAT-001158,apples,Jonagold,North,2025-10-14 12:00:00,8806.0,94.0,10.3,Optimal Dry,False
+BAT-001159,apples,Golden Delicious,Centre,2025-09-01 07:45:00,9027.1,93.6,20.0,Optimal Dry,True
+BAT-001160,apples,Granny Smith,South,2025-08-28 08:00:00,10418.2,86.7,17.5,Optimal Dry,False
+BAT-001161,apples,Gala,North,2025-10-21 14:00:00,8664.4,93.2,12.0,Optimal Dry,True
+BAT-001162,plums,President,Centre,2025-08-09 06:45:00,9040.8,93.0,17.0,Optimal Dry,True
+BAT-001163,pears,Williams,North,2025-08-24 07:15:00,8174.8,86.5,12.6,Humid,True
+BAT-001164,strawberries,Marmolada,North,2025-06-20 12:00:00,1904.3,88.1,18.8,Optimal Dry,True
+BAT-001165,apricots,Krasnoshchoky,Centre,2025-06-27 13:30:00,5722.3,99.0,29.2,Hot / Sun-Exposed,True
+BAT-001166,pears,Conference,North,2025-09-27 11:00:00,5096.9,92.5,12.6,Optimal Dry,True
+BAT-001167,plums,President,Centre,2025-09-20 10:45:00,8977.5,88.6,21.1,Optimal Dry,False
+BAT-001168,table_grapes,Victoria,South,2025-09-20 14:15:00,2989.3,91.2,23.8,Optimal Dry,False
+BAT-001169,apples,Jonagold,Centre,2025-09-28 14:45:00,11817.9,93.5,16.9,Optimal Dry,True
+BAT-001170,apples,Idared,North,2025-10-15 07:45:00,7396.7,96.7,2.4,Humid,True
+BAT-001171,tomatoes,Cherry,North,2025-08-12 09:45:00,5768.0,91.4,19.8,Optimal Dry,False
+BAT-001172,apples,Jonagold,North,2025-10-21 14:30:00,11501.6,87.3,12.0,Optimal Dry,True
+BAT-001173,apples,Gala,North,2025-08-29 14:45:00,5655.4,93.3,28.4,Hot / Sun-Exposed,True
+BAT-001174,plums,Kabardinka,South,2025-08-14 10:30:00,9592.6,94.1,25.8,Optimal Dry,False
+BAT-001175,apples,Granny Smith,North,2025-08-22 07:00:00,6726.3,92.2,20.4,Optimal Dry,True
+BAT-001176,table_grapes,Muscat de Hamburg,South,2025-10-14 08:45:00,2632.2,91.6,5.7,Humid,False
+BAT-001177,table_grapes,Victoria,Centre,2025-10-21 10:30:00,5921.3,88.7,5.1,Optimal Dry,False
+BAT-001178,plums,Kabardinka,Centre,2025-08-29 11:15:00,6440.7,83.2,26.5,Optimal Dry,True
+BAT-001179,apples,Gala,North,2025-10-17 14:45:00,14335.1,99.0,14.0,Optimal Dry,True
+BAT-001180,apples,Golden Delicious,North,2025-08-22 08:45:00,13757.5,91.4,22.8,Optimal Dry,True
+BAT-001181,plums,Stanley,Centre,2025-09-26 12:30:00,8861.1,86.6,14.5,Optimal Dry,True
+BAT-001182,apples,Gala,North,2025-10-23 08:00:00,5177.2,91.1,11.4,Humid,True
+BAT-001183,pears,Williams,South,2025-09-15 14:15:00,6757.4,95.3,22.9,Optimal Dry,True
+BAT-001184,apples,Idared,North,2025-10-05 14:30:00,14153.1,93.9,15.1,Optimal Dry,True
+BAT-001185,apples,Idared,North,2025-08-24 14:45:00,12946.7,89.5,15.4,Optimal Dry,False
+BAT-001186,plums,President,Centre,2025-08-30 12:15:00,5605.8,91.0,29.0,Hot / Sun-Exposed,True
+BAT-001187,apples,Gala,North,2025-09-27 07:00:00,13327.1,91.6,4.5,Optimal Dry,False
+BAT-001188,raspberries,Glen Ample,North,2025-08-25 10:45:00,1826.9,91.1,17.3,Optimal Dry,False
+BAT-001189,tomatoes,Cherry,South,2025-07-25 12:00:00,4602.5,86.1,33.3,Hot / Sun-Exposed,False
+BAT-001190,apples,Granny Smith,North,2025-09-11 10:00:00,13562.1,93.4,20.2,Optimal Dry,True
+BAT-001191,apples,Golden Delicious,North,2025-09-17 14:45:00,11317.8,89.0,17.7,Optimal Dry,True
+BAT-001192,apples,Golden Delicious,South,2025-09-15 11:30:00,5664.9,86.8,21.4,Optimal Dry,True
+BAT-001193,apples,Jonagold,Centre,2025-09-28 10:00:00,11306.5,85.7,11.6,Optimal Dry,True
+BAT-001194,table_grapes,Victoria,South,2025-10-11 10:45:00,4806.0,93.8,12.9,Optimal Dry,False
+BAT-001195,pears,Williams,South,2025-09-11 14:00:00,5022.8,90.5,25.8,Optimal Dry,False
+BAT-001196,table_grapes,Codreanca,Centre,2025-09-09 08:30:00,5948.4,94.6,17.8,Optimal Dry,False
+BAT-001197,apples,Idared,North,2025-10-17 06:30:00,6748.2,86.2,5.5,Humid,True
+BAT-001198,apples,Golden Delicious,South,2025-10-02 14:45:00,13292.3,94.5,10.8,Optimal Dry,False
+BAT-001199,table_grapes,Muscat de Hamburg,South,2025-09-21 12:30:00,3190.6,90.6,23.8,Optimal Dry,True
+BAT-001200,table_grapes,Codreanca,South,2025-10-04 07:15:00,6919.7,88.4,12.6,Humid,False
+BAT-001201,table_grapes,Moldova,Centre,2025-10-02 10:30:00,2600.9,91.3,7.3,Optimal Dry,False
+BAT-001202,plums,President,Centre,2025-09-01 14:45:00,6365.0,81.1,27.7,Optimal Dry,True
+BAT-001203,strawberries,Clery,North,2025-06-22 14:15:00,2511.9,87.3,23.8,Optimal Dry,True
+BAT-001204,apples,Fuji,North,2025-09-26 06:15:00,6174.1,88.3,4.9,Optimal Dry,True
+BAT-001205,apples,Granny Smith,North,2025-10-13 08:00:00,5404.9,92.2,10.2,Humid,True
+BAT-001206,plums,Anna Späth,Centre,2025-10-10 06:15:00,8708.0,94.4,10.9,Optimal Dry,False
+BAT-001207,apricots,Spring Blush,Centre,2025-07-15 14:00:00,2777.4,88.2,28.7,Hot / Sun-Exposed,False
+BAT-001208,plums,Kabardinka,North,2025-08-17 11:15:00,3020.2,84.3,25.1,Optimal Dry,False
+BAT-001209,apples,Golden Delicious,Centre,2025-08-25 09:30:00,5192.7,89.4,17.3,Optimal Dry,False
+BAT-001210,plums,Anna Späth,South,2025-10-09 09:00:00,7027.0,96.9,11.3,Humid,False
+BAT-001211,tomatoes,Primadonna,North,2025-08-03 08:45:00,3394.7,86.6,22.6,Optimal Dry,True
+BAT-001212,apples,Fuji,Centre,2025-10-15 11:00:00,8539.0,84.7,9.3,Optimal Dry,True
+BAT-001213,table_grapes,Muscat de Hamburg,South,2025-10-20 07:30:00,6334.3,99.0,2.7,Optimal Dry,False
+BAT-001214,apples,Jonagold,North,2025-09-03 07:45:00,13818.6,86.6,18.1,Optimal Dry,True
+BAT-001215,apples,Jonagold,North,2025-10-07 09:15:00,13840.5,90.6,9.8,Humid,False
+BAT-001216,strawberries,Asia,Centre,2025-06-23 07:00:00,1794.9,83.8,16.9,Optimal Dry,False
+BAT-001217,tomatoes,Primadonna,South,2025-09-22 11:00:00,4417.6,85.3,21.0,Optimal Dry,False
+BAT-001218,apples,Idared,South,2025-09-29 06:45:00,11215.6,87.2,5.9,Humid,False
+BAT-001219,plums,President,Centre,2025-08-15 06:15:00,4571.4,99.0,18.9,Optimal Dry,True
+BAT-001220,table_grapes,Victoria,Centre,2025-09-24 10:30:00,5313.8,86.1,18.3,Optimal Dry,False
+BAT-001221,apples,Granny Smith,North,2025-10-21 10:15:00,5722.2,86.9,4.8,Humid,True
+BAT-001222,table_grapes,Moldova,Centre,2025-09-18 12:15:00,4581.2,90.0,17.7,Optimal Dry,False
+BAT-001223,strawberries,Marmolada,North,2025-06-14 10:30:00,1568.5,92.5,18.4,Optimal Dry,False
+BAT-001224,tomatoes,Primadonna,North,2025-09-30 10:45:00,2029.2,94.8,10.4,Humid,False
+BAT-001225,table_grapes,Moldova,Centre,2025-10-20 08:15:00,3571.7,87.4,2.9,Optimal Dry,False
+BAT-001226,table_grapes,Victoria,South,2025-09-19 12:45:00,2700.1,91.0,21.7,Optimal Dry,True
+BAT-001227,table_grapes,Victoria,South,2025-09-14 13:30:00,7950.5,90.9,21.9,Optimal Dry,False
+BAT-001228,pears,Abate Fetel,Centre,2025-09-01 11:15:00,11592.5,82.2,25.1,Optimal Dry,False
+BAT-001229,apples,Gala,Centre,2025-10-14 12:45:00,10064.8,91.3,11.3,Optimal Dry,True
+BAT-001230,plums,Anna Späth,South,2025-10-04 13:00:00,3417.6,90.7,14.0,Humid,False
+BAT-001231,apples,Idared,North,2025-10-06 10:30:00,11393.2,95.8,9.8,Humid,False
+BAT-001232,plums,Stanley,Centre,2025-09-06 07:00:00,8333.2,86.6,15.2,Optimal Dry,False
+BAT-001233,pears,Conference,South,2025-08-31 08:00:00,11259.7,90.6,20.5,Optimal Dry,True
+BAT-001234,apples,Idared,North,2025-10-15 07:00:00,8681.2,90.7,2.6,Humid,False
+BAT-001235,plums,Anna Späth,Centre,2025-09-26 10:15:00,5225.6,97.7,10.9,Optimal Dry,True
+BAT-001236,table_grapes,Codreanca,South,2025-10-21 08:45:00,3854.8,89.5,3.1,Optimal Dry,True
+BAT-001237,table_grapes,Victoria,Centre,2025-09-30 08:45:00,6337.2,88.4,10.2,Post-Rain,True
+BAT-001238,plums,President,South,2025-08-18 14:45:00,7255.7,95.0,25.3,Optimal Dry,False
+BAT-001239,apples,Golden Delicious,North,2025-10-17 13:15:00,4259.8,82.0,11.6,Optimal Dry,False
+BAT-001240,tomatoes,Primadonna,South,2025-07-24 12:00:00,6917.2,99.0,31.0,Hot / Sun-Exposed,False
+BAT-001241,apples,Gala,North,2025-09-04 09:45:00,14375.7,99.0,21.8,Optimal Dry,True
+BAT-001242,apples,Jonagold,North,2025-09-25 06:15:00,4842.0,98.4,11.0,Optimal Dry,False
+BAT-001243,tomatoes,Cherry,Centre,2025-09-14 09:45:00,2834.4,90.3,18.3,Optimal Dry,False
+BAT-001244,table_grapes,Codreanca,South,2025-09-05 10:45:00,7628.5,86.3,26.1,Optimal Dry,False
+BAT-001245,plums,Stanley,Centre,2025-09-11 11:45:00,4453.8,91.0,23.9,Optimal Dry,False
+BAT-001246,apples,Idared,North,2025-09-01 12:45:00,12741.1,94.8,26.6,Optimal Dry,True
+BAT-001247,apples,Idared,North,2025-08-24 08:15:00,12486.3,91.9,14.1,Optimal Dry,False
+BAT-001248,plums,Anna Späth,North,2025-09-06 14:45:00,8863.3,99.0,26.7,Optimal Dry,False
+BAT-001249,apples,Golden Delicious,North,2025-08-20 14:30:00,10020.2,86.5,25.1,Optimal Dry,False
+BAT-001250,pears,Ksenia,North,2025-08-25 09:15:00,6522.2,88.4,13.4,Optimal Dry,False
+BAT-001251,table_grapes,Codreanca,South,2025-09-22 14:15:00,3988.8,88.8,24.0,Optimal Dry,True
+BAT-001252,table_grapes,Codreanca,South,2025-09-01 06:45:00,5309.8,89.1,15.9,Humid,False
+BAT-001253,plums,Kabardinka,Centre,2025-08-14 13:00:00,5305.3,84.7,29.4,Hot / Sun-Exposed,False
+BAT-001254,table_grapes,Victoria,South,2025-09-29 07:30:00,7585.4,93.6,7.5,Humid,False
+BAT-001255,table_grapes,Victoria,South,2025-09-18 14:00:00,3966.6,93.1,19.7,Optimal Dry,False
+BAT-001256,table_grapes,Moldova,South,2025-10-23 06:15:00,3560.9,86.7,11.9,Humid,False
+BAT-001257,plums,Kabardinka,Centre,2025-10-04 11:00:00,5528.9,90.6,10.8,Post-Rain,True
+BAT-001258,tomatoes,Cherry,South,2025-09-07 14:30:00,2069.1,99.0,26.4,Optimal Dry,True
+BAT-001259,apples,Idared,North,2025-10-11 12:00:00,7326.5,99.0,10.8,Optimal Dry,False
+BAT-001260,apples,Gala,Centre,2025-10-18 08:15:00,5364.5,95.2,8.2,Humid,False
+BAT-001261,apples,Idared,North,2025-10-18 14:15:00,12129.7,88.4,12.1,Optimal Dry,True
+BAT-001262,plums,Anna Späth,South,2025-10-02 14:15:00,7489.7,89.2,11.2,Optimal Dry,True
+BAT-001263,table_grapes,Victoria,South,2025-09-14 13:00:00,3561.0,90.3,21.5,Optimal Dry,True
+BAT-001264,raspberries,Heritage,North,2025-07-07 10:45:00,1625.1,90.5,29.8,Hot / Sun-Exposed,True
+BAT-001265,plums,President,North,2025-10-08 11:45:00,8050.1,88.7,12.8,Humid,False
+BAT-001266,apples,Idared,North,2025-09-18 10:00:00,7132.3,98.3,14.8,Optimal Dry,True
+BAT-001267,plums,Kabardinka,Centre,2025-08-31 08:45:00,5865.5,95.7,22.9,Optimal Dry,True
+BAT-001268,raspberries,Heritage,North,2025-07-13 10:00:00,2238.6,94.3,23.4,Optimal Dry,False
+BAT-001269,tomatoes,Bobcat,South,2025-09-15 12:30:00,3588.9,86.9,21.4,Optimal Dry,False
+BAT-001270,plums,Anna Späth,South,2025-08-26 10:45:00,5822.9,91.9,21.8,Optimal Dry,True
+BAT-001271,table_grapes,Codreanca,South,2025-09-12 06:45:00,2959.9,89.0,18.6,Humid,False
+BAT-001272,tomatoes,Rio Grande,Centre,2025-08-22 11:30:00,5070.9,88.0,28.8,Hot / Sun-Exposed,True
+BAT-001273,apples,Granny Smith,North,2025-08-27 09:45:00,4275.7,86.3,19.8,Optimal Dry,True
+BAT-001274,pears,Conference,South,2025-09-22 11:30:00,10043.7,86.3,22.3,Optimal Dry,False
+BAT-001275,apples,Golden Delicious,North,2025-10-21 14:00:00,4182.8,91.5,12.0,Optimal Dry,False
+BAT-001276,apples,Idared,North,2025-09-16 06:45:00,10414.1,85.7,9.1,Humid,False
+BAT-001277,apples,Idared,North,2025-10-11 11:45:00,4397.1,91.7,10.8,Optimal Dry,True
+BAT-001278,table_grapes,Muscat de Hamburg,South,2025-10-04 06:15:00,7554.1,89.3,12.8,Post-Rain,True
+BAT-001279,plums,Kabardinka,North,2025-08-18 07:00:00,5637.5,94.0,17.1,Optimal Dry,True
+BAT-001280,apples,Fuji,North,2025-10-07 08:00:00,14408.9,97.3,9.8,Humid,False
+BAT-001281,pears,Ksenia,Centre,2025-08-28 08:45:00,6166.3,87.3,20.2,Optimal Dry,True
+BAT-001282,tomatoes,Rio Grande,Centre,2025-09-30 14:15:00,5199.8,91.5,13.8,Optimal Dry,False
+BAT-001283,table_grapes,Victoria,South,2025-09-14 10:00:00,4621.7,92.4,19.3,Optimal Dry,True
+BAT-001284,table_grapes,Victoria,South,2025-09-29 08:00:00,3127.5,83.1,7.5,Humid,False
+BAT-001285,table_grapes,Victoria,South,2025-09-09 11:45:00,6850.4,88.7,26.4,Optimal Dry,False
+BAT-001286,apples,Granny Smith,North,2025-09-25 07:15:00,14815.5,99.0,10.6,Optimal Dry,False
+BAT-001287,tomatoes,Rio Grande,Centre,2025-07-27 13:15:00,5448.7,84.0,34.7,Hot / Sun-Exposed,False
+BAT-001288,plums,Anna Späth,Centre,2025-09-14 12:00:00,3794.4,93.5,21.0,Optimal Dry,True
+BAT-001289,apples,Gala,North,2025-10-16 12:45:00,7026.6,98.0,12.8,Optimal Dry,False
+BAT-001290,apples,Fuji,North,2025-09-23 13:15:00,11596.1,91.4,22.9,Optimal Dry,False
+BAT-001291,raspberries,Polana,North,2025-07-16 12:15:00,894.6,89.9,28.5,Hot / Sun-Exposed,True
+BAT-001292,apples,Idared,North,2025-09-01 09:45:00,7406.3,94.8,22.7,Optimal Dry,False
+BAT-001293,apples,Granny Smith,North,2025-09-16 10:30:00,13662.5,87.7,15.1,Humid,True
+BAT-001294,apples,Granny Smith,North,2025-10-20 10:00:00,9350.5,96.8,4.2,Optimal Dry,False
+BAT-001295,apples,Gala,North,2025-10-05 11:15:00,5955.5,90.1,12.6,Optimal Dry,True
+BAT-001296,plums,President,South,2025-09-28 07:30:00,7745.9,88.0,7.2,Humid,True
+BAT-001297,plums,Anna Späth,North,2025-09-02 13:00:00,7454.1,93.6,28.2,Hot / Sun-Exposed,True
+BAT-001298,plums,Anna Späth,Centre,2025-10-09 06:30:00,6206.8,79.6,11.3,Humid,False
+BAT-001299,apples,Jonagold,North,2025-10-11 13:15:00,10110.8,86.5,12.0,Optimal Dry,True
+BAT-001300,plums,Stanley,Centre,2025-08-15 14:00:00,4224.0,98.1,28.7,Hot / Sun-Exposed,True
+BAT-001301,table_grapes,Muscat de Hamburg,South,2025-09-02 13:15:00,5766.6,94.3,30.1,Hot / Sun-Exposed,True
+BAT-001302,apples,Idared,North,2025-09-08 12:45:00,6492.3,93.8,25.0,Optimal Dry,True
+BAT-001303,table_grapes,Victoria,South,2025-09-11 10:15:00,7604.9,92.5,20.5,Optimal Dry,False
+BAT-001304,apples,Golden Delicious,Centre,2025-08-26 07:30:00,5576.0,89.5,14.2,Optimal Dry,True
+BAT-001305,pears,Conference,Centre,2025-08-15 06:00:00,4985.7,90.0,18.9,Optimal Dry,False
+BAT-001306,apples,Idared,South,2025-10-02 06:30:00,10184.6,91.7,4.5,Humid,False
+BAT-001307,table_grapes,Moldova,Centre,2025-09-09 12:00:00,2953.3,97.0,26.0,Optimal Dry,False
+BAT-001308,apples,Golden Delicious,North,2025-09-19 08:15:00,4751.3,90.9,11.5,Optimal Dry,True
+BAT-001309,table_grapes,Muscat de Hamburg,South,2025-10-08 07:45:00,4798.5,88.3,12.3,Post-Rain,False
+BAT-001310,apricots,Nadejda,North,2025-06-28 09:45:00,4979.5,89.6,21.7,Optimal Dry,True
+BAT-001311,apples,Gala,North,2025-08-25 06:15:00,7721.1,86.2,9.5,Optimal Dry,False
+BAT-001312,tomatoes,Rio Grande,Centre,2025-07-28 08:30:00,2079.1,90.1,23.5,Optimal Dry,True
+BAT-001313,apples,Golden Delicious,North,2025-10-18 06:45:00,9089.8,98.2,7.0,Humid,False
+BAT-001314,pears,Abate Fetel,South,2025-08-23 12:15:00,6675.1,91.1,22.5,Optimal Dry,True
+BAT-001315,table_grapes,Moldova,South,2025-10-13 07:15:00,4473.2,87.9,8.8,Humid,True
+BAT-001316,table_grapes,Codreanca,South,2025-09-20 06:00:00,3465.9,91.3,14.8,Humid,True
+BAT-001317,table_grapes,Codreanca,South,2025-09-16 13:45:00,3703.6,99.0,23.1,Optimal Dry,False
+BAT-001318,tomatoes,Cherry,South,2025-08-20 14:15:00,3052.7,99.0,26.6,Optimal Dry,True
+BAT-001319,table_grapes,Moldova,South,2025-09-30 13:30:00,7189.5,80.9,16.0,Optimal Dry,False
+BAT-001320,plums,Stanley,Centre,2025-09-20 11:15:00,5083.2,89.7,21.1,Optimal Dry,True
+BAT-001321,strawberries,Marmolada,North,2025-06-20 12:00:00,1201.8,88.4,18.8,Optimal Dry,False
+BAT-001322,pears,Conference,Centre,2025-10-14 12:00:00,11806.6,94.1,11.1,Optimal Dry,False
+BAT-001323,table_grapes,Victoria,South,2025-09-20 11:00:00,3523.5,90.6,21.9,Optimal Dry,True
+BAT-001324,apples,Idared,North,2025-10-04 12:00:00,5098.5,91.1,9.9,Humid,True
+BAT-001325,table_grapes,Victoria,South,2025-10-25 14:45:00,4038.0,96.4,16.6,Optimal Dry,True
+BAT-001326,plums,Anna Späth,Centre,2025-09-16 14:15:00,7293.7,92.7,23.4,Optimal Dry,True
+BAT-001327,plums,Stanley,Centre,2025-10-05 11:15:00,4843.2,99.0,12.7,Optimal Dry,True
+BAT-001328,apricots,Spring Blush,Centre,2025-07-01 09:00:00,4352.2,88.9,18.7,Optimal Dry,False
+BAT-001329,plums,Anna Späth,South,2025-09-13 10:15:00,9944.0,85.9,20.8,Optimal Dry,False
+BAT-001330,apples,Fuji,North,2025-09-23 08:30:00,9590.4,91.9,14.1,Humid,True
+BAT-001331,plums,Anna Späth,South,2025-08-10 10:15:00,6566.4,91.3,26.4,Optimal Dry,True
+BAT-001332,raspberries,Heritage,North,2025-08-05 13:00:00,1255.2,89.2,28.3,Hot / Sun-Exposed,False
+BAT-001333,table_grapes,Muscat de Hamburg,South,2025-09-03 07:00:00,5326.0,92.9,17.9,Optimal Dry,True
+BAT-001334,apples,Jonagold,North,2025-09-19 12:30:00,4256.4,86.9,19.5,Optimal Dry,True
+BAT-001335,apples,Idared,North,2025-10-12 07:45:00,13066.6,88.9,11.3,Humid,True
+BAT-001336,tomatoes,Bobcat,North,2025-08-06 09:45:00,2841.1,87.1,27.5,Optimal Dry,False
+BAT-001337,plums,President,South,2025-09-01 11:00:00,3631.7,94.3,23.5,Optimal Dry,False
+BAT-001338,tomatoes,Primadonna,South,2025-10-03 08:45:00,3395.7,90.1,7.2,Optimal Dry,False
+BAT-001339,table_grapes,Moldova,Centre,2025-10-01 07:45:00,2594.6,87.1,6.6,Optimal Dry,False
+BAT-001340,apples,Jonagold,North,2025-08-29 06:30:00,7550.4,85.2,15.6,Optimal Dry,True
+BAT-001341,pears,Abate Fetel,South,2025-09-17 07:30:00,11614.2,84.7,16.3,Optimal Dry,True
+BAT-001342,apples,Fuji,South,2025-10-17 13:15:00,9215.4,88.8,15.4,Optimal Dry,True
+BAT-001343,apples,Golden Delicious,North,2025-10-19 10:45:00,7775.5,88.5,7.3,Optimal Dry,False
+BAT-001344,tomatoes,Cherry,North,2025-07-19 08:45:00,5285.8,92.7,19.3,Optimal Dry,False
+BAT-001345,tomatoes,Bobcat,Centre,2025-07-14 08:00:00,3140.6,93.6,21.8,Optimal Dry,True
+BAT-001346,apples,Gala,North,2025-10-21 13:00:00,7506.4,96.8,10.9,Optimal Dry,True
+BAT-001347,apples,Idared,North,2025-09-03 10:00:00,10353.8,89.4,22.7,Optimal Dry,False
+BAT-001348,plums,President,North,2025-08-05 06:45:00,7615.8,96.4,19.1,Humid,False
+BAT-001349,apples,Golden Delicious,North,2025-09-09 11:45:00,6517.1,83.8,24.9,Optimal Dry,True
+BAT-001350,apples,Jonagold,Centre,2025-10-20 10:00:00,6034.6,92.0,5.3,Optimal Dry,False
+BAT-001351,apricots,Spring Blush,North,2025-07-20 07:45:00,2820.9,89.3,18.7,Optimal Dry,True
+BAT-001352,plums,Anna Späth,South,2025-08-24 07:30:00,8373.8,85.5,16.6,Optimal Dry,False
+BAT-001353,pears,Ksenia,North,2025-08-30 14:00:00,3814.5,91.0,29.7,Hot / Sun-Exposed,True
+BAT-001354,apples,Granny Smith,North,2025-09-13 11:15:00,12542.2,86.9,19.6,Optimal Dry,False
+BAT-001355,tomatoes,Bobcat,South,2025-09-16 13:30:00,5160.9,91.3,23.1,Optimal Dry,True
+BAT-001356,apricots,Kioto,South,2025-07-15 07:30:00,2615.6,94.7,23.2,Optimal Dry,True
+BAT-001357,apples,Golden Delicious,Centre,2025-08-27 06:45:00,11632.0,87.1,12.5,Optimal Dry,False
+BAT-001358,apples,Fuji,North,2025-08-24 11:45:00,9501.3,84.2,17.5,Optimal Dry,True
+BAT-001359,apples,Jonagold,North,2025-09-12 14:15:00,8222.6,90.1,17.6,Optimal Dry,True
+BAT-001360,tomatoes,Primadonna,Centre,2025-08-15 09:00:00,2981.4,89.2,22.4,Optimal Dry,False
+BAT-001361,apples,Gala,Centre,2025-10-02 12:15:00,10900.8,94.7,8.5,Optimal Dry,True
+BAT-001362,apples,Granny Smith,South,2025-08-28 10:45:00,14480.8,93.5,25.2,Optimal Dry,False
+BAT-001363,table_grapes,Codreanca,South,2025-10-16 12:15:00,7147.5,90.1,12.2,Optimal Dry,True
+BAT-001364,tomatoes,Rio Grande,North,2025-08-26 06:45:00,6236.5,95.5,10.5,Optimal Dry,False
+BAT-001365,apples,Golden Delicious,North,2025-09-24 13:00:00,14619.6,86.5,19.6,Optimal Dry,True
+BAT-001366,plums,Stanley,South,2025-09-19 10:45:00,9267.1,92.1,18.9,Optimal Dry,True
+BAT-001367,table_grapes,Codreanca,Centre,2025-09-14 13:00:00,3428.5,90.3,21.8,Optimal Dry,False
+BAT-001368,apples,Fuji,North,2025-08-25 11:15:00,10410.6,93.6,17.3,Optimal Dry,True
+BAT-001369,apples,Jonagold,North,2025-10-21 08:00:00,5431.4,94.8,0.9,Humid,False
+BAT-001370,table_grapes,Victoria,South,2025-09-12 07:00:00,3823.9,88.2,18.6,Humid,False
+BAT-001371,apples,Jonagold,North,2025-10-18 12:15:00,7509.3,87.0,9.1,Humid,False
+BAT-001372,apples,Jonagold,North,2025-10-02 10:30:00,9415.5,89.2,6.6,Optimal Dry,False
+BAT-001373,pears,Abate Fetel,Centre,2025-09-20 06:00:00,5596.5,87.7,15.3,Humid,True
+BAT-001374,strawberries,Clery,North,2025-06-22 07:30:00,1893.8,95.6,15.2,Optimal Dry,True
+BAT-001375,apples,Jonagold,North,2025-09-21 11:15:00,4789.1,91.3,21.9,Optimal Dry,False
+BAT-001376,table_grapes,Victoria,South,2025-09-17 09:00:00,5157.5,91.0,17.9,Optimal Dry,False
+BAT-001377,plums,Anna Späth,Centre,2025-08-14 11:00:00,9574.6,90.0,27.0,Optimal Dry,False
+BAT-001378,table_grapes,Codreanca,Centre,2025-10-11 06:00:00,3889.7,93.2,8.7,Humid,True
+BAT-001379,table_grapes,Victoria,South,2025-10-06 06:45:00,4696.5,94.9,10.7,Humid,False
+BAT-001380,apples,Granny Smith,North,2025-10-15 11:15:00,10242.4,90.3,8.5,Optimal Dry,True
+BAT-001381,table_grapes,Victoria,South,2025-09-17 12:45:00,6191.8,88.2,15.4,Post-Rain,False
+BAT-001382,apples,Idared,North,2025-10-18 10:00:00,11303.0,90.1,8.2,Post-Rain,False
+BAT-001383,tomatoes,Bobcat,South,2025-09-19 12:00:00,3518.5,95.5,20.4,Optimal Dry,False
+BAT-001384,tomatoes,Rio Grande,Centre,2025-10-01 11:30:00,4461.9,87.5,8.9,Optimal Dry,True
+BAT-001385,apples,Granny Smith,North,2025-09-23 10:30:00,6566.5,86.2,18.1,Optimal Dry,True
+BAT-001386,table_grapes,Moldova,Centre,2025-10-20 09:15:00,4563.4,94.1,3.9,Optimal Dry,True
+BAT-001387,apples,Granny Smith,Centre,2025-10-03 10:00:00,5850.9,91.2,8.6,Optimal Dry,True
+BAT-001388,pears,Conference,North,2025-09-29 09:15:00,6384.7,92.6,10.1,Optimal Dry,True
+BAT-001389,table_grapes,Victoria,Centre,2025-10-19 10:15:00,7187.7,93.0,7.7,Optimal Dry,False
+BAT-001390,plums,President,South,2025-09-03 10:45:00,7949.8,86.8,27.5,Optimal Dry,True
+BAT-001391,apples,Golden Delicious,North,2025-10-21 09:15:00,7479.3,94.6,2.3,Humid,False
+BAT-001392,apples,Jonagold,North,2025-09-18 12:30:00,13458.8,82.0,17.4,Optimal Dry,False
+BAT-001393,plums,Stanley,North,2025-09-28 11:15:00,8758.7,96.1,12.8,Optimal Dry,False
+BAT-001394,pears,Conference,North,2025-09-23 13:30:00,7778.5,92.5,23.7,Optimal Dry,False
+BAT-001395,plums,Anna Späth,Centre,2025-09-30 13:30:00,6271.0,87.5,13.8,Optimal Dry,False
+BAT-001396,table_grapes,Codreanca,Centre,2025-09-30 09:30:00,6121.5,91.2,11.6,Humid,False
+BAT-001397,apples,Granny Smith,North,2025-10-20 06:45:00,5900.8,90.1,2.8,Optimal Dry,False
+BAT-001398,table_grapes,Muscat de Hamburg,South,2025-09-27 06:00:00,2662.6,93.8,5.5,Optimal Dry,False
+BAT-001399,strawberries,Asia,Centre,2025-05-31 10:30:00,1006.0,86.3,17.4,Optimal Dry,False
+BAT-001400,strawberries,Alba,Centre,2025-06-05 10:15:00,1672.3,87.4,23.2,Optimal Dry,False
+BAT-001401,plums,Kabardinka,South,2025-08-20 06:15:00,9022.0,95.5,17.0,Optimal Dry,True
+BAT-001402,apples,Jonagold,North,2025-09-23 14:30:00,6101.4,98.1,23.7,Optimal Dry,False
+BAT-001403,table_grapes,Muscat de Hamburg,Centre,2025-09-30 08:45:00,2794.9,95.9,10.2,Post-Rain,False
+BAT-001404,apples,Granny Smith,North,2025-10-16 12:15:00,6138.1,94.3,11.9,Optimal Dry,True
+BAT-001405,apples,Granny Smith,North,2025-08-29 08:30:00,8581.8,90.2,16.9,Optimal Dry,False
+BAT-001406,apricots,Nadejda,Centre,2025-07-04 14:30:00,4391.1,87.4,32.2,Hot / Sun-Exposed,True
+BAT-001407,apples,Gala,Centre,2025-10-07 12:30:00,10699.7,96.1,11.2,Post-Rain,True
+BAT-001408,apples,Granny Smith,North,2025-10-19 12:15:00,9259.2,88.0,7.6,Optimal Dry,False
+BAT-001409,apples,Jonagold,North,2025-09-20 09:45:00,12449.6,91.2,19.0,Optimal Dry,True
+BAT-001410,raspberries,Glen Ample,North,2025-06-26 10:00:00,1420.3,91.5,22.5,Optimal Dry,True
+BAT-001411,plums,Anna Späth,North,2025-08-01 08:00:00,9622.1,87.5,17.8,Optimal Dry,False
+BAT-001412,apples,Granny Smith,North,2025-09-28 13:30:00,10352.4,93.7,15.8,Optimal Dry,True
+BAT-001413,apples,Idared,North,2025-08-24 13:00:00,5741.0,90.6,14.5,Post-Rain,True
+BAT-001414,table_grapes,Muscat de Hamburg,South,2025-10-21 09:45:00,6620.0,84.5,6.2,Optimal Dry,True
+BAT-001415,apples,Gala,North,2025-10-17 06:45:00,4241.5,85.9,5.3,Humid,False
+BAT-001416,apples,Golden Delicious,North,2025-10-17 13:00:00,11858.0,94.5,11.6,Optimal Dry,False
+BAT-001417,apples,Idared,North,2025-10-08 09:45:00,13456.0,93.3,11.7,Humid,False
+BAT-001418,apples,Golden Delicious,Centre,2025-09-10 12:15:00,5078.9,96.3,23.5,Optimal Dry,False
+BAT-001419,apples,Gala,North,2025-08-26 12:00:00,10697.2,91.3,20.6,Optimal Dry,True
+BAT-001420,apples,Granny Smith,North,2025-09-25 06:45:00,14193.9,88.1,10.6,Optimal Dry,True
+BAT-001421,apples,Idared,North,2025-08-28 07:00:00,11516.2,97.8,13.6,Optimal Dry,True
+BAT-001422,plums,Kabardinka,Centre,2025-10-02 12:15:00,2909.6,84.8,8.5,Optimal Dry,True
+BAT-001423,apples,Granny Smith,North,2025-10-08 07:45:00,7536.8,94.7,10.8,Humid,True
+BAT-001424,tomatoes,Rio Grande,Centre,2025-09-28 12:15:00,3708.0,90.0,15.6,Optimal Dry,True
+BAT-001425,raspberries,Heritage,Centre,2025-08-16 07:00:00,915.6,92.9,16.9,Optimal Dry,True
+BAT-001426,pears,Abate Fetel,South,2025-10-08 09:15:00,10133.6,92.6,12.4,Humid,False
+BAT-001427,plums,Kabardinka,Centre,2025-08-12 06:15:00,4174.0,94.5,14.3,Optimal Dry,True
+BAT-001428,plums,Anna Späth,South,2025-08-12 06:30:00,9434.2,85.8,15.3,Optimal Dry,False
+BAT-001429,apples,Gala,North,2025-10-23 14:45:00,13195.9,99.0,16.7,Optimal Dry,True
+BAT-001430,apples,Gala,North,2025-09-10 10:30:00,13894.5,91.7,21.6,Optimal Dry,True
+BAT-001431,pears,Williams,Centre,2025-09-20 12:00:00,11971.8,85.5,22.4,Optimal Dry,False
+BAT-001432,plums,Anna Späth,Centre,2025-08-18 11:30:00,3934.6,80.9,23.3,Optimal Dry,False
+BAT-001433,plums,Kabardinka,Centre,2025-09-08 13:45:00,9632.4,81.3,26.7,Optimal Dry,True
+BAT-001434,table_grapes,Victoria,South,2025-09-17 12:15:00,6711.3,90.7,16.1,Post-Rain,True
+BAT-001435,strawberries,Asia,Centre,2025-05-29 10:00:00,2427.2,82.6,15.6,Optimal Dry,True
+BAT-001436,apricots,Kioto,North,2025-07-25 08:15:00,2034.9,94.0,23.2,Optimal Dry,False
+BAT-001437,plums,Stanley,North,2025-09-20 09:30:00,7916.1,85.1,19.0,Optimal Dry,False
+BAT-001438,table_grapes,Victoria,South,2025-10-10 06:00:00,4503.5,86.9,10.5,Optimal Dry,True
+BAT-001439,apples,Granny Smith,North,2025-09-08 07:15:00,8711.2,95.0,13.8,Optimal Dry,True
+BAT-001440,table_grapes,Victoria,South,2025-10-20 10:00:00,5322.6,80.9,6.9,Optimal Dry,False
+BAT-001441,apples,Granny Smith,North,2025-08-30 13:15:00,13963.9,95.4,28.8,Hot / Sun-Exposed,True
+BAT-001442,apples,Jonagold,North,2025-10-10 09:45:00,7057.9,88.6,11.2,Optimal Dry,False
+BAT-001443,plums,Anna Späth,Centre,2025-09-30 11:45:00,3117.2,91.6,12.6,Optimal Dry,True
+BAT-001444,apples,Golden Delicious,North,2025-09-16 07:00:00,9577.8,90.0,9.1,Humid,False
+BAT-001445,strawberries,Asia,Centre,2025-05-27 13:45:00,2626.8,89.5,17.6,Post-Rain,False
+BAT-001446,strawberries,Clery,Centre,2025-06-19 06:00:00,2272.1,88.5,17.8,Optimal Dry,True
+BAT-001447,apples,Jonagold,North,2025-09-05 09:30:00,6759.4,92.3,22.0,Optimal Dry,False
+BAT-001448,pears,Ksenia,North,2025-10-05 09:00:00,11440.3,91.0,9.0,Humid,True
+BAT-001449,tomatoes,Bobcat,South,2025-09-14 06:45:00,4845.8,99.0,12.7,Optimal Dry,True
+BAT-001450,apples,Fuji,North,2025-10-12 10:15:00,4023.3,88.6,12.1,Optimal Dry,False
+BAT-001451,apples,Gala,North,2025-08-26 09:15:00,11808.5,92.4,14.8,Optimal Dry,True
+BAT-001452,apples,Jonagold,Centre,2025-09-27 14:30:00,13256.5,90.8,15.8,Optimal Dry,False
+BAT-001453,table_grapes,Codreanca,Centre,2025-10-16 10:30:00,3844.3,92.4,9.6,Optimal Dry,True
+BAT-001454,tomatoes,Bobcat,North,2025-09-16 09:15:00,3012.0,98.5,12.4,Humid,False
+BAT-001455,apples,Fuji,South,2025-10-10 11:45:00,4943.3,93.4,16.3,Optimal Dry,False
+BAT-001456,plums,Kabardinka,Centre,2025-08-19 09:30:00,3425.6,93.4,20.0,Optimal Dry,True
+BAT-001457,tomatoes,Cherry,Centre,2025-07-25 06:45:00,3565.4,85.7,22.2,Optimal Dry,True
+BAT-001458,tomatoes,Bobcat,Centre,2025-08-18 10:15:00,3455.4,87.2,21.9,Optimal Dry,True
+BAT-001459,plums,President,Centre,2025-09-06 08:15:00,9260.4,92.3,16.6,Optimal Dry,True
+BAT-001460,apples,Fuji,North,2025-09-02 10:45:00,13992.1,90.4,25.1,Optimal Dry,False
+BAT-001461,apples,Idared,North,2025-10-01 09:00:00,11752.9,97.0,5.5,Humid,False
+BAT-001462,table_grapes,Victoria,Centre,2025-09-07 14:00:00,3212.1,90.7,25.5,Optimal Dry,True
+BAT-001463,apples,Fuji,Centre,2025-10-04 09:30:00,13045.1,94.3,9.7,Humid,False
+BAT-001464,raspberries,Polana,North,2025-07-10 07:00:00,848.5,92.0,17.2,Humid,False
+BAT-001465,pears,Conference,North,2025-10-03 07:00:00,8142.9,92.7,4.4,Humid,False
+BAT-001466,plums,Kabardinka,Centre,2025-08-21 09:30:00,4424.9,92.9,25.5,Optimal Dry,True
+BAT-001467,plums,Stanley,Centre,2025-10-09 07:00:00,9230.4,87.2,11.2,Humid,True
+BAT-001468,apples,Golden Delicious,North,2025-09-17 12:15:00,11230.0,96.3,15.6,Humid,False
+BAT-001469,plums,Anna Späth,North,2025-08-05 10:15:00,6828.6,97.1,24.4,Optimal Dry,True
+BAT-001470,plums,Stanley,Centre,2025-08-15 06:00:00,8028.0,91.9,18.9,Optimal Dry,False
+BAT-001471,table_grapes,Codreanca,South,2025-10-10 14:00:00,7111.7,89.4,17.2,Optimal Dry,True
+BAT-001472,plums,Stanley,North,2025-08-12 09:45:00,2513.0,87.8,19.8,Optimal Dry,False
+BAT-001473,raspberries,Polana,North,2025-08-11 06:45:00,734.3,89.4,19.3,Humid,True
+BAT-001474,table_grapes,Victoria,South,2025-10-15 13:15:00,4781.9,93.3,12.0,Optimal Dry,True
+BAT-001475,tomatoes,Rio Grande,Centre,2025-09-03 06:30:00,6668.8,92.6,18.4,Optimal Dry,False
+BAT-001476,apples,Jonagold,North,2025-09-27 14:15:00,5423.4,88.7,15.3,Optimal Dry,False
+BAT-001477,apples,Fuji,North,2025-09-21 06:15:00,12830.8,91.0,13.5,Humid,True
+BAT-001478,apples,Granny Smith,North,2025-09-17 08:30:00,12825.0,92.2,13.4,Humid,True
+BAT-001479,apples,Jonagold,Centre,2025-10-17 09:00:00,11843.7,88.4,8.1,Humid,True
+BAT-001480,table_grapes,Victoria,South,2025-10-17 09:45:00,7571.6,86.6,10.8,Humid,False
+BAT-001481,plums,President,South,2025-09-18 14:15:00,5122.7,84.3,19.7,Optimal Dry,False
+BAT-001482,plums,Stanley,South,2025-08-08 11:15:00,5604.9,91.8,24.1,Optimal Dry,False
+BAT-001483,apples,Gala,North,2025-08-23 07:15:00,4711.0,89.4,16.4,Optimal Dry,True
+BAT-001484,table_grapes,Muscat de Hamburg,Centre,2025-09-06 07:45:00,4742.8,87.4,16.6,Optimal Dry,False
+BAT-001485,apples,Granny Smith,North,2025-09-21 12:15:00,8812.5,97.1,23.4,Optimal Dry,True
+BAT-001486,strawberries,Clery,Centre,2025-06-21 11:00:00,2959.6,93.5,17.2,Optimal Dry,False
+BAT-001487,plums,Kabardinka,Centre,2025-10-07 12:30:00,7481.4,93.8,11.2,Post-Rain,True
+BAT-001488,apricots,Krasnoshchoky,Centre,2025-07-07 12:15:00,2871.6,91.6,32.3,Hot / Sun-Exposed,False
+BAT-001489,raspberries,Heritage,North,2025-08-20 08:00:00,1344.4,89.8,16.9,Optimal Dry,True
+BAT-001490,tomatoes,Primadonna,Centre,2025-07-12 14:00:00,6079.0,90.6,25.5,Optimal Dry,True
+BAT-001491,apples,Idared,North,2025-08-26 09:45:00,5968.4,94.0,17.2,Optimal Dry,True
+BAT-001492,tomatoes,Cherry,South,2025-09-29 10:15:00,2976.9,94.1,12.6,Optimal Dry,False
+BAT-001493,apricots,Krasnoshchoky,North,2025-07-14 08:30:00,2745.8,83.1,21.7,Optimal Dry,True
+BAT-001494,pears,Williams,North,2025-09-18 14:00:00,5629.4,87.2,18.8,Optimal Dry,True
+BAT-001495,table_grapes,Moldova,South,2025-10-01 07:15:00,4084.4,99.0,7.2,Humid,True
+BAT-001496,apples,Fuji,North,2025-09-21 08:45:00,14908.8,94.4,17.1,Optimal Dry,True
+BAT-001497,plums,President,Centre,2025-10-09 11:45:00,7103.0,87.9,12.1,Humid,True
+BAT-001498,tomatoes,Primadonna,Centre,2025-09-26 12:00:00,6499.2,92.3,14.5,Optimal Dry,True
+BAT-001499,plums,Anna Späth,Centre,2025-08-29 11:15:00,7862.2,93.0,26.5,Optimal Dry,True
+BAT-001500,tomatoes,Bobcat,Centre,2025-07-25 09:00:00,2534.1,95.3,26.6,Optimal Dry,False
+BAT-001501,plums,Stanley,Centre,2025-08-18 08:15:00,3876.9,96.3,19.4,Optimal Dry,False
+BAT-001502,plums,President,North,2025-09-22 10:45:00,9402.8,98.9,20.1,Optimal Dry,False
+BAT-001503,apples,Idared,North,2025-10-09 14:30:00,11931.4,97.6,12.3,Humid,True
+BAT-001504,apples,Gala,North,2025-10-02 07:45:00,6818.1,91.8,4.7,Humid,False
+BAT-001505,plums,President,South,2025-08-17 12:30:00,8997.7,87.4,27.8,Optimal Dry,True
+BAT-001506,tomatoes,Rio Grande,Centre,2025-10-04 09:45:00,4354.3,92.2,9.7,Humid,False
+BAT-001507,plums,Kabardinka,South,2025-10-07 06:15:00,8942.9,94.6,11.7,Humid,True
+BAT-001508,table_grapes,Codreanca,South,2025-10-10 12:00:00,7596.4,91.1,16.3,Optimal Dry,False
+BAT-001509,table_grapes,Codreanca,South,2025-09-29 10:15:00,3355.6,91.1,12.6,Optimal Dry,True
+BAT-001510,tomatoes,Cherry,Centre,2025-09-05 13:00:00,5777.4,92.1,27.4,Optimal Dry,False
+BAT-001511,pears,Conference,North,2025-09-26 13:15:00,9353.4,87.9,14.5,Optimal Dry,False
+BAT-001512,plums,Kabardinka,Centre,2025-08-14 08:30:00,4323.2,94.0,19.6,Optimal Dry,False
+BAT-001513,plums,Stanley,North,2025-09-02 08:45:00,6097.0,93.2,21.7,Optimal Dry,False
+BAT-001514,pears,Ksenia,South,2025-10-06 12:30:00,5599.8,87.5,14.3,Optimal Dry,False
+BAT-001515,apples,Granny Smith,North,2025-10-15 13:30:00,5380.7,99.0,10.6,Optimal Dry,False
+BAT-001516,table_grapes,Moldova,South,2025-09-28 09:00:00,6725.3,99.0,9.6,Optimal Dry,True
+BAT-001517,plums,Stanley,Centre,2025-09-21 09:15:00,7758.0,88.6,16.7,Optimal Dry,False
+BAT-001518,plums,Kabardinka,Centre,2025-09-13 10:00:00,4552.1,93.7,20.4,Optimal Dry,True
+BAT-001519,apricots,Krasnoshchoky,Centre,2025-06-22 09:30:00,5667.3,90.9,20.2,Optimal Dry,True
+BAT-001520,strawberries,Asia,Centre,2025-06-06 07:30:00,844.9,86.4,21.6,Optimal Dry,False
+BAT-001521,apples,Jonagold,North,2025-08-26 12:45:00,10375.6,94.3,21.7,Optimal Dry,True
+BAT-001522,apples,Jonagold,North,2025-10-20 13:30:00,13499.7,85.2,9.5,Optimal Dry,True
+BAT-001523,apples,Jonagold,North,2025-10-21 07:30:00,8903.6,92.4,0.9,Humid,False
+BAT-001524,pears,Ksenia,Centre,2025-09-30 06:00:00,10693.5,91.1,10.0,Post-Rain,False
+BAT-001525,apples,Jonagold,South,2025-09-06 14:15:00,14778.1,94.2,27.7,Optimal Dry,False
+BAT-001526,plums,Anna Späth,South,2025-08-01 06:30:00,6463.7,99.0,16.4,Optimal Dry,False
+BAT-001527,plums,Anna Späth,North,2025-08-15 07:15:00,2975.4,92.7,17.1,Optimal Dry,True
+BAT-001528,apples,Fuji,North,2025-09-12 11:00:00,13210.8,94.1,16.7,Humid,True
+BAT-001529,plums,Kabardinka,North,2025-09-22 12:45:00,9190.3,94.1,22.8,Optimal Dry,True
+BAT-001530,table_grapes,Codreanca,South,2025-09-17 13:30:00,5204.2,92.3,15.1,Post-Rain,False
+BAT-001531,plums,Kabardinka,North,2025-08-22 06:45:00,9715.8,87.0,20.4,Optimal Dry,True
+BAT-001532,raspberries,Heritage,North,2025-07-23 10:30:00,1990.0,85.9,25.1,Optimal Dry,True
+BAT-001533,apples,Jonagold,North,2025-09-13 06:45:00,14199.2,91.1,14.4,Optimal Dry,False
+BAT-001534,plums,Anna Späth,Centre,2025-10-05 06:15:00,5184.3,83.5,9.5,Humid,True
+BAT-001535,apples,Gala,North,2025-09-05 08:45:00,5037.3,90.9,19.4,Optimal Dry,True
+BAT-001536,apples,Jonagold,North,2025-08-22 12:15:00,14807.3,85.8,24.3,Optimal Dry,True
+BAT-001537,apples,Gala,North,2025-09-13 12:00:00,5739.3,91.2,21.1,Optimal Dry,False
+BAT-001538,tomatoes,Primadonna,Centre,2025-10-06 12:30:00,2794.0,95.5,11.3,Humid,True
+BAT-001539,plums,Kabardinka,Centre,2025-08-10 11:15:00,7715.3,94.8,26.8,Optimal Dry,True
+BAT-001540,tomatoes,Bobcat,South,2025-07-20 14:15:00,4738.4,83.0,28.1,Hot / Sun-Exposed,False
+BAT-001541,strawberries,Marmolada,North,2025-06-21 13:30:00,1734.1,94.0,21.2,Optimal Dry,False
+BAT-001542,apricots,Spring Blush,South,2025-06-28 13:15:00,2149.8,92.9,27.5,Optimal Dry,False
+BAT-001543,pears,Ksenia,North,2025-08-23 14:00:00,6625.5,94.8,21.9,Optimal Dry,True
+BAT-001544,apples,Golden Delicious,North,2025-10-12 11:00:00,4960.5,82.6,12.9,Optimal Dry,True
+BAT-001545,apples,Idared,North,2025-09-03 09:45:00,10624.3,88.2,22.7,Optimal Dry,False
+BAT-001546,apples,Fuji,Centre,2025-09-24 14:30:00,5136.1,99.0,24.0,Optimal Dry,True
+BAT-001547,plums,Anna Späth,South,2025-08-26 06:45:00,4947.3,91.4,13.2,Optimal Dry,True
+BAT-001548,plums,President,Centre,2025-09-20 14:45:00,4204.0,83.8,22.8,Optimal Dry,True
+BAT-001549,plums,Anna Späth,North,2025-08-26 10:15:00,6662.5,82.5,17.2,Optimal Dry,False
+BAT-001550,pears,Ksenia,Centre,2025-08-26 11:45:00,4583.0,98.4,22.1,Optimal Dry,False
+BAT-001551,plums,Kabardinka,North,2025-09-03 11:00:00,6713.4,94.1,24.7,Optimal Dry,False
+BAT-001552,tomatoes,Primadonna,Centre,2025-09-05 10:30:00,6177.4,90.1,22.3,Optimal Dry,True
+BAT-001553,tomatoes,Cherry,Centre,2025-07-20 10:00:00,6623.3,92.5,23.2,Optimal Dry,False
+BAT-001554,apples,Idared,North,2025-09-28 09:15:00,10231.1,99.0,8.2,Optimal Dry,False
+BAT-001555,apricots,Krasnoshchoky,Centre,2025-07-30 11:45:00,2388.8,88.2,23.5,Optimal Dry,True
+BAT-001556,apples,Jonagold,North,2025-10-10 13:15:00,7782.4,94.8,14.6,Optimal Dry,False
+BAT-001557,apricots,Nadejda,North,2025-07-19 12:30:00,2031.6,92.7,22.2,Optimal Dry,False
+BAT-001558,apples,Granny Smith,Centre,2025-10-22 12:30:00,4866.8,94.1,15.3,Optimal Dry,False
+BAT-001559,table_grapes,Victoria,Centre,2025-09-03 08:00:00,3025.5,94.5,19.1,Optimal Dry,False
+BAT-001560,apples,Fuji,North,2025-09-23 07:15:00,7291.9,80.8,13.3,Humid,True
+BAT-001561,pears,Abate Fetel,Centre,2025-09-02 09:15:00,6462.1,92.4,23.1,Optimal Dry,False
+BAT-001562,plums,Stanley,North,2025-09-05 12:45:00,6131.3,88.0,26.7,Optimal Dry,True
+BAT-001563,apples,Gala,North,2025-10-08 09:30:00,10184.8,90.9,11.7,Humid,False
+BAT-001564,apricots,Nadejda,Centre,2025-07-27 12:30:00,3606.4,91.6,33.2,Hot / Sun-Exposed,True
+BAT-001565,pears,Conference,North,2025-09-10 06:30:00,4603.1,91.5,17.0,Optimal Dry,False
+BAT-001566,apples,Jonagold,North,2025-09-07 07:00:00,6913.7,88.8,14.8,Optimal Dry,True
+BAT-001567,table_grapes,Codreanca,South,2025-09-20 10:45:00,6194.6,91.1,21.9,Optimal Dry,False
+BAT-001568,plums,Stanley,Centre,2025-08-25 09:30:00,7662.7,88.8,17.3,Optimal Dry,True
+BAT-001569,plums,President,South,2025-10-08 09:15:00,6682.5,88.2,12.4,Humid,True
+BAT-001570,tomatoes,Rio Grande,Centre,2025-08-20 07:30:00,6318.0,91.3,17.5,Optimal Dry,True
+BAT-001571,tomatoes,Rio Grande,South,2025-08-28 14:15:00,6078.1,91.0,28.4,Hot / Sun-Exposed,False
+BAT-001572,apples,Gala,North,2025-09-09 13:45:00,6798.2,95.0,26.3,Optimal Dry,True
+BAT-001573,apples,Gala,North,2025-10-01 13:45:00,10754.0,96.9,7.2,Optimal Dry,True
+BAT-001574,apples,Idared,North,2025-10-05 06:00:00,8242.5,85.0,8.3,Humid,False
+BAT-001575,tomatoes,Cherry,South,2025-09-27 12:45:00,4763.1,95.1,16.1,Optimal Dry,False
+BAT-001576,pears,Abate Fetel,South,2025-08-16 11:45:00,4878.9,90.6,27.4,Optimal Dry,True
+BAT-001577,table_grapes,Muscat de Hamburg,Centre,2025-09-09 06:45:00,7304.1,94.7,16.4,Optimal Dry,True
+BAT-001578,apples,Granny Smith,North,2025-08-25 12:30:00,13534.2,93.7,18.8,Optimal Dry,False
+BAT-001579,plums,Anna Späth,Centre,2025-08-06 09:30:00,2866.7,94.2,28.3,Hot / Sun-Exposed,False
+BAT-001580,raspberries,Glen Ample,North,2025-08-08 14:15:00,2420.0,88.4,24.4,Optimal Dry,False
+BAT-001581,table_grapes,Codreanca,South,2025-10-16 10:45:00,6437.2,91.7,10.1,Optimal Dry,True
+BAT-001582,apples,Jonagold,North,2025-10-10 08:00:00,13028.7,88.7,9.1,Humid,True
+BAT-001583,plums,Kabardinka,Centre,2025-09-26 11:15:00,5662.8,92.7,13.0,Optimal Dry,True
+BAT-001584,pears,Williams,Centre,2025-08-18 14:30:00,8062.2,88.6,21.9,Optimal Dry,False
+BAT-001585,plums,Stanley,Centre,2025-09-03 06:45:00,8943.0,97.5,18.0,Optimal Dry,False
+BAT-001586,apples,Golden Delicious,North,2025-10-20 10:45:00,8459.2,99.0,5.7,Optimal Dry,True
+BAT-001587,raspberries,Polana,South,2025-08-20 11:30:00,780.7,99.0,24.0,Optimal Dry,True
+BAT-001588,plums,President,North,2025-09-17 06:45:00,8279.3,89.6,13.3,Humid,True
+BAT-001589,apples,Gala,North,2025-10-17 11:30:00,4487.3,98.0,9.5,Optimal Dry,False
+BAT-001590,table_grapes,Muscat de Hamburg,Centre,2025-09-09 08:30:00,2509.8,89.8,17.8,Optimal Dry,True
+BAT-001591,pears,Abate Fetel,North,2025-09-03 14:00:00,8947.1,98.2,27.9,Optimal Dry,False
+BAT-001592,apples,Gala,North,2025-09-18 13:45:00,8001.2,88.3,18.8,Optimal Dry,True
+BAT-001593,tomatoes,Cherry,Centre,2025-09-04 13:45:00,4617.0,93.4,28.6,Hot / Sun-Exposed,False
+BAT-001594,apples,Golden Delicious,North,2025-10-01 12:45:00,8862.0,90.7,6.6,Humid,False
+BAT-001595,strawberries,Clery,North,2025-06-11 06:45:00,2759.7,81.5,14.4,Optimal Dry,True
+BAT-001596,table_grapes,Codreanca,Centre,2025-10-01 11:30:00,4137.9,89.2,8.9,Optimal Dry,True
+BAT-001597,apples,Jonagold,North,2025-09-12 08:00:00,7844.1,93.4,15.8,Post-Rain,False
+BAT-001598,table_grapes,Victoria,South,2025-10-16 07:15:00,7764.2,93.1,2.6,Humid,False
+BAT-001599,plums,Kabardinka,Centre,2025-08-26 06:45:00,7012.0,89.2,11.9,Optimal Dry,False
+BAT-001600,tomatoes,Rio Grande,South,2025-07-07 13:00:00,2609.1,89.7,34.3,Hot / Sun-Exposed,True
+BAT-001601,tomatoes,Primadonna,Centre,2025-08-23 08:45:00,6595.4,91.8,18.7,Optimal Dry,True
+BAT-001602,plums,Kabardinka,South,2025-08-14 07:45:00,3605.7,93.5,20.4,Optimal Dry,True
+BAT-001603,apples,Gala,North,2025-09-30 09:15:00,10921.1,93.4,9.8,Post-Rain,False
+BAT-001604,plums,Kabardinka,Centre,2025-08-19 10:45:00,3024.8,88.0,21.5,Optimal Dry,True
+BAT-001605,table_grapes,Victoria,South,2025-09-14 07:15:00,3998.2,93.7,12.7,Optimal Dry,True
+BAT-001606,apples,Idared,North,2025-09-02 10:00:00,14169.4,98.2,23.3,Optimal Dry,False
+BAT-001607,apples,Fuji,Centre,2025-10-02 06:15:00,5855.2,92.3,5.5,Optimal Dry,False
+BAT-001608,plums,Kabardinka,South,2025-09-08 07:45:00,2841.4,90.4,16.1,Optimal Dry,False
+BAT-001609,table_grapes,Muscat de Hamburg,South,2025-09-09 09:45:00,5370.4,94.9,22.3,Optimal Dry,True
+BAT-001610,apples,Golden Delicious,North,2025-09-10 08:45:00,14630.7,86.3,19.5,Optimal Dry,True
+BAT-001611,plums,Anna Späth,North,2025-09-05 12:30:00,6404.1,97.0,25.7,Optimal Dry,False
+BAT-001612,tomatoes,Primadonna,Centre,2025-09-06 06:00:00,2597.4,88.0,15.5,Optimal Dry,False
+BAT-001613,apricots,Spring Blush,Centre,2025-07-22 06:15:00,4228.1,90.0,19.9,Optimal Dry,True
+BAT-001614,plums,Stanley,Centre,2025-08-12 07:00:00,7769.9,87.9,15.0,Optimal Dry,False
+BAT-001615,plums,Kabardinka,Centre,2025-09-23 11:30:00,7992.5,95.9,22.9,Optimal Dry,False
+BAT-001616,table_grapes,Victoria,Centre,2025-10-08 12:30:00,4132.2,94.3,12.7,Humid,True
+BAT-001617,tomatoes,Bobcat,Centre,2025-07-10 12:00:00,3790.8,87.5,24.0,Optimal Dry,False
+BAT-001618,apples,Idared,North,2025-09-21 08:30:00,14702.2,90.1,14.6,Humid,False
+BAT-001619,plums,President,Centre,2025-09-07 06:45:00,3392.2,92.0,15.6,Optimal Dry,True
+BAT-001620,apples,Granny Smith,North,2025-09-23 12:00:00,6416.4,86.3,21.6,Optimal Dry,False
+BAT-001621,raspberries,Novokitaevskaya,North,2025-08-07 09:45:00,638.5,86.2,19.5,Optimal Dry,False
+BAT-001622,apples,Golden Delicious,North,2025-09-14 11:45:00,7195.2,93.3,20.3,Optimal Dry,False
+BAT-001623,apples,Granny Smith,Centre,2025-09-24 09:00:00,10220.6,91.9,15.9,Optimal Dry,True
+BAT-001624,table_grapes,Codreanca,South,2025-09-10 10:00:00,6733.4,92.1,23.0,Optimal Dry,False
+BAT-001625,apricots,Krasnoshchoky,North,2025-07-08 14:15:00,3601.9,93.4,32.4,Hot / Sun-Exposed,True
+BAT-001626,plums,Stanley,North,2025-08-11 11:15:00,6640.3,90.6,22.4,Optimal Dry,True
+BAT-001627,tomatoes,Rio Grande,North,2025-07-02 11:30:00,3203.5,91.7,24.1,Optimal Dry,True
+BAT-001628,apples,Gala,North,2025-10-21 14:15:00,12632.3,94.0,12.0,Optimal Dry,True
+BAT-001629,apples,Gala,North,2025-10-21 07:30:00,10474.9,90.8,0.9,Humid,False
+BAT-001630,apples,Jonagold,Centre,2025-09-09 14:30:00,12656.3,97.8,27.5,Optimal Dry,True
+BAT-001631,plums,Kabardinka,Centre,2025-08-09 11:00:00,4898.1,88.1,27.1,Optimal Dry,False
+BAT-001632,raspberries,Polana,North,2025-06-26 07:30:00,1916.7,89.3,21.1,Optimal Dry,False
+BAT-001633,apples,Idared,North,2025-10-02 10:30:00,13478.0,93.3,6.6,Optimal Dry,True
+BAT-001634,plums,Stanley,Centre,2025-10-04 07:30:00,9093.9,85.1,9.6,Humid,False
+BAT-001635,apples,Fuji,North,2025-09-29 09:15:00,14348.2,93.7,10.1,Optimal Dry,True
+BAT-001636,apples,Fuji,Centre,2025-08-31 14:45:00,5572.6,87.5,32.6,Hot / Sun-Exposed,False
+BAT-001637,plums,Anna Späth,South,2025-08-03 08:45:00,7574.4,94.4,24.1,Optimal Dry,False
+BAT-001638,apples,Idared,North,2025-10-24 08:45:00,5332.2,87.2,14.5,Humid,False
+BAT-001639,apples,Granny Smith,North,2025-10-25 09:45:00,8496.3,93.2,9.5,Optimal Dry,False
+BAT-001640,table_grapes,Moldova,Centre,2025-10-11 10:45:00,4414.7,85.9,11.0,Optimal Dry,False
+BAT-001641,apples,Golden Delicious,North,2025-10-20 12:00:00,4331.3,99.0,7.2,Optimal Dry,True
+BAT-001642,pears,Abate Fetel,Centre,2025-10-02 10:15:00,8265.2,89.4,7.3,Optimal Dry,True
+BAT-001643,tomatoes,Bobcat,Centre,2025-07-23 07:45:00,4332.7,88.8,22.5,Optimal Dry,True
+BAT-001644,table_grapes,Muscat de Hamburg,South,2025-09-09 10:30:00,7659.4,90.0,22.3,Optimal Dry,False
+BAT-001645,tomatoes,Cherry,Centre,2025-09-29 14:00:00,6317.1,96.7,18.1,Optimal Dry,False
+BAT-001646,plums,Stanley,Centre,2025-08-05 11:15:00,2858.2,98.7,28.5,Hot / Sun-Exposed,False
+BAT-001647,apples,Golden Delicious,North,2025-09-11 11:30:00,12422.5,97.5,22.7,Optimal Dry,True
+BAT-001648,apples,Granny Smith,North,2025-08-31 12:30:00,4235.0,88.8,29.1,Hot / Sun-Exposed,True
+BAT-001649,apricots,Spring Blush,Centre,2025-07-30 09:30:00,3808.6,92.4,22.3,Optimal Dry,False
+BAT-001650,apples,Jonagold,North,2025-10-14 07:45:00,12950.6,93.1,4.4,Humid,True
+BAT-001651,apricots,Spring Blush,Centre,2025-07-31 08:15:00,3666.7,87.0,18.6,Optimal Dry,False
+BAT-001652,plums,Anna Späth,Centre,2025-10-10 07:15:00,9403.0,86.1,10.6,Optimal Dry,True
+BAT-001653,plums,Anna Späth,Centre,2025-08-15 07:15:00,9763.5,89.3,19.2,Optimal Dry,True
+BAT-001654,plums,Anna Späth,South,2025-09-22 08:00:00,9379.3,89.7,14.1,Humid,True
+BAT-001655,plums,President,Centre,2025-08-22 11:30:00,3968.2,89.2,28.8,Hot / Sun-Exposed,False
+BAT-001656,apples,Fuji,North,2025-08-25 06:00:00,4614.2,92.4,9.5,Optimal Dry,True
+BAT-001657,apples,Idared,North,2025-09-20 13:30:00,10819.0,89.7,22.9,Optimal Dry,True
+BAT-001658,apples,Idared,North,2025-10-01 12:30:00,4333.2,90.9,6.2,Humid,True
+BAT-001659,apples,Granny Smith,Centre,2025-10-20 10:45:00,13050.3,87.5,6.7,Optimal Dry,True
+BAT-001660,plums,Anna Späth,Centre,2025-08-30 09:45:00,3307.7,87.8,25.5,Optimal Dry,False
+BAT-001661,pears,Williams,Centre,2025-09-30 10:00:00,11553.6,91.8,11.6,Humid,True
+BAT-001662,table_grapes,Muscat de Hamburg,South,2025-10-02 13:30:00,6145.7,92.6,11.2,Optimal Dry,False
+BAT-001663,apples,Idared,North,2025-08-29 08:15:00,4321.8,88.7,16.9,Optimal Dry,False
+BAT-001664,apples,Granny Smith,North,2025-08-28 12:00:00,12806.8,90.1,25.2,Optimal Dry,False
+BAT-001665,tomatoes,Bobcat,South,2025-08-11 12:30:00,6126.6,98.4,28.0,Optimal Dry,True
+BAT-001666,tomatoes,Rio Grande,Centre,2025-09-03 11:45:00,2372.0,90.2,26.8,Optimal Dry,False
+BAT-001667,strawberries,Asia,North,2025-06-21 12:30:00,883.2,84.5,17.9,Optimal Dry,False
+BAT-001668,tomatoes,Cherry,South,2025-10-03 12:00:00,4394.2,89.4,9.1,Optimal Dry,True
+BAT-001669,apricots,Krasnoshchoky,Centre,2025-07-14 07:30:00,4265.0,90.7,21.8,Optimal Dry,False
+BAT-001670,apricots,Spring Blush,North,2025-07-10 14:30:00,3234.8,90.2,24.0,Optimal Dry,True
+BAT-001671,apricots,Krasnoshchoky,Centre,2025-07-07 12:45:00,3385.3,88.4,33.8,Hot / Sun-Exposed,True
+BAT-001672,pears,Williams,Centre,2025-09-03 12:15:00,8110.1,89.8,26.8,Optimal Dry,True
+BAT-001673,table_grapes,Moldova,Centre,2025-10-06 11:45:00,6106.2,85.3,11.3,Humid,True
+BAT-001674,apples,Fuji,Centre,2025-09-16 12:30:00,12476.3,93.3,21.3,Optimal Dry,False
+BAT-001675,apples,Golden Delicious,North,2025-09-08 06:15:00,9799.8,91.2,14.1,Optimal Dry,False
+BAT-001676,apples,Jonagold,North,2025-09-26 14:15:00,11908.7,89.7,15.2,Optimal Dry,True
+BAT-001677,apples,Golden Delicious,North,2025-09-28 14:15:00,9706.3,85.6,15.8,Optimal Dry,False
+BAT-001678,tomatoes,Rio Grande,Centre,2025-08-03 13:30:00,4427.5,94.3,30.0,Hot / Sun-Exposed,False
+BAT-001679,plums,Stanley,North,2025-08-23 10:15:00,6803.7,85.4,18.0,Optimal Dry,True
+BAT-001680,apples,Idared,North,2025-10-05 10:00:00,14616.5,92.4,10.3,Humid,True
+BAT-001681,pears,Abate Fetel,Centre,2025-10-15 14:15:00,10132.7,93.7,10.8,Optimal Dry,True
+BAT-001682,apples,Golden Delicious,North,2025-09-15 13:30:00,9662.6,86.0,17.2,Post-Rain,True
+BAT-001683,plums,Anna Späth,Centre,2025-09-09 10:45:00,5800.3,95.5,24.2,Optimal Dry,False
+BAT-001684,plums,Kabardinka,North,2025-09-26 06:45:00,3193.6,85.9,4.5,Optimal Dry,False
+BAT-001685,plums,Stanley,South,2025-08-06 11:45:00,3684.1,91.0,30.9,Hot / Sun-Exposed,True
+BAT-001686,table_grapes,Codreanca,South,2025-09-08 09:45:00,7017.3,83.1,21.4,Optimal Dry,True
+BAT-001687,apples,Golden Delicious,North,2025-08-26 06:00:00,8648.1,88.3,10.2,Optimal Dry,True
+BAT-001688,apples,Gala,South,2025-09-02 14:45:00,12036.0,91.0,30.9,Hot / Sun-Exposed,False
+BAT-001689,apples,Granny Smith,North,2025-08-25 12:15:00,5613.2,87.6,18.8,Optimal Dry,True
+BAT-001690,apples,Golden Delicious,South,2025-10-13 06:15:00,8006.8,89.5,8.2,Humid,True
+BAT-001691,raspberries,Glen Ample,North,2025-07-14 13:30:00,728.4,97.2,30.6,Hot / Sun-Exposed,True
+BAT-001692,table_grapes,Moldova,South,2025-10-10 12:45:00,3796.0,92.8,17.3,Optimal Dry,True
+BAT-001693,apricots,Krasnoshchoky,Centre,2025-06-29 07:15:00,5187.5,91.0,16.5,Optimal Dry,False
+BAT-001694,strawberries,Alba,North,2025-05-28 12:00:00,1831.4,93.6,18.5,Optimal Dry,False
+BAT-001695,apples,Golden Delicious,North,2025-08-21 12:15:00,11508.2,99.0,26.8,Optimal Dry,False
+BAT-001696,tomatoes,Bobcat,Centre,2025-10-02 10:00:00,4777.9,86.4,7.3,Optimal Dry,False
+BAT-001697,apricots,Kioto,Centre,2025-07-26 12:15:00,3410.9,95.2,32.0,Hot / Sun-Exposed,True
+BAT-001698,apples,Golden Delicious,North,2025-10-20 11:15:00,12625.2,97.9,5.7,Optimal Dry,True
+BAT-001699,plums,Kabardinka,South,2025-08-24 06:30:00,5331.6,90.6,14.4,Optimal Dry,True
+BAT-001700,apples,Golden Delicious,North,2025-10-20 07:00:00,12523.8,92.4,2.8,Optimal Dry,False
+BAT-001701,apples,Golden Delicious,North,2025-09-24 06:15:00,10686.7,96.3,13.2,Humid,False
+BAT-001702,table_grapes,Moldova,South,2025-10-08 13:30:00,4540.3,93.7,13.0,Post-Rain,True
+BAT-001703,raspberries,Glen Ample,North,2025-08-16 06:15:00,680.6,89.8,14.7,Optimal Dry,False
+BAT-001704,table_grapes,Moldova,South,2025-10-09 14:30:00,3660.8,88.8,13.7,Optimal Dry,True
+BAT-001705,table_grapes,Moldova,Centre,2025-09-02 13:00:00,7875.5,87.6,29.8,Hot / Sun-Exposed,True
+BAT-001706,apples,Idared,North,2025-08-24 12:15:00,5032.4,89.5,17.5,Optimal Dry,True
+BAT-001707,strawberries,Clery,Centre,2025-06-08 14:45:00,2096.2,95.6,30.4,Hot / Sun-Exposed,True
+BAT-001708,apples,Jonagold,North,2025-10-02 06:00:00,6885.5,91.8,4.8,Humid,True
+BAT-001709,tomatoes,Primadonna,Centre,2025-07-25 14:45:00,2988.9,86.8,33.5,Hot / Sun-Exposed,False
+BAT-001710,tomatoes,Primadonna,Centre,2025-10-06 06:30:00,4241.4,93.9,10.2,Humid,True
+BAT-001711,apples,Golden Delicious,North,2025-09-16 07:45:00,14295.8,96.2,10.5,Humid,False
+BAT-001712,apples,Granny Smith,North,2025-09-08 11:15:00,5266.1,91.7,21.7,Optimal Dry,False
+BAT-001713,table_grapes,Moldova,South,2025-09-30 11:15:00,2503.9,94.3,13.7,Optimal Dry,False
+BAT-001714,apples,Golden Delicious,North,2025-10-07 09:30:00,4316.7,93.6,10.1,Humid,False
+BAT-001715,apples,Idared,North,2025-08-23 12:00:00,8044.9,86.1,20.9,Optimal Dry,False
+BAT-001716,raspberries,Novokitaevskaya,North,2025-06-17 14:00:00,986.5,86.7,26.7,Optimal Dry,False
+BAT-001717,apples,Fuji,North,2025-09-01 10:30:00,8515.5,91.0,22.7,Optimal Dry,True
+BAT-001718,plums,Kabardinka,North,2025-09-13 07:00:00,6215.4,91.1,14.4,Optimal Dry,False
+BAT-001719,apples,Jonagold,North,2025-09-02 13:00:00,10856.9,90.5,28.2,Hot / Sun-Exposed,True
+BAT-001720,table_grapes,Muscat de Hamburg,South,2025-10-08 14:30:00,7019.1,85.6,13.0,Post-Rain,True
+BAT-001721,raspberries,Heritage,North,2025-07-04 10:15:00,1662.0,96.0,27.0,Optimal Dry,False
+BAT-001722,plums,Kabardinka,Centre,2025-08-08 14:45:00,5893.7,91.0,26.1,Optimal Dry,True
+BAT-001723,apples,Idared,North,2025-09-18 08:30:00,7979.0,88.2,11.5,Optimal Dry,False
+BAT-001724,plums,President,Centre,2025-09-12 13:30:00,3545.2,88.4,20.9,Optimal Dry,True
+BAT-001725,apples,Golden Delicious,North,2025-10-14 09:15:00,11801.9,96.5,5.9,Optimal Dry,False
+BAT-001726,tomatoes,Rio Grande,North,2025-07-03 10:45:00,4189.3,96.7,26.0,Optimal Dry,True
+BAT-001727,pears,Abate Fetel,North,2025-09-11 10:00:00,5249.0,87.6,20.2,Optimal Dry,True
+BAT-001728,apples,Jonagold,North,2025-09-12 11:00:00,4197.7,89.4,16.7,Humid,False
+BAT-001729,apples,Jonagold,North,2025-10-19 09:30:00,5327.1,99.0,7.4,Optimal Dry,False
+BAT-001730,strawberries,Clery,North,2025-05-30 13:00:00,2641.5,95.4,17.5,Optimal Dry,True
+BAT-001731,plums,Stanley,North,2025-09-23 11:30:00,5020.7,86.4,21.6,Optimal Dry,False
+BAT-001732,pears,Conference,Centre,2025-08-27 12:30:00,4168.3,92.9,25.8,Optimal Dry,False
+BAT-001733,pears,Ksenia,North,2025-10-14 09:00:00,5034.8,93.3,5.9,Optimal Dry,True
+BAT-001734,apples,Jonagold,North,2025-10-18 06:30:00,4694.3,84.7,6.7,Humid,True
+BAT-001735,apples,Gala,North,2025-10-15 14:00:00,11803.8,89.7,10.6,Optimal Dry,False
+BAT-001736,apples,Jonagold,North,2025-09-28 09:30:00,9693.1,85.0,10.8,Optimal Dry,True
+BAT-001737,plums,President,North,2025-10-01 06:30:00,5957.8,92.8,5.7,Humid,False
+BAT-001738,apples,Fuji,North,2025-09-10 08:30:00,14312.6,95.1,17.6,Optimal Dry,True
+BAT-001739,apples,Idared,North,2025-10-20 08:30:00,8220.4,92.3,3.0,Optimal Dry,False
+BAT-001740,apples,Jonagold,North,2025-09-16 08:30:00,13187.9,89.1,10.5,Humid,False
+BAT-001741,apples,Golden Delicious,North,2025-09-15 07:15:00,9674.0,88.2,12.9,Optimal Dry,False
+BAT-001742,apples,Idared,North,2025-09-07 09:15:00,5149.8,92.5,18.1,Optimal Dry,False
+BAT-001743,apples,Idared,North,2025-08-27 09:00:00,12104.7,88.3,17.1,Optimal Dry,False
+BAT-001744,table_grapes,Victoria,South,2025-10-11 11:45:00,7761.4,91.9,13.8,Optimal Dry,False
+BAT-001745,apricots,Kioto,North,2025-07-29 08:30:00,5307.3,92.9,20.2,Post-Rain,True
+BAT-001746,apricots,Krasnoshchoky,Centre,2025-07-03 06:30:00,5516.2,91.0,16.5,Optimal Dry,False
+BAT-001747,apples,Idared,North,2025-09-03 08:00:00,4494.3,90.4,18.1,Optimal Dry,True
+BAT-001748,apples,Granny Smith,North,2025-09-23 09:45:00,10679.9,93.3,18.1,Optimal Dry,False
+BAT-001749,tomatoes,Rio Grande,South,2025-07-22 11:15:00,4873.3,94.5,32.1,Hot / Sun-Exposed,False
+BAT-001750,plums,President,North,2025-10-04 06:00:00,4737.2,87.7,9.1,Post-Rain,False
+BAT-001751,table_grapes,Moldova,South,2025-10-25 10:45:00,3894.3,88.8,13.8,Optimal Dry,False
+BAT-001752,pears,Conference,Centre,2025-09-03 07:00:00,10701.3,98.1,18.0,Optimal Dry,True
+BAT-001753,plums,Kabardinka,Centre,2025-08-05 13:00:00,6069.2,93.3,30.5,Hot / Sun-Exposed,True
+BAT-001754,tomatoes,Primadonna,Centre,2025-08-13 13:00:00,4356.2,94.5,27.3,Optimal Dry,True
+BAT-001755,plums,Kabardinka,Centre,2025-09-08 08:15:00,6265.7,93.2,16.3,Optimal Dry,False
+BAT-001756,pears,Abate Fetel,Centre,2025-09-08 12:30:00,6707.2,88.1,24.6,Optimal Dry,False
+BAT-001757,pears,Williams,North,2025-10-13 14:45:00,8034.3,95.1,12.0,Optimal Dry,False
+BAT-001758,table_grapes,Muscat de Hamburg,South,2025-09-30 09:30:00,4791.4,99.0,12.3,Optimal Dry,True
+BAT-001759,apples,Gala,North,2025-08-27 13:45:00,6402.3,90.3,25.9,Optimal Dry,True
+BAT-001760,raspberries,Novokitaevskaya,North,2025-08-07 14:00:00,1608.7,88.1,24.4,Optimal Dry,False
+BAT-001761,plums,Kabardinka,Centre,2025-08-01 08:00:00,4389.9,88.6,19.7,Optimal Dry,False
+BAT-001762,table_grapes,Muscat de Hamburg,Centre,2025-09-25 06:15:00,3442.9,92.9,12.5,Optimal Dry,False
+BAT-001763,table_grapes,Moldova,Centre,2025-09-07 11:15:00,7599.8,94.4,22.7,Optimal Dry,False
+BAT-001764,plums,Anna Späth,Centre,2025-09-05 09:45:00,6097.1,83.7,22.3,Optimal Dry,False
+BAT-001765,plums,Anna Späth,Centre,2025-09-22 06:15:00,7542.6,98.5,12.3,Humid,True
+BAT-001766,strawberries,Asia,North,2025-06-01 13:45:00,2845.1,86.9,24.0,Optimal Dry,True
+BAT-001767,table_grapes,Codreanca,South,2025-10-22 14:30:00,7641.5,90.1,18.5,Optimal Dry,True
+BAT-001768,table_grapes,Moldova,South,2025-09-05 10:30:00,4682.4,84.7,24.1,Optimal Dry,False
+BAT-001769,strawberries,Asia,North,2025-06-14 08:15:00,1849.1,90.5,15.1,Optimal Dry,True
+BAT-001770,tomatoes,Bobcat,Centre,2025-08-20 08:45:00,4014.8,91.3,19.3,Optimal Dry,False
+BAT-001771,apples,Jonagold,Centre,2025-08-22 10:45:00,5326.2,96.0,26.8,Optimal Dry,False
+BAT-001772,plums,Anna Späth,North,2025-08-06 12:45:00,7275.6,89.8,29.9,Hot / Sun-Exposed,True
+BAT-001773,tomatoes,Rio Grande,North,2025-07-19 13:15:00,6564.9,91.3,20.8,Post-Rain,False
+BAT-001774,apples,Granny Smith,North,2025-09-15 13:45:00,13560.1,92.1,17.2,Post-Rain,False
+BAT-001775,apples,Gala,North,2025-09-05 13:00:00,8211.8,91.9,26.7,Optimal Dry,True
+BAT-001776,pears,Williams,Centre,2025-10-13 12:45:00,10894.5,90.0,11.1,Optimal Dry,False
+BAT-001777,table_grapes,Muscat de Hamburg,South,2025-09-20 07:15:00,3088.8,93.9,14.9,Humid,False
+BAT-001778,apples,Jonagold,North,2025-09-16 11:30:00,8856.2,80.3,19.6,Optimal Dry,True
+BAT-001779,apples,Fuji,Centre,2025-10-02 12:45:00,6842.5,95.2,9.1,Optimal Dry,True
+BAT-001780,pears,Ksenia,North,2025-08-25 10:15:00,7213.9,90.3,15.5,Optimal Dry,False
+BAT-001781,plums,Stanley,Centre,2025-09-03 09:45:00,5015.0,89.5,23.0,Optimal Dry,False
+BAT-001782,tomatoes,Cherry,Centre,2025-07-18 10:15:00,3980.3,99.0,20.8,Optimal Dry,True
+BAT-001783,tomatoes,Bobcat,South,2025-09-09 08:15:00,6792.9,95.9,16.5,Optimal Dry,True
+BAT-001784,tomatoes,Primadonna,South,2025-08-10 09:30:00,2587.2,92.6,26.4,Optimal Dry,False
+BAT-001785,apples,Jonagold,Centre,2025-08-28 11:30:00,9202.4,92.5,27.5,Optimal Dry,False
+BAT-001786,apples,Gala,North,2025-10-25 13:15:00,7955.8,92.4,12.9,Optimal Dry,False
+BAT-001787,plums,President,South,2025-08-12 11:30:00,3193.6,89.0,24.1,Optimal Dry,False
+BAT-001788,apples,Idared,North,2025-10-17 12:00:00,7782.2,88.7,9.5,Optimal Dry,True
+BAT-001789,apples,Idared,North,2025-10-01 08:45:00,10351.4,86.2,5.5,Humid,True
+BAT-001790,apricots,Nadejda,Centre,2025-07-19 10:30:00,5653.8,99.0,21.5,Optimal Dry,False
+BAT-001791,apples,Golden Delicious,Centre,2025-09-29 11:45:00,5360.0,90.7,16.3,Optimal Dry,True
+BAT-001792,apples,Idared,Centre,2025-09-01 08:15:00,6699.1,91.7,20.0,Optimal Dry,False
+BAT-001793,plums,President,North,2025-08-31 11:30:00,5143.0,87.4,29.1,Hot / Sun-Exposed,True
+BAT-001794,table_grapes,Codreanca,Centre,2025-10-14 13:00:00,7674.4,97.8,11.3,Optimal Dry,True
+BAT-001795,apples,Idared,North,2025-10-17 11:00:00,9265.2,86.9,8.2,Humid,False
+BAT-001796,table_grapes,Codreanca,South,2025-10-24 13:00:00,5512.2,93.9,18.5,Optimal Dry,False
+BAT-001797,table_grapes,Codreanca,South,2025-09-03 12:45:00,6012.9,90.4,30.2,Hot / Sun-Exposed,False
+BAT-001798,plums,Anna Späth,South,2025-10-03 07:30:00,7645.3,88.9,6.8,Optimal Dry,True
+BAT-001799,table_grapes,Muscat de Hamburg,South,2025-09-25 09:15:00,3843.0,86.5,14.0,Optimal Dry,True
+BAT-001800,apples,Granny Smith,North,2025-10-16 11:30:00,9422.7,84.1,11.9,Optimal Dry,False
