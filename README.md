@@ -68,6 +68,8 @@ The backend tests validate both endpoints and enforce that an `insufficient_data
 - [`docs/evaluation.md`](docs/evaluation.md) — evaluation principles without unsupported targets.
 - [`docs/domain_rules.md`](docs/domain_rules.md) — guardrails for future agronomic rules.
 - [`docs/demo_runbook.md`](docs/demo_runbook.md) — foundation demo procedure.
+- [`docs/team_roles.md`](docs/team_roles.md) — current SoS challenge-specific ownership.
+- [`docs/workstreams/`](docs/workstreams/) — SoS challenge-specific operating guides for the five team workstreams.
 - [`docs/decisions/0001-foundation-architecture.md`](docs/decisions/0001-foundation-architecture.md) — foundation ADR.
 
-**Raw challenge input schema: UNKNOWN until dataset probe.**
+The sponsor pack supplies an inspectable raw schema. Observed integrity, canonical mapping, and an accepted production `BatchInput` remain pending reconnaissance and integration decisions.

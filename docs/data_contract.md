@@ -1,8 +1,10 @@
 # Application output contract
 
-**Raw challenge input schema: UNKNOWN until dataset probe.**
+**Supplied raw schema:** inspectable in the sponsor CSV headers and `sponsor_pack/data/data_dictionary.xlsx`.
 
-This document specifies the current public output semantics only. It deliberately defines no production `BatchInput` and no fictional dataset fields.
+**Accepted production/canonical input model:** not yet defined. The supplied raw schema does not by itself establish validation behavior, observed integrity, canonical mapping, or a production `BatchInput`.
+
+This document specifies the current public output semantics only. It deliberately defines no production `BatchInput` and does not promote raw sponsor fields into an accepted application contract.
 
 ## Assessment status
 
@@ -17,8 +19,8 @@ The Pydantic model enforces these invariants. Consumers must not derive or displ
 | --- | --- | --- |
 | `batch_id` | string | Identifier in the assessment context; not a declaration of raw-data field names |
 | `status` | assessment status | Whether an assessment could be made |
-| `risk` | object or null | Optional normalized score and optional qualitative band |
-| `deterioration_horizon` | object or null | Optional start and end timestamps; absent when unsupported |
+| `risk` | `RiskEstimate` object or null | The enclosing object may be null. When present, `score` is required and numeric in `[0,1]`; `band` is optional. The score is not necessarily a calibrated probability. An `assessed` result requires this object. |
+| `deterioration_horizon` | `DeteriorationHorizon` object or null | The enclosing object may be null. When present, `starts_at` is required and `ends_at` is optional. It must remain null when a horizon is unsupported. |
 | `factors` | list of structured factors | Evidence-linked contributors or data-quality blockers |
 | `recommendation` | structured object or null | Machine-readable action, priority, rationale codes, and review flag |
 | `reliability` | object | Reliability level, optional confidence score, reason codes, and missing requirements |

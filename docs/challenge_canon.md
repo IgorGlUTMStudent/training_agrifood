@@ -4,9 +4,13 @@
 
 **FACT:** Smart Harvest: Reduce Post-Harvest Losses is a **SIMULATION / training challenge** for the SoS AgriFood team. It is not evidence of a real provider requirement or a production commitment.
 
-**FACT:** Sample data is expected to concern crop batches, harvest information, storage conditions, environmental measurements, transportation status, and historical losses.
+**FACT:** The repository now contains the supplied training challenge materials under `sponsor_pack/`: the challenge brief, sponsor README, eight relational CSV tables, and `sponsor_pack/data/data_dictionary.xlsx`.
 
-**UNKNOWN:** The actual files, schema, semantics, quality, labels, collection process, and operating environment have not been inspected. The description above must not be converted into fictional fields or provider requirements.
+**FACT:** Those supplied materials document a relational source structure, declared field names and types, dispatch-time assessment semantics (`T_assess = T_dispatch`), historical outcome fields, and a public/hidden temporal restriction. This records what the training package supplies; it is not evidence about a real GigaHack provider or real commercial operations.
+
+**FACT:** For predictive assessment, only information available at dispatch is eligible. Arrival inspection, actual post-dispatch delay or incidents, post-dispatch telemetry unavailable at assessment, final outcomes, and equivalent future observations are forbidden prediction inputs. Their presence in public historical files permits retrospective analysis, not inference-time use.
+
+**UNKNOWN pending empirical reconnaissance:** actual data quality, completeness, distributions, observed type consistency, referential integrity, sampling gaps, label usefulness, evaluation design, model performance, validated recommendation effects, and agronomic thresholds. The existence of supplied schema and outcome columns does not establish any of those matters, and this document does not claim that Viktor's profiling has been completed.
 
 ## Required operator outcomes
 
