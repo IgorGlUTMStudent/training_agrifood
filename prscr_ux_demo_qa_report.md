@@ -268,9 +268,9 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [sensitech.com/en/products/software/sensiwatch-platform](https://www.sensitech.com/en/products/software/sensiwatch-platform)
 * **WHAT THE PRODUCT DOES:** Tracks perishable food and pharma shipments, validating cold-chain compliance for custody transfer decisions.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Trip-level compliance reports and accept/reject decision evidence.
+  * *[UNVERIFIED / RECOMMENDATION]* Trip-level compliance reports and accept/reject decision evidence.
   * *[UNVERIFIED / RECOMMENDATION]* Prominent disposition status badges (e.g., "Released" vs. "Quarantine Required") directly on the operational triage screen.
-  * *[OBSERVED PRACTICE]* Calculated cumulative thermal stability metrics (e.g., Mean Kinetic Temperature - MKT).
+  * *[UNVERIFIED / RECOMMENDATION]* Calculated cumulative thermal stability metrics (e.g., Mean Kinetic Temperature - MKT).
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* Operators need an unambiguous triage status at $T_{dispatch}$ ("Cleared" vs "High Risk / Review Prioritized").
   * *[RECOMMENDATION]* Cumulative exposure summaries (degree-hours) are more digestible than raw sensor tables.
@@ -542,16 +542,16 @@ PROVISIONAL LAYOUT:
 * **DEMO IMPORTANCE:** **CRITICAL** (Answers: *"What factors contribute to the risk?"*).
 
 #### 5. Section D: Prioritized Action & Intervention (Detail Panel — Bottom)
-* **PURPOSE:** Surface the single most effective operational action to mitigate loss before departure.
+* **PURPOSE:** Surface the prioritized supported operational recommendation before departure.
 * **PRIMARY USER QUESTION:** *"What action should I prioritize right now at the dock to avoid loss?"*
 * **INFORMATION HIERARCHY:** (1) `[PRIORITIZED ACTION]` headline with action verb, (2) Priority badge (`High`), (3) Rationale bullets, (4) Human review notice (`requires_human_review: true`), (5) Action button: `[BUTTON: REVIEW RECOMMENDATION]`.
 * **PRIMARY ACTION:** `[BUTTON: REVIEW RECOMMENDATION]`.
 * **SECONDARY INFORMATION:** Operational notes, vehicle assignment link.
 * **DATA REQUIRED:** `RiskAssessment.recommendation`.
-* **EMPTY STATE:** When risk is low: `"[NO ACTION REQUIRED]"`.
+* **EMPTY STATE:** When risk is low: `"[NO PRIORITIZED RECOMMENDATION AVAILABLE]"`.
 * **LOADING STATE:** Shimmering action callout box.
 * **ERROR STATE:** Inline alert: *"Recommendation engine failed to generate an action."*
-* **INSUFFICIENT-DATA STATE:** Recommendation withheld; missing requirements exposed; human review required before clearing dispatch.
+* **INSUFFICIENT-DATA STATE:** Recommendation withheld; missing requirements exposed; human review required before relying on the recommendation.
 * **UNCERTAINTY / EXPLAINABILITY:** Clear disclaimer that recommendations require human operator validation.
 * **MOBILE CONSIDERATIONS:** Fixed bottom sticky action bar with action button.
 * **DEMO IMPORTANCE:** **CRITICAL** (Answers: *"What action should be prioritized?"*).
@@ -759,7 +759,7 @@ COLD-STORAGE TELEMETRY + HARVEST METADATA
 ## 12. EVIDENCE / HANDOFF
 
 * **Base Commit SHA:** `20021656028392a420561c6dc2a0f5434835081f`
-* **HEAD Commit SHA:** `bb00820f96f2c2b24d2ae8088ebe926feaf965c1` (prior to final consistency fix commit)
+* Verified PR HEAD before this micro-fix: 0dc1a9c9981e9ce712ce7c8d0005b6dd78615ae7
 * **Branch:** `prscr/ux-demo-qa` (tracking `origin/prscr/ux-demo-qa`)
 * **Changed Files:** `prscr_ux_demo_qa_report.md` (only file modified)
 
@@ -778,7 +778,7 @@ COLD-STORAGE TELEMETRY + HARVEST METADATA
    ```powershell
    git log --oneline -3
    # Output:
-   # [commit SHA] docs: final narrow consistency fix (PR #9)
+   # 0dc1a9c docs: final narrow consistency fix (PR #9)
    # bb00820 docs: PUX report evidence & consistency fix (PR #9 review)
    # 8ce2da4 docs: add PUX workstream report (PUX-00 through PUX-07)
    ```
