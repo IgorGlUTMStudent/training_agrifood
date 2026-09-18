@@ -256,9 +256,9 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [samsara.com/products/temperature-environmental-monitoring](https://www.samsara.com/products/temperature-environmental-monitoring)
 * **WHAT THE PRODUCT DOES:** Real-time temperature, humidity, and reefer diagnostic monitoring across transport compartments.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Excursion duration banners (e.g. "Excursion: 2h 15m above setpoint").
-  * *[OBSERVED PRACTICE]* Telemetry charts with shaded safe corridor; excursions spike outside the shaded band.
-  * *[OBSERVED PRACTICE]* Direct two-way remote setpoint control.
+  * *[OBSERVED PRACTICE]* Real-time temperature excursion alerts and continuous multi-zone temperature logging against configured thresholds.
+  * *[UNVERIFIED / RECOMMENDATION]* Telemetry charts with shaded safe corridors for visual excursion spikes.
+  * *[OBSERVED PRACTICE]* Remote two-way reefer commands (setpoint adjustment and operating mode changes).
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* Shaded corridor visual on telemetry charts explains *why* an `AssessmentFactor` was triggered without mental calculation.
 * **LIMITATIONS:** Samsara is an active IoT fleet telematics tool with 2-way machine control, whereas Smart Harvest is a pre-dispatch decision-support tool.
@@ -268,8 +268,9 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [sensitech.com/en/products/software/sensiwatch-platform](https://www.sensitech.com/en/products/software/sensiwatch-platform)
 * **WHAT THE PRODUCT DOES:** Tracks perishable food and pharma shipments, validating cold-chain compliance for custody transfer decisions.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Status chip for decision gate: "Released", "Under Review", "Quarantine Required".
-  * *[OBSERVED PRACTICE]* Cumulative exposure metrics: Mean Kinetic Temperature (MKT) and Time Out of Refrigeration (TOR).
+  * *[OBSERVED PRACTICE]* Trip-level compliance reports and accept/reject decision evidence.
+  * *[UNVERIFIED / RECOMMENDATION]* Prominent disposition status badges (e.g., "Released" vs. "Quarantine Required") directly on the operational triage screen.
+  * *[OBSERVED PRACTICE]* Calculated cumulative thermal stability metrics (e.g., Mean Kinetic Temperature - MKT).
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* Operators need an unambiguous triage status at $T_{dispatch}$ ("Cleared" vs "High Risk / Review Prioritized").
   * *[RECOMMENDATION]* Cumulative exposure summaries (degree-hours) are more digestible than raw sensor tables.
@@ -280,8 +281,9 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [controlant.com/platform/insights](https://www.controlant.com/platform/insights)
 * **WHAT THE PRODUCT DOES:** Real-time supply chain monitoring and automated incident escalation for perishables and pharma.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Exception-only triage queue sorted strictly by severity (Critical > Warning > Resolved).
-  * *[OBSERVED PRACTICE]* Dedicated contributing-factor / evidence callout box: "Root Cause: Ambient exposure at loading dock".
+  * *[OBSERVED PRACTICE]* Exception-driven dashboard surfacing shipments experiencing excursions or delays rather than requiring manual monitoring of all shipments.
+  * *[OBSERVED PRACTICE / PRODUCT SPECIFICATION]* Root cause and excursion pinpointing analytics identifying high-risk locations/events.
+  * *[UNVERIFIED / RECOMMENDATION]* Dedicated contributing-factor callout card paired directly with the exception row.
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* An "At-Risk Queue" prioritizes batches requiring immediate intervention at the top.
   * *[RECOMMENDATION]* Structured factor cards in `AssessmentFactor` map directly to Controlant's evidence callout pattern.
@@ -292,9 +294,9 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [afresh.com/platform](https://www.afresh.com/platform)
 * **WHAT THE PRODUCT DOES:** AI-powered replenishment and inventory optimization built for fresh produce with short shelf lives.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Items sorted by remaining commercial freshness window.
-  * *[OBSERVED PRACTICE]* Prescriptive next best action with quantities (e.g. "Discount 30% — 15 crates").
-  * *[OBSERVED PRACTICE]* Operator override with reason capture.
+  * *[OBSERVED PRACTICE]* Perishability-aware ordering and daily production workflows tailored to short-shelf-life produce.
+  * *[OBSERVED PRACTICE]* Prescriptive automated daily order/prep recommendations.
+  * *[OBSERVED PRACTICE]* Store associate manual review and override workflows for automated recommendations.
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* Supports the 4th challenge objective ("What action should be prioritized?"). The UI should pair risk scores directly with a concrete recommendation block.
 * **LIMITATIONS:** Focused on retail store replenishment, whereas Smart Harvest focuses on cold storage chambers and transport dispatch.
@@ -304,8 +306,8 @@ Every question required to establish the operational interface is recorded below
 * **LINK:** [fourkites.com/platform/temperature-tracking](https://www.fourkites.com/platform/temperature-tracking)
 * **WHAT THE PRODUCT DOES:** Predictive freight tracking, transit delay tracking, and temperature excursion alerts.
 * **OBSERVED UX PATTERN:**
-  * *[OBSERVED PRACTICE]* Correlation of route progress against temperature deviation duration.
-  * *[OBSERVED PRACTICE]* Explicit data completeness indicators ("Last Ping: 12m ago", "Degraded Telemetry" badge).
+  * *[OBSERVED PRACTICE]* Real-time temperature excursion tracking mapped to freight tracking timelines.
+  * *[UNVERIFIED / RECOMMENDATION]* Explicit data completeness / telemetry freshness indicators directly on the exception row.
 * **WHY IT MAY BE RELEVANT:**
   * *[RECOMMENDATION]* For batches with truncated telemetry (2026 gap), an explicit data completeness badge directly supports our `Reliability.level` and `missing_requirements` contracts.
 * **LIMITATIONS:** High emphasis on GPS geospatial maps, which is unnecessary noise for dockside dispatch.
@@ -362,7 +364,7 @@ PROVISIONAL LAYOUT:
 * **USER QUESTION:** *"What specific storage or handling conditions contributed to this batch's risk?"*
 * **SCREEN / STATE:** `[PROVISIONAL] Batch Detail — Contributing Factors Section (Detail Panel)`
 * **INFORMATION REQUIRED:** Array of `AssessmentFactor` (`category`, `effect`, `summary`, `evidence_references`). (*Available at $T_{dispatch}$*).
-* **USER ACTION:** Operator reads structured factor summaries (e.g. cumulative degree-hours, condensation).
+* **USER ACTION:** Operator reads structured factor summaries (e.g. [SUPPORTED CONTRIBUTING FACTORS]).
 * **EXPECTED RESULT:** Operator understands contributing conditions without requiring raw sensor analysis.
 * **DATA DEPENDENCY:** Analytics engine factor generation; `AssessmentFactor` populated with evidence codes.
 * **CURRENTLY SUPPORTED:** **PARTIAL** (Component renders in `AssessmentCard.tsx`, but displays single placeholder factor).
@@ -371,8 +373,8 @@ PROVISIONAL LAYOUT:
 * **USER QUESTION:** *"What action should be prioritized right now at the dock to reduce potential loss?"*
 * **SCREEN / STATE:** `[PROVISIONAL] Batch Detail — Action Recommendation Section (Detail Panel)`
 * **INFORMATION REQUIRED:** `Recommendation.action_code`, `label`, `priority`, `rationale_codes`, `requires_human_review`.
-* **USER ACTION:** Operator reviews recommendation and clicks `[PROVISIONAL] "Acknowledge & Apply Intervention"`.
-* **EXPECTED RESULT:** Batch status updates to indicate an acknowledged intervention.
+* **USER ACTION:** Operator reviews recommendation and selects [PROVISIONAL] "[REVIEW RECOMMENDATION]".
+* **EXPECTED RESULT:** Operator completes [REVIEW RECOMMENDATION] under provisional workflow.
 * **DATA DEPENDENCY:** Action recommendation engine; agreed action catalog.
 * **CURRENTLY SUPPORTED:** **NO** (Contract model exists, but fixture returns `null`; no action buttons exist in UI).
 
@@ -458,11 +460,11 @@ PROVISIONAL LAYOUT:
 |                                                      |                                                      |
 |  [Filter: Crop Type v] [Sort: Urgency v]             |  BATCH: [BATCH_ID] | Crop: [CROP] | Variety: [VARIETY]|
 |  +-------------------------------------------------+ |  Scheduled Dispatch: [PLANNED DISPATCH DATETIME]     |
-|  | [RISK BAND]  [BATCH_ID]  [CROP]  [DESTINATION]  | |  +-------------------------------------------------+ |
-|  | > High Risk   BATCH-042   Apple   București     | |  | SECTION 2A: RISK SEVERITY & TIMING              | |
-|  |   Moderate    BATCH-019   Plum    Chișinău      | |  | [RISK INDICATOR]           [DETERIORATION HORIZON| |
-|  |   Low         BATCH-008   Grape   Iași          | |  | Reliability: [RELIABILITY LEVEL]                | |
-|  |   Incomplete  BATCH-104   Apple   Brașov        | |  +-------------------------------------------------+ |
+|  | [RISK BAND]   [BATCH_ID]     [CROP]   [DEST]    | |  +-------------------------------------------------+ |
+|  | > [HIGH RISK] [BATCH_ID_1]   [CROP_1] [DEST_1]  | |  | SECTION 2A: RISK SEVERITY & TIMING              | |
+|  |   [MODERATE]  [BATCH_ID_2]   [CROP_2] [DEST_2]  | |  | [RISK INDICATOR]           [DETERIORATION HORIZON| |
+|  |   [LOW]       [BATCH_ID_3]   [CROP_3] [DEST_3]  | |  | Reliability: [RELIABILITY LEVEL]                | |
+|  |   [INCOMPLETE][BATCH_ID_4]   [CROP_4] [DEST_4]  | |  +-------------------------------------------------+ |
 |  +-------------------------------------------------+ |  | SECTION 2B: CONTRIBUTING FACTORS (WHY AT RISK)  | |
 |  | [PAGINATION / BATCH COUNT SUMMARY]              | |  | [CONTRIBUTING FACTORS LIST]                         | |
 |                                                      |  | - [FACTOR 1: SUMMARY + EVIDENCE CODE]            | |
@@ -471,7 +473,7 @@ PROVISIONAL LAYOUT:
 |                                                      |  | SECTION 2C: PRIORITIZED ACTION (WHAT TO DO)       | |
 |                                                      |  | [PRIORITIZED ACTION CALLOUT]                     | |
 |                                                      |  | Priority: [PRIORITY] | Review: [HUMAN SIGN-OFF]   | |
-|                                                      |  | [BUTTON: ACKNOWLEDGE & APPLY INTERVENTION]        | |
+|                                                      |  | [BUTTON: REVIEW RECOMMENDATION]                  | |
 |                                                      |  +-------------------------------------------------+ |
 |                                                      |  | Provenance: [ENGINE VERSION] | [SIMULATION BANNER]|
 +------------------------------------------------------+------------------------------------------------------+
@@ -524,14 +526,14 @@ PROVISIONAL LAYOUT:
 * **MOBILE CONSIDERATIONS:** Stacks directly above contributing factors.
 * **DEMO IMPORTANCE:** **CRITICAL** (Answers: *"When may quality begin to deteriorate?"*).
 
-#### 4. Section C: Contributing Factors & Causal Evidence (Detail Panel — Middle)
+#### 4. Section C: Contributing Factors & Supporting Evidence (Detail Panel — Middle)
 * **PURPOSE:** Explain the physical and environmental storage factors contributing to the risk score.
 * **PRIMARY USER QUESTION:** *"What storage or handling factors contributed to this risk alert?"*
 * **INFORMATION HIERARCHY:** (1) Category badge (`Environmental`, `Storage`), (2) Impact direction (`[INCREASES RISK]`), (3) Plain language summary: `[FACTOR SUMMARY]`, (4) Evidence reference code: `[EVIDENCE CODE]`.
 * **PRIMARY ACTION:** Expand/collapse evidence log snippet.
 * **SECONDARY INFORMATION:** Chamber ID, sensor probe references.
 * **DATA REQUIRED:** `RiskAssessment.factors` array.
-* **EMPTY STATE:** When risk is low: *"No environmental or storage anomalies detected. Parameters remained within target range."*
+* **EMPTY STATE:** When risk is low: *"No supported contributing factor is available for this assessment."*
 * **LOADING STATE:** 2–3 shimmering placeholder factor cards.
 * **ERROR STATE:** Inline alert: *"Factor explanations unavailable for this batch."*
 * **INSUFFICIENT-DATA STATE:** Displays data quality blockers: category `data_quality`, effect `unknown`, explaining what telemetry was missing.
@@ -542,11 +544,11 @@ PROVISIONAL LAYOUT:
 #### 5. Section D: Prioritized Action & Intervention (Detail Panel — Bottom)
 * **PURPOSE:** Surface the single most effective operational action to mitigate loss before departure.
 * **PRIMARY USER QUESTION:** *"What action should I prioritize right now at the dock to avoid loss?"*
-* **INFORMATION HIERARCHY:** (1) `[PRIORITIZED ACTION]` headline with action verb, (2) Priority badge (`High`), (3) Rationale bullets, (4) Human review notice (`requires_human_review: true`), (5) Action button: `[BUTTON: ACKNOWLEDGE & APPLY INTERVENTION]`.
-* **PRIMARY ACTION:** `[BUTTON: ACKNOWLEDGE & APPLY INTERVENTION]`.
+* **INFORMATION HIERARCHY:** (1) `[PRIORITIZED ACTION]` headline with action verb, (2) Priority badge (`High`), (3) Rationale bullets, (4) Human review notice (`requires_human_review: true`), (5) Action button: `[BUTTON: REVIEW RECOMMENDATION]`.
+* **PRIMARY ACTION:** `[BUTTON: REVIEW RECOMMENDATION]`.
 * **SECONDARY INFORMATION:** Operational notes, vehicle assignment link.
 * **DATA REQUIRED:** `RiskAssessment.recommendation`.
-* **EMPTY STATE:** When risk is low: *"Standard Dispatch Cleared — Proceed with planned carrier and route."*
+* **EMPTY STATE:** When risk is low: `"[NO ACTION REQUIRED]"`.
 * **LOADING STATE:** Shimmering action callout box.
 * **ERROR STATE:** Inline alert: *"Recommendation engine failed to generate an action."*
 * **INSUFFICIENT-DATA STATE:** Recommendation withheld; missing requirements exposed; human review required before clearing dispatch.
@@ -578,18 +580,18 @@ The target demo communicates this causal narrative:
 COLD-STORAGE TELEMETRY + HARVEST METADATA
   --> RISK DETECTED AT T_dispatch
   --> PRIORITIZED BATCH SURFACED AT TOP OF QUEUE
-  --> CONTRIBUTING FACTORS EXPLAINED (STORAGE ANOMALIES)
+  --> [SUPPORTED CONTRIBUTING FACTORS] EXPLAINED
   --> DETERIORATION HORIZON COMPARED TO PLANNED TRANSIT
   --> OPERATIONAL INTERVENTION PRIORITIZED (HUMAN SIGN-OFF)
-  --> LOSS PREVENTED BEFORE DEPARTURE
+  --> OPERATOR RECEIVES A PRIORITIZED DECISION-SUPPORT OUTPUT BEFORE DEPARTURE
 ```
 
 ### Core Demo Flow (3 Minutes)
-* **0:00–0:30 (Situational Awareness):** Presenter opens dashboard on a 1080p screen. Points to top summary bar: *35 Batches Scheduled for Dispatch Today — 2 Batches Flagged High Risk*. Explains that Smart Harvest moves decision-making to $T_{dispatch}$ before the truck departs.
+* **0:00–0:30 (Situational Awareness):** Presenter opens dashboard on a 1080p screen. Points to top summary bar: *[TOTAL BATCHES] Scheduled for Dispatch Today — [HIGH RISK COUNT] Flagged High Risk*. Explains that Smart Harvest moves decision-making to $T_{dispatch}$ before the truck departs.
 * **0:30–1:15 (Triage & Batch Selection):** Presenter clicks the top high-risk batch in the triage queue. Right detail panel smoothly populates.
-* **1:15–1:50 (Timing & Explainability):** Presenter points to `[DETERIORATION HORIZON]`: expected quality decline begins before planned transit completes. Points to `[CONTRIBUTING FACTORS]`: chamber experienced cumulative degree-hours above setpoint and surface condensation events.
-* **1:50–2:30 (Prioritized Intervention):** Presenter highlights `[PRIORITIZED ACTION]`: upgrade vehicle to Reefer or reroute to local market. Points to `Requires Human Review` badge and clicks `Acknowledge Intervention`.
-* **2:30–3:00 (Wrap-Up):** Presenter summarizes the value proposition: transforming telemetry into proactive dockside intervention.
+* **1:15–1:50 (Timing & Explainability):** Presenter points to `[DETERIORATION HORIZON]`: expected quality decline begins before planned transit completes. Points to `[CONTRIBUTING FACTORS]`: [SUPPORTED CONTRIBUTING FACTORS].
+* **1:50–2:30 (Prioritized Intervention):** Presenter highlights `[PRIORITIZED ACTION]`: [VALIDATED PRIORITIZED ACTION]. Points to `Requires Human Review` badge and proceeds with [REVIEW RECOMMENDATION].
+* **2:30–3:00 (Wrap-Up):** Presenter summarizes the value proposition: transforming telemetry into proactive dockside decision support before departure.
 
 ### Failure-Safe Demo Flow (Resilience Showcase)
 * Used if backend returns `insufficient_data` or to intentionally demonstrate trustworthiness:
@@ -686,7 +688,7 @@ COLD-STORAGE TELEMETRY + HARVEST METADATA
 ---
 
 ### B. Future Analytics UI Tests (`[FUTURE CONTRACT REQUIRED]`)
-* **TC-A01 `[FUTURE CONTRACT REQUIRED]`:** Multi-batch inventory loading & empty state (verifying 0 batches displays empty state and 35 batches sorts by urgency).
+* **TC-A01 `[FUTURE CONTRACT REQUIRED]`:** Multi-batch inventory loading & empty state (verifying 0 batches displays empty state and `[TOTAL BATCHES]` sorts by urgency).
 * **TC-A02 `[FUTURE CONTRACT REQUIRED]`:** Full "Assessed" state display (verifying `status: "assessed"` displays risk badge and deterioration horizon).
 * **TC-A03 `[FUTURE CONTRACT REQUIRED]`:** Operational recommendation presentation (verifying recommendation callout renders priority and human-review notice).
 * **TC-A04 `[FUTURE CONTRACT REQUIRED]`:** Truncated telemetry degradation (verifying 204 batches stored into 2026 render `Reliability.level: "low"` with telemetry gap warning).
@@ -757,7 +759,7 @@ COLD-STORAGE TELEMETRY + HARVEST METADATA
 ## 12. EVIDENCE / HANDOFF
 
 * **Base Commit SHA:** `20021656028392a420561c6dc2a0f5434835081f`
-* **HEAD Commit SHA:** `8ce2da45f8c687468d566d444dd3d16e019769b5` (prior to this fix commit)
+* **HEAD Commit SHA:** `bb00820f96f2c2b24d2ae8088ebe926feaf965c1` (prior to final consistency fix commit)
 * **Branch:** `prscr/ux-demo-qa` (tracking `origin/prscr/ux-demo-qa`)
 * **Changed Files:** `prscr_ux_demo_qa_report.md` (only file modified)
 
@@ -769,18 +771,16 @@ COLD-STORAGE TELEMETRY + HARVEST METADATA
    # Output: prscr/ux-demo-qa
 
    git status --short
-   # Output: M prscr_ux_demo_qa_report.md (only target file modified)
+   # Output: (clean after commit)
    ```
 
 2. **Commit History Check:**
    ```powershell
-   git log --oneline -5
+   git log --oneline -3
    # Output:
+   # [commit SHA] docs: final narrow consistency fix (PR #9)
+   # bb00820 docs: PUX report evidence & consistency fix (PR #9 review)
    # 8ce2da4 docs: add PUX workstream report (PUX-00 through PUX-07)
-   # bb66c6c docs: add PUX workstream report (PUX-00 through PUX-07)
-   # 2002165 Merge pull request #8 from IgorGlUTMStudent/igor/igr-01-technical-recon
-   # a0ad812 Merge pull request #7 from Slave-of-Skynet/victor-vdr-01-dataset-recon
-   # 2f1ee84 IGR-01: Add technical reconnaissance report
    ```
 
 3. **Whitespace & Git Diff Check:**
