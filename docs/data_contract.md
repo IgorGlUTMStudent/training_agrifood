@@ -1,10 +1,31 @@
-# Application output contract
+# Application data contract
 
-**Supplied raw schema:** inspectable in the sponsor CSV headers and `sponsor_pack/data/data_dictionary.xlsx`.
+**Accepted production/canonical input model:** defined under [ADR 0002](decisions/0002-predictive-input-semantics.md) as `BatchAssessmentInput`.
 
-**Accepted production/canonical input model:** not yet defined. The supplied raw schema does not by itself establish validation behavior, observed integrity, canonical mapping, or a production `BatchInput`.
+The normative raw→canonical mapping for all 73 supplied fields is defined by [ADR 0002](decisions/0002-predictive-input-semantics.md), Field Mapping Matrix.
 
-This document specifies the current public output semantics only. It deliberately defines no production `BatchInput` and does not promote raw sponsor fields into an accepted application contract.
+This document specifies both the canonical predictive input contract (`BatchAssessmentInput`) and the public assessment output contract (`RiskAssessment`).
+
+## Canonical Predictive Input Contract (`BatchAssessmentInput`)
+
+### Assessment Cutoff and Invariant
+- **Assessment Moment:** Strictly $T_{assess} \equiv T_{dispatch} = \text{storage_sessions.dispatch_datetime}$.
+- **Assessment Clock:** Single source of truth `assessment_context.assessment_timestamp`.
+- **Temporal Sequence Invariant:** $T_{harvest} < T_{harvest\_qc} < T_{entry} < T_{pre\_dispatch\_qc} < T_{dispatch}$.
+
+### Field Eligibility Taxonomy
+All 73 raw CSV table-field pairs are classified into exact roles:
+- **`PREDICTIVE_ELIGIBLE` (25 fields):** Observable and fixed at or before $T_{dispatch}$; authorized candidate features.
+- **`STAGE_CONDITIONAL` (4 fields):** `quality_checks.check_datetime`, `firmness_kg_cm2`, `sugar_brix`, `defect_pct`. Eligible strictly for `stage in ('harvest', 'pre_dispatch')`; forbidden for `stage == 'arrival'`.
+- **`CONDITIONALLY_ELIGIBLE` (16 fields):** Available before dispatch but conditional on operational booking immutability (`planned_logistics.*`, `planned_dispatch_datetime`) or chamber physics (gas sensors in CA rooms, surface temp in ZONE-006, equipment states).
+- **`CONTEXT_ONLY` (10 fields):** Identifiers and metadata retained for identity, provenance, and UI display; strictly prohibited from model features.
+- **`LABEL_OR_EVALUATION_ONLY` (4 fields):** Historical outcome fields (`historical_quality_outcomes.*`); strictly forbidden from inference input.
+- **`FORBIDDEN_FUTURE` (5 fields):** Post-dispatch transit realizations (`shipments` actual departure/arrival/delay/incidents/telemetry); strictly forbidden from inference input.
+- **`RAW_ONLY / NOT NEEDED IN CANONICAL INPUT` (9 fields):** Surrogate keys and duplicate join FKs verified during ingestion and not duplicated in canonical domain entities.
+
+### Telemetry Boundary
+Joined via `zone_id` and bounded strictly by `storage_sessions.entry_datetime <= timestamp <= storage_sessions.dispatch_datetime`. Stored as raw typed eligible readings. Feature engineering, aggregation, and imputation are deferred to analytics tasks.
+
 
 ## Assessment status
 
