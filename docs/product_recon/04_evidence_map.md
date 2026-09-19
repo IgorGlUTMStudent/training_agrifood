@@ -12,7 +12,7 @@ STATUS: RESEARCH NOTE — NOT CANON
 
 В настоящем документе все утверждения строго разграничены по уровням достоверности:
 1. **CHALLENGE FACT:** Официальные правила и факты тренировочного челленджа Smart Harvest (`sponsor_pack/brief/`, `sponsor_pack/README.md`, `docs/challenge_canon.md`).
-2. **DATA FACT — VDR-01 / VDR-02:** Эмпирически измеренные характеристики датасета из отчетов инвентаризации ([VDR-01](data_recon/01_dataset_inventory.md)) и хронологического/leakage-аудита ([VDR-02](data_recon/02_temporal_leakage.md)), а также решения по входным границам ([ADR 0002 / VLD-02A](decisions/0002-predictive-input-semantics.md)).
+2. **DATA FACT — VDR-01 / VDR-02:** Эмпирически измеренные характеристики датасета из отчетов инвентаризации ([VDR-01](../data_recon/01_dataset_inventory.md)) и хронологического/leakage-аудита ([VDR-02](../data_recon/02_temporal_leakage.md)), а также решения по входным границам ([ADR 0002 / VLD-02A](../decisions/0002-predictive-input-semantics.md)).
 3. **DOMAIN FACT:** Факты из внешних отрецензированных источников (FAO, USDA, UNECE, университетские службы Extension, научные публикации).
 4. **INFERENCE:** Аналитические выводы, модели предметной области, инженерные гипотезы и предлагаемые кандидатные наборы решений команды.
 5. **TEAM DECISION:** Зафиксированные архитектурные и продуктовые решения команды Slave of Skynet (SoS).
