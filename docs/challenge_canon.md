@@ -10,7 +10,9 @@
 
 **FACT:** For predictive assessment, only information available at dispatch is eligible. Arrival inspection, actual post-dispatch delay or incidents, post-dispatch telemetry unavailable at assessment, final outcomes, and equivalent future observations are forbidden prediction inputs. Their presence in public historical files permits retrospective analysis, not inference-time use.
 
-**UNKNOWN pending empirical reconnaissance:** actual data quality, completeness, distributions, observed type consistency, referential integrity, sampling gaps, label usefulness, evaluation design, model performance, validated recommendation effects, and agronomic thresholds. The existence of supplied schema and outcome columns does not establish any of those matters, and this document does not claim that Viktor's profiling has been completed.
+**FACT — accepted snapshot evidence:** [VDR-01](data_recon/01_dataset_inventory.md), accepted and integrated through [PR #7](https://github.com/Slave-of-Skynet/training_agrifood/pull/7), empirically inspected the supplied snapshot. It established observed schemas/types, row counts and file sizes, PK/FK integrity, observed relationships/cardinalities, sampling/coverage characteristics, missingness and selected data-quality anomalies, and crop/cultivar and historical outcome coverage. These findings update the earlier pre-profiling state; they do not guarantee the same structure or quality in future data.
+
+**UNKNOWN / decisions still required:** detailed assessment-time eligibility pending accepted VDR-02 evidence; production validation and canonical predictive mapping; target choice and label fitness; feature windows and missing-data treatment; split/evaluation protocol; baseline/model performance; deterioration semantics; validated action effects; agronomic thresholds; and business/loss-reduction claims. Historical outcome relationships do not establish deterministic prediction from dispatch-time inputs.
 
 ## Required operator outcomes
 
