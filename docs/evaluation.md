@@ -9,7 +9,7 @@ The project currently makes no business-accuracy, agronomic-accuracy, loss-reduc
 - Arrival-stage inspection cannot be required by the predictive path.
 - Actual post-dispatch delay, transit incidents, realized transport outcomes, unavailable post-dispatch telemetry, final outcomes, and equivalent future observations must not influence a dispatch prediction.
 - Public historical files may contain future or arrival-stage information for retrospective analysis. Public availability does not make it admissible at inference time, and hidden evaluation may withhold it entirely.
-- Storage sessions connect batches to zones and therefore to zone telemetry. Shared-zone, shared-time, batch, facility, and repeated-entity structure may create leakage; VDR-02 must investigate it before a split or evaluation protocol is accepted.
+- Storage sessions connect batches to zones and therefore to zone telemetry. Accepted VDR-02 investigated shared-zone/shared-time structure and demonstrated that in standard randomized 80/20 train/test splits of batches, an average of 95.79% of test batches share an identical chamber microclimate cluster with training batches. Conversely, naive chronological splitting causes severe seasonal crop disappearance (summer crops drop to 0.0% in test). Both random batch splitting and naive chronological splitting have documented limitations, and shared-zone/shared-time dependence must be accounted for. However, a final evaluation split strategy is not yet selected, and the evaluation protocol still requires separate evidence (VDR-04) and a formal decision.
 
 ## Principles
 
