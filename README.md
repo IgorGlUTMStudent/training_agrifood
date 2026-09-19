@@ -72,4 +72,4 @@ The backend tests validate both endpoints and enforce that an `insufficient_data
 - [`docs/workstreams/`](docs/workstreams/) — SoS challenge-specific operating guides for the five team workstreams.
 - [`docs/decisions/0001-foundation-architecture.md`](docs/decisions/0001-foundation-architecture.md) — foundation ADR.
 
-The sponsor pack supplies an inspectable raw schema. Observed integrity, canonical mapping, and an accepted production `BatchInput` remain pending reconnaissance and integration decisions.
+The sponsor pack supplies an inspectable raw schema. Observed integrity of the supplied snapshot has been profiled in accepted, integrated [VDR-01](docs/data_recon/01_dataset_inventory.md). Canonical predictive mapping and an accepted production `BatchAssessmentInput` remain pending accepted temporal/leakage evidence and integration decisions; observed snapshot integrity does not establish production input semantics.
