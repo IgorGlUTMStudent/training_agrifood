@@ -97,7 +97,7 @@ STATUS: RESEARCH NOTE — NOT CANON
   4. `cold chain transit duration ambient truck failure fresh produce`
 * **Критерии достаточного доказательства:** Инженерные стандарты холодовой цепи (Соглашение СПС / ATP), определяющие допустимость перевозки нерефрижераторным транспортом в зависимости от температуры окружающей среды, длительности рейса и типа груза.
 * **Ограничения источников:** Соглашение СПС обязательно для международных перевозок, но внутренние локальные перевозки часто регулируются менее жестко.
-* **Риски переноса:** Использование неохлаждаемого транспорта допустимо для плотных зимних яблок на коротких плечах осенью, но смертельно для свежей малины или спелых персиков в летнюю жару.
+* **Риски переноса:** Использование неохлаждаемого транспорта на коротких плечах может быть допустимо для отдельных стойких культур (например, поздних яблок), однако сопряжено с повышенным риском деградации качества (*deterioration risk*) для нестойких ягод; конкретная применимость и масштаб риска требуют подтверждения с учетом культуры, сезона и дальности перевозки.
 
 ---
 
@@ -110,7 +110,7 @@ STATUS: RESEARCH NOTE — NOT CANON
   4. `controlled atmosphere CO2 O2 tolerance limits apple plum table grape tomato`
 * **Критерии достаточного доказательства:** Справочные таблицы оптимальных температур, критических точек подмораживания, порогов чувствительности к холодовому ожогу (*chilling injury*) и рекомендуемых концентраций газов для каждой из 8 культур датасета.
 * **Ограничения источников:** Литературные оптимумы выведены для идеальных условий; реакция плода зависит от зрелости при сборе, подвоя, погодных условий сезона и помологического сорта.
-* **Риски переноса:** Объединение норм хранения разнородных культур (например, попытка охладить томаты до 0°C, как яблоки, приведет к холодовому ожогу и гибели плодов).
+* **Риски переноса:** Механическое объединение норм хранения разнородных культур недопустимо: так, температуры около 0°C, оптимальные для яблок, несут риск холодового повреждения (*potential chilling injury / physiological disorder*) для теплолюбивых культур (томатов); величина и применимость порогов требуют контекстных и видоспецифичных доказательств.
 
 ---
 
@@ -166,16 +166,17 @@ STATUS: RESEARCH NOTE — NOT CANON
 
 ---
 
-### Q7.2. Предотгрузочные показатели качества: пороговые значения и предиктивная ценность
-* **Целевой уровень источников:** Tier 1 (UNECE Standards, USDA Grades) + Tier 2 (Sensory and instrumental quality evaluation literature).
+### Q7.2. Минимальное время опережения (lead time) для корректирующих действий
+* **Согласованный вопрос (02_research_questions.md):** Каково минимальное время опережения (lead time), необходимое оператору для реализации корректирующего действия?
+* **Целевой уровень источников:** Tier 1 (FAO post-harvest guides, USDA AMS) + Tier 2 (Cold chain logistics & warehouse operations literature) + Tier 3 (GCCA Standard Operating Procedures).
 * **Поисковые запросы (English):**
-  1. `pre-dispatch quality inspection minimum firmness brix defect tolerance UNECE`
-  2. `penetrometer firmness threshold export apple stone fruit table grape`
-  3. `predicting transit survival fruit pre-shipment quality parameters`
-  4. `maximum allowable defect percentage shipping point inspection fresh produce`
-* **Критерии достаточного доказательства:** Официальные стандарты товарных сортов (Extra Class, Class I, Class II) с допустимыми процентами дефектов и минимальными значениями сахаристости (°Brix) и плотности.
-* **Ограничения источников:** Товарный стандарт фиксирует статический допуск на момент осмотра, но не гарантирует динамику распада в пути при нарушении температурного режима.
-* **Риски переноса:** Требования внутреннего рынка Молдовы могут существенно отличаться от допусков немецких или польских торговых сетей.
+  1. `"cold storage" dispatch "lead time" corrective action fresh produce`
+  2. `packhouse loading dock operational schedule minimum lead time fruit inspection`
+  3. `refrigerated transport re-booking lead time notification window perishable logistics`
+  4. `pre-cooling duration fruits vegetables operational cycle dispatch buffer`
+* **Критерии достаточного доказательства:** Документированные технологические регламенты и стандартные операционные процедуры (SOPs), фиксирующие временные интервалы, необходимые для выполнения доохлаждения (*re-cooling*), пересортировки/переупаковки, перезаказа транспорта на рефрижераторный или пересогласования маршрута до момента физической отгрузки.
+* **Ограничения источников:** В современных высокоавтоматизированных распределительных центрах время реакции измеряется минутами и часами, тогда как в региональных упаковочных цехах поиск и подача свободного рефрижератора может занимать от 12 до 24 часов.
+* **Риски переноса:** Нормативы времени реагирования из дистрибуции сухих бакалейных грузов или контейнерной логистики общего назначения неприменимы к региональным складам скоропорта, где доступность рефрижераторного автотранспорта зависит от сезонного рынка и локального автопарка.
 
 ---
 
@@ -210,7 +211,7 @@ STATUS: RESEARCH NOTE — NOT CANON
 * **Поисковые запросы (English):**
   1. `agricultural decision support systems adoption barriers trust Rose 2016`
   2. `explaining justifying recommendations agricultural DSS Greer 1994`
-  3. `algorithm aversion decision support farm logistics Grant 2026`
+  3. `algorithm aversion agricultural decision-making trust barriers Grant 2026`
   4. `operator compliance decision support system alarm fatigue false alarms review`
 * **Критерии достаточного доказательства:** Эмпирические исследования барьеров внедрения агро-DSS, влияния объяснимого ИИ (XAI) на комплаенс операторов и факторов отказа от рекомендаций.
 * **Ограничения источников:** Практически все опубликованные работы по агро-DSS исследовались на фермерах в поле (орошение, удобрения, защита растений), а не на диспетчерах холодильных складов скоропорта.
@@ -238,7 +239,8 @@ $$\text{Title} \longrightarrow \text{Authors} \longrightarrow \text{Year} \longr
 
 Примеры нормативного цитирования:
 1. *Rose, D. C., Sutherland, W. J., Parker, C., Lobley, M., Winter, M., Morris, C., Twining, S., Ffoulkes, C., Amano, T., & Dicks, L. V.* (2016). Decision support tools in agriculture: Towards effective design and delivery. *Agricultural Systems*, 149, 165–174. DOI: [10.1016/j.agsy.2016.09.009](https://doi.org/10.1016/j.agsy.2016.09.009)
-2. *Greer, J. E., Greer, G. J., & Ward, G.* (1994). Explaining and justifying recommendations in an agriculture decision support system. *Computers and Electronics in Agriculture*, 11(2–3), 195–214. DOI: [10.1016/0168-1699(94)90006-4](https://doi.org/10.1016/0168-1699(94)90006-4)
-3. *Ara, I., Turner, L., Gyasi-Agyei, Y., & Li, M.* (2021). Application, adoption and opportunities for improving decision support systems in irrigated agriculture: A review. *Agricultural Water Management*, 257, 107161. DOI: [10.1016/j.agwat.2021.107161](https://doi.org/10.1016/j.agwat.2021.107161)
-4. *Gross, K. C., Wang, C. Y., & Saltveit, M.* (Eds.). (2016). *The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks*. Agriculture Handbook Number 66, USDA Agricultural Research Service.
-5. *FAO* (1989). *Prevention of post-harvest food losses: fruit, vegetable and root crops a training manual*. FAO Training Series No. 17/2, Rome.
+2. *Jim E. Greer, Sarah Falk, Ken J. Greer, Murray J. Bentham* (1994). Explaining and justifying recommendations in an agriculture decision support system. *Computers and Electronics in Agriculture*, 11(2–3), 195–214. DOI: [10.1016/0168-1699(94)90008-6](https://doi.org/10.1016/0168-1699(94)90008-6)
+3. *Jack H. Grant, Dorothee Scharpenberg, Louise Manning* (2026). Algorithm aversion in agricultural decision-making: Trust dynamics, barriers, and fertiliser-related decision support. *Agricultural Systems*, 233, Article 104630. DOI: [10.1016/j.agsy.2025.104630](https://doi.org/10.1016/j.agsy.2025.104630)
+4. *Iffat Ara, Lydia Turner, Matthew Tom Harrison, Marta Monjardino, Peter deVoil, Daniel Rodriguez* (2021). Application, adoption and opportunities for improving decision support systems in irrigated agriculture: A review. *Agricultural Water Management*, 257, Article 107161. DOI: [10.1016/j.agwat.2021.107161](https://doi.org/10.1016/j.agwat.2021.107161)
+5. *Gross, K. C., Wang, C. Y., & Saltveit, M.* (Eds.). (2016). *The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks*. Agriculture Handbook Number 66, USDA Agricultural Research Service.
+6. *FAO* (1989). *Prevention of post-harvest food losses: fruit, vegetable and root crops a training manual*. FAO Training Series No. 17/2, Rome.
