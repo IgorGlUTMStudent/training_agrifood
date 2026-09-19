@@ -6,7 +6,9 @@
 **Assigned base commit:** `f9ca1d7bd29940e6b925884c7becae65dc921f7c`
 **Actual starting commit:** `b382834eb73acbcd416000048d0074cf3b78d8df` (descendant of assigned base via PR #15 VLD-R2 post-VDR-02 reconciliation; final authorization of base remains an Integrator decision)
 **Branch:** `victor/vdr-03-target-horizon-feasibility`
-**Status:** DRAFT FOR REVIEW — Decision-ready evidence on target candidates and deterioration-horizon feasibility
+**Status:** ACCEPTED / INTEGRATED EVIDENCE
+**Review gate:** ACCEPTABLE FOR NEXT HUMAN INTEGRATION GATE
+**Integration:** PR #18 merged to main
 
 ---
 

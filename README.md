@@ -12,7 +12,7 @@ Smart Harvest is a **SIMULATION / training challenge** prototype for post-harves
 
 ## What does not exist yet
 
-There is no challenge-dataset ingestion, production input schema, risk formula, validated agronomic rule set, ML model, persistence layer, authentication, realtime processing, or deployment integration. Those choices remain intentionally unresolved until dataset and domain reconnaissance.
+Canonical predictive-input semantics and the `BatchAssessmentInput` definition were accepted under ADR 0002 (VLD-02A), but their production code implementation is not implemented yet. There is no challenge-dataset ingestion in application code, risk formula, validated agronomic rule set, ML model, persistence layer, authentication, realtime processing, or deployment integration. Those choices remain intentionally unresolved until subsequent evidence and decision gates.
 
 ## Prerequisites
 
@@ -63,6 +63,7 @@ The backend tests validate both endpoints and enforce that an `insufficient_data
 
 - [`docs/challenge_canon.md`](docs/challenge_canon.md) — challenge facts, outcomes, evaluation criteria, and unknowns.
 - [`docs/architecture.md`](docs/architecture.md) — accepted system shape and boundaries.
+- [`docs/integration_contract.md`](docs/integration_contract.md) — workstream dependency map, integration boundaries, and STOP conditions.
 - [`docs/assumptions_unknowns.md`](docs/assumptions_unknowns.md) — unresolved dataset and environment questions.
 - [`docs/data_contract.md`](docs/data_contract.md) — current output/application contract.
 - [`docs/evaluation.md`](docs/evaluation.md) — evaluation principles without unsupported targets.
@@ -71,5 +72,10 @@ The backend tests validate both endpoints and enforce that an `insufficient_data
 - [`docs/team_roles.md`](docs/team_roles.md) — current SoS challenge-specific ownership.
 - [`docs/workstreams/`](docs/workstreams/) — SoS challenge-specific operating guides for the five team workstreams.
 - [`docs/decisions/0001-foundation-architecture.md`](docs/decisions/0001-foundation-architecture.md) — foundation ADR.
+- [`docs/decisions/0002-predictive-input-semantics.md`](docs/decisions/0002-predictive-input-semantics.md) — canonical predictive input semantics decision (ADR 0002).
+- [`docs/data_recon/01_dataset_inventory.md`](docs/data_recon/01_dataset_inventory.md) — accepted dataset inventory and integrity profile (VDR-01).
+- [`docs/data_recon/02_temporal_leakage.md`](docs/data_recon/02_temporal_leakage.md) — accepted temporal semantics and leakage audit (VDR-02).
+- [`docs/data_recon/03_target_horizon_feasibility.md`](docs/data_recon/03_target_horizon_feasibility.md) — accepted target and deterioration-horizon feasibility evidence (VDR-03).
+- [`docs/product_recon/`](docs/product_recon/) — product and domain research evidence (APR-01; research notes, not automatically challenge canon).
 
-The sponsor pack supplies an inspectable raw schema. Observed integrity of the supplied snapshot has been profiled in accepted, integrated [VDR-01](docs/data_recon/01_dataset_inventory.md), and temporal/leakage semantics have been audited in accepted, integrated [VDR-02](docs/data_recon/02_temporal_leakage.md). While temporal and leakage evidence now exists, canonical predictive mapping and an accepted production `BatchAssessmentInput` remain pending a formal VLD-02 integration decision; the existence of VDR-02 evidence does not itself create or authorize production input semantics.
+The sponsor pack supplies an inspectable raw schema. Observed integrity of the supplied snapshot has been profiled in accepted, integrated [VDR-01](docs/data_recon/01_dataset_inventory.md), temporal/leakage semantics have been audited in accepted, integrated [VDR-02](docs/data_recon/02_temporal_leakage.md), and target & deterioration-horizon feasibility has been profiled in accepted, integrated [VDR-03](docs/data_recon/03_target_horizon_feasibility.md). Canonical predictive-input semantics and the `BatchAssessmentInput` definition were accepted under [ADR 0002](docs/decisions/0002-predictive-input-semantics.md) (VLD-02A); production code implementation remains pending. Target, evaluation, feature-engineering, runtime deterioration-horizon, and action semantics remain separately unresolved.
