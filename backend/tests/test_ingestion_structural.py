@@ -212,3 +212,51 @@ def test_raw_preservation(tmp_path: Path) -> None:
     assert row1["empty_val"] == ""
     assert row1["numeric_string"] == "0045"
     assert row1["bool_string"] == "False"
+
+
+def test_short_row_width_mismatch_negative_case(tmp_path: Path) -> None:
+    """Test A: Short row (fewer fields than header) triggers explicit ROW_WIDTH_MISMATCH."""
+    test_csv = tmp_path / "short_row.csv"
+    test_csv.write_text(
+        "a,b,c\n"
+        "1,2\n",
+        encoding="utf-8",
+    )
+
+    table, issues = read_raw_table(test_csv, "short_row_table")
+    assert table is not None
+    mismatch_issues = [i for i in issues if i.code == "ROW_WIDTH_MISMATCH"]
+    assert len(mismatch_issues) == 1
+
+    issue = mismatch_issues[0]
+    assert issue.table_name == "short_row_table"
+    assert issue.source_path == str(test_csv)
+    assert issue.details["line_number"] == 2
+    assert issue.details["expected_field_count"] == 3
+    assert issue.details["actual_field_count"] == 2
+    # Fail-closed: row is not silently repaired or accepted
+    assert table.row_count == 0
+
+
+def test_extra_field_row_width_mismatch_negative_case(tmp_path: Path) -> None:
+    """Test B: Extra field row (more fields than header) triggers explicit ROW_WIDTH_MISMATCH."""
+    test_csv = tmp_path / "extra_field.csv"
+    test_csv.write_text(
+        "a,b,c\n"
+        "1,2,3,4\n",
+        encoding="utf-8",
+    )
+
+    table, issues = read_raw_table(test_csv, "extra_field_table")
+    assert table is not None
+    mismatch_issues = [i for i in issues if i.code == "ROW_WIDTH_MISMATCH"]
+    assert len(mismatch_issues) == 1
+
+    issue = mismatch_issues[0]
+    assert issue.table_name == "extra_field_table"
+    assert issue.source_path == str(test_csv)
+    assert issue.details["line_number"] == 2
+    assert issue.details["expected_field_count"] == 3
+    assert issue.details["actual_field_count"] == 4
+    # Fail-closed: extra field is not silently discarded to accept row
+    assert table.row_count == 0

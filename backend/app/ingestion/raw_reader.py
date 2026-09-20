@@ -147,9 +147,29 @@ def read_raw_table(
 
             # Read all rows preserving exact strings
             rows: list[dict[str, str]] = []
-            for row in reader:
-                # Map using headers; preserve raw text values exactly as provided
-                row_dict = {headers[i]: row[i] if i < len(row) else "" for i in range(len(headers))}
+            for line_idx, row in enumerate(reader, start=2):
+                if len(row) != len(headers):
+                    issues.append(
+                        DiagnosticIssue(
+                            code="ROW_WIDTH_MISMATCH",
+                            message=(
+                                f"Row width mismatch in {path.name} at line {line_idx}: "
+                                f"expected {len(headers)} fields, got {len(row)}"
+                            ),
+                            table_name=table_name,
+                            source_path=str(path),
+                            details={
+                                "line_number": line_idx,
+                                "row_index": line_idx - 2,
+                                "expected_field_count": len(headers),
+                                "actual_field_count": len(row),
+                                "raw_row": row,
+                            },
+                        )
+                    )
+                    continue
+
+                row_dict = {headers[i]: row[i] for i in range(len(headers))}
                 rows.append(row_dict)
 
         return RawTable(name=table_name, source_path=path, headers=headers, rows=rows), issues
