@@ -4,7 +4,7 @@
 **Repository:** `Slave-of-Skynet/training_agrifood`
 **Task type:** Evidence-producing Data & Evaluation experiment
 **Assigned base commit:** `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`
-**Current HEAD:** `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`
+**Analysis Base / Execution HEAD:** `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`
 **Branch:** `victor/vdr-04a-dispatch-predictability`
 **Status:** DRAFT FOR REVIEW — EVIDENCE ONLY
 **Decision authority:** None — this task produces reproducible evidence for a later Integrator gate (VLD-02B)
@@ -15,7 +15,9 @@
 
 - **Repository Base SHA:** `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd` (matches canonical `origin/main` following VLD-R3 reconciliation and PR #18 merge).
 - **Execution Script:** `scripts/vdr04a_predictability.py`
-- **Output Artifact:** `docs/data_recon/04_dispatch_predictability_results.json` (SHA256: `8e9b238cabc64d11c10657e5478334b44b81ee41034f52d4d310526758cc5e88`).
+- **Output Artifact:** `docs/data_recon/04_dispatch_predictability_results.json`
+  - Committed JSON SHA256 (LF-normalized repository artifact): `6CD6B532F79D2F4F6C3BD9B26E26C5900D08DAA54529B053D41D85BC0B544C62`
+  - Original analysis-environment JSON SHA256 (Windows/CRLF): `8E9B238CABC64D11C10657E5478334B44B81EE41034F52D4D310526758CC5E88`
 - **Reproduction Command:**
   ```bash
   python scripts/vdr04a_predictability.py \
@@ -304,31 +306,39 @@ Batch prioritisation capability was evaluated separately under both defensible p
 > [!NOTE]
 > **Deterministic Tie Policy:** When candidate models or baselines produce identical predicted loss values (e.g. discrete crop-median predictions), ties are resolved deterministically by secondary sorting on `batch_id` ascending. `batch_id` is utilized strictly for post-hoc evaluation ranking resolution; it is forbidden by ADR 0002 from entering any feature matrix and has zero predictive influence.
 
-### Protocol P1: Forward Inter-Season Holdout (Season 2025, $N=900$)
+#### Protocol P1: Forward Inter-Season Holdout (Season 2025, $N=900$)
 
-| Strategy / Feature Set | Spearman $\rho$ | NDCG@10 | NDCG@50 | Precision@10 ($\ge 15\%$) | Precision@50 ($\ge 15\%$) | Recall@10 ($\ge 15\%$) | Recall@50 ($\ge 15\%$) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Baseline: Crop-Median Loss** | 0.4497 | 0.2634 | 0.2797 | 0.8000 | 0.5800 | 0.0267 | 0.0967 |
-| **F0 (Crop Only)** | 0.4268 | 0.1966 | 0.2436 | 0.4000 | 0.5200 | 0.0133 | 0.0867 |
-| **F1 (Context)** | 0.3227 | 0.2189 | 0.2441 | 0.5000 | 0.6000 | 0.0167 | 0.1000 |
-| **F2 (Context + Telemetry)** | 0.3336 | 0.2003 | 0.2554 | 0.6000 | 0.6000 | 0.0200 | 0.1000 |
-| **F3 (Context + Telemetry + Logistics)** | **0.4600** | **0.8831** | **0.6491** | **1.0000** | **0.8600** | **0.0333** | **0.1433** |
+| Strategy / Feature Set | Model Tier | Spearman $\rho$ | NDCG@10 | NDCG@50 | Precision@10 ($\ge 15\%$) | Precision@50 ($\ge 15\%$) | Recall@10 ($\ge 15\%$) | Recall@50 ($\ge 15\%$) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Baseline: Crop-Median Loss** | Heuristic | 0.4497 | 0.2634 | 0.2797 | 0.8000 | 0.5800 | 0.0267 | 0.0967 |
+| **F0 (Crop Only)** | Linear (`Ridge`) | 0.4268 | 0.1966 | 0.2436 | 0.4000 | 0.5200 | 0.0133 | 0.0867 |
+| **F0 (Crop Only)** | Nonlinear (`HGB`) | 0.4268 | 0.1966 | 0.2436 | 0.4000 | 0.5200 | 0.0133 | 0.0867 |
+| **F1 (Context)** | Linear (`Ridge`) | 0.4037 | 0.2269 | 0.2671 | 0.6000 | 0.6200 | 0.0200 | 0.1033 |
+| **F1 (Context)** | Nonlinear (`HGB`) | 0.3227 | 0.2189 | 0.2441 | 0.5000 | 0.6000 | 0.0167 | 0.1000 |
+| **F2 (Context + Telemetry)** | Linear (`Ridge`) | 0.3461 | 0.2464 | 0.2866 | 0.7000 | 0.6000 | 0.0233 | 0.1000 |
+| **F2 (Context + Telemetry)** | Nonlinear (`HGB`) | 0.3336 | 0.2003 | 0.2554 | 0.6000 | 0.6000 | 0.0200 | 0.1000 |
+| **F3 (+ Planned Logistics)** | Linear (`Ridge`) | 0.4557 | 0.3414 | 0.4421 | 0.9000 | 0.8000 | 0.0300 | 0.1333 |
+| **F3 (+ Planned Logistics)** | Nonlinear (`HGB`) | **0.4600** | **0.8831** | **0.6491** | **1.0000** | **0.8600** | **0.0333** | **0.1433** |
 
 ### Protocol P2: Chamber-Time Grouped OOF (All Batches, $N=1,800$)
 
-| Strategy / Feature Set | Spearman $\rho$ | NDCG@10 | NDCG@50 | Precision@10 ($\ge 15\%$) | Precision@50 ($\ge 15\%$) | Recall@10 ($\ge 15\%$) | Recall@50 ($\ge 15\%$) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Baseline: Crop-Median Loss** | 0.3525 | 0.2533 | 0.2906 | 0.5000 | 0.7600 | 0.0079 | 0.0602 |
-| **F0 (Crop Only)** | 0.3488 | 0.1972 | 0.2514 | 0.8000 | 0.7400 | 0.0127 | 0.0586 |
-| **F1 (Context)** | 0.3861 | 0.3069 | 0.2629 | 0.6000 | 0.7000 | 0.0095 | 0.0555 |
-| **F2 (Context + Telemetry)** | 0.3328 | 0.1998 | 0.2089 | 0.6000 | 0.6400 | 0.0095 | 0.0507 |
-| **F3 (Context + Telemetry + Logistics)** | **0.3911** | **0.8888** | **0.7955** | **1.0000** | **0.9600** | **0.0158** | **0.0761** |
+| Strategy / Feature Set | Model Tier | Spearman $\rho$ | NDCG@10 | NDCG@50 | Precision@10 ($\ge 15\%$) | Precision@50 ($\ge 15\%$) | Recall@10 ($\ge 15\%$) | Recall@50 ($\ge 15\%$) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Baseline: Crop-Median Loss** | Heuristic | 0.3525 | 0.2533 | 0.2906 | 0.5000 | 0.7600 | 0.0079 | 0.0602 |
+| **F0 (Crop Only)** | Linear (`Ridge`) | 0.3484 | 0.1972 | 0.2514 | 0.8000 | 0.7400 | 0.0127 | 0.0586 |
+| **F0 (Crop Only)** | Nonlinear (`HGB`) | 0.3488 | 0.1972 | 0.2514 | 0.8000 | 0.7400 | 0.0127 | 0.0586 |
+| **F1 (Context)** | Linear (`Ridge`) | 0.4597 | 0.5977 | 0.3965 | 0.8000 | 0.6800 | 0.0127 | 0.0539 |
+| **F1 (Context)** | Nonlinear (`HGB`) | 0.3861 | 0.3069 | 0.2629 | 0.6000 | 0.7000 | 0.0095 | 0.0555 |
+| **F2 (Context + Telemetry)** | Linear (`Ridge`) | 0.3606 | 0.5847 | 0.3733 | 0.9000 | 0.6400 | 0.0143 | 0.0507 |
+| **F2 (Context + Telemetry)** | Nonlinear (`HGB`) | 0.3328 | 0.1998 | 0.2089 | 0.6000 | 0.6400 | 0.0095 | 0.0507 |
+| **F3 (+ Planned Logistics)** | Linear (`Ridge`) | 0.4454 | 0.6960 | 0.5674 | 1.0000 | 0.9200 | 0.0158 | 0.0729 |
+| **F3 (+ Planned Logistics)** | Nonlinear (`HGB`) | **0.3911** | **0.8888** | **0.7955** | **1.0000** | **0.9600** | **0.0158** | **0.0761** |
 
-[OBSERVED RESULT] Under the tested models, feature construction, and evaluation protocols, meaningful ranking lift was observed only after adding planned-logistics features.
-[OBSERVED RESULT] When planned logistics are added (F3), top-k retrieval exhibits exceptional precision across both protocols:
+[OBSERVED RESULT] Non-logistics feature families show protocol- and model-dependent ranking lift, including substantial P2 ranking improvement for the linear F1 and F2 benchmarks (e.g. F1 Ridge achieves Spearman $\rho = 0.4597$ and NDCG@10 = $0.5977$, and F2 Ridge achieves NDCG@10 = $0.5847$ vs crop-median baseline $\rho = 0.3525$ and NDCG@10 = $0.2533$). Under prospective inter-season evaluation (P1), non-logistics ranking lift is more muted (NDCG@10 = $0.2003 - 0.2464$ vs $0.2634$).
+[OBSERVED RESULT] The planned-logistics feature family produces the strongest and most consistent ranking improvement across both P1 and P2, particularly under the nonlinear benchmark:
 - **Precision@10 against severe degradation ($\ge 15\%$) is 100.0% in both P1 and P2** (10 out of 10 prioritized batches are confirmed severe loss).
-- **Precision@50 is 86.0% in P1 and 96.0% in P2**.
-- **NDCG@10 reaches 0.8831 in P1 and 0.8888 in P2**.
+- **Precision@50 is 86.0% in P1 and 96.0% in P2** (and $80.0\% - 92.0\%$ under linear F3).
+- **NDCG@10 reaches 0.8831 in P1 and 0.8888 in P2** (and $0.6960$ under P2 linear F3).
 
 > [!WARNING]
 > **Precision vs Recall Operational Trade-off:** While top-k precision is exceptionally high under F3 ($100\%$ at $K=10$, $86\%-96\%$ at $K=50$), it is inherently accompanied by low recall due to the small budget $K$ relative to the total pool of degraded batches. In P1, Recall@10 is $3.33\%$ (10 of 300 severe degradation batches) and Recall@50 is $14.33\%$ (43 of 300). In P2, Recall@10 is $1.58\%$ (10 of 631) and Recall@50 is $7.61\%$ (48 of 631). Prioritisation effectively isolates the highest-risk batches for early intervention, but cannot serve as an exhaustive salvage screening mechanism without substantially increasing the intervention capacity $K$.
@@ -439,9 +449,11 @@ Evidence for dispatch-time point prediction is classified as:
 
 ### Ranking Feasibility
 Evidence for dispatch-time ranking is classified as:
-**MEANINGFUL LIFT DEMONSTRATED** (Conditioned on Planned Logistics)
-- Under the tested models, feature construction, and evaluation protocols, meaningful ranking lift was observed only after adding planned-logistics features (Precision@10 against severe degradation = 100%, Precision@50 = 86%, NDCG@10 = 0.8831 in P1; Precision@10 = 100%, Precision@50 = 96%, NDCG@10 = 0.8888 in P2).
-- Without planned logistics (F0, F1, F2), models achieve comparable or lower Spearman correlation ($\rho \le 0.4268$ vs $0.4497$ in P1) and NDCG@10 ($0.1966 - 0.2189$ vs $0.2634$ in P1) relative to sorting by historical crop-median loss, demonstrating no systematic ranking advantage over the crop baseline.
+**MEANINGFUL LIFT DEMONSTRATED** (Strongest with Planned Logistics; Protocol/Model-Dependent Without)
+- Non-logistics feature families show protocol/model-dependent ranking lift, including substantial P2 ranking improvement for the linear F1 and F2 benchmarks (e.g. F1 linear Spearman 0.4597, NDCG@10 0.5977; F2 linear Spearman 0.3606, NDCG@10 0.5847 vs crop median baseline Spearman 0.3525, NDCG@10 0.2533).
+- The planned-logistics feature family produces the strongest and most consistent ranking improvement across both P1 and P2, particularly under the nonlinear benchmark (NDCG@10 0.8831 in P1 and 0.8888 in P2; Precision@10 against severe degradation 100% in both; Precision@50 86% in P1 and 96% in P2).
+- Under prospective inter-season evaluation (P1), non-logistics ranking lift is more muted (NDCG@10 0.2003–0.2464 vs crop baseline 0.2634; Spearman $\rho \le 0.4268$ vs $0.4497$).
+- VLD-02B must not infer from VDR-04A that absence of planned logistics necessarily makes ranking impossible.
 
 ### Telemetry Contribution
 - Marginal contribution is **near-zero to negative**. Storage room telemetry is tightly controlled around setpoints and demonstrated no material incremental predictive signal under tested features/protocols.
@@ -453,7 +465,7 @@ Evidence for dispatch-time ranking is classified as:
 - The empirical findings are consistent across both prospective inter-season testing (Protocol P1) and microclimate-blocked cross-validation (Protocol P2).
 
 ### What VLD-02B Can Now Decide
-1. Whether predictive/ranking capability should require `planned_logistics` to be present, and what degraded/insufficient-data behaviour applies when it is absent (noting that any change from optional to mandatory canonical schema semantics would require an explicit shared-contract decision).
+1. Whether the stronger and more cross-protocol-consistent ranking performance provided by planned logistics is sufficient to make those fields a capability prerequisite, versus retaining a weaker/degraded ranking mode without them (that remains a later Integrator decision; any change from optional to mandatory canonical schema semantics would require an explicit shared-contract decision).
 2. Whether to adopt batch ranking / risk prioritisation as the primary operational framing rather than continuous point loss forecasting.
 3. Whether to exclude extensive pre-dispatch storage telemetry feature engineering pipelines from production backend scope given the absence of demonstrated marginal value under tested protocols.
 4. Selection of prospective inter-season holdout as the definitive validation split standard for downstream models.
