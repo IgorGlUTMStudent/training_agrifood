@@ -72,6 +72,7 @@ def read_raw_table(
     """Read a single raw CSV file, preserving exact string values and validating headers.
 
     Does NOT coerce types, clean values, or drop rows/columns.
+    Enforces fail-closed ROW_WIDTH_MISMATCH diagnostics for rows whose field count differs from headers.
     """
     path = Path(file_path)
     issues: list[DiagnosticIssue] = []
