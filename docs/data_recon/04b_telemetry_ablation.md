@@ -183,7 +183,7 @@ Programmatic assertions verified:
 
 - **Maximum absolute difference across all metrics (MAE, RMSE, R², Spearman, NDCG@10, NDCG@50, Precision@10, Precision@50, Recall@10, Recall@50) across P1 and P2:**
   $$\mathbf{0.00000000 \times 10^0 \quad (\text{diff} < 10^{-15})}$$
-- **Replication Status:** `EXACT_OR_NUMERICALLY_EQUIVALENT` (bit-for-bit parity achieved).
+- **Replication Status:** `EXACT_OR_NUMERICALLY_EQUIVALENT` (exact numerical parity across the compared VDR-04A metrics).
 
 ---
 
