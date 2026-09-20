@@ -15,7 +15,7 @@
 This report reconciles earlier UX proposals (PUX-00 through PUX-07) against the established evidence and decision canon across the repository:
 - **Normative Decisions:** ADR 0001 (batch architecture), ADR 0002 (predictive input semantics, temporal boundaries, missingness), ADR 0003 / VLD-02B (assessment, ranking, and evaluation semantics).
 - **Data & Evaluation Evidence:** VDR-01 (dataset inventory), VDR-02 (temporal leakage), VDR-03 (target/horizon feasibility), VDR-04A (dispatch predictability benchmark), VDR-04B (telemetry marginal-value ablation under planned logistics).
-- **Product Research:** APR-01 Steps 0–8 (user decision model, proposed product workflow, adversarial review) and APR-02 research packets.
+- **Product Research:** APR-01 Steps 0–8 (user decision model, proposed product workflow, adversarial review) and APR-02 packets. APR-02 remains `PROPOSED PRODUCT SPEC — NOT CANON`; APR2-D1–D6 require a Human/Integrator Gate before becoming accepted product decisions.
 - **Implementation State:** Ingestion diagnostics (IGR-02), frontend status/assessment components, and PR CI foundation (VLD-CI-01).
 
 The historical task starting base remains recorded as `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`. The repository has advanced to `204c3ac37fb2098bfe6c0908a66c54065cda23ae` on `origin/main`. This reconciliation updates all UX requirements to be truthful to accepted decisions while strictly isolating unratified proposals and unknown operational parameters.
@@ -39,21 +39,21 @@ All data-dependent UX concepts proposed across PUX-00–07 are evaluated on two 
 
 | UX Element | Original PUX Proposal | Current Implementation State | Evidence Support | Disposition | What Is Safe to Show Now | What Must NOT Be Shown | Blocking Evidence / Decision | Blocker Owner | Post-VDR-04A/04B Relevance |
 |---|---|---|---|---|---|---|---|---|---|
-| **Batch Overview List (Neutral)** | Multi-batch table showing contextual fields and status | Implemented via static demo fixture only; no production multi-batch API | `SUPPORTED` | `KEEP` | Neutral list, Batch IDs, crop type, dispatch metadata, facility/zone identifier | Implied risk triage ordering or sorting by unassessed severity | None for neutral list structure | None | Baseline UI frame |
+| **Batch Overview List (Neutral)** | Multi-batch table showing contextual fields and status | Not implemented; current frontend contains only a single synthetic AssessmentCard fixture and no production multi-batch API | `SUPPORTED` | `KEEP` | Neutral list, Batch IDs, crop type, dispatch metadata, facility/zone identifier | Implied risk triage ordering or sorting by unassessed severity | None for neutral list structure | None | Baseline UI frame |
 | **Ranking / Ordering Semantics** | Deterministic sorting rule for assessed batches | Implemented in evaluation benchmark scripts; not in production API | `SUPPORTED` | `KEEP` | Descending `risk.score` sort with deterministic `batch_id ASC` tie-breaker strictly within same `engine_tier + engine_version` | Merging different engine tiers/versions into a single ranked queue; treating unassessed/insufficient_data as zero-risk | Formal comparability validation across tiers/versions (ADR 0003 D3) | Data Science / Integrator | Accepted ranking semantics (ADR 0003 D3) |
 | **Concrete Operator Triage Queue Workflow** | Default operator queue with review quotas (e.g. K=10, K=50) for specific persona | Not implemented; static single-card UI | `UNKNOWN` / `RECOMMENDATION` | `BLOCKED` | Neutral list sorted by chronological dispatch or batch ID; explicit notice that ranking is prioritisation, not exhaustive screening | Default triage queue mode, K=10/50 treated as operator quotas, unvalidated persona-specific authority | Team/Integrator decision on persona, operator authority, review capacity, and fallback routing | Product Lead / Integrator | APR-01 Steps 6–8 candidate workflow |
 | **Risk Score (Severity / Numeric)** | Decimal [0.0–1.0] displayed directly or as progress bar | Implemented as raw float in unreachable `assessed` branch of `AssessmentCard.tsx` | `SUPPORTED` | `CHANGE` | Score presented strictly as predicted loss/degradation severity used for prioritisation (`clip(pct, 0, 100) / 100`) | Interpreting score as probability, calibrated confidence, certainty of spoilage, or causal impact; false decimal precision | None on semantics (ADR 0003 D2 accepted); visual precision and production model scoring pending | UX / Frontend | Establishes bounded loss-severity semantics |
 | **Risk Band (Low / Mod / High)** | Color-coded categorical tags (Green/Amber/Red) | Schema field exists (`risk.band` in `contracts.ts`), currently null | `NOT SUPPORTED` / `POLICY DECIDED` | `BLOCKED` | Neutral status badges, explicit "Pending Assessment" or omitting band container | Hard-coded cut-offs, traffic-light color severity scales, inferred ≥15% high-risk band | Gated by future risk band and threshold policy validation (ADR 0003 D2 sets `risk.band = null`) | Integrator / Product | Prevents arbitrary alert thresholds |
-| **Deterioration Horizon** | "In 18 hours" continuous countdown, hover timestamps | Implemented as `starts_at` in unreachable branch of `AssessmentCard.tsx` | `NOT SUPPORTED` | `REMOVE` | Nullable state communicating "Not estimable from supplied observations" (field preserved for forward compatibility) | Continuous countdowns, arrival timestamps, coarse deterioration windows/intervals | Rejection of continuous time model and interval estimation from supplied observations (VDR-03, ADR 0003 D6) | Integrator / VDR-03 | Continuous countdown and coarse intervals permanently forbidden |
+| **Deterioration Horizon** | "In 18 hours" continuous countdown, hover timestamps | Implemented as `starts_at` in unreachable branch of `AssessmentCard.tsx` | `NOT SUPPORTED` | `REMOVE` | Nullable state communicating "Not estimable from supplied observations" (field preserved for forward compatibility) | Continuous countdowns, arrival timestamps, coarse deterioration windows/intervals | Rejection of continuous time model and interval estimation from supplied observations (VDR-03, ADR 0003 D6) | Integrator / VDR-03 | Continuous countdowns and coarse deterioration intervals are unsupported and not authorized under current accepted evidence and ADR 0003 policy |
 | **Reliability State & Numerical Confidence** | Quantitative confidence metric (e.g. "94% reliable") | Fields exist in domain model; demo returns `level: "unavailable"`, `confidence_score: null` | `SUPPORTED WITH LIMITATION` | `CHANGE` | Factual display of `level: unavailable` along with explicit `reason_codes` and `missing_requirements` when populated | Invented numerical confidence scores (e.g. "94%"), arbitrary low/medium/high reliability thresholds | Calibrated reliability policy and sufficiency criteria validation (ADR 0003 D7) | Integrator / Data Science | Separates assessment capability from calibrated confidence |
 | **Contributing Factors / Explanations** | Environmental drivers (e.g. "Humidity caused +15% loss") | Structured container rendered if populated (`AssessmentCard.tsx`) | `SUPPORTED WITH LIMITATION` | `CHANGE` | Factor presence for factual data-quality/context condition, or verified model contribution from accepted method; `effect = unknown` or `factors = []` | Causal phrasing ("caused", "resulted in"), synthetic factor weights, feature-family associations presented as individual causal factor cards | Explanation mechanism selection and attribution baseline validation (ADR 0003 D8) | Data Science / Integrator | Directs factors to verified model attribution, not biological causality |
 | **Recommendations / Actions** | Direct intervention buttons ("Sell now", "Reroute", "Pre-cool") | `Recommendation` container in schema; demo returns null | `NOT SUPPORTED` / `POLICY DECIDED` | `BLOCKED` | Rendering recommendation as unavailable/withheld (`recommendation = null`) | Prescribed business interventions, autonomous action dispatch, financial savings claims, prevented loss claims | Domain action-effect validation catalog and operator authority definition (ADR 0003 D9) | Product Lead / Integrator | Candidate action classes 1–5 remain research, not product output |
 | **Missing / Partial Data Handling** | Generic warning banner | `insufficient_data` state implemented in `AssessmentCard.tsx` | `SUPPORTED` | `KEEP` | Explicit degradation state explaining that required inputs are missing, displaying populated `reason_codes` and `missing_requirements` | Silent null suppression, fabricated zero defaults, automatically treating missing telemetry as insufficient data | None for UI display capability; exact engine minimums remain implementation decisions (ADR 0003 D7) | Implementation / Integrator | Core robust UX pattern |
 | **Historical Outcomes vs Predictions** | Display historical loss alongside prediction | Not implemented in client UI | `NOT SUPPORTED` | `REMOVE` | Retrospective evaluation / benchmark / analytics review views strictly segregated from operational triage | Historical transit losses or final outcomes displayed as if known prior to dispatch (`T_assess = T_dispatch`) | Temporal and lineage invariants; target leakage rules (ADR 0002, ADR 0003 D1) | Integrator | Prevents retrospective target leakage |
 | **Financial / Economic Loss Claims** | Predicted EUR savings counter, prevented loss metrics | Not implemented | `NOT SUPPORTED` | `REMOVE` | Raw historical baseline economics strictly in offline evaluation views | Predicted monetary savings, ROI calculations, commercial savings claims | Absence of causal savings models and intervention benefit evidence (VDR-03, ADR 0003 D9) | Product Lead | Monetary savings claims strictly excluded |
-| **Real-Time Streaming Alerts & Tracking** | Push alerts, continuous reefer truck tracking | On-demand request model only; no push/streaming infrastructure | `NOT SUPPORTED` | `REMOVE` | On-demand batch evaluation trigger, static update timestamps | Live streaming trackers, simulated live telemetry ticks, GPS transit tracking | Batch architecture decision (ADR 0001) | Architecture | Confirms purely on-demand/batch evaluation |
+| **Real-Time Streaming Alerts & Tracking** | Push alerts, continuous reefer truck tracking | ADR 0001 accepts batch/on-demand MVP architecture. Current implementation provides health checking and a single synthetic demo assessment only; no production batch-assessment, inventory, push, or streaming infrastructure exists. | `NOT SUPPORTED` | `REMOVE` | Static update timestamps only (on-demand request lifecycle once batch evaluation API exists) | Live streaming trackers, simulated live telemetry ticks, GPS transit tracking | Batch architecture decision (ADR 0001) | Architecture | Confirms purely on-demand/batch evaluation |
 | **Charts: Pre-dispatch Telemetry** | Historical observation charts | Not implemented | `SUPPORTED WITH LIMITATION` | `KEEP` | Strictly observational charts bounded to `T_dispatch`, preserving lineage `batch -> storage_session -> storage_zone -> sensor_readings` | Telemetry presented as driving the score; unsupported safe/unsafe thresholds; future trajectories; causal explanations | None for optional observed context; marginal value remains unproven under tested configurations (VDR-04B, ADR 0003 D10) | Data Science / Product | Optional observed context, not core explanatory surface |
-| **Charts: Predictive Forecasts** | Predictive trendlines, deterioration trajectories | Not implemented | `NOT SUPPORTED` | `REMOVE` | None | Deterioration trendlines, future quality trajectories, safe-corridor bands | Rejection of continuous time model and interval estimation (VDR-03, ADR 0003 D6) | Integrator | Predictive future trajectories permanently forbidden |
+| **Charts: Predictive Forecasts** | Predictive trendlines, deterioration trajectories | Not implemented | `NOT SUPPORTED` | `REMOVE` | None | Deterioration trendlines, future quality trajectories, safe-corridor bands | Rejection of continuous time model and interval estimation (VDR-03, ADR 0003 D6) | Integrator | Predictive future trajectories are unsupported and not authorized under current accepted evidence and ADR 0003 policy |
 
 ---
 
@@ -178,15 +178,17 @@ APR-01 Steps 6–8 provide a thorough research synthesis for operator workflow, 
 
 ---
 
-## 6. Empirical Evidence Reconciliation: VDR-04A & VDR-04B
+## 6. Empirical Evidence Reconciliation: VDR-03, VDR-04A & VDR-04B
 
-### 6.1 VDR-04A (Dispatch Predictability Benchmark)
-- **Primary Operational Task:** Ranking lift is demonstrated; strongest when planned logistics are present. Non-logistics ranking remains protocol/model-dependent.
+### 6.1 VDR-03 (Target & Horizon Feasibility)
+- **VDR-03 Horizon Feasibility:** Exact biological deterioration onset and continuous/coarse deterioration horizon are unsupported by the supplied checkpoint observations.
+
+### 6.2 VDR-04A (Dispatch Predictability Benchmark)
+- **Primary Operational Task:** Dispatch-time prediction/ranking feasibility and continuous-loss benchmark evidence; ranking lift is demonstrated and strongest when planned logistics are present. Non-logistics ranking remains protocol/model-dependent.
 - **Continuous Point Prediction:** Demonstrates limited, context-specific lift over crop-median baseline.
 - **Planned Logistics:** Feature family providing the strongest consistent incremental predictive association.
-- **Target Feasibility:** Continuous deterioration horizon is unfeasible from supplied checkpoint data.
 
-### 6.2 VDR-04B (Telemetry Marginal Value Ablation)
+### 6.3 VDR-04B (Telemetry Marginal Value Ablation)
 VDR-04B directly evaluated the marginal value of pre-dispatch storage telemetry under planned logistics ($C+L \to C+T+L$):
 - **Observed Result:** Under tested aggregate telemetry representations and fixed model configurations, adding telemetry to context and logistics did **NOT** produce stable marginal lift:
   - In Protocol P2 (Chamber-Time Grouped OOF), $C+T+L$ degraded relative to $C+L$ across all 5 folds for $R^2$ and Spearman correlation, and in 4 of 5 folds for MAE and NDCG@10.
@@ -238,11 +240,13 @@ The future single-batch and multi-batch UI must be structured to remain truthful
 |    - Verified model contribution or data condition                          |
 |    - Directional effect: increases_risk / decreases_risk / unknown          |
 +-----------------------------------------------------------------------------+
-| 7. OPERATOR ADVISORY SLOT                                                   |
+| 7. RECOMMENDATION STATUS                                                    |
 |    - Status: "No validated recommendation available"                        |
-|    - Human Review Required flag                                             |
+|    - Current payload: recommendation = null                                 |
 +-----------------------------------------------------------------------------+
 ```
+
+*Recommendation Payload & Review Policy Separation:* Under current ADR 0003 D9 policy, `recommendation = null`, meaning no current recommendation payload or advisory object exists from which a `requires_human_review` field could be rendered. Any future admitted recommendation/action must require human review under ADR 0003 D9.
 
 ---
 
@@ -271,7 +275,7 @@ The future single-batch and multi-batch UI must be structured to remain truthful
 - Operational review capacity and triage queue membership rules.
 - Permitted action catalogue and fallback routing for degraded batches.
 
-### 9.5 Permanently Excluded / Not Supported
+### 9.5 Excluded / Unsupported Under Current MVP Policy
 - Continuous deterioration countdown timers and coarse deterioration intervals.
 - Real-time GPS and in-transit streaming telemetry feeds.
 - Automated monetary loss prevention or ROI calculations.
