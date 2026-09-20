@@ -24,7 +24,7 @@ from app.ingestion.raw_reader import (
 from app.ingestion.structural_manifest import TABLE_MANIFEST, TableSpec
 
 
-DATA_DIR = Path("sponsor_pack/data")
+DATA_DIR = Path(__file__).parent.parent.parent / "sponsor_pack" / "data"
 
 
 def test_supplied_snapshot_loads() -> None:
