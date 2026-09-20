@@ -33,17 +33,20 @@ All data-dependent UX concepts proposed across PUX-00–07 are evaluated on two 
 
 | UX Element | Original PUX Proposal | Current Implementation State | Evidence Support | Disposition | What Is Safe to Show Now | What Must NOT Be Shown | Blocking Evidence / Decision |
 |---|---|---|---|---|---|---|---|
-| **Batch Overview List** | Multi-batch table showing contextual fields and status | No implemented multi-batch overview/triage list; no production batch-list API | `SUPPORTED` | `KEEP` | Neutral list, Batch IDs, crop type, dispatch metadata, facility/zone identifier | Implied risk triage ordering | None for neutral list structure |
-| **Risk-Ordered Priority Queue** | Triage queue sorted by risk score descending | Not implemented | `SUPPORTED WITH LIMITATION` | `BLOCKED` | Neutral list sorted by neutral attributes (dispatch time, batch ID) | Default sorting by risk score or severity band | VLD-02B (Operational framing and planned-logistics policy) |
-| **Risk Score (Numeric / Float)** | Decimal [0.0–1.0] displayed directly or as progress bar | Implemented as raw float in unreachable `assessed` branch | `SUPPORTED WITH LIMITATION` | `CHANGE` | Score display with explicit qualification of experimental status once validated | Raw uncalibrated probabilities, false precision, unverified percentages | VLD-02B (Model calibration and target definition) |
-| **Risk Band (Low / Mod / High)** | Color-coded categorical tags (Green/Amber/Red) | Schema field exists; band thresholds undefined | `UNKNOWN` | `BLOCKED` | Neutral status badges or explicit "Pending Assessment" state | Hard-coded cut-offs, traffic-light color severity scales | VLD-02B (Threshold policy definition) |
-| **Deterioration Horizon** | "In 18 hours" continuous countdown, hover timestamps | Implemented as `starts_at` in inactive branch | `NOT SUPPORTED` | `REMOVE` | Nullable state | Continuous countdowns, precise minute/hour arrival timestamps | VDR-03 (Exact continuous onset unsupported); coarse proxy is UNKNOWN/DECISION REQUIRED |
-| **Contributing Factors** | Environmental drivers | Structured container rendered if populated | `SUPPORTED WITH LIMITATION` | `CHANGE` | Factor presence (e.g., data-quality factor) without directional/causal attribution | Causal phrasing, synthetic factor weights, telemetry as confirmed risk contributor | Predictive factor semantics remain gated |
-| **Recommendations / Actions** | Direct intervention buttons ("Sell now", "Reroute") | Single `Recommendation` container in schema | `UNKNOWN` | `BLOCKED` | Render as unavailable/withheld rather than trusting arbitrary payload | Prescribed business interventions, autonomous action dispatch | Operational action-effect validation catalog |
-| **Missing / Partial Data Handling** | Generic warning banner | `insufficient_data` state implemented in frontend card | `SUPPORTED` | `KEEP` | Generic degradation state | Silent null suppression, fabricated zero defaults | None for explicit missing state UI |
-| **Financial / Economic Loss Claims** | Predicted EUR savings counter, prevented loss metrics | Not implemented | `NOT SUPPORTED` | `REMOVE` | Raw historical baseline economics strictly in offline evaluation views | Predicted monetary savings, ROI calculations, commercial claims (unsupported) | Absence of causal savings models |
-| **Real-Time Streaming Alerts** | Push alerts, continuous reefer truck tracking | Batch API request model | `NOT SUPPORTED` | `REMOVE` | On-demand batch evaluation trigger, static update timestamps | Live streaming trackers, simulated live telemetry ticks | Batch architecture decision (ADR 0001) |
-| **Charts & Visualizations** | Predictive trendlines | Not implemented | `NOT SUPPORTED` | `REMOVE` | Historical observation charts in evaluation | Future/forecast trendlines | No time-series prediction evidence |
+| **Batch Overview List** | Multi-batch table showing contextual fields | No implemented multi-batch overview/triage list | `SUPPORTED` | `KEEP` | Neutral list, Batch IDs, crop type, dispatch metadata | Implied risk triage ordering | None for neutral list structure |
+| **Risk-Ordered Priority Queue** | Triage queue sorted by risk score | Not implemented | `SUPPORTED WITH LIMITATION` | `BLOCKED` | Neutral list sorted by neutral attributes | Default sorting by risk score | VLD-02B |
+| **Risk Score (Numeric / Float)** | Decimal [0.0–1.0] displayed directly | Implemented as raw float in unreachable `assessed` branch | `SUPPORTED WITH LIMITATION` | `CHANGE` | Score display with explicit experimental qualification | Raw probabilities, false precision | VLD-02B |
+| **Risk Band (Low / Mod / High)** | Color-coded categorical tags | Schema field exists; thresholds undefined | `UNKNOWN` | `BLOCKED` | Neutral status badges | Hard-coded cut-offs, traffic-light severity | VLD-02B |
+| **Confidence Score (Numeric)** | Percentage UI (e.g., "94% reliable") | `Reliability.level` exists; `confidence_score` optional | `UNKNOWN` | `BLOCKED` | Existing coarse `Reliability.level` structure | Numeric confidence UI, raw percentages | Accepted validated interpretation |
+| **Deterioration Horizon** | Continuous countdown, hover timestamps | Implemented as `starts_at` in inactive branch | `NOT SUPPORTED` | `REMOVE` | Nullable state | Continuous countdowns, exact minute/hour timestamps | VDR-03 |
+| **Contributing Factors** | Environmental drivers | Structured container rendered if populated | `SUPPORTED WITH LIMITATION` | `CHANGE` | Factor presence without directional/causal attribution | Causal phrasing, synthetic factor weights | Predictive factor semantics gated |
+| **Recommendations / Actions** | Direct intervention buttons | Single `Recommendation` container in schema | `UNKNOWN` | `BLOCKED` | Render as unavailable/withheld | Prescribed business interventions | Operational action-effect validation |
+| **Missing / Partial Data** | Generic warning banner | `insufficient_data` state implemented | `SUPPORTED` | `KEEP` | Generic degradation state | Silent null suppression | None for explicit missing state UI |
+| **Historical Comparison** | Final outcomes shown alongside active data | Not implemented | `SUPPORTED WITH LIMITATION` | `REMOVE` | Retrospective/evaluation views only | Available to or explanatory for dispatch-time assessment | Temporal/Lineage Invariants |
+| **Financial / Economic Loss** | Predicted EUR savings counter | Not implemented | `NOT SUPPORTED` | `REMOVE` | Offline evaluation baseline economics | Predicted monetary savings, ROI | Absence of causal savings models |
+| **Real-Time Streaming Alerts** | Push alerts, live tracking | On-demand health request + single synthetic assessment. No production batch-list or streaming/push infrastructure. | `NOT SUPPORTED` | `REMOVE` | On-demand batch evaluation trigger | Live streaming trackers, simulated live telemetry ticks | Batch architecture decision (ADR 0001) |
+| **Charts: Pre-dispatch Telemetry** | Historical observation charts | Not implemented | `SUPPORTED WITH LIMITATION` | `KEEP` | Bounded to T_dispatch, strict session->zone->sensor lineage | Causal or agronomic thresholds | None for strict lineage |
+| **Charts: Predictive Forecasts** | Predictive trendlines | Not implemented | `NOT SUPPORTED` | `REMOVE` | None | Deterioration trendlines, future trajectories, safe-corridors | Pending evidence/decisions |
 
 ---
 
@@ -93,18 +96,21 @@ The proposed predictive UX must strictly adhere to the following invariants:
   - Neutral batch context metadata blocks.
   - Provenance/simulation disclosure banners.
   - Ordinary in-app status/warning/degraded-state alerts.
+  - Observed pre-dispatch telemetry charts (strictly bounded to information available by T_dispatch, using accepted storage-session → zone → sensor lineage, without implying causal/agronomic thresholds).
 - **CHANGE:** 
   - Risk score numeric display (requires qualification of experimental status once validated).
   - Contributing factors (preserve structured container; show presence without causal attribution).
 - **REMOVE:** 
-  - Real-time streaming/push/live-tracking alerts (outside MVP scope).
-  - Continuous deterioration countdown timers (exact continuous onset unsupported).
-  - Predicted financial/monetary savings and ROI claims (unsupported under current evidence).
-  - Retrospective/historical outcomes presented alongside active predictions.
+  - Predictive/forecast deterioration trendlines, future trajectories, or safe-corridor charts.
+  - Real-time streaming/push/live-tracking alerts.
+  - Continuous deterioration countdown timers.
+  - Predicted financial/monetary savings and ROI claims.
+  - Historical/final outcomes used as information available to, or explanatory evidence for, the dispatch-time assessment.
 - **BLOCKED:** 
-  - Risk-Ordered Priority Queue (pending VLD-02B on operational framing/planned-logistics policy).
-  - Risk Band categories (pending VLD-02B on threshold policies).
+  - Numeric confidence scores (e.g., "94% reliable") pending accepted validated interpretation (explicitly distinguished from established `Reliability.level`).
+  - Risk-Ordered Priority Queue (pending VLD-02B).
+  - Risk Band categories (pending VLD-02B).
   - Recommendations/Actions (withhold rendering until accepted action semantics exist).
 - **NEW UX REQUIREMENTS:** 
   - Render recommendations as unavailable/withheld rather than trusting arbitrary payload content.
-  - Ensure insufficient-data UI accommodates `reason_codes` if required by VLD-02B.
+  - The future insufficient-data UI must be capable of exposing/explaining populated `reason_codes` and `missing_requirements` truthfully, while exact user-facing wording/policy may remain a later UX/integration decision.
