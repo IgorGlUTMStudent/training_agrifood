@@ -145,10 +145,10 @@ $$T_{assess} \equiv T_{dispatch} = \text{storage_sessions.dispatch_datetime}$$
 
 | Код | Наименование решения | Операционный вопрос оператора | Допустимые альтернативы | Границы полномочий `[UNKNOWN / CONTRACT-DEPENDENT]` |
 | :--- : | :--- | :--- | :--- | :--- |
-| **D1** | **Release vs. Hold** *(Допуск к погрузке)* | Готова ли партия к погрузке в транспорт по текущему качественному состоянию? | **1. Release** (выпуск без ограничений);<br>**2. Hold** (задержка на рампе для инструментального контроля QC). | Процедуры QC фиксируют право временной задержки партии при подозрении на дефект; право окончательной блокировки отгрузки зависит от регламентов предприятия. |
-| **D2** | **Pre-cool Verification** *(Контроль охлаждения)* | Соответствует ли температура плодов нормативу погрузки в рефрижератор? | **1. Confirm Pre-cooled** (температура в норме);<br>**2. Re-cool Required** (требуется доохлаждение в камере). | Отраслевой стандарт рекомендует проверять температуру перед погрузкой; возможность назначения доохлаждения ограничена наличием свободных камер хаба. |
-| **D3** | **Carrier Verification** *(Верификация ТС)* | Соответствует ли поданное транспортное средство классу перевозимого груза? | **1. Accept Carrier** (подан надлежащий рефрижератор);<br>**2. Flag Incompatible** (подан тент или изотерм для нестойкой культуры). | Оператор уполномочен зафиксировать несоответствие кузова ТС заявке; заказ другого ТС требует санкции службы логистики. |
-| **D4** | **Transport-Route Matching** *(Соответствие плечу)* | Выдержит ли партия транспортировку назначенной длительности в заданном ТС? | **1. Proceed Route** (маршрут согласован);<br>**2. Reroute Recommendation** (рекомендация сократить плечо доставки). | Перенаправление партии или отмена экспортного рейса выходит за рамки полномочий рампы и требует коммерческого решения руководства. |
+| **D1** | **Release vs. Hold** *(Допуск к погрузке)* | Готова ли партия к погрузке в транспорт по текущему качественному состоянию? | **1. Release** (выпуск без ограничений);<br>**2. Hold** (задержка на рампе для инструментального контроля QC). | Временная задержка партии может выполняться диспетчером или сотрудником QC в зависимости от регламента хаба (may be performed by dispatch/QC roles depending on facility SOP); право окончательной блокировки отгрузки зависит от условий контракта (`exact authority remains contract-dependent`). |
+| **D2** | **Pre-cool Verification** *(Контроль охлаждения)* | Соответствует ли температура плодов нормативу погрузки в рефрижератор? | **1. Confirm Pre-cooled** (температура в норме);<br>**2. Re-cool Required** (требуется доохлаждение в камере). | Экспресс-контроль температуры регламентирован отраслевыми практиками; возможность и полномочия по назначению доохлаждения зависят от свободных мощностей хаба (`exact authority remains contract-dependent`). |
+| **D3** | **Carrier Verification** *(Верификация ТС)* | Соответствует ли поданное транспортное средство классу перевозимого груза? | **1. Accept Carrier** (подан надлежащий рефрижератор);<br>**2. Flag Incompatible** (подан тент или изотерм для нестойкой культуры). | Фиксация несоответствия кузова заявке может выполняться персоналом рампы; замена транспортного средства обычно требует эскалации на логистическую службу (`typically requires commercial/logistics escalation; exact authority remains contract-dependent`). |
+| **D4** | **Transport-Route Matching** *(Соответствие плечу)* | Выдержит ли партия транспортировку назначенной длительности в заданном ТС? | **1. Proceed Route** (маршрут согласован);<br>**2. Reroute Recommendation** (рекомендация сократить плечо доставки). | Перенаправление партии или отмена экспортного рейса обычно требуют коммерческой эскалации (typically requires commercial escalation); точные полномочия зависят от договоров с грузовладельцами (`exact authority remains contract-dependent`). |
 
 ### Сопряжение с 4 обязательными исходами челленджа `[CHALLENGE FACT]`:
 
@@ -215,15 +215,15 @@ $$\text{recommendation} = \text{null}$$
 #### Класс 1: Стандартный допуск к отгрузке (Standard Dispatch Clearance)
 * **Evidence / Source `[DOMAIN FACT]`:** FAO (1989) Section 4; UNECE (2017); GCCA (2018).
 * **Operational Feasibility Status:** Высокая (штатная процедура приемо-сдаточного контроля).
-* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Линейный диспетчер рампы подписывает разрешение в рамках стандартного регламента.
+* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Подписание стандартного допуска к погрузке может выполняться персоналом диспетчерской рампы или склада в зависимости от локального регламента (may be performed by dispatch/warehouse staff depending on facility SOP); точные операционные полномочия определяются регламентом предприятия (`exact operational authority remains contract-dependent`).
 * **Data Dependency:** Доступные на $T_{dispatch}$ параметры качества и плановой логистики.
-* **Validation Status:** Research Candidate. Каузальный эффект на сохранность груза в пути не валидирован (нет контрфактов).
-* **Whether Human Review is Required:** Не требуется при отсутствии зарегистрированных сигналов риска.
+* **Validation Status:** Baseline Operational Process. Каузальный эффект на сохранность груза в пути не валидирован (нет контрфактов).
+* **Whether Human Review is Required:** Standard clearance is a baseline operational process, not an admitted Recommendation under current ADR 0003 D9 policy. Current predictive output has `recommendation = null`. If a future action gate represents clearance as Recommendation, applicable human-review semantics must be decided there. (Не вводить `requires_human_review = false` в текущий контракт).
 
 #### Класс 2: Технологическая задержка на рампе для контроля QC (Operational Hold & Re-inspection)
 * **Evidence / Source `[DOMAIN FACT]`:** GCCA (2018) Cold Storage SOPs; USDA AMS (2016); FAO (1989).
 * **Operational Feasibility Status:** Средняя (ограничена доступным временным буфером рампы до выставления штрафов за простой автотранспорта).
-* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Приостановка погрузки выполняется диспетчером; снятие технологического карантина требует подписи службы качества.
+* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Временная приостановка погрузки может инициироваться диспетчером рампы или инспектором качества в зависимости от регламента объекта (may be performed by dispatch or QC roles depending on facility SOP); снятие задержки обычно требует подписи службы контроля качества, однако границы полномочий зависят от условий контрактов (`exact authority remains contract-dependent`).
 * **Data Dependency:** Предотгрузочные данные качества `pre_dispatch`, профиль аномалий телеметрии камеры.
 * **Validation Status:** Research Candidate. Эффективность предотвращения рекламаций не калибрована.
 * **Whether Human Review is Required:** **ДА** (`requires_human_review = true` по контракту; кандидаты корректирующих действий требуют обязательной верификации человеком).
@@ -231,7 +231,7 @@ $$\text{recommendation} = \text{null}$$
 #### Класс 3: Предрейсовое доохлаждение партии (Pre-cooling / Re-cooling Treatment)
 * **Evidence / Source `[DOMAIN FACT]`:** FAO (2004) Bulletin 151; UC Davis Kader (2002); Thompson et al. (2008).
 * **Operational Feasibility Status:** Условно-доступная (зависит от наличия свободных камер быстрого охлаждения `Rapid Pre-Cooling` на конкретном предприятии).
-* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Требует согласования между диспетчером, технологом холодильного комплекса и водителем ТС.
+* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Назначение доохлаждения обычно требует межведомственной координации между диспетчером рампы, технологом холодильного комплекса и перевозчиком с учётом доступности свободных мощностей камер (typically requires coordination between dispatch, cold store technician, and carrier, subject to available chamber capacity); точные права на принятие решения зависят от регламента предприятия (`exact authority remains contract-dependent`).
 * **Data Dependency:** `sensor_readings.produce_surface_temperature_c`, `batches.harvest_temperature_c`, `batches.field_precooled`, `storage_zones.zone_type`, `shipments.vehicle_type`.
 * **Validation Status:** Research Candidate. Количественный выигрыш в снижении потерь не наблюдаем в данных.
 * **Whether Human Review is Required:** **ДА** (`requires_human_review = true`).
@@ -239,7 +239,7 @@ $$\text{recommendation} = \text{null}$$
 #### Класс 4: Рекомендация назначения рефрижератора (Refrigerated Transport Reassignment)
 * **Evidence / Source `[DOMAIN FACT]`:** Соглашение СПС / ATP UNECE; GCCA (2018); FAO (2004).
 * **Operational Feasibility Status:** Проблематичная в регионах (доступность свободного рефрижераторного транспорта на спотовом рынке Молдовы в сезон сбора урожая ограничена `[UNKNOWN]`).
-* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Выходит за рамки полномочий рампы; требует санкции отдела логистики и согласования разницы в стоимости фрахта.
+* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Переназначение типа ТС обычно требует логистической и коммерческой эскалации, а также согласования тарифов фрахта (typically requires commercial/logistics escalation and freight tariff adjustments); линейный персонал рампы редко обладает автономными полномочиями по смене подвижного состава (`exact authority remains contract-dependent`).
 * **Data Dependency:** `shipments.vehicle_type`, `shipments.planned_duration_hours`, `batches.crop_type`.
 * **Validation Status:** Research Candidate (мотивирован ассоциацией в VDR-04A). Фактическая доступность машин неизвестна.
 * **Whether Human Review is Required:** **ДА** (`requires_human_review = true`).
@@ -247,7 +247,7 @@ $$\text{recommendation} = \text{null}$$
 #### Класс 5: Сокращение маршрута или сдача на переработку (Commercial Route Shortening / Processing Diversion)
 * **Evidence / Source `[DOMAIN FACT]`:** Andrés F. López Camelo (2004) FAO Bulletin 151; FAO (1989); Kitinoja & Kader (2002).
 * **Operational Feasibility Status:** Критически сложная (сопряжена с юридическими штрафами за срыв экспортной поставки и потерей выручки).
-* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Исключительная компетенция коммерческого руководства предприятия или владельца груза.
+* **Authority Dependency `[UNKNOWN / CONTRACT-DEPENDENT]`:** Коммерческое сокращение маршрута или перенаправление на переработку обычно требует эскалации на высшее коммерческое руководство или санкции владельца груза из-за контрактных штрафов (typically requires commercial escalation and explicit authorization from cargo owner or commercial management due to contract penalties); точные полномочия зависят от контракта (`exact authority remains contract-dependent`).
 * **Data Dependency:** Высокий уровень предиктивного риска, `shipments.destination_market`, `shipments.planned_duration_hours`, комплекс предотгрузочных признаков деградации.
 * **Validation Status:** Research Candidate / Extreme Contingency. Соотношение штрафов сети и убытка от утилизации не калибровано в датасете (`[UNKNOWN]`).
 * **Whether Human Review is Required:** **ДА** (`requires_human_review = true`).
