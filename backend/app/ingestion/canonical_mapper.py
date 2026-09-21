@@ -163,19 +163,22 @@ def build_batch_assessment_input(
 
     # Build or retrieve read-only telemetry index by zone_id (Contract Section 7)
     sensor_table = snapshot["sensor_readings"]
-    cached_index = getattr(snapshot, "_readings_by_zone_cache", None)
-    if cached_index is not None and cached_index[0] is sensor_table.rows:
-        readings_by_zone = cached_index[1]
+    cached_index = snapshot._readings_by_zone_cache
+    if (
+        cached_index is not None
+        and cached_index[0] is sensor_table.rows
+        and cached_index[1] == len(sensor_table.rows)
+    ):
+        readings_by_zone = cached_index[2]
     else:
         readings_by_zone: dict[str, list[dict[str, str]]] = {}
         for r in sensor_table.rows:
             zid = r.get("zone_id")
             if zid:
                 readings_by_zone.setdefault(zid, []).append(r)
-        try:
-            snapshot._readings_by_zone_cache = (sensor_table.rows, readings_by_zone)
-        except Exception:
-            pass
+        snapshot._readings_by_zone_cache = (
+            sensor_table.rows, len(sensor_table.rows), readings_by_zone
+        )
 
     # 1. Join batch
     batch_table = snapshot["batches"]

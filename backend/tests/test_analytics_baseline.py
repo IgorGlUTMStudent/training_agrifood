@@ -20,13 +20,11 @@ Negative:
 
 from __future__ import annotations
 
-import math
 from datetime import datetime
 import pytest
 from pydantic import ValidationError
 
 from app.analytics.crop_median_baseline import (
-    CropMedianBaseline,
     CropMedianTrainingRecord,
     fit_crop_median_baseline,
     predict_loss_fraction_pct,
@@ -432,7 +430,6 @@ def test_negative_case_n5_no_silent_full_snapshot_fitting() -> None:
     any convenience function that silently fits on historical outcomes without
     explicit caller-supplied records.
     """
-    import inspect
     import app.analytics.crop_median_baseline as baseline_module
 
     # Assert RawSnapshot is not imported or used as type hint in crop_median_baseline

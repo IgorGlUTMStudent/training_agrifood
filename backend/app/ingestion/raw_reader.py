@@ -9,7 +9,6 @@ from __future__ import annotations
 import csv
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
 
 from app.ingestion.diagnostics import (
     DiagnosticIssue,
@@ -50,18 +49,16 @@ class RawSnapshot:
         default_factory=lambda: StructuralDiagnostics(directory="")
     )
 
-    @property
-    def loaded_tables(self) -> list[str]:
-        return list(self.tables.keys())
+    # Source rows, indexed length, and zone index. Excluded from snapshot equality.
+    _readings_by_zone_cache: tuple[
+        list[dict[str, str]], int, dict[str, list[dict[str, str]]]
+    ] | None = field(default=None, init=False, repr=False, compare=False)
 
     def __getitem__(self, table_name: str) -> RawTable:
         return self.tables[table_name]
 
     def __contains__(self, table_name: str) -> bool:
         return table_name in self.tables
-
-    def get(self, table_name: str, default: Any = None) -> Any:
-        return self.tables.get(table_name, default)
 
 
 def read_raw_table(

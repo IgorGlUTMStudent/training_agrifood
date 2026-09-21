@@ -10,11 +10,9 @@ from datetime import datetime
 from enum import Enum
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import Field, model_validator
 
-
-class ContractModel(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+from app.domain._contract import ContractModel
 
 
 class HealthResponse(ContractModel):

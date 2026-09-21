@@ -51,7 +51,6 @@ from app.domain.batch import (
 )
 from app.ingestion.canonical_mapper import (
     BatchNotFoundError,
-    CanonicalMappingError,
     CanonicalValidationError,
     CardinalityError,
     build_batch_assessment_input,
@@ -469,6 +468,46 @@ def test_telemetry_interval_bounds(supplied_snapshot: RawSnapshot) -> None:
 
     for reading in canonical.telemetry.readings:
         assert entry <= reading.timestamp <= dispatch
+
+
+def test_telemetry_cache_rebuilds_after_append_and_remove() -> None:
+    snapshot = _make_synthetic_snapshot()
+    first = build_batch_assessment_input(snapshot, "BAT-SYN-001")
+    rows = snapshot["sensor_readings"].rows
+    added_timestamp = datetime(2024, 9, 15, 12, 0)
+    added_row = dict(
+        rows[1],
+        reading_id="SR-ADDED-01",
+        timestamp=added_timestamp.isoformat(),
+        air_temperature_c="3.25",
+    )
+    rows.append(added_row)
+
+    second = build_batch_assessment_input(snapshot, "BAT-SYN-001")
+
+    assert all(r.timestamp != added_timestamp for r in first.telemetry.readings)
+    added_readings = [r for r in second.telemetry.readings if r.timestamp == added_timestamp]
+    assert len(added_readings) == 1
+    assert added_readings[0].air_temperature_c == 3.25
+    assert len(second.telemetry.readings) == len(first.telemetry.readings) + 1
+
+    rows.remove(added_row)
+    third = build_batch_assessment_input(snapshot, "BAT-SYN-001")
+    assert third.telemetry == first.telemetry
+
+
+def test_telemetry_cache_rebuilds_after_rows_replacement() -> None:
+    snapshot = _make_synthetic_snapshot()
+    first = build_batch_assessment_input(snapshot, "BAT-SYN-001")
+    rows = [dict(r) for r in snapshot["sensor_readings"].rows]
+    rows[1]["air_temperature_c"] = "3.25"
+    snapshot["sensor_readings"].rows = rows
+
+    second = build_batch_assessment_input(snapshot, "BAT-SYN-001")
+
+    assert first.telemetry.readings[0].air_temperature_c == 1.5
+    assert second.telemetry.readings[0].air_temperature_c == 3.25
+    assert len(second.telemetry.readings) == len(first.telemetry.readings)
 
 
 def test_telemetry_structural_missingness_preserved(supplied_snapshot: RawSnapshot) -> None:

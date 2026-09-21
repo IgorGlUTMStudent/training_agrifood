@@ -1,4 +1,4 @@
-"""Stable application/domain output contracts."""
+"""Stable application/domain input and output contracts."""
 
 from app.domain.assessment import RiskAssessment
 from app.domain.batch import BatchAssessmentInput
