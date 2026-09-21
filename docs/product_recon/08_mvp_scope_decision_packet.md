@@ -1,4 +1,5 @@
-STATUS: PROPOSED PRODUCT SPEC — NOT CANON
+STATUS: APR2-D1–D6 HUMAN GATE ACCEPTED
+SOURCE PACKET / MIXED EVIDENCE AND HISTORICAL CONTEXT
 
 # APR-02: MVP Scope Decision Packet & Product Specification
 
@@ -13,7 +14,12 @@ STATUS: PROPOSED PRODUCT SPEC — NOT CANON
 **Refreshed APR-02F base:** `cea6ece1d100434772b79b9eb42c8d7bd8488466` (Base Refresh Addendum; PR #22 / PR #28)
 **Original APR02_BASE:** `6d0e4a50c36937f01b769a16a99bfa03af458c66`
 **Target File:** `docs/product_recon/08_mvp_scope_decision_packet.md`
-**Status:** PROPOSED PRODUCT SPEC — NOT CANON (APR-02 takeover synthesis / PROPOSED PRODUCT SPEC — requires Human Gate)
+**Status:** APR2-D1–D6 HUMAN GATE ACCEPTED (authoritative through ADR 0004; source packet containing mixed evidence and historical context)
+
+> **Post-Human-Gate Note (2026-09-21):**
+> On 2026-09-21 Vladimir, Human Integrator, accepted APR2-D1–D6 in their amended forms.
+> The authoritative decision record is [ADR 0004](../decisions/0004-mvp-product-scope.md).
+> Other research notes, historical implementation snapshots, recommendations and UNKNOWNs in this document are not automatically promoted to canonical decisions.
 
 ---
 
@@ -166,7 +172,7 @@ FACT: implementation snapshot сверён на refreshed APR-02F base `cea6ece1
 
 # ОБЯЗАТЕЛЬНЫЕ ЭПИСТЕМИЧЕСКИЕ ГРАНИЦЫ (§5)
 
-Метки доказательности: **FACT** — прямой факт источника/кода; **DECISION** — принятое ADR-решение; **OBSERVED RESULT** — результат конкретного исследования; **INFERENCE** — ограниченный вывод; **RECOMMENDATION** — предложение; **UNKNOWN** — открытый вопрос. Коммит исследования не делает его каноном. APR2-D1–D6 ниже — RECOMMENDATION до Human Gate.
+Метки доказательности: **FACT** — прямой факт источника/кода; **DECISION** — принятое ADR-решение; **OBSERVED RESULT** — результат конкретного исследования; **INFERENCE** — ограниченный вывод; **RECOMMENDATION** — предложение; **UNKNOWN** — открытый вопрос. Коммит исследования не делает его каноном. Исходно APR2-D1–D6 формулировались как RECOMMENDATION; 2026-09-21 они были явно приняты Human Integrator (Vladimir) в [ADR 0004](../decisions/0004-mvp-product-scope.md). Прочие исследовательские предложения документа сохраняют статус рекомендаций.
 
 Отдельно используются пять статусов области/реализации:
 
@@ -174,10 +180,10 @@ FACT: implementation snapshot сверён на refreshed APR-02F base `cea6ece1
   Только то, что физически присутствует в committed коде репозитория (`backend/app/**`, `frontend/src/**`). Не путать с аналитически валидированными возможностями.
 
 - **B. ACCEPTED PRODUCT SEMANTICS (Принятая продуктовая семантика):**  
-  Формально утверждённые нормативные решения команды и интегратора (ADR 0001, ADR 0002, ADR 0003). Являются обязательными рамками для проектирования; степень реализации указана отдельно (IGR-03 input mapping реализован, analytics/output runtime отсутствует).
+  Формально утверждённые нормативные решения команды и интегратора (ADR 0001, ADR 0002, ADR 0003, ADR 0004). Являются обязательными рамками для проектирования; степень реализации указана отдельно (IGR-03 input mapping реализован, analytics/output runtime отсутствует).
 
 - **C. PROPOSED MVP SCOPE (Предлагаемый объём MVP):**  
-  Рекомендации синтеза APR-02 (takeover synthesis) по целевому функционалу MVP, выносимые на утверждение интегратору. **НЕ являются командным решением до прохождения Human Gate.**
+  Рекомендации синтеза APR-02 (takeover synthesis) по целевому функционалу MVP. Решения APR2-D1–D6 утверждены Интегратором в ADR 0004; прочие предложения данного раздела остаются проектными рекомендациями.
 
 - **D. DEFERRED / OUT OF MVP (Отложено / За рамками MVP):**  
   Функционал и концепции, исключённые из ближайшего релиза ввиду отсутствия данных, калибровки, объясняющих движков или контрфактических доказательств.
@@ -270,7 +276,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 
 В таблице ниже представлена детальная классификация всех продуктовых возможностей Smart Harvest.  
 *Статус области:* `CURRENT`, `PROPOSED MVP`, `DEFER`, `BLOCKED`.  
-**ВАЖНО:** Статус `PROPOSED MVP` отражает предложение APR-02 takeover synthesis и **НЕ является решением команды** до утверждения на соответствующем гейте (Human Gate).
+**ВАЖНО:** Исходный статус таблицы отражает предложения APR-02 takeover synthesis. 2026-09-21 Human Integrator (Vladimir) принял решения APR2-D1–D6 (авторитетно в [ADR 0004](../decisions/0004-mvp-product-scope.md)). Прочие строки и детали остаются исследовательскими рекомендациями до отдельных решений.
 
 | Capability | Accepted semantic | Current implementation | Product recommendation | Dependency / owner | Scope status | Rationale |
 | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
@@ -294,7 +300,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 
 # 9. PRODUCT DECISIONS REQUIRING HUMAN GATE (§9)
 
-Ниже сформулированы 6 обязательных продуктовых развилок, требующих утверждения Интегратором (Human Gate). APR-02 takeover synthesis формулирует проблему, ограничения, варианты, компромиссы и дает рекомендации, но **НЕ принимает решение самостоятельно** (требуется Human Gate).
+Ниже приведены 6 продуктовых развилок APR-02. 2026-09-21 Human Integrator (Vladimir) рассмотрел данный пакет и явно **ПРИНЯЛ** решения APR2-D1–D6 в их скорректированной форме; авторитетный канонический документ — **[ADR 0004](../decisions/0004-mvp-product-scope.md)**. Исторические формулировки развилок сохранены ниже с обновлённым статусом гейта.
 
 ---
 
@@ -305,7 +311,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **Why / trade-off:** Фокус на пользователе, принимающем или поддерживающем решения в момент отгрузки, помогает проектировать advisory Decision Support; он не устанавливает реальные обязанности сотрудника.
 - **UNKNOWN:** Hold/release authority, отмена отгрузки, смена перевозчика/ТС, обязательный QC, подписание CMR/транспортных документов, требуемая процедура инспекции и реальный SOP.
 - **Evidence / boundary:** Sponsor brief; ADR 0002 (момент оценки), ADR 0003 D1. APR-01 05–07 — исследовательские предложения, не доказательство полномочий.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** При отсрочке design persona остается предложением.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -317,7 +323,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **RECOMMENDATION — proposed amended decision:** Для dataset-backed MVP/demo выбирать canonical recorded assessment events в **configurable replay/view window**. `facility_id` — только UI/context filter. `planned_dispatch_datetime` можно показывать как plan/schedule context, условно допустимый по ADR 0002; он не заменяет canonical assessment clock.
 - **UNKNOWN / trade-off:** Точная длительность окна и реальная review capacity неизвестны; фиксированная квота K=10 запрещена. Pagination/scrolling — детали реализации. Replay из snapshot не устанавливает будущую live queue membership или реальный рабочий процесс.
 - **Evidence / boundary:** Sponsor README; ADR 0002; ADR 0003 D3; VDR-01/02. Dataset observation не превращается в operational FACT.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** До гейта membership остается предложением.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -328,7 +334,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **Proposed UI copy:** “No predictive score is available for this batch because required inputs were not satisfied. This does not mean low or high risk. Smart Harvest does not determine the operational disposition of this batch.”
 - **UNKNOWN / boundary:** Операционная обработка и SOP неизвестны. Не назначать QC, автоматический пропуск или блокировку; система не знает обязательного следующего действия. Раздельное представление требует отдельной секции, но предотвращает смешение отсутствия оценки с величиной риска.
 - **FACT — implementation:** Сейчас существует только synthetic insufficient-data fixture; proposed section не реализована. Точные engine minimums и fallback routing остаются открытыми.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** При отсрочке действует null-contract, без изобретения workflow.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -341,7 +347,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **UNKNOWN / DEFERRED:** Метод model attribution, его референтный базис и валидация. `increases_risk` / `decreases_risk` запрещены до отдельного валидированного механизма; добавление SHAP само по себе не решает explainability.
 - **Outcome 3 / trade-off:** Механизм скора объясним, контекст полезен отдельно, но атрибуция «what contributes to this risk» для текущего baseline не поддержана. Outcome 3 не выполнен полностью.
 - **FACT — implementation:** В текущей synthetic fixture один `data_quality` factor с `effect = unknown`; baseline и предложенные UI-блоки не реализованы. Его не выдавать за baseline attribution.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** При отсрочке не фабриковать factors.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -353,7 +359,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **Proposed UI copy:** “Action recommendations are unavailable. Current evidence does not validate intervention effectiveness. Smart Harvest prioritizes batches for review but does not prescribe an operational action.” Последняя фраза описывает proposed ranking capability; текущий runtime остается fixture без очереди.
 - **UNKNOWN / boundary:** Каталог действий, эффективность вмешательств и реальные операционные процедуры неизвестны. Блок не должен ссылаться на warehouse SOP, назначать действия, перечислять примерные рекомендации или обещать экономию.
 - **Trade-off:** Явное сообщение объясняет недоступность, но сохраняет незакрытое требование спонсора. FACT: в fixture `recommendation = null`; предлагаемый текст не реализован.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** При отсрочке null сохраняется, Outcome 4 остается неподдержанным.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -366,7 +372,7 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - **UNKNOWN:** Monitoring, storage-condition audit, diagnostics и equipment-health detection — возможные будущие гипотезы; VDR-04B их не валидировал, текущая реализация их не предоставляет.
 - **Research status / boundary:** VDR-04B — **committed research evidence used by this proposed Human Gate package**, со статусом **DRAFT FOR REVIEW — EVIDENCE ONLY**. Приемка как project evidence остается решением Human Integrator; коммит и этот пакет не делают отчет каноном.
 - **Trade-off:** Кандидат упрощения уменьшает число feature families, но не доказывает универсального превосходства и требует отдельного learned-engine решения.
-- **Owner / decision gate:** Vladimir (Human Integrator). **PROPOSED — requires Human Gate; not approved.** При отсрочке telemetry остается canonical, baseline direction сохраняется, learned-engine выбор не производится.
+- **Owner / decision gate:** Vladimir (Human Integrator). **ACCEPTED HUMAN DECISION** on 2026-09-21; see [ADR 0004](../decisions/0004-mvp-product-scope.md).
 
 ---
 
@@ -405,5 +411,5 @@ FACT: snapshot сверён на refreshed APR-02F base `cea6ece1d100434772b79b9
 - [x] **Граница APR-02F:** Разрешены только этот файл, `09_product_acceptance_traceability.md` и status-only repair в `docs/decisions/0003-assessment-evaluation-semantics.md`; принятые ADR-решения и provenance не меняются. Остальной канон, VDR-04B, PUX-08 и application code вне write scope.
 
 ---
-*Документ подготовлен в рамках APR-02 takeover synthesis (Vladimir — Integrator) из-за таймбокса финала тренировки для передачи на рассмотрение Human Gate.*
+*Документ подготовлен в рамках APR-02 takeover synthesis (Vladimir — Integrator) из-за таймбокса финала тренировки для передачи на рассмотрение Human Gate. Решения APR2-D1–D6 приняты Human Integrator (Vladimir) 2026-09-21 в [ADR 0004](../decisions/0004-mvp-product-scope.md).*
 *Конец спецификации.*
