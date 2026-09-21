@@ -51,7 +51,21 @@ npm run dev
 
 Open `http://localhost:5173`. Vite proxies `/api` requests to `http://localhost:8000` in development. To use another API origin, copy `.env.example` to `.env` and set `VITE_API_BASE_URL`.
 
+The backend's allowed frontend origins can be configured with the `SMART_HARVEST_CORS_ORIGINS` environment variable (comma-separated; default: `http://localhost:5173`).
+
 ## Checks
+
+Before running checks, complete the dependency setup above: create and activate `.venv`, install the backend with `python -m pip install -e ".\backend[test]"`, and run `npm install` in `frontend`. The editable backend installation is required for pytest to import `app`.
+
+The preferred full local repository verification gate for the Windows-first team is, from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/verify.ps1
+```
+
+It runs the backend pytest suite using the project `.venv`, then the frontend production build. It does not install dependencies. CI performs clean dependency installation separately before running its checks.
+
+For targeted or manual checks, with `.venv` activated, start from the repository root:
 
 ```powershell
 python -m pytest backend/tests
@@ -60,6 +74,8 @@ npm run build
 ```
 
 The backend tests validate both endpoints and enforce that an `insufficient_data` assessment has no fabricated risk or deterioration horizon. The frontend build runs TypeScript checking before bundling.
+
+The demo API test pins the current backend serialized response shape; it is not a full Pydantic-to-TypeScript contract equivalence proof. See [`scripts/README.md`](scripts/README.md) for script lifecycle and evidence reproduction rules.
 
 ## Canonical documentation
 

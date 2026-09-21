@@ -22,6 +22,31 @@ def test_demo_assessment_is_explicitly_synthetic_and_insufficient() -> None:
 
     assert response.status_code == 200
     payload = response.json()
+    assert set(payload) == {
+        "batch_id",
+        "status",
+        "risk",
+        "deterioration_horizon",
+        "factors",
+        "recommendation",
+        "reliability",
+        "provenance",
+    }
+    assert set(payload["reliability"]) == {
+        "level",
+        "confidence_score",
+        "reason_codes",
+        "missing_requirements",
+    }
+    assert set(payload["provenance"]) == {
+        "contract_version",
+        "engine_tier",
+        "engine_version",
+        "generated_at",
+        "source_dataset_id",
+        "simulation",
+        "notice",
+    }
     assert payload["status"] == "insufficient_data"
     assert payload["risk"] is None
     assert payload["deterioration_horizon"] is None
