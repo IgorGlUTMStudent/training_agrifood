@@ -1,6 +1,6 @@
 # ADR 0003 — Assessment, Ranking and Evaluation Semantics
 
-- **Status:** ACCEPTED HUMAN DECISION; Phase B canonical recording prepared for Project Brain review. Not yet committed or integrated.
+- **Status:** ACCEPTED HUMAN DECISION; INTEGRATED.
 - **Decision owner:** Vladimir — Integrator.
 - **Date:** 2026-09-20.
 - **Task:** VLD-02B; documentation only, no application implementation.
