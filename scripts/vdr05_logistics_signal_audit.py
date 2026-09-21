@@ -860,8 +860,10 @@ def compare_vdr04b_reproduction(
 ) -> Dict[str, Any]:
     """Verify replication of baseline, C, and C+L against historical VDR-04B evidence."""
     if not historical_path.exists():
-        logger.warning(f"Historical VDR-04B file {historical_path} not found; skipping reproduction comparison.")
-        return {"status": "historical_file_not_found"}
+        raise FileNotFoundError(
+            f"Mandatory historical VDR-04B reference file not found at '{historical_path}'. "
+            "VDR-05 requires historical reproduction verification before proceeding."
+        )
 
     with open(historical_path, "r", encoding="utf-8") as f:
         hist_data = json.load(f)
