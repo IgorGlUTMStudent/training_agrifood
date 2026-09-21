@@ -161,13 +161,135 @@ button {
   line-height: 1.5;
 }
 
+.limitation-block {
+  margin-top: 0.75rem;
+}
+
+.limitation-label {
+  display: block;
+  color: #684d33;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.chip--reason {
+  color: #5c3818;
+  background: #fae4d2;
+  border: 1px solid #ebc2a2;
+}
+
+.chip--requirement {
+  color: #493b2a;
+  background: #f0eae1;
+  border: 1px solid #dcd2c4;
+}
+
+.assessment-values {
+  margin-bottom: 1rem;
+}
+
+.assessment-metric {
+  border-left: 0.3rem solid #245943;
+  padding: 0.9rem 1rem;
+  background: #eef6f1;
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #18583b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #173126;
+}
+
+.metric-caption {
+  margin: 0.35rem 0 0;
+  color: #506158;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.assessment-section {
+  margin-top: 1.25rem;
+  border-top: 1px solid #e5e8df;
+  padding-top: 0.9rem;
+}
+
+.assessment-section h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  color: #173126;
+}
+
+.status-note {
+  margin: 0;
+  color: #68766f;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.recommendation-content {
+  margin-top: 0.35rem;
+}
+
+.recommendation-label {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #173126;
+}
+
+.review-flag {
+  display: inline-block;
+  margin-top: 0.35rem;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  color: #784812;
+  background: #fae8cc;
+  border: 1px solid #edd0a8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .factor-list {
-  margin-top: 1.7rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid #e5e8df;
+  padding-top: 0.9rem;
 }
 
 .factor-list h3 {
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   font-size: 0.95rem;
+  color: #173126;
 }
 
 .factor-list article {
@@ -176,12 +298,27 @@ button {
   padding: 0.9rem;
 }
 
-.factor-list article span {
+.factor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.factor-category {
   color: #567061;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.factor-effect {
+  color: #68766f;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .factor-list article p {
@@ -191,6 +328,8 @@ button {
 
 .reliability {
   margin-top: 1.25rem;
+  border-top: 1px solid #e5e8df;
+  padding-top: 0.9rem;
   color: #68766f;
   font-size: 0.88rem;
 }
