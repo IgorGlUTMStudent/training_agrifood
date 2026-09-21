@@ -1,7 +1,9 @@
-"""Raw dataset ingestion and structural diagnostics package.
+"""Raw dataset ingestion, structural diagnostics, and canonical mapping package.
 
-Provides pure raw CSV reading and physical structural integrity verification.
-Does NOT perform predictive modeling, cleaning, imputation, or domain entity conversion.
+Provides pure raw CSV reading, physical structural integrity verification, and
+canonical BatchAssessmentInput mapping.
+Does NOT perform predictive modeling, feature engineering, imputation,
+analytics scoring, or recommendation generation.
 """
 
 from __future__ import annotations

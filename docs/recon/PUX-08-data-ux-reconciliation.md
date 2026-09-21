@@ -4,7 +4,7 @@
 **Role:** Frontend / UX / Design specialist
 **Repository:** `Slave-of-Skynet/training_agrifood`
 **Base Revision:** `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`
-**Inspected Latest Main Revision:** `204c3ac37fb2098bfe6c0908a66c54065cda23ae`
+**Inspected Latest Main Revision:** `98e0df1db0b2987301b6f7523fd45520d67dffa0` (reconciled post-IGR-03 / APR-02F integration; historical PR #22 inspected `204c3ac37fb2098bfe6c0908a66c54065cda23ae`)
 **Target File:** `docs/recon/PUX-08-data-ux-reconciliation.md`
 **Status:** DRAFT FOR REVIEW (Reconciled After Repository Advance)
 
@@ -16,9 +16,9 @@ This report reconciles earlier UX proposals (PUX-00 through PUX-07) against the 
 - **Normative Decisions:** ADR 0001 (batch architecture), ADR 0002 (predictive input semantics, temporal boundaries, missingness), ADR 0003 / VLD-02B (assessment, ranking, and evaluation semantics).
 - **Data & Evaluation Evidence:** VDR-01 (dataset inventory), VDR-02 (temporal leakage), VDR-03 (target/horizon feasibility), VDR-04A (dispatch predictability benchmark), VDR-04B (telemetry marginal-value ablation under planned logistics).
 - **Product Research:** APR-01 Steps 0–8 (user decision model, proposed product workflow, adversarial review) and APR-02 packets. APR-02 remains `PROPOSED PRODUCT SPEC — NOT CANON`; APR2-D1–D6 require a Human/Integrator Gate before becoming accepted product decisions.
-- **Implementation State:** Ingestion diagnostics (IGR-02), frontend status/assessment components, and PR CI foundation (VLD-CI-01).
+- **Implementation State:** Ingestion diagnostics (IGR-02), canonical BatchAssessmentInput mapping (IGR-03), frontend status/assessment components, and PR CI foundation (VLD-CI-01).
 
-The historical task starting base remains recorded as `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`. The repository has advanced to `204c3ac37fb2098bfe6c0908a66c54065cda23ae` on `origin/main`. This reconciliation updates all UX requirements to be truthful to accepted decisions while strictly isolating unratified proposals and unknown operational parameters.
+The historical task starting base remains recorded as `70ab2a3ce6f060f9b2b43fcb7fb4ecd284426fdd`. The repository has advanced to `98e0df1db0b2987301b6f7523fd45520d67dffa0` on `origin/main` (incorporating PR #28 IGR-03 and PR #29 APR-02F). This reconciliation updates all UX requirements to be truthful to accepted decisions while strictly isolating unratified proposals and unknown operational parameters.
 
 ### Epistemic Classifications Applied:
 - **FACT:** Directly verifiable from committed repository code, dataset distributions, or accepted challenge canon.
@@ -80,8 +80,9 @@ Review of committed repository code as of latest `origin/main` (`204c3ac37fb2098
 1. **Raw Ingestion & Structural Diagnostics [IGR-02] (`backend/app/ingestion/**`):**
    - Pure raw CSV reading (`raw_reader.py`), physical schema specification (`structural_manifest.py`), and dataset integrity verification (`diagnostics.py`) are **IMPLEMENTED**.
    - Handles raw reading of all 8 sponsor CSV files and detects missing files, duplicate keys, broken foreign keys, and structural nulls.
-2. **Predictive Mapping & Analytics Pipeline:**
-   - Canonical `BatchAssessmentInput` conversion, feature engineering, ML model scoring, production ranking endpoint, and product batch inventory API are **NOT YET IMPLEMENTED**.
+2. **Canonical Mapping & Analytics Pipeline:**
+   - **Canonical `BatchAssessmentInput` mapping [IGR-03]:** **IMPLEMENTED** (`backend/app/domain/batch.py`, `backend/app/ingestion/canonical_mapper.py`). Implements deterministic raw-to-canonical conversion, temporal leakage boundary enforcement ($T_{entry} \le t \le T_{dispatch}$), preservation of structural missingness as `None`, planned logistics mapping, and fail-closed cardinality validation.
+   - **Analytics & Assessment Runtime:** Feature engineering, ML model scoring, runtime crop-median engine, production ranking endpoint, and product batch inventory API are **NOT YET IMPLEMENTED**.
    - `demo_assessment.py` continues to return a synthetic `insufficient_data` fixture.
 
 ---

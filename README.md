@@ -8,11 +8,13 @@ Smart Harvest is a **SIMULATION / training challenge** prototype for post-harves
 - Pydantic output contracts for assessment status, risk, deterioration horizon, factors, structured recommendations, reliability, and provenance.
 - React + TypeScript + Vite shell with loading, available, and unavailable backend states.
 - A deliberately neutral synthetic fixture marked `SIMULATION / synthetic fixture / not challenge data`.
+- Raw dataset ingestion and physical structural diagnostics for the sponsor CSV tables ([`backend/app/ingestion/`](backend/app/ingestion/)).
+- Typed canonical `BatchAssessmentInput` domain models ([`backend/app/domain/batch.py`](backend/app/domain/batch.py)) and deterministic raw-to-canonical mapper ([`backend/app/ingestion/canonical_mapper.py`](backend/app/ingestion/canonical_mapper.py)), enforcing dispatch-time cutoffs ($T_{assess} \equiv T_{dispatch}$), leakage-safe exclusion of future arrival/transit/outcome fields, preservation of structural missingness as `None`, and planned logistics mapping.
 - Canonical architecture, data-contract, evaluation, domain-rule, and runbook documentation under [`docs/`](docs/).
 
 ## What does not exist yet
 
-Canonical predictive-input semantics and the `BatchAssessmentInput` definition were accepted under ADR 0002 (VLD-02A), but their production code implementation is not implemented yet. There is no challenge-dataset ingestion in application code, risk formula, validated agronomic rule set, ML model, persistence layer, authentication, realtime processing, or deployment integration. Those choices remain intentionally unresolved until subsequent evidence and decision gates.
+While raw ingestion and canonical predictive-input mapping are now implemented, there is still no production analytics scoring runtime, runtime crop-median engine integration, production batch assessment endpoint, ranked multi-batch queue endpoint, recommendation engine, production learned model, persistence layer, authentication, realtime processing, or deployment integration. The demo endpoint continues to return a synthetic `insufficient_data` fixture. Those choices remain intentionally unresolved until subsequent evidence and decision gates.
 
 ## Prerequisites
 
@@ -73,9 +75,11 @@ The backend tests validate both endpoints and enforce that an `insufficient_data
 - [`docs/workstreams/`](docs/workstreams/) — SoS challenge-specific operating guides for the five team workstreams.
 - [`docs/decisions/0001-foundation-architecture.md`](docs/decisions/0001-foundation-architecture.md) — foundation ADR.
 - [`docs/decisions/0002-predictive-input-semantics.md`](docs/decisions/0002-predictive-input-semantics.md) — canonical predictive input semantics decision (ADR 0002).
+- [`docs/decisions/0003-assessment-evaluation-semantics.md`](docs/decisions/0003-assessment-evaluation-semantics.md) — assessment, ranking, and evaluation semantics decision (ADR 0003).
 - [`docs/data_recon/01_dataset_inventory.md`](docs/data_recon/01_dataset_inventory.md) — accepted dataset inventory and integrity profile (VDR-01).
 - [`docs/data_recon/02_temporal_leakage.md`](docs/data_recon/02_temporal_leakage.md) — accepted temporal semantics and leakage audit (VDR-02).
 - [`docs/data_recon/03_target_horizon_feasibility.md`](docs/data_recon/03_target_horizon_feasibility.md) — accepted target and deterioration-horizon feasibility evidence (VDR-03).
+- [`docs/data_recon/04_dispatch_predictability.md`](docs/data_recon/04_dispatch_predictability.md) — accepted dispatch predictability benchmark evidence (VDR-04A).
 - [`docs/product_recon/`](docs/product_recon/) — product and domain research evidence (APR-01; research notes, not automatically challenge canon).
 
-The sponsor pack supplies an inspectable raw schema. Observed integrity of the supplied snapshot has been profiled in accepted, integrated [VDR-01](docs/data_recon/01_dataset_inventory.md), temporal/leakage semantics have been audited in accepted, integrated [VDR-02](docs/data_recon/02_temporal_leakage.md), and target & deterioration-horizon feasibility has been profiled in accepted, integrated [VDR-03](docs/data_recon/03_target_horizon_feasibility.md). Canonical predictive-input semantics and the `BatchAssessmentInput` definition were accepted under [ADR 0002](docs/decisions/0002-predictive-input-semantics.md) (VLD-02A); production code implementation remains pending. Target, evaluation, feature-engineering, runtime deterioration-horizon, and action semantics remain separately unresolved.
+The sponsor pack supplies an inspectable raw schema. Observed integrity of the supplied snapshot has been profiled in accepted, integrated [VDR-01](docs/data_recon/01_dataset_inventory.md), temporal/leakage semantics have been audited in accepted, integrated [VDR-02](docs/data_recon/02_temporal_leakage.md), and target & deterioration-horizon feasibility has been profiled in accepted, integrated [VDR-03](docs/data_recon/03_target_horizon_feasibility.md). Canonical predictive-input semantics and the `BatchAssessmentInput` definition were accepted under [ADR 0002](docs/decisions/0002-predictive-input-semantics.md) (VLD-02A), and canonical mapping is implemented in application code (IGR-03). Assessment, ranking, baseline, and evaluation semantics were accepted under [ADR 0003](docs/decisions/0003-assessment-evaluation-semantics.md). Production analytics scoring, runtime crop-median engine execution, ranked queue endpoints, recommendations, and learned models remain separately unbuilt.
