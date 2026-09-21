@@ -11,9 +11,9 @@ A later deployment may package built SPA assets with the FastAPI service as one 
 - `frontend/src/api` — HTTP client and TypeScript representations of public responses.
 - `frontend/src/components` and `frontend/src/pages` — operator presentation and connection states.
 - `backend/app/api` — versioned HTTP boundary; no business logic.
-- `backend/app/domain` — stable assessment output semantics.
-- `backend/app/ingestion` — future validation/canonicalization boundary; intentionally empty.
-- `backend/app/analytics` — future deterministic baseline and optional learned tier; intentionally empty.
+- `backend/app/domain` — canonical `BatchAssessmentInput` and stable `RiskAssessment` output contracts.
+- `backend/app/ingestion` — raw CSV ingestion, structural diagnostics, and raw-to-canonical mapping.
+- `backend/app/analytics` — standalone deterministic crop-median baseline; runtime service integration and a production learned engine remain pending.
 - `backend/app/explain` — future structured explanation boundary.
 - `backend/app/recommend` — future structured action boundary.
 - `backend/app/services` — application orchestration; currently only a synthetic fixture builder.
@@ -44,7 +44,7 @@ FastAPI typed HTTP contract
 React operator UI
 ```
 
-Only the last three foundation links exist today: typed output contract, API transport, and a UI rendering a synthetic insufficient-data state.
+Raw ingestion and structural diagnostics, canonical `BatchAssessmentInput`, the raw-to-canonical mapper, and a deterministic crop-median baseline module are implemented. The runtime demo provides the typed `RiskAssessment` output contract, API transport, and a UI rendering a synthetic insufficient-data state. The baseline module is not yet integrated into a real assessment service.
 
 ## Analytics principles
 
@@ -64,4 +64,4 @@ Only the last three foundation links exist today: typed output contract, API tra
 
 ## Explicit non-goals for the foundation
 
-Dataset ingestion, production `BatchInput`, feature engineering, risk formulas, crop rules, ML, persistence, authentication, realtime processing, action-effect estimation, savings estimation, and deployment-platform integration are not implemented.
+Runtime baseline execution in a real assessment service, a production batch-assessment endpoint, a multi-batch ranked queue endpoint, a production learned engine, a validated recommendation engine, and a supported deterioration horizon are not implemented. Runtime feature engineering, crop rules, persistence, authentication, realtime processing, action-effect estimation, savings estimation, and deployment integration also remain unimplemented.

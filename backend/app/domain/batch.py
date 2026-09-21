@@ -6,13 +6,9 @@ Defined per ADR 0002 (Predictive Input Semantics and Temporal Leakage Boundary).
 from __future__ import annotations
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
 
-
-class ContractModel(BaseModel):
-    """Base contract model strictly forbidding undeclared extra fields."""
-
-    model_config = ConfigDict(extra="forbid")
+from app.domain._contract import ContractModel
 
 
 class BatchIdentity(ContractModel):

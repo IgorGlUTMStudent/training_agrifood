@@ -54,7 +54,3 @@ class StructuralDiagnostics:
     def get_issues_by_code(self, code: str) -> list[DiagnosticIssue]:
         """Filter issues by diagnostic code."""
         return [i for i in self.issues if i.code == code]
-
-    def get_issues_for_table(self, table_name: str) -> list[DiagnosticIssue]:
-        """Filter issues by table name."""
-        return [i for i in self.issues if i.table_name == table_name]

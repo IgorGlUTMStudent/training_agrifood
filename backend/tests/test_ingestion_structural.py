@@ -12,16 +12,12 @@ Validates:
 """
 
 from pathlib import Path
-import pytest
 
-from app.ingestion.diagnostics import DiagnosticIssue, StructuralDiagnostics
 from app.ingestion.raw_reader import (
-    RawSnapshot,
-    RawTable,
     read_raw_snapshot,
     read_raw_table,
 )
-from app.ingestion.structural_manifest import TABLE_MANIFEST, TableSpec
+from app.ingestion.structural_manifest import TABLE_MANIFEST
 
 
 DATA_DIR = Path(__file__).parent.parent.parent / "sponsor_pack" / "data"

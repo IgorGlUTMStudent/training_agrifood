@@ -1,1 +1,4 @@
-"""Future analytics boundary; no risk logic is implemented in the foundation."""
+"""Analytics boundary with a standalone deterministic crop-median baseline.
+
+The baseline is not integrated into the runtime assessment service.
+"""
