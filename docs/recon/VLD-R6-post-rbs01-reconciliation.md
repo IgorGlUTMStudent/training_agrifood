@@ -25,8 +25,10 @@ Reconcile repository documentation with the integrated RBS-01 baseline serving i
 At `794eac36b2deb7f244aeccc4ee2326100996edac`, the repository implements and enforces:
 1. **Offline baseline artifact generation:** `scripts/generate_baseline_artifact.py` performs a controlled fit on the Season-2024 training partition (`dispatch_datetime < 2025-05-01`, 900 batches) and writes a validated JSON artifact.
 2. **Versioned runtime artifact:** `backend/artifacts/baseline-crop-median-v1-p1-s2024.json` carries format version `baseline-artifact.v1`, family `baseline-crop-median-v1`, engine version `baseline-crop-median-v1-p1-s2024`, dataset `training-agrifood-snapshot-v1`, Season-2024 training partition metadata, SHA256 hashes of all 8 source tables, training membership SHA256 fingerprint, crop medians, and global median.
-3. **Runtime snapshot and artifact validation:** `backend/app/runtime/artifact.py` verifies the pinned 8-table raw snapshot against accepted SHA256 digests, validates structural diagnostics, verifies 1:1 session-batch relations, checks training membership against the artifact fingerprint, and reconstructs `CropMedianBaseline` without historical outcomes.
-4. **FastAPI lifespan runtime context:** `backend/app/main.py` and `backend/app/runtime/context.py` initialize `AnalyticsRuntimeContext` on application startup via environment variables `SMART_HARVEST_DATA_DIR` and `SMART_HARVEST_BASELINE_ARTIFACT`, providing an explicit fail-closed dependency (`get_runtime`).
+3. **Runtime validation and context composition:**
+   - `backend/app/runtime/artifact.py`: artifact schema, pinned source hashes/snapshot validation, partition reconstruction/fingerprint primitives.
+   - `backend/app/runtime/context.py`: artifact + snapshot composition, training-membership fingerprint comparison, crop coverage validation, `CropMedianBaseline` reconstruction, `AnalyticsRuntimeContext` publication.
+4. **FastAPI lifespan runtime context:** `backend/app/main.py` initializes `AnalyticsRuntimeContext` on application startup via environment variables `SMART_HARVEST_DATA_DIR` and `SMART_HARVEST_BASELINE_ARTIFACT`, providing an explicit fail-closed dependency (`get_runtime`).
 5. **Real single-batch HTTP assessment route:** `GET /api/v1/assessments/{batch_id}` in `backend/app/api/routes.py`:
    - Validates release eligibility: Season-2024 training batches receive HTTP 409 ("Batch is not eligible for this assessment release").
    - Validates existence: Unknown batch IDs receive HTTP 404 ("Batch not found").
@@ -56,8 +58,8 @@ The following work was **NOT** authorized or implemented by RBS-01 and remains d
 - **Learned model tier:** No ML model family (e.g. HistGradientBoosting) is selected or wired for serving.
 - **Action recommendations:** `recommendation` remains `null`; no intervention catalogue or causal efficacy is validated.
 - **Deterioration horizon:** `deterioration_horizon` remains `null`; continuous countdown is unsupported by data.
-- **Production deployment:** `simulation = false` is forbidden; no cloud hosting or deployment is configured.
-- **Challenge outcomes:** Outcome 1 (relative loss-severity score) is operational for individual eligible batches; Outcomes 2, 3, and 4 remain unclosed. No claim of food-loss reduction is demonstrated.
+- **Production deployment:** `simulation = false` is not authorized by ADR 0005 / HG-R5 and remains outside this gate; no cloud hosting or production deployment is configured.
+- **Challenge outcomes:** Outcome 1 is partially supported: an eligible individual batch can receive the accepted relative loss-severity score, but a multi-batch/ranked operator prioritisation workflow is not implemented. Outcomes 2, 3, and 4 remain unclosed. No food-loss-reduction claim is demonstrated.
 - **VLD-03:** The end-to-end verification gate has not started.
 
 ## Current end-to-end path

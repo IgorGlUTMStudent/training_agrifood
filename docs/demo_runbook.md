@@ -31,7 +31,7 @@ Invoke-RestMethod http://localhost:8000/api/v1/demo/assessment
 
 Expected behavior:
 - `health.analytics = "not_configured"` (`status: ok`, `service: smart-harvest`).
-- `demo/assessment` returns the synthetic fixture (`status: insufficient_data`, `simulation: true`, notice `"SIMULATION / synthetic fixture / not challenge data"`, omitting risk, horizon, and recommendation).
+- `demo/assessment` returns the synthetic fixture (`status: insufficient_data`, `simulation: true`, notice `"SIMULATION / synthetic fixture / not challenge data"`, `risk = null`, `deterioration_horizon = null`, `recommendation = null`).
 - Real assessment route `GET /api/v1/assessments/{batch_id}` returns HTTP 503 ("Analytics runtime unavailable") with `Cache-Control: no-store`.
 
 ### Mode B — Configured RBS-01 backend
