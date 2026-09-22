@@ -1,12 +1,18 @@
 from fastapi.testclient import TestClient
+import pytest
 
-from app.main import app
+from app.main import create_app
 from app.services.demo_assessment import SIMULATION_NOTICE
 
-client = TestClient(app)
+@pytest.fixture
+def client(monkeypatch):
+    monkeypatch.delenv("SMART_HARVEST_DATA_DIR", raising=False)
+    monkeypatch.delenv("SMART_HARVEST_BASELINE_ARTIFACT", raising=False)
+    with TestClient(create_app()) as test_client:
+        yield test_client
 
 
-def test_health_endpoint() -> None:
+def test_health_endpoint(client) -> None:
     response = client.get("/api/v1/health")
 
     assert response.status_code == 200
@@ -17,7 +23,7 @@ def test_health_endpoint() -> None:
     }
 
 
-def test_demo_assessment_is_explicitly_synthetic_and_insufficient() -> None:
+def test_demo_assessment_is_explicitly_synthetic_and_insufficient(client) -> None:
     response = client.get("/api/v1/demo/assessment")
 
     assert response.status_code == 200
