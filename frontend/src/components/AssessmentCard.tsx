@@ -83,28 +83,23 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
         <div className="assessment-section score-computation-section">
           <h3>How this score is computed</h3>
           <p>
-            The score is derived from the historical median loss fraction for this crop in
-            the training data.
+            The score is derived from the historical median loss_fraction_pct for this crop in
+            the training partition.
           </p>
-          <p>For an unseen crop, the global training median is used.</p>
+          <p>For an unseen crop, the global training-partition median is used.</p>
           <p>
-            The resulting loss-severity value is clipped to the accepted 0–1 score range.
+            That predicted loss fraction is clipped to [0, 100] and divided by 100.
+          </p>
+          <p>
+            The resulting risk.score is a [0, 1] relative loss-severity score, not a probability,
+            confidence score, or guaranteed future loss.
           </p>
         </div>
       )}
 
       <div className="assessment-section">
         <h3>Deterioration timing</h3>
-        {assessment.deterioration_horizon ? (
-          <p className="status-note">
-            Window: {assessment.deterioration_horizon.starts_at}
-            {assessment.deterioration_horizon.ends_at
-              ? ` to ${assessment.deterioration_horizon.ends_at}`
-              : ""}
-          </p>
-        ) : (
-          <p className="status-note">Not estimable from supplied observations</p>
-        )}
+        <p className="status-note">Not estimable from supplied observations</p>
       </div>
 
       <div className="assessment-section">

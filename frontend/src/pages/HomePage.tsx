@@ -45,7 +45,7 @@ export function HomePage() {
         <h1>Smart Harvest</h1>
         <p>
           Dispatch-time decision support for reviewing batch assessments and
-          prioritising attention where a validated score is available.
+          prioritising attention where an assessment score is available.
         </p>
       </header>
 
