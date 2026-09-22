@@ -220,3 +220,18 @@ Exact artifact path, private JSON arrangement, settings defaults and path packag
 This ADR is synchronized only into [architecture](../architecture.md), [integration contract](../integration_contract.md) and the [UNKNOWN register](../assumptions_unknowns.md). The reviewed recon is unchanged. Existing ADRs, challenge canon, implementation-facing documents, APR-03A's historical snapshot, code, schemas, configuration and dependencies are not rewritten. No artifact is generated and no baseline is fitted in this task.
 
 **STOP FOR PROJECT BRAIN REVIEW.** No commit, push, PR creation, merge or Igor implementation before review. An ACCEPTABLE review establishes documentation coherence for the subsequent Human integration gate; it does not itself authorize merge.
+
+## Post-decision implementation status — RBS-01
+
+**FACT — Later implementation:**
+RBS-01 was implemented and Human Integrated through PR #42, merge commit `794eac36b2deb7f244aeccc4ee2326100996edac` (implementation commit `59cd759a1ac098475e553a6852505904f61341a7`).
+
+This implementation fulfilled accepted ADR 0005 decisions D1–D7 in committed code:
+- **D1 & D2:** Controlled offline deterministic baseline artifact generation (`scripts/generate_baseline_artifact.py`) and validated versioned artifact `backend/artifacts/baseline-crop-median-v1-p1-s2024.json` (family `baseline-crop-median-v1`, concrete engine `baseline-crop-median-v1-p1-s2024`, dataset `training-agrifood-snapshot-v1`, Season-2024 training partition of 900 batches, source table SHA256 hashes, training membership fingerprint, crop medians, and global median).
+- **D3:** Dataset-backed provenance semantics (`simulation = True`, `engine_tier = "deterministic_baseline"`, notice `"SIMULATION / training challenge dataset / deterministic baseline / not production deployment"`). Existing synthetic fixture remains distinct and unchanged.
+- **D4:** FastAPI lifespan startup initialization (`backend/app/main.py`), pinned snapshot validation (8 tables, source hashes, structural diagnostics), artifact schema and membership validation, and explicit runtime dependency provider (`backend/app/runtime/context.py`, `backend/app/runtime/artifact.py`).
+- **D5:** Dataset-backed single-batch HTTP assessment route `GET /api/v1/assessments/{batch_id}` (`backend/app/api/routes.py`), release eligibility enforcement (409 for training batches, 404 for unknown batches), fail-closed degraded transport semantics (503 if unconfigured or unavailable, 500 on mapping/internal error), and `Cache-Control: no-store`.
+- **D6:** Synchronized health states across backend and frontend contracts (`"not_configured"`, `"ready"`, `"unavailable"`). Top-level `status = "ok"` and HTTP 200 remain application liveness. Configuration via `SMART_HARVEST_DATA_DIR` and `SMART_HARVEST_BASELINE_ARTIFACT`.
+- **D7:** Bounded implementation scope was preserved: multi-batch endpoints, ranked queue, facility filtering, pagination, frontend real-assessment consumption, learned models, recommendation engines, deterioration models, and deployment remain deferred.
+
+This implementation note records fulfillment of already accepted ADR 0005 D1–D7. It introduces no new decision.
