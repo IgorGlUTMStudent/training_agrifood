@@ -7,11 +7,13 @@ interface BackendStatusProps {
 export function BackendStatus({ health }: BackendStatusProps) {
   return (
     <section className="panel status-panel" aria-labelledby="backend-status-heading">
-      <div>
-        <p className="eyebrow">Backend status</p>
-        <h2 id="backend-status-heading">Available</h2>
+      <div className="status-panel-header">
+        <div>
+          <p className="eyebrow">Service status</p>
+          <h2 id="backend-status-heading">Available</h2>
+        </div>
+        <span className="status-chip status-chip--available">Connected</span>
       </div>
-      <span className="status-chip status-chip--available">Connected</span>
       <dl className="metadata">
         <div>
           <dt>Service</dt>

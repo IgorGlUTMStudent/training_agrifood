@@ -14,21 +14,31 @@ function humanizeReasonCode(code: string): string {
 
 export function AssessmentCard({ assessment }: AssessmentCardProps) {
   const isInsufficient = assessment.status === "insufficient_data";
+  const isBaseline =
+    assessment.status === "assessed" &&
+    assessment.provenance.engine_tier === "deterministic_baseline";
   const { reliability, recommendation, factors } = assessment;
 
   return (
     <section className="panel assessment-panel" aria-labelledby="assessment-heading">
-      <div className="fixture-banner">{assessment.provenance.notice}</div>
-      <p className="eyebrow">Contract proof</p>
-      <h2 id="assessment-heading">Synthetic assessment</h2>
+      {assessment.provenance.simulation && (
+        <div className="fixture-banner" role="note">
+          {assessment.provenance.notice}
+        </div>
+      )}
+
+      <p className="eyebrow">Batch Review</p>
+      <h2 id="assessment-heading">
+        {isInsufficient ? "Not assessed / Incomplete data" : "Batch Assessment"}
+      </h2>
       <p className="batch-id">Batch: {assessment.batch_id}</p>
 
       {isInsufficient ? (
         <div className="insufficient-state" role="status">
-          <strong>Insufficient data</strong>
-          <p>
-            No risk score is available because required inputs could not be satisfied.
-            This batch cannot be scored and must not be treated as zero risk.
+          <p className="insufficient-notice">
+            No predictive score is available for this batch because required inputs were
+            not satisfied. This does not mean low or high risk. Smart Harvest does not
+            determine the operational disposition of this batch.
           </p>
 
           {reliability.reason_codes.length > 0 && (
@@ -60,7 +70,7 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
       ) : (
         <div className="assessment-values">
           <div className="assessment-metric">
-            <span className="metric-label">Predicted loss severity score:</span>
+            <span className="metric-label">Predicted loss severity score</span>
             <span className="metric-value">{assessment.risk?.score}</span>
             <p className="metric-caption">
               Prioritisation score (0.00–1.00). Not a probability or guarantee of loss.
@@ -69,9 +79,32 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
         </div>
       )}
 
+      {isBaseline && (
+        <div className="assessment-section score-computation-section">
+          <h3>How this score is computed</h3>
+          <p>
+            The score is derived from the historical median loss fraction for this crop in
+            the training data.
+          </p>
+          <p>For an unseen crop, the global training median is used.</p>
+          <p>
+            The resulting loss-severity value is clipped to the accepted 0–1 score range.
+          </p>
+        </div>
+      )}
+
       <div className="assessment-section">
         <h3>Deterioration timing</h3>
-        <p className="status-note">Not estimable from supplied observations</p>
+        {assessment.deterioration_horizon ? (
+          <p className="status-note">
+            Window: {assessment.deterioration_horizon.starts_at}
+            {assessment.deterioration_horizon.ends_at
+              ? ` to ${assessment.deterioration_horizon.ends_at}`
+              : ""}
+          </p>
+        ) : (
+          <p className="status-note">Not estimable from supplied observations</p>
+        )}
       </div>
 
       <div className="assessment-section">
@@ -84,12 +117,16 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
             )}
           </div>
         ) : (
-          <p className="status-note">No validated recommendation available</p>
+          <p className="status-note">
+            Action recommendations are unavailable. Current evidence does not validate
+            intervention effectiveness. Smart Harvest prioritizes batches for review but
+            does not prescribe an operational action.
+          </p>
         )}
       </div>
 
       {factors.length > 0 && (
-        <div className="factor-list">
+        <div className="assessment-section factor-list">
           <h3>Structured factors</h3>
           {factors.map((factor) => (
             <article key={factor.code}>
@@ -103,8 +140,24 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
         </div>
       )}
 
-      <div className="reliability">
-        Reliability: <strong>{reliability.level}</strong>
+      <div className="assessment-section metadata-section">
+        <div className="reliability">
+          Reliability: <strong>{reliability.level}</strong>
+        </div>
+        <dl className="provenance-meta">
+          <div>
+            <dt>Engine tier</dt>
+            <dd>{assessment.provenance.engine_tier.replace("_", " ")}</dd>
+          </div>
+          <div>
+            <dt>Engine version</dt>
+            <dd>{assessment.provenance.engine_version}</dd>
+          </div>
+          <div>
+            <dt>Contract version</dt>
+            <dd>{assessment.provenance.contract_version}</dd>
+          </div>
+        </dl>
       </div>
     </section>
   );
