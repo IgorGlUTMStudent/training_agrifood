@@ -220,6 +220,21 @@ def verify_artifact_vdr06a_parity(
     with open(vdr06a_path, "r", encoding="utf-8") as f:
         vdr06a_data = json.load(f)
 
+    # Verify artifact full identity and lineage fail-closed
+    if art_data.get("format_version") != "baseline-artifact.v1":
+        raise ValueError(f"Artifact format_version mismatch: {art_data.get('format_version')}")
+    if art_data.get("algorithm_family") != "baseline-crop-median-v1":
+        raise ValueError(f"Artifact algorithm_family mismatch: {art_data.get('algorithm_family')}")
+    if art_data.get("engine_version") != "baseline-crop-median-v1-p1-s2024":
+        raise ValueError(f"Artifact engine_version mismatch: {art_data.get('engine_version')}")
+    if art_data.get("source_dataset_id") != "training-agrifood-snapshot-v1":
+        raise ValueError(f"Artifact source_dataset_id mismatch: {art_data.get('source_dataset_id')}")
+    expected_tp = {"batch_count": 900, "predicate": "dispatch_datetime < 2025-05-01"}
+    if art_data.get("training_partition") != expected_tp:
+        raise ValueError(f"Artifact training_partition mismatch: {art_data.get('training_partition')}")
+    if art_data.get("source_table_hashes") != SOURCE_HASHES:
+        raise ValueError("Artifact source_table_hashes mismatch against accepted raw dataset hashes")
+
     # Verify training membership fingerprint
     art_fingerprint = art_data.get("training_membership_sha256")
     if art_fingerprint != training_fingerprint:
@@ -470,6 +485,7 @@ def audit_held_out_api(
         manifest.append({
             "batch_id": bid,
             "crop_type": b["crop_type"],
+            "membership": "held_out",
             "api_score": act_score,
             "expected_score": exp_score,
             "absolute_delta": delta,
@@ -500,9 +516,21 @@ def audit_held_out_api(
         "http_200_count": 900,
         "missing_count": 0,
         "duplicate_count": 0,
+        "unexpected_count": 0,
         "cache_control_no_store_count": invariants["cache_control_no_store_count"],
         "status": "PASS",
     }
+
+    if (
+        coverage_summary["expected_count"] != 900
+        or coverage_summary["requested_count"] != 900
+        or coverage_summary["http_200_count"] != 900
+        or coverage_summary["missing_count"] != 0
+        or coverage_summary["duplicate_count"] != 0
+        or coverage_summary["unexpected_count"] != 0
+        or coverage_summary["cache_control_no_store_count"] != 900
+    ):
+        raise AssertionError(f"Held-out coverage or cache-control invariant failed: {coverage_summary}")
 
     invariants["status"] = "PASS"
     logger.info(f"Held-out audit complete: max_delta={max_delta}, mismatches={mismatch_count}.")
@@ -538,9 +566,10 @@ def audit_training_release_gate(
         except Exception:
             pass
 
-    if http_409_count != 900 or unexpected_count != 0 or detail_matches != 900:
+    if http_409_count != 900 or unexpected_count != 0 or detail_matches != 900 or cache_control_matches != 900:
         raise AssertionError(
-            f"Training release gate failed: 409_count={http_409_count}, unexpected={unexpected_count}, detail_matches={detail_matches}"
+            f"Training release gate failed: 409_count={http_409_count}, unexpected={unexpected_count}, "
+            f"detail_matches={detail_matches}, cache_control_matches={cache_control_matches}"
         )
 
     logger.info("Training release gate PASSED for all 900 batches.")
@@ -577,10 +606,14 @@ def audit_edge_cases(
         "http_status": res_unk.status_code,
         "detail": res_unk.json().get("detail") if res_unk.status_code == 404 else None,
         "cache_control": res_unk.headers.get("cache-control"),
-        "status": "PASS" if (res_unk.status_code == 404 and res_unk.json().get("detail") == "Batch not found") else "FAIL",
+        "status": "PASS" if (
+            res_unk.status_code == 404
+            and res_unk.json().get("detail") == "Batch not found"
+            and res_unk.headers.get("cache-control") == "no-store"
+        ) else "FAIL",
     }
     if unk_summary["status"] != "PASS":
-        raise AssertionError(f"Unknown batch test failed: {res_unk.status_code}")
+        raise AssertionError(f"Unknown batch test failed: status={res_unk.status_code}, cache_control={res_unk.headers.get('cache-control')}")
 
     # 2. Method rejection 405
     res_post = client.post(f"/api/v1/assessments/{sample_held_out_bid}")
@@ -588,10 +621,13 @@ def audit_edge_cases(
         "tested_batch_id": sample_held_out_bid,
         "http_status": res_post.status_code,
         "observed_cache_control": res_post.headers.get("cache-control"),
-        "status": "PASS" if res_post.status_code == 405 else "FAIL",
+        "status": "PASS" if (
+            res_post.status_code == 405
+            and res_post.headers.get("cache-control") == "no-store"
+        ) else "FAIL",
     }
     if post_summary["status"] != "PASS":
-        raise AssertionError(f"Method rejection test failed: {res_post.status_code}")
+        raise AssertionError(f"Method rejection test failed: status={res_post.status_code}, cache_control={res_post.headers.get('cache-control')}")
 
     # Save current env
     saved_data = os.environ.get("SMART_HARVEST_DATA_DIR")
@@ -614,6 +650,7 @@ def audit_edge_cases(
             "status": "PASS" if (
                 h_unconf.status_code == 200 and h_unconf.json().get("analytics") == "not_configured"
                 and a_unconf.status_code == 503 and a_unconf.json().get("detail") == "Analytics runtime unavailable"
+                and a_unconf.headers.get("cache-control") == "no-store"
             ) else "FAIL",
         }
         if unconf_summary["status"] != "PASS":
@@ -637,6 +674,7 @@ def audit_edge_cases(
             "status": "PASS" if (
                 h_unavail.status_code == 200 and h_unavail.json().get("analytics") == "unavailable"
                 and a_unavail.status_code == 503 and a_unavail.json().get("detail") == "Analytics runtime unavailable"
+                and a_unavail.headers.get("cache-control") == "no-store"
             ) else "FAIL",
         }
         if unavail_summary["status"] != "PASS":
@@ -863,12 +901,18 @@ def run_audit(data_dir: Path, artifact_path: Path, vdr06a_path: Path) -> Dict[st
         "dataset_hashes": {name: item["actual_sha256"] for name, item in dataset_integrity["tables"].items()},
     }
 
+    def to_relative_posix(p: Path) -> str:
+        try:
+            return p.resolve().relative_to(repo_root.resolve()).as_posix()
+        except ValueError:
+            return p.as_posix()
+
     references = {
-        "artifact_path": str(artifact_path).replace("\\", "/"),
+        "artifact_path": to_relative_posix(artifact_path),
         "artifact_sha256": artifact_sha,
-        "vdr06a_path": str(vdr06a_path).replace("\\", "/"),
+        "vdr06a_path": to_relative_posix(vdr06a_path),
         "vdr06a_sha256": vdr06a_sha,
-        "data_dir": str(data_dir).replace("\\", "/"),
+        "data_dir": to_relative_posix(data_dir),
     }
 
     conclusions = {
