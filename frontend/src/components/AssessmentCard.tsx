@@ -14,21 +14,31 @@ function humanizeReasonCode(code: string): string {
 
 export function AssessmentCard({ assessment }: AssessmentCardProps) {
   const isInsufficient = assessment.status === "insufficient_data";
+  const isBaseline =
+    assessment.status === "assessed" &&
+    assessment.provenance.engine_tier === "deterministic_baseline";
   const { reliability, recommendation, factors } = assessment;
 
   return (
     <section className="panel assessment-panel" aria-labelledby="assessment-heading">
-      <div className="fixture-banner">{assessment.provenance.notice}</div>
-      <p className="eyebrow">Contract proof</p>
-      <h2 id="assessment-heading">Synthetic assessment</h2>
+      {assessment.provenance.simulation && (
+        <div className="fixture-banner" role="note">
+          {assessment.provenance.notice}
+        </div>
+      )}
+
+      <p className="eyebrow">Batch Review</p>
+      <h2 id="assessment-heading">
+        {isInsufficient ? "Not assessed / Incomplete data" : "Batch Assessment"}
+      </h2>
       <p className="batch-id">Batch: {assessment.batch_id}</p>
 
       {isInsufficient ? (
         <div className="insufficient-state" role="status">
-          <strong>Insufficient data</strong>
-          <p>
-            No risk score is available because required inputs could not be satisfied.
-            This batch cannot be scored and must not be treated as zero risk.
+          <p className="insufficient-notice">
+            No predictive score is available for this batch because required inputs were
+            not satisfied. This does not mean low or high risk. Smart Harvest does not
+            determine the operational disposition of this batch.
           </p>
 
           {reliability.reason_codes.length > 0 && (
@@ -60,12 +70,30 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
       ) : (
         <div className="assessment-values">
           <div className="assessment-metric">
-            <span className="metric-label">Predicted loss severity score:</span>
+            <span className="metric-label">Predicted loss severity score</span>
             <span className="metric-value">{assessment.risk?.score}</span>
             <p className="metric-caption">
               Prioritisation score (0.00–1.00). Not a probability or guarantee of loss.
             </p>
           </div>
+        </div>
+      )}
+
+      {isBaseline && (
+        <div className="assessment-section score-computation-section">
+          <h3>How this score is computed</h3>
+          <p>
+            The score is derived from the historical median loss_fraction_pct for this crop in
+            the training partition.
+          </p>
+          <p>For an unseen crop, the global training-partition median is used.</p>
+          <p>
+            That predicted loss fraction is clipped to [0, 100] and divided by 100.
+          </p>
+          <p>
+            The resulting risk.score is a [0, 1] relative loss-severity score, not a probability,
+            confidence score, or guaranteed future loss.
+          </p>
         </div>
       )}
 
@@ -84,12 +112,16 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
             )}
           </div>
         ) : (
-          <p className="status-note">No validated recommendation available</p>
+          <p className="status-note">
+            Action recommendations are unavailable. Current evidence does not validate
+            intervention effectiveness. Smart Harvest prioritizes batches for review but
+            does not prescribe an operational action.
+          </p>
         )}
       </div>
 
       {factors.length > 0 && (
-        <div className="factor-list">
+        <div className="assessment-section factor-list">
           <h3>Structured factors</h3>
           {factors.map((factor) => (
             <article key={factor.code}>
@@ -103,8 +135,24 @@ export function AssessmentCard({ assessment }: AssessmentCardProps) {
         </div>
       )}
 
-      <div className="reliability">
-        Reliability: <strong>{reliability.level}</strong>
+      <div className="assessment-section metadata-section">
+        <div className="reliability">
+          Reliability: <strong>{reliability.level}</strong>
+        </div>
+        <dl className="provenance-meta">
+          <div>
+            <dt>Engine tier</dt>
+            <dd>{assessment.provenance.engine_tier.replace("_", " ")}</dd>
+          </div>
+          <div>
+            <dt>Engine version</dt>
+            <dd>{assessment.provenance.engine_version}</dd>
+          </div>
+          <div>
+            <dt>Contract version</dt>
+            <dd>{assessment.provenance.contract_version}</dd>
+          </div>
+        </dl>
       </div>
     </section>
   );
