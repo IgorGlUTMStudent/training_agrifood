@@ -1,7 +1,7 @@
 export interface HealthResponse {
   status: "ok";
   service: "smart-harvest";
-  analytics: "not_configured";
+  analytics: "not_configured" | "ready" | "unavailable";
 }
 
 export type AssessmentStatus = "assessed" | "insufficient_data";

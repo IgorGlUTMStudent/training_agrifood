@@ -18,7 +18,7 @@ from app.domain._contract import ContractModel
 class HealthResponse(ContractModel):
     status: Literal["ok"]
     service: Literal["smart-harvest"]
-    analytics: Literal["not_configured"]
+    analytics: Literal["not_configured", "ready", "unavailable"]
 
 
 class AssessmentStatus(str, Enum):
