@@ -7,9 +7,10 @@
 **Owner**: Viktor (Data & Evaluation Owner)
 **Integrator / Reviewer**: Vladimir (Project Brain / Integrator)
 **Status**: DRAFT FOR PROJECT BRAIN REVIEW
-**Results Artifact**: [`docs/data_recon/06b_runtime_release_parity_results.json`](06b_runtime_release_parity_results.json) (SHA256: `8a559ce54c8ba0a2d50953ae87492405f238373de98cd0364ecf0b508eac806e`)
-**Executable Harness**: [`scripts/vdr06b_runtime_release_parity.py`](../../scripts/vdr06b_runtime_release_parity.py) (SHA256: `5a3acaaf7673b2a97fa8a86315618a6b07585364f45a8eb363366cbec8286db8`)
+**Results Artifact**: [`docs/data_recon/06b_runtime_release_parity_results.json`](06b_runtime_release_parity_results.json) (SHA256: `9128024b198e3492be988ed5b58d20b4f277063ef0959354b9fefbb9a8e60cb7`)
+**Executable Harness**: [`scripts/vdr06b_runtime_release_parity.py`](../../scripts/vdr06b_runtime_release_parity.py) (SHA256: `e6431e1188f682b3ec26473a9ff7511bc25dffccdba0cea3905653722650b079`)
 **Base Commit**: `fc71c67356704c2b33d0c4c5c28afc09c4007560`
+**Committed Audit Harness Commit**: `2c841939a68f360ae8854900f9fe3a0800fde37d`
 
 ---
 
@@ -133,6 +134,7 @@ All 900 independently identified held-out batches were requested sequentially th
 - **HTTP 200 OK Count**: 900
 - **Missing Predictions**: 0
 - **Duplicate Predictions**: 0
+- **Unexpected Predictions**: 0
 - **Cache-Control `no-store` Count**: 900
 - **Coverage Status**: **PASS** (100% complete coverage)
 
@@ -256,9 +258,9 @@ All 900 held-out responses satisfied 100% of schema and contract invariants (900
    - Executed 2 repeat requests per sentinel (18 total requests, all HTTP 200).
    - Removing only `generated_at`, all response payloads were 100% identical (0 mismatches across repeat requests).
 2. **Audit Harness Reproducibility**:
-   - Scratch Run 1 SHA256: `8a559ce54c8ba0a2d50953ae87492405f238373de98cd0364ecf0b508eac806e`
-   - Scratch Run 2 SHA256: `8a559ce54c8ba0a2d50953ae87492405f238373de98cd0364ecf0b508eac806e`
-   - Official Run SHA256: `8a559ce54c8ba0a2d50953ae87492405f238373de98cd0364ecf0b508eac806e`
+   - Scratch Run 1 SHA256: `9128024b198e3492be988ed5b58d20b4f277063ef0959354b9fefbb9a8e60cb7`
+   - Scratch Run 2 SHA256: `9128024b198e3492be988ed5b58d20b4f277063ef0959354b9fefbb9a8e60cb7`
+   - Official Run SHA256: `9128024b198e3492be988ed5b58d20b4f277063ef0959354b9fefbb9a8e60cb7`
    - Byte-identical across all runs (`True`).
 
 ---
