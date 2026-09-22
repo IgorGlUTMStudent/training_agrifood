@@ -8,12 +8,18 @@
 - **Reviewer / Decision Owner:** Vladimir — Project Brain / Integrator
 - **Repository:** `Slave-of-Skynet/training_agrifood` (upstream), `IgorGlUTMStudent/training_agrifood` (origin fork)
 - **Target Branch:** `igor/igr-05a-multi-batch-serving-recon`
-- **Verified Base HEAD:** `401f395bdf6dab1317a36d2e2519627ce0858a3c` (merged PR #45 — VDR-06B runtime release parity)
-- **Reference Base Commit:** `fc71c67356704c2b33d0c4c5c28afc09c4007560` (PR #43 — VLD-R6 post-RBS-01 reconciliation)
-- **Base SHA Reconciliation:** Upstream `main` advanced from `fc71c67356704c2b33d0c4c5c28afc09c4007560` to `401f395bdf6dab1317a36d2e2519627ce0858a3c` via two merged PRs: PR #44 (APR-04A challenge outcome coverage and evidence gaps, commits `5993597` and `f8cc4b5`) and PR #45 (VDR-06B runtime release parity audit, commits `b504ac8`, `2c84193`, and `be2aef0`). Verification confirms zero changes between `fc71c67` and `401f395` touch the RBS-01 runtime, backend API routes, canonical mapper, domain contracts (`RiskAssessment`, `BatchAssessmentInput`), or ADR 0003–0005 decisions. The working tree was clean and fast-forwarded cleanly.
+- **Verified Base HEAD:** `540c98eb273a14d6a61e37c89c69d4bf9babfa78` (merged PR #46 — PUX-11A single-batch frontend integration)
+- **Reference Base Commit:** `401f395bdf6dab1317a36d2e2519627ce0858a3c` (merged PR #45 — VDR-06B runtime release parity)
+- **Base SHA Reconciliation:** Upstream `main` advanced from `401f395bdf6dab1317a36d2e2519627ce0858a3c` to `540c98eb273a14d6a61e37c89c69d4bf9babfa78` via merged PR #46 (PUX-11A single-batch dataset-backed assessment integration, commit `4e6f4ab`).
+  - *PUX-11A frontend flow changes (External Context):* PR #46 integrated frontend lookup against the single-batch endpoint (`GET /api/v1/assessments/{batch_id}`):
+    1. [`frontend/src/api/client.ts`](frontend/src/api/client.ts): Added `ApiError` class with HTTP status code preservation, and added `getAssessment(batchId, signal)`.
+    2. [`frontend/src/components/BatchAssessmentLookup.tsx`](frontend/src/components/BatchAssessmentLookup.tsx): Created single-batch lookup form input.
+    3. [`frontend/src/pages/HomePage.tsx`](frontend/src/pages/HomePage.tsx): Decoupled health check connection state from assessment request state; implemented `handleLookup()` calling `getAssessment()`; added dedicated UI panels for idle, loading, and HTTP 404 ("Batch not found"), 409 ("not eligible for release"), and 503 ("analytics runtime unavailable") error states.
+    4. [`frontend/src/styles.css`](frontend/src/styles.css): Added layout and styling for single-batch assessment lookup and error feedback.
+  - *Implementation Scope Boundary:* PUX-11A is strictly frontend integration for single-batch lookup. It touched zero backend routes, zero runtime models, zero canonical mapper logic, and zero ADR decisions. PUX-11A is external context only and is strictly **NOT** part of the IGR-05A implementation scope.
 - **Task Type:** RECON / DECISION PACKET — DOCUMENTATION ONLY
 - **Implementation Authorization:** NONE (Human Gate approval strictly required prior to implementation)
-- **Write Scope:** Exactly one new file: [`docs/recon/IGR-05A-multi-batch-serving-recon.md`](file:///D:/AgriFood/training_agrifood/docs/recon/IGR-05A-multi-batch-serving-recon.md)
+- **Write Scope:** Exactly one new file: [`docs/recon/IGR-05A-multi-batch-serving-recon.md`](docs/recon/IGR-05A-multi-batch-serving-recon.md)
 - **Epistemic Status:** RECOMMENDATIONS AND DECISION OPTIONS FOR HUMAN GATE REVIEW; DOES NOT ALTER EXISTING CANONICAL DECISIONS
 
 ---
@@ -23,7 +29,7 @@
 ### Purpose and context
 Following the successful integration of RBS-01 (PR #42) and the post-RBS-01 reconciliations (VLD-R6 / PR #43, APR-04A / PR #44, VDR-06B / PR #45), the repository possesses an operational, dataset-backed single-batch HTTP assessment serving path: `GET /api/v1/assessments/{batch_id}`. 
 
-However, Challenge Outcome 1 ("Prioritize batches according to deterioration risk to decide which should be shipped, processed, or re-inspected first") requires an operator triage view across **multiple batches** within an operational shift or replay window. Furthermore, [ADR 0004](./../decisions/0004-mvp-product-scope.md) (APR2-D2) established that the MVP operational triage view selects canonical recorded assessment events via a **configurable replay/view window**, with batch ordering governed strictly by [ADR 0003](./../decisions/0003-assessment-evaluation-semantics.md) (`risk.score DESC, batch_id ASC`).
+However, Challenge Outcome 1 ("Prioritize batches according to deterioration risk to decide which should be shipped, processed, or re-inspected first") requires an operator triage view across **multiple batches** within an operational shift or replay window. Furthermore, [ADR 0004](docs/decisions/0004-mvp-product-scope.md) (APR2-D2) established that the MVP operational triage view selects canonical recorded assessment events via a **configurable replay/view window**, with batch ordering governed strictly by [ADR 0003](docs/decisions/0003-assessment-evaluation-semantics.md) (`risk.score DESC, batch_id ASC`).
 
 The purpose of **IGR-05A** is to perform a rigorous, read-only architectural, data-selection, performance, and contract reconnaissance for multi-batch serving. It maps candidate paths, identifies capability gaps, benchmarks runtime costs, evaluates 23 core architectural questions, formulates three concrete candidate designs, and structures 10 explicit decision proposals for Human Gate review (Vladimir).
 
@@ -36,10 +42,10 @@ The purpose of **IGR-05A** is to perform a rigorous, read-only architectural, da
    - Replay-window membership (`dispatch_datetime`) and facility filtering (`facility_id`) can be evaluated **100% prior to canonical mapping** on raw session rows (1,800 rows) and zone rows (25 rows).
    - Release eligibility (`batch_id in runtime.held_out_ids`) is precomputed at lifespan startup in $O(1)$ set lookup.
 3. **Current mapper performance shape (OBSERVED PRACTICE):**
-   - In the current implementation, [`build_batch_assessment_input()`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/canonical_mapper.py#L132) executes unindexed linear scans over `batches` (1,800 rows), `storage_sessions` (1,800 rows), `quality_checks` (5,400 rows), and `shipments` (1,800 rows), parses zone telemetry (~26,000 readings/zone), and instantiates Pydantic domain models.
+   - In the current implementation, [`build_batch_assessment_input()`](backend/app/ingestion/canonical_mapper.py) executes unindexed linear scans over `batches` (1,800 rows), `storage_sessions` (1,800 rows), `quality_checks` (5,400 rows), and `shipments` (1,800 rows), parses zone telemetry (~26,000 readings/zone), and instantiates Pydantic domain models.
    - Benchmark measurements on the local environment demonstrate that sequential single-batch execution requires **~65–71 ms per batch**.
-   - Attempting to evaluate all 900 held-out batches sequentially on every collection request would require **~64 seconds**, which would cause HTTP timeouts.
-   - Conversely, evaluating a bounded replay window (e.g., 24–48 hours in Season 2025, containing 5–25 batches) requires only **~35–180 ms**, providing responsive sub-second HTTP responses **without requiring any database, worker queue, or complex indexing infrastructure**.
+   - Attempting to evaluate all 900 held-out batches sequentially on every collection request would require **~65 seconds**, which would cause HTTP timeouts.
+   - Conversely, evaluating a bounded replay window (e.g., 24–48 hours in Season 2025, containing 5–25 batches) requires **~0.36–1.85 s** under Mode (b) distinct-batch dynamics (~72–74 ms/call), providing responsive low-latency HTTP responses **without requiring any database, worker queue, or complex indexing infrastructure**.
 4. **Architectural necessity assessment (INFERENCE):**
    - **Database:** NOT NEEDED for bounded MVP / demo. The 54 MB snapshot resides in memory in `RawSnapshot`.
    - **Concurrency / Worker Infrastructure:** NOT NEEDED for bounded MVP / demo. Synchronous, in-process FastAPI execution over bounded collections satisfies demo needs.
@@ -52,24 +58,24 @@ The purpose of **IGR-05A** is to perform a rigorous, read-only architectural, da
 
 | Source Key | Inspected File / Artifact | Classification | Purpose and Authority |
 | :--- | :--- | :--- | :--- |
-| **S1** | [`backend/app/api/routes.py`](file:///D:/AgriFood/training_agrifood/backend/app/api/routes.py) | FACT / CODE | Current single-batch endpoint, error handling, cache headers |
-| **S2** | [`backend/app/main.py`](file:///D:/AgriFood/training_agrifood/backend/app/main.py) | FACT / CODE | Application lifespan, CORS policy, middleware, startup |
-| **S3** | [`backend/app/runtime/context.py`](file:///D:/AgriFood/training_agrifood/backend/app/runtime/context.py) | FACT / CODE | Lifespan state, `AnalyticsRuntimeContext`, fail-closed provider |
-| **S4** | [`backend/app/runtime/artifact.py`](file:///D:/AgriFood/training_agrifood/backend/app/runtime/artifact.py) | FACT / CODE | Pinned snapshot validation, SHA256 hashes, cohort partition |
-| **S5** | [`backend/app/services/baseline_assessment.py`](file:///D:/AgriFood/training_agrifood/backend/app/services/baseline_assessment.py) | FACT / CODE | Deterministic baseline assessment construction |
-| **S6** | [`backend/app/ingestion/canonical_mapper.py`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/canonical_mapper.py) | FACT / CODE | Raw-to-canonical mapper, join logic, telemetry cache |
-| **S7** | [`backend/app/ingestion/raw_reader.py`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/raw_reader.py) | FACT / CODE | `RawSnapshot`, `RawTable`, structural diagnostics |
-| **S8** | [`backend/app/ingestion/structural_manifest.py`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/structural_manifest.py) | FACT / CODE | Table manifests, foreign key specs, expected schemas |
-| **S9** | [`backend/app/analytics/crop_median_baseline.py`](file:///D:/AgriFood/training_agrifood/backend/app/analytics/crop_median_baseline.py) | FACT / CODE | Baseline scoring logic, median calculation, clipping |
-| **S10** | [`backend/app/domain/assessment.py`](file:///D:/AgriFood/training_agrifood/backend/app/domain/assessment.py) | FACT / CODE | Domain contract: `RiskAssessment`, `HealthResponse`, enums |
-| **S11** | [`backend/app/domain/batch.py`](file:///D:/AgriFood/training_agrifood/backend/app/domain/batch.py) | FACT / CODE | Domain contract: `BatchAssessmentInput` and sub-contexts |
-| **S12** | [`backend/artifacts/baseline-crop-median-v1-p1-s2024.json`](file:///D:/AgriFood/training_agrifood/backend/artifacts/baseline-crop-median-v1-p1-s2024.json) | FACT / ARTIFACT | Pinned baseline artifact values, crop medians, global median |
-| **S13** | [`docs/decisions/0003-assessment-evaluation-semantics.md`](file:///D:/AgriFood/training_agrifood/docs/decisions/0003-assessment-evaluation-semantics.md) | DECISION | Normative ranking (`score DESC, batch_id ASC`), engine comparability |
-| **S14** | [`docs/decisions/0004-mvp-product-scope.md`](file:///D:/AgriFood/training_agrifood/docs/decisions/0004-mvp-product-scope.md) | DECISION | Replay window policy, facility filter semantics, operator persona |
-| **S15** | [`docs/decisions/0005-runtime-baseline-serving.md`](file:///D:/AgriFood/training_agrifood/docs/decisions/0005-runtime-baseline-serving.md) | DECISION | Serving architecture, release eligibility (409/404), lifespan |
-| **S16** | [`docs/integration_contract.md`](file:///D:/AgriFood/training_agrifood/docs/integration_contract.md) | DECISION | Workstream boundaries, shared contracts, STOP conditions |
-| **S17** | [`docs/recon/VLD-R6-post-rbs01-reconciliation.md`](file:///D:/AgriFood/training_agrifood/docs/recon/VLD-R6-post-rbs01-reconciliation.md) | RECON | Candidate next slices (Candidate B: Multi-batch backend) |
-| **S18** | [`docs/data_recon/06b_runtime_release_parity.md`](file:///D:/AgriFood/training_agrifood/docs/data_recon/06b_runtime_release_parity.md) | EVIDENCE | VDR-06B release parity audit (900 held-out batches, 0 errors) |
+| **S1** | [`backend/app/api/routes.py`](backend/app/api/routes.py) | FACT / CODE | Current single-batch endpoint, error handling, cache headers |
+| **S2** | [`backend/app/main.py`](backend/app/main.py) | FACT / CODE | Application lifespan, CORS policy, middleware, startup |
+| **S3** | [`backend/app/runtime/context.py`](backend/app/runtime/context.py) | FACT / CODE | Lifespan state, `AnalyticsRuntimeContext`, fail-closed provider |
+| **S4** | [`backend/app/runtime/artifact.py`](backend/app/runtime/artifact.py) | FACT / CODE | Pinned snapshot validation, SHA256 hashes, cohort partition |
+| **S5** | [`backend/app/services/baseline_assessment.py`](backend/app/services/baseline_assessment.py) | FACT / CODE | Deterministic baseline assessment construction |
+| **S6** | [`backend/app/ingestion/canonical_mapper.py`](backend/app/ingestion/canonical_mapper.py) | FACT / CODE | Raw-to-canonical mapper, join logic, telemetry cache |
+| **S7** | [`backend/app/ingestion/raw_reader.py`](backend/app/ingestion/raw_reader.py) | FACT / CODE | `RawSnapshot`, `RawTable`, structural diagnostics |
+| **S8** | [`backend/app/ingestion/structural_manifest.py`](backend/app/ingestion/structural_manifest.py) | FACT / CODE | Table manifests, foreign key specs, expected schemas |
+| **S9** | [`backend/app/analytics/crop_median_baseline.py`](backend/app/analytics/crop_median_baseline.py) | FACT / CODE | Baseline scoring logic, median calculation, clipping |
+| **S10** | [`backend/app/domain/assessment.py`](backend/app/domain/assessment.py) | FACT / CODE | Domain contract: `RiskAssessment`, `HealthResponse`, enums |
+| **S11** | [`backend/app/domain/batch.py`](backend/app/domain/batch.py) | FACT / CODE | Domain contract: `BatchAssessmentInput` and sub-contexts |
+| **S12** | [`backend/artifacts/baseline-crop-median-v1-p1-s2024.json`](backend/artifacts/baseline-crop-median-v1-p1-s2024.json) | FACT / ARTIFACT | Pinned baseline artifact values, crop medians, global median |
+| **S13** | [`docs/decisions/0003-assessment-evaluation-semantics.md`](docs/decisions/0003-assessment-evaluation-semantics.md) | DECISION | Normative ranking (`score DESC, batch_id ASC`), engine comparability |
+| **S14** | [`docs/decisions/0004-mvp-product-scope.md`](docs/decisions/0004-mvp-product-scope.md) | DECISION | Replay window policy, facility filter semantics, operator persona |
+| **S15** | [`docs/decisions/0005-runtime-baseline-serving.md`](docs/decisions/0005-runtime-baseline-serving.md) | DECISION | Serving architecture, release eligibility (409/404), lifespan |
+| **S16** | [`docs/integration_contract.md`](docs/integration_contract.md) | DECISION | Workstream boundaries, shared contracts, STOP conditions |
+| **S17** | [`docs/recon/VLD-R6-post-rbs01-reconciliation.md`](docs/recon/VLD-R6-post-rbs01-reconciliation.md) | RECON | Candidate next slices (Candidate B: Multi-batch backend) |
+| **S18** | [`docs/data_recon/06b_runtime_release_parity.md`](docs/data_recon/06b_runtime_release_parity.md) | EVIDENCE | VDR-06B release parity audit (900 held-out batches, 0 errors) |
 | **S19** | `sponsor_pack/data/*.csv` | FACT / DATA | Raw CSV files: 1,800 batches, 1,800 sessions, 25 zones, 10 facilities |
 
 ---
@@ -141,12 +147,12 @@ HTTP GET /api/v1/assessments/{batch_id}
 
 | Stage | File & Symbol | Input | Output | State Used | Failure Mode | Reusable for Collection Serving? |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Request** | [`backend/app/api/routes.py`](file:///D:/AgriFood/training_agrifood/backend/app/api/routes.py#L36)<br>`assessment()` | HTTP path param `batch_id` | HTTP Response | None | HTTP 404 / 409 / 500 / 503 | Partial: new route required for collection query parameters |
-| **2. Provider** | [`backend/app/runtime/context.py`](file:///D:/AgriFood/training_agrifood/backend/app/runtime/context.py#L67)<br>`get_runtime()` | `fastapi.Request` | `AnalyticsRuntimeContext` | `app.state.analytics_runtime` | HTTP 503 if unconfigured / unavailable | **YES (100%)**: identical runtime dependency provider |
-| **3. Eligibility** | [`backend/app/api/routes.py`](file:///D:/AgriFood/training_agrifood/backend/app/api/routes.py#L44)<br>in-route check | `batch_id: str` | `bool` | `runtime.training_ids`, `runtime.held_out_ids` | HTTP 409 (training), HTTP 404 (unknown) | **YES**: pre-filter collection against `held_out_ids` |
-| **4. Mapper** | [`backend/app/ingestion/canonical_mapper.py`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/canonical_mapper.py#L132)<br>`build_batch_assessment_input()` | `RawSnapshot`, `batch_id` | `BatchAssessmentInput` | `snapshot.tables`, `snapshot._readings_by_zone_cache` | `CanonicalMappingError` (raises 500) | **YES**: reusable per batch, but repeated linear scans are expensive |
-| **5. Scoring** | [`backend/app/analytics/crop_median_baseline.py`](file:///D:/AgriFood/training_agrifood/backend/app/analytics/crop_median_baseline.py#L131)<br>`predict_risk_score()` | `CropMedianBaseline`, `BatchAssessmentInput` | `float` (0.0–1.0) | `runtime.baseline` | `TypeError` if input types invalid | **YES (100%)**: deterministic scoring function |
-| **6. Service** | [`backend/app/services/baseline_assessment.py`](file:///D:/AgriFood/training_agrifood/backend/app/services/baseline_assessment.py#L26)<br>`build_baseline_assessment()` | Baseline, BatchInput, Provenance kwargs | `RiskAssessment` | Stateless | `ValueError` if Pydantic invariant fails | **YES (100%)**: standard assessment builder |
+| **1. Request** | [`backend/app/api/routes.py`](backend/app/api/routes.py)<br>`assessment()` | HTTP path param `batch_id` | HTTP Response | None | HTTP 404 / 409 / 500 / 503 | Partial: new route required for collection query parameters |
+| **2. Provider** | [`backend/app/runtime/context.py`](backend/app/runtime/context.py)<br>`get_runtime()` | `fastapi.Request` | `AnalyticsRuntimeContext` | `app.state.analytics_runtime` | HTTP 503 if unconfigured / unavailable | **YES (100%)**: identical runtime dependency provider |
+| **3. Eligibility** | [`backend/app/api/routes.py`](backend/app/api/routes.py)<br>in-route check | `batch_id: str` | `bool` | `runtime.training_ids`, `runtime.held_out_ids` | HTTP 409 (training), HTTP 404 (unknown) | **YES**: pre-filter collection against `held_out_ids` |
+| **4. Mapper** | [`backend/app/ingestion/canonical_mapper.py`](backend/app/ingestion/canonical_mapper.py)<br>`build_batch_assessment_input()` | `RawSnapshot`, `batch_id` | `BatchAssessmentInput` | `snapshot.tables`, `snapshot._readings_by_zone_cache` | `CanonicalMappingError` (raises 500) | **YES**: reusable per batch, but repeated linear scans are expensive |
+| **5. Scoring** | [`backend/app/analytics/crop_median_baseline.py`](backend/app/analytics/crop_median_baseline.py)<br>`predict_risk_score()` | `CropMedianBaseline`, `BatchAssessmentInput` | `float` (0.0–1.0) | `runtime.baseline` | `TypeError` if input types invalid | **YES (100%)**: deterministic scoring function |
+| **6. Service** | [`backend/app/services/baseline_assessment.py`](backend/app/services/baseline_assessment.py)<br>`build_baseline_assessment()` | Baseline, BatchInput, Provenance kwargs | `RiskAssessment` | Stateless | `ValueError` if Pydantic invariant fails | **YES (100%)**: standard assessment builder |
 | **7. Transport** | FastAPI Serialization | `RiskAssessment` | JSON bytes | Pydantic serializer | Model validation error | **YES**: item serialization or envelope serialization |
 
 ---
@@ -242,7 +248,7 @@ The physical relationships between raw tables in `sponsor_pack/data/` were audit
 
 ### Implementation mechanics of `build_batch_assessment_input()`
 
-Inspection of [`backend/app/ingestion/canonical_mapper.py`](file:///D:/AgriFood/training_agrifood/backend/app/ingestion/canonical_mapper.py) reveals the computational cost of mapping an individual batch:
+Inspection of [`backend/app/ingestion/canonical_mapper.py`](backend/app/ingestion/canonical_mapper.py) reveals the computational cost of mapping an individual batch:
 
 1. **Telemetry Index Reuse (FACT):**
    - Lines 165–181: On the first invocation, the mapper builds an index `readings_by_zone: dict[str, list[dict[str, str]]]` over all 669,665 rows of `sensor_readings` and stores it in `snapshot._readings_by_zone_cache`.
@@ -339,10 +345,13 @@ A standalone benchmark harness was executed outside the repository (in `$env:TEM
 3. **Unbounded collection is dangerous (INFERENCE):** If a collection endpoint attempts to execute `build_batch_assessment_input()` for all 900 held-out batches sequentially on every HTTP request, it will require:
    $$900 \times 72.3\text{ ms} \approx 65\text{ seconds}$$
    This would exceed default HTTP client timeouts and degrade developer experience.
-4. **Replay window naturally bounds distinct batch evaluation (INFERENCE):** Under ADR 0004 APR2-D2, the operator views a **configurable replay/view window** (e.g. 24 or 48 hours). In Season 2025, a 24-hour window contains typically 2 to 8 batches; a 7-day window contains ~35 batches. 
-   - 10 distinct batches $\to$ ~0.72 s
-   - 25 distinct batches $\to$ ~1.81 s
-   - 50 distinct batches $\to$ ~3.65 s
+4. **Replay window naturally bounds distinct batch evaluation (INFERENCE):** Under ADR 0004 APR2-D2, the operator views a **configurable replay/view window** (e.g. 24 or 48 hours). In Season 2025, a 24-hour window contains typically 2 to 8 batches; a 48-hour window contains 5 to 15 batches; a 7-day window contains ~35 batches.
+   - 5 distinct batches $\to$ **~0.36–0.37 s**
+   - 10 distinct batches $\to$ **~0.72 s**
+   - 20 distinct batches $\to$ **~1.45 s**
+   - 25 distinct batches $\to$ **~1.85 s**
+   - 50 distinct batches $\to$ **~3.71 s**
+   - 100 distinct batches $\to$ **~7.23 s**
    Bounding collection requests by replay window or page limit provides responsive execution without requiring any database or background queue.
 
 ---
@@ -427,10 +436,15 @@ The order in which filters are applied determines both computational efficiency 
 ### The Slice-Before-Rank Semantic Problem (Contract Q11 Analysis)
 - **The Semantic Conflict:** If an implementation naively applies pagination slicing (`[offset : offset + limit]`) *before* computing scores and ranking, it creates a severe domain violation: the returned page contains only the locally sorted items of an arbitrary chronological batch slice. Batches with the highest risk in the entire replay window that happen to fall outside the raw chronological slice would be completely omitted from page 1.
 - **Contract Requirement (ADR 0003 D1 & D3):** The operator triage queue requires true operational prioritization by risk score across the requested operational window. Slicing must strictly occur **AFTER** global risk ranking across the candidate cohort matching the window and facility filters.
-- **Feasibility & Candidate Architectures:**
-  - *Approach 1 (Canonical Pipeline):* `filter (window + facility + held-out) -> map and score all window candidates -> GLOBAL sort (risk.score DESC, batch_id ASC) -> paginate [offset : offset + limit]`. Because the replay window naturally bounds the cohort (e.g. 5–35 batches), mapping and scoring all window candidates takes only ~0.35–2.5 seconds total.
-  - *Approach 2 (Optimized Baseline Pre-Scoring):* For the deterministic baseline, `risk.score` is a pure function of `crop_type` (present directly in raw `batches.csv`). The service can compute baseline scores for all window candidates in < 1 ms, perform global sorting, slice the top `limit` items, and then invoke expensive `build_batch_assessment_input()` *only* on the sliced page. This guarantees exact global order while maintaining ~70 ms total request latency.
-  - *Human Gate Note:* Slicing before global ranking is strictly rejected as a valid operational ranking implementation unless explicitly accepted as a degraded demo-only trade-off under a dedicated Human Gate decision.
+- **Authoritative Canonical Pipeline for Bounded Initial IGR-05B:**
+  $$\text{filter (eligible/window/facility)} \longrightarrow \text{canonical-map and score ALL window candidates} \longrightarrow \text{global sort (risk.score DESC, batch\_id ASC)} \longrightarrow \text{pagination slice [offset:offset+limit]} \longrightarrow \text{response assembly}$$
+  - *Compute vs. Payload Bounding:* Replay window bounding naturally limits the **compute cost** (the total candidate batches mapped and scored; e.g. 5–25 batches requires only ~0.36–1.85 s total wall time under Mode (b) distinct-batch execution). In contrast, the pagination `limit` parameter bounds the **returned page size and network transport payload**. Pagination does NOT prevent scoring all window candidates.
+  - *Full Pipeline Integrity:* Because window sizes are bounded in operational triage (e.g. 24h or 48h), executing full canonical mapping via `build_batch_assessment_input()` and baseline scoring via `build_baseline_assessment()` for all window candidates is fully viable in-process without requiring asynchronous queues or database layers.
+- **Separation of Future Optimization (INFERENCE — NOT a Correctness Condition for IGR-05B):**
+  - For the deterministic crop-median baseline, `risk.score` is a pure function of `crop_type` (present directly in raw `batches.csv`).
+  - *Future Optimization Concept:* A future optimization could compute preliminary baseline scores using raw `crop_type` in $< 1\text{ ms}$ for candidate ranking. However, the $< 1\text{ ms}$ figure applies **ONLY** to the pre-ranking lookup. After pagination slicing `[offset : offset + limit]`, every returned item in the sliced page **STILL strictly requires** full canonical mapping via `build_batch_assessment_input()` and full `RiskAssessment` model construction via `build_baseline_assessment()`.
+  - *Status:* This raw pre-scoring concept is strictly an architectural INFERENCE and future optimization candidate. It requires its own dedicated contract and strict numerical/schema parity verification before use. It is **NOT** part of the authoritative canonical path and **NOT** a correctness condition for IGR-05B.
+- **Human Gate Note:** Slicing before global ranking is strictly rejected as a valid operational ranking implementation unless explicitly accepted as a degraded demo-only trade-off under a dedicated Human Gate decision.
 
 ### Comparability guard (ADR 0003 D3)
 - The collection must reject or segregate any items that do not share the exact same `engine_tier + engine_version`.
@@ -521,7 +535,7 @@ What happens if 1 out of 20 candidate batches fails canonical mapping or raises 
   - Create a dedicated application service: `AssessmentCollectionService` (or function `get_assessment_collection()`) in `backend/app/services/collection_assessment.py`.
   - The service takes `AnalyticsRuntimeContext`, `facility_id`, `window_start`, `window_end`, `limit`, and `offset`.
   - The service executes candidate selection, pre-filtering, canonical mapping, scoring, sorting, and envelope packaging.
-  - [`backend/app/api/routes.py`](file:///D:/AgriFood/training_agrifood/backend/app/api/routes.py) only parses parameters, invokes the service, and formats HTTP errors.
+  - [`backend/app/api/routes.py`](backend/app/api/routes.py) only parses parameters, invokes the service, and formats HTTP errors.
 
 ---
 
@@ -530,7 +544,7 @@ What happens if 1 out of 20 candidate batches fails canonical mapping or raises 
 ### Assessment of indexing needs and latency modes
 - The raw tables in `RawSnapshot` are lists of dictionaries (`list[dict[str, str]]`).
 - For the single-batch path, searching `batches` (1,800 rows) takes ~0.1 ms.
-- **Latency profiles under local empirical measurement (Windows 11, Python 3.12.3, HEAD `401f395`):**
+- **Latency profiles under local empirical measurement (Windows 11, Python 3.12.3, verified at base `540c98e` / `401f395`):**
   - **Mode (a) — Warm-Cache Repeat (Same Batch `BAT-000901`):**
     - 10 calls: 0.0899s total (**8.99 ms / call**)
     - 50 calls: 0.4571s total (**9.14 ms / call**)
@@ -543,11 +557,13 @@ What happens if 1 out of 20 candidate batches fails canonical mapping or raises 
 - **Implication for Multi-Batch Serving:**
   - Collection serving is governed by **Mode (b)** dynamics.
   - Sizing estimates for candidate cohorts:
-    - 10 candidate batches: $10 \times 72.3\text{ ms} \approx 0.72\text{ s}$
-    - 20 candidate batches: $20 \times 72.3\text{ ms} \approx 1.45\text{ s}$
-    - 50 candidate batches: $50 \times 74.2\text{ ms} \approx 3.71\text{ s}$
-    - 100 candidate batches: $100 \times 72.3\text{ ms} \approx 7.23\text{ s}$
-    - Unbounded 900 held-out batches: $900 \times 72.3\text{ ms} \approx 65\text{ s}$ (causes HTTP client timeout)
+    - 5 candidate batches: $5 \times 72.3\text{ ms} \approx \mathbf{0.36\text{ s}}$
+    - 10 candidate batches: $10 \times 72.3\text{ ms} \approx \mathbf{0.72\text{ s}}$
+    - 20 candidate batches: $20 \times 72.3\text{ ms} \approx \mathbf{1.45\text{ s}}$
+    - 25 candidate batches: $25 \times 74.0\text{ ms} \approx \mathbf{1.85\text{ s}}$
+    - 50 candidate batches: $50 \times 74.2\text{ ms} \approx \mathbf{3.71\text{ s}}$
+    - 100 candidate batches: $100 \times 72.3\text{ ms} \approx \mathbf{7.23\text{ s}}$
+    - Unbounded 900 held-out batches: $900 \times 72.3\text{ ms} \approx \mathbf{65\text{ s}}$ (causes HTTP client timeout)
 - **Lightweight In-Memory Index (Candidate Optimization):**
   - If the service pre-indexes `batches_by_id: dict[str, dict]` and `sessions_by_batch_id: dict[str, dict]`, or if the service filters sessions first and only maps the surviving items, latency remains well within acceptable bounds (< 1.5s for bounded windows).
   - No database or persistent index is required.
@@ -588,15 +604,18 @@ Three distinct, coherent architectural candidate designs were formulated:
 | **Query Parameters** | `facility_id?: str`, `limit?: int = 50`, `offset?: int = 0` | `facility_id?: str`, `window_start?: str`, `window_end?: str`, `limit?: int = 50`, `offset?: int = 0` | `facility_id?: str`, `preset?: str` |
 | **Response Shape** | Bare array: `list[RiskAssessment]` | Envelope: `RiskAssessmentCollectionResponse` (`items: list[RiskAssessment]`, metadata) | Summary Envelope: `QueueResponse` (`items: list[QueueItemSummary]`) |
 | **Item Contract** | Full `RiskAssessment` | Full `RiskAssessment` | New lightweight `QueueItemSummary` (no telemetry/factors) |
-| **Replay Window Support** | Implicit / unbounded | Explicit `window_start` / `window_end` (Default duration: **HUMAN DECISION REQUIRED**) | Fixed presets |
+| **Replay Window Support** | Implicit / unbounded | Explicit `window_start` / `window_end` (Default duration: **HUMAN DECISION REQUIRED**; window bounds compute cost) | Fixed presets |
 | **Ordering Rule** | `risk.score DESC, batch_id ASC` | `risk.score DESC, batch_id ASC` (evaluated globally across window candidates) | `risk.score DESC, batch_id ASC` |
-| **Pagination Sequence** | Slicing applied after global ranking | Slicing (`[offset:offset+limit]`) strictly **AFTER** global ranking across window cohort | Slicing applied after global ranking |
+| **Pagination Sequence** | Slicing applied after global ranking | Slicing (`[offset:offset+limit]`) strictly **AFTER** global ranking across window cohort (`limit` bounds returned page/payload) | Slicing applied after global ranking |
 | **Empty Result** | `[]` (HTTP 200) | `{"items": [], "total_count": 0, ...}` (HTTP 200) | `{"items": [], "total_count": 0}` (HTTP 200) |
 | **Per-Item Failure** | Fail-closed HTTP 500 | Fail-closed HTTP 500 | Fail-closed HTTP 500 |
 | **New Domain Models** | None | Exactly 1 (`RiskAssessmentCollectionResponse`) | Exactly 2 (`QueueItemSummary`, `QueueResponse`) |
 | **Frontend Contract Impact** | Minimal (array of existing type) | Moderate (envelope interface) | High (new summary interface + single-batch drilldown) |
+| **Performance (5 items)** | Mode (b): ~0.36–0.37 s | Mode (b): ~0.36–0.37 s | < 0.05 s |
 | **Performance (20 items)** | Mode (b): ~1.45 s | Mode (b): ~1.45 s | < 0.05 s (scores computed without canonical mapper) |
+| **Performance (25 items)** | Mode (b): ~1.85 s | Mode (b): ~1.85 s | < 0.05 s |
 | **Performance (50 items)** | Mode (b): ~3.71 s | Mode (b): ~3.71 s | < 0.05 s |
+| **Performance (100 items)** | Mode (b): ~7.23 s | Mode (b): ~7.23 s | < 0.05 s |
 | **Performance (All 900 items)** | Mode (b): ~65 s (Severe timeout risk) | Protected by window / limit ($\le 50$) | ~0.1 s |
 | **ADR 0004 Compliance** | Partial (no window metadata) | **Full compliance with APR2-D2** | Moderate (introduces unapproved summary contract) |
 | **Implementation Risk** | Low | Low | Medium (new projection logic) |
@@ -605,9 +624,11 @@ Three distinct, coherent architectural candidate designs were formulated:
 
 ## 21. Recommended bounded candidate
 
-### Option B: Replay Window Triage Collection Envelope
+### RECOMMENDATION — NOT A DECISION
 
-**RECOMMENDATION — BOUNDED IMPLEMENTATION CANDIDATE (Option B):**
+**PROPOSED BOUNDED IMPLEMENTATION CANDIDATE (Option B — Replay Window Triage Collection Envelope):**
+
+The following design represents Igor's technical recommendation submitted for Vladimir's Human Gate review. It does **NOT** constitute accepted architecture or canonical policy until explicitly approved by the Human Gate.
 
 1. **Endpoint & Method:** `GET /api/v1/assessments` (extends resource hierarchy logically without creating an ad-hoc `/queue` path).
 2. **Query Parameters:**
@@ -627,16 +648,20 @@ Three distinct, coherent architectural candidate designs were formulated:
        facility_id: str | None = None
        engine_version: str
    ```
-4. **Processing Pipeline (Strict Rank-Before-Slice Order per ADR 0003 D1/D3):**
+4. **Authoritative Canonical Processing Pipeline (Strict Rank-Before-Slice Order per ADR 0003 D1/D3):**
    - **Step 1 (Cohort Selection):** Pre-filter `storage_sessions` by `batch_id in runtime.held_out_ids` ($O(1)$ set membership).
    - **Step 2 (Window & Facility Filter):** Pre-filter sessions by `window_start <= dispatch_datetime < window_end` (or closed interval per IGR05-D3) and matching `facility_id` via `storage_zones` lookup. Record `total_count` of candidate batches matching the operational criteria.
-   - **Step 3 (Global Scoring across Window Candidates):** For all candidate batches surviving Step 2:
-     - *Approach A (Full Canonical Mapping):* Map each candidate via `build_batch_assessment_input()` and score with `build_baseline_assessment()`. For bounded windows (5–35 batches), this takes ~0.35–2.5 seconds total.
-     - *Approach B (Optimized Baseline Pre-Scoring):* For the deterministic crop-median baseline, pre-score candidates using `crop_type` directly from `batches.csv` in $< 1\text{ ms}$.
-   - **Step 4 (Global Deterministic Ranking):** Sort ALL scored candidate batches across the entire window cohort by `(risk.score DESC, batch_id ASC)` in strict compliance with ADR 0003 D1/D3.
-   - **Step 5 (Pagination Slicing):** Apply pagination slicing `[offset : offset + limit]` to the globally ranked candidate list. (If using Approach B, execute full `build_batch_assessment_input()` and `build_baseline_assessment()` only on the sliced page items).
+   - **Step 3 (Canonical Mapping & Scoring of ALL Window Candidates):** For all candidate batches surviving Step 2:
+     - Map each candidate batch via `build_batch_assessment_input()`.
+     - Score each candidate batch via `build_baseline_assessment()`.
+     - *Compute vs. Payload Bounding:* Because the replay window naturally bounds candidate cohort size (e.g., 5–25 batches requires only ~0.36–1.85 s total wall time under Mode (b)), canonical mapping and scoring of all window candidates in-process is fast, robust, and mathematically sound. The replay window bounds the compute cost, while `limit` bounds the returned page/payload. Pagination does NOT prevent scoring all window candidates.
+   - **Step 4 (Global Deterministic Ranking):** Sort ALL scored candidate assessments across the entire window cohort by `(risk.score DESC, batch_id ASC)` in strict compliance with ADR 0003 D1/D3.
+   - **Step 5 (Pagination Slicing):** Apply pagination slicing `[offset : offset + limit]` to the globally ranked candidate list.
    - **Step 6 (Envelope Assembly):** Assemble sliced `items`, `total_count`, window metadata, and `engine_version` into `RiskAssessmentCollectionResponse`.
-5. **Fail-Closed Semantics:** Any canonical mapping failure on an eligible batch immediately returns HTTP 500.
+5. **Architectural Separation of Future Optimization (INFERENCE):**
+   - Raw pre-scoring via `batches.csv` `crop_type` in $< 1\text{ ms}$ is documented strictly as a separate future optimization / INFERENCE. Even if adopted in the future, every item returned in the sliced page would still require canonical mapping via `build_batch_assessment_input()` and baseline scoring via `build_baseline_assessment()`.
+   - Raw pre-scoring requires its own dedicated contract and numerical/schema parity verification before use. It is **NOT** a correctness condition for IGR-05B and is **NOT** part of the initial canonical pipeline.
+6. **Fail-Closed Semantics:** Any canonical mapping failure on an eligible batch immediately returns HTTP 500.
 
 ---
 
@@ -662,22 +687,32 @@ The following 10 decision packets are submitted for Human Integrator review and 
 ---
 
 ### IGR05-D2: Replay window requirement
-- **Question:** How is the replay window specified by the client, and if optional, what is the default duration?
-- **Already-fixed constraints:** ADR 0004 APR2-D2 ("operational triage view selects canonical recorded assessment events via a configurable replay/view window").
-- **Options:**
-  - *Option 1:* Strictly mandatory `window_start` and `window_end` query parameters (returns HTTP 400 if omitted).
-  - *Option 2:* Optional window parameters with a documented default replay window (**HUMAN DECISION REQUIRED ON DURATION**):
-    - *Sub-option 2a:* 24-hour default window (`2025-05-01T00:00:00Z` to `2025-05-02T00:00:00Z`, ~2–8 batches, Mode (b) latency ~0.15–0.6s).
-    - *Sub-option 2b:* 48-hour default window (`2025-05-01T00:00:00Z` to `2025-05-03T00:00:00Z`, ~5–15 batches, Mode (b) latency ~0.35–1.1s).
-    - *Sub-option 2c:* 7-day default window (`2025-05-01T00:00:00Z` to `2025-05-08T00:00:00Z`, ~35 batches, Mode (b) latency ~2.5s).
-  - *Option 3:* Unbounded by default, relying solely on `limit=50`.
+- **Question:** How is the replay window specified by the client, what happens on parameter omission or partial specification, and how are invalid intervals handled?
+- **Already-fixed constraints:** ADR 0004 APR2-D2 ("operational triage view selects canonical recorded assessment events via a configurable replay/view window"). Replay window bound limits total compute cost across candidates.
+- **Decision Dimensions & Variants (HUMAN DECISION REQUIRED):**
+  1. *Behavior when BOTH `window_start` and `window_end` are absent:*
+     - **Variant 1A (Mandatory Window):** Strict requirement; missing window parameters return HTTP 400 Bad Request. Client must always be explicit.
+     - **Variant 1B (Optional Window with Default Bounds):** Server defaults to an evaluation window if omitted, ensuring unparameterized requests succeed for demo/dashboard views.
+  2. *Anchor and default bounds for automatic window (if Variant 1B chosen):*
+     - **Variant 2A (Fixed Season 2025 Start):** Window anchors at fixed timestamp `2025-05-01T00:00:00Z` plus default duration:
+       - *Sub-variant 2A-1 (24-hour default):* `2025-05-01T00:00:00Z` to `2025-05-02T00:00:00Z` (~2–8 batches, Mode (b) latency ~0.15–0.6s).
+       - *Sub-variant 2A-2 (48-hour default):* `2025-05-01T00:00:00Z` to `2025-05-03T00:00:00Z` (~5–15 batches, Mode (b) latency ~0.36–1.1s).
+       - *Sub-variant 2A-3 (7-day default):* `2025-05-01T00:00:00Z` to `2025-05-08T00:00:00Z` (~35 batches, Mode (b) latency ~2.5s).
+     - **Variant 2B (Sliding Replay Anchor):** Window anchors relative to the latest observed dispatch timestamp in the held-out dataset minus duration.
+  3. *Behavior when only ONE of `window_start` / `window_end` is provided:*
+     - **Variant 3A (Strict Pair Requirement):** Both parameters must be provided together. Supplying only one returns HTTP 400 Bad Request ("Both window_start and window_end must be provided").
+     - **Variant 3B (Open-Ended Unilateral Boundary):** Allow open-ended queries (e.g., `window_start` to end of season, or start of season to `window_end`), protected against unbounded latency by pagination `limit`.
+     - **Variant 3C (Default Duration Offset):** If only `window_start` is given, default `window_end = window_start + default_duration`; if only `window_end` is given, default `window_start = window_end - default_duration`.
+  4. *Behavior for invalid interval (`window_start >= window_end`):*
+     - **Variant 4A (Strict Validation Error):** Return HTTP 400 Bad Request ("window_start must precede window_end").
+     - **Variant 4B (Permissive Empty Result):** Return HTTP 200 with empty list `items: []` and `total_count: 0`.
 - **Consequences:**
-  - *Technical:* Option 2 ensures that a plain `GET /api/v1/assessments` succeeds out-of-the-box for frontend demo initialization without crashing or requiring complex parameter coordination. Option 1 enforces explicit client intention. Option 3 is non-deterministic regarding time window.
-  - *Product:* Aligns with demo runbook ease-of-use while maintaining configurable window capability.
-  - *Shared-contract:* Query parameter specification in backend routes and frontend clients.
-- **Igor recommendation:** Option 2 (Optional window with default bounds). The specific default window duration (24h, 48h, or 7d) is **HUMAN DECISION REQUIRED for Vladimir**. Igor suggests Sub-option 2b (48h) or 2c (7d) as balanced starting points.
-- **Evidence:** Benchmark Mode (b) demonstrates that an unbounded 900-batch scan takes ~65s (causing HTTP timeouts); a 24h window takes < 0.6s; a 48h window takes ~1.1s; a 7-day window takes ~2.5s.
-- **Vladimir decision:** **PENDING (HUMAN DECISION REQUIRED)**
+  - *Technical:* Variant 1B with 2A ensures zero-config initialization for web demo shells. Variant 3A and 4A ensure fail-fast, fail-closed parameter validation.
+  - *Product:* Prevents unexpected client crashes while maintaining complete replay flexibility.
+  - *Shared-contract:* Query parameter specifications in OpenAPI docs and TypeScript clients.
+- **Igor recommendation:** Optional window with documented 48h default (Variant 1B + 2A-2), strict pair requirement (Variant 3A), and strict invalid interval validation (Variant 4A). However, the selection among all variants is strictly a **HUMAN DECISION REQUIRED for Vladimir**.
+- **Evidence:** Benchmark Mode (b) demonstrates: 5 distinct batches take ~0.36–0.37s; 20 batches take ~1.45s; 25 batches take ~1.85s; 50 batches take ~3.71s; unbounded 900-batch scan takes ~65s. Bounded windows protect API responsiveness.
+- **Vladimir decision:** **PENDING — HUMAN DECISION REQUIRED**
 
 ---
 
@@ -757,6 +792,7 @@ The following 10 decision packets are submitted for Human Integrator review and 
 - **Consequences:**
   - *Technical:* Under Mode (b) distinct-batch execution:
     - 20 distinct items take ~1.45s.
+    - 25 distinct items take ~1.85s.
     - 50 distinct items take ~3.71s.
     - 100 distinct items take ~7.23s.
     - Unbounded (900 items) takes ~65s (causes HTTP client timeouts).
@@ -874,15 +910,14 @@ The following topics are explicitly **NOT** decided by this recon and remain pre
 
 1. **Pre-flight Git Verification:**
    - Origin and upstream remotes verified.
-   - Fast-forward merge of upstream/main completed (`401f395bdf6dab1317a36d2e2519627ce0858a3c`).
-   - Clean working tree confirmed prior to branch creation.
-   - Branch `igor/igr-05a-multi-batch-serving-recon` created and verified.
+   - Base HEAD reconciled with `upstream/main` at `540c98eb273a14d6a61e37c89c69d4bf9babfa78` (post PUX-11A / PR #46).
+   - Clean working tree confirmed on branch `igor/igr-05a-multi-batch-serving-recon`.
 2. **Read-Only Codebase Audit:**
    - 19 key source files and contracts thoroughly audited.
    - Relational joins and cardinality verified.
    - Zero access to `historical_quality_outcomes.csv` confirmed.
 3. **Backend Test Suite Sanity Check:**
-   - `.\.venv\Scripts\python.exe -m pytest backend/tests` executed: **106 passed, 2 warnings in 12.84s, exit code 0.** (The 67 vs. 106 discrepancy is fully resolved: `[ 67%]` was an intermediate quiet-mode terminal progress indicator at 72/106 tests, while 67 was also the legacy pre-RBS-01 test count).
+   - `.\.venv\Scripts\python.exe -m pytest backend/tests` executed: **106 passed, 2 warnings in 12.84s (and 14.70s), exit code 0.** (The 67 vs. 106 discrepancy is fully resolved: `[ 67%]` was an intermediate quiet-mode terminal progress indicator at 72/106 tests, while 67 was also the legacy pre-RBS-01 test count).
 4. **Configured Runtime Verification:**
    - Lifespan initialization verified with `TestClient`.
    - Health check: `ready` (200).
@@ -894,15 +929,24 @@ The following topics are explicitly **NOT** decided by this recon and remain pre
    - Measured **Mode (a)** (same-batch warm-cache repeat): **8.99–9.14 ms / call** (10 calls = 0.0899s, 50 calls = 0.4571s, 100 calls = 0.9103s).
    - Measured **Mode (b)** (distinct-batch cache-build across zones): **72.25–74.18 ms / call** (10 calls = 0.7225s, 50 calls = 3.7088s, 100 calls = 7.2274s). Direct `build_batch_assessment_input()` accounts for 65.83 ms / call (~91% of total).
    - Proved that collection serving operates under Mode (b) dynamics, mandating replay-window or page-limit bounding to prevent HTTP timeouts.
-6. **Final Scope Verification:**
-   - Exactly one file created: `docs/recon/IGR-05A-multi-batch-serving-recon.md`.
+6. **Final Scope & Observable GitHub State Verification:**
+   - Exactly one file created/modified: [`docs/recon/IGR-05A-multi-batch-serving-recon.md`](docs/recon/IGR-05A-multi-batch-serving-recon.md).
    - Zero changes to backend, frontend, tests, configuration, or datasets.
-   - No commit, push, PR, or merge performed.
+   - Commit `720fb9b` exists on branch `igor/igr-05a-multi-batch-serving-recon`.
+   - Pull Request #47 exists and is open on `Slave-of-Skynet/training_agrifood`.
+   - No merge has been performed.
+
+### Process deviation record
+
+> [!WARNING]
+> **PROCESS DEVIATION — PR #47 was created before the required Project Brain review gate. No merge has been performed.**
+>
+> This record documents a historical workflow sequence violation: PR #47 was opened on GitHub prior to completing the Project Brain review gate for IGR-05A. This entry is a factual audit record and does not alter the task scope or authorize implementation. The write surface remains strictly documentation-only. No merge has been executed, and implementation under IGR-05B remains strictly blocked pending Vladimir's explicit Human Gate decisions on D1 through D10.
 
 ---
 
 ## 27. Final handoff
 
-This document constitutes the complete deliverables for task **IGR-05A: Multi-Batch Serving Recon & Decision Packet**. It is submitted to **Vladimir (Integrator / Project Brain)** for formal Human Gate review.
+This document constitutes the complete deliverables for task **IGR-05A: Multi-Batch Serving Recon & Decision Packet**. It is submitted to **Vladimir (Integrator / Project Brain)** for formal Human Gate review under PR #47.
 
 All 10 decision items (`IGR05-D1` through `IGR05-D10`) remain with status **PENDING** awaiting Vladimir's explicit decision. Implementation under task **IGR-05B** remains strictly blocked until this review is concluded.
